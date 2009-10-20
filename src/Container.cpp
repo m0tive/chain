@@ -1,0 +1,28 @@
+/// \file Container.cpp
+/// \date 2009/10/20
+/// \version 0.01
+/// \author Peter Dodds
+/// \brief 
+/// \note 
+//------------------------------------------------------------------------------
+
+#include "Container.hpp"
+
+namespace Chain 
+{
+   //------------------------------------------------ Container::Container
+   Container::Container()
+   {
+      
+   }
+   //------------------------------------------------ Container::~Container
+   Container::~Container()
+   {
+      
+   }
+   //------------------------------------------------ Container::~Container
+   Container::AddChild(DisplayObject const& child)
+   {
+      return; // TODO
+   }
+}
