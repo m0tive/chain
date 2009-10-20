@@ -1,0 +1,9 @@
+*.o
+*~
+*.tmp
+*.ncb
+*.sln
+*.suo
+*.vcproj.*
+./Debug
+./Release

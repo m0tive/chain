@@ -31,7 +31,7 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~SceneManager();
-   }
+   };
 }
 
 #endif

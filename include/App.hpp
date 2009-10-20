@@ -49,7 +49,7 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~App();
-   }
+   };
 }
 
 #endif

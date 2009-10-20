@@ -14,7 +14,7 @@
 #define _Chain_Root_h_
 
 #include "Container.hpp"
-#include "RootManager.hpp"
+#include "SceneManager.hpp"
 
 namespace Chain
 {
@@ -33,7 +33,7 @@ namespace Chain
          virtual ~Root();
          
          // bool IsRoot() const;
-   }
+   };
 }
 
 #endif

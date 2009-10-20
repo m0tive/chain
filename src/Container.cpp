@@ -21,7 +21,7 @@ namespace Chain
       
    }
    //------------------------------------------------ Container::~Container
-   Container::AddChild(DisplayObject const& child)
+   void Container::AddChild(DisplayObject const& child)
    {
       return; // TODO
    }

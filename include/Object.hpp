@@ -37,7 +37,7 @@ namespace Chain
       private:
          unsigned int m_id;
          static unsigned int m_id_incrementer;
-   }
+   };
 }
 
 #endif

@@ -8,11 +8,12 @@
 
 #include "DisplayObject.hpp"
 #include "Container.hpp"
+#include "Root.hpp"
 
 namespace Chain 
 {
    //------------------------------------------------ DisplayObject::DisplayObject
-   DisplayObject::DisplayObject() : m_root(0), m_parent(0)
+   DisplayObject::DisplayObject() //: m_root(0), m_parent(0)
    {
       
    }
@@ -29,11 +30,11 @@ namespace Chain
    //------------------------------------------------ DisplayObject::Root
    Root* DisplayObject::Root () const
    {
-      return m_root;
+      return 0;//m_root;
    }
    //------------------------------------------------ DisplayObject::Parent
    Container* DisplayObject::Parent () const
    {
-      return m_parent;
+      return 0;//m_parent;
    }
 }

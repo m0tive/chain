@@ -32,7 +32,7 @@ namespace Chain
          virtual ~Container();
          
          void AddChild (DisplayObject const& child);
-   }
+   };
 }
 
 #endif

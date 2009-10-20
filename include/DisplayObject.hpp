@@ -51,9 +51,9 @@ namespace Chain
          Container* Parent () const;
          
       private:
-         Root* m_root;
-         Container* m_parent;
-   }
+         //Root* m_root;
+         //Container* m_parent;
+   };
 }
 
 #endif

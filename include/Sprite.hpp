@@ -28,7 +28,7 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~Sprite();
-   }
+   };
 }
 
 #endif

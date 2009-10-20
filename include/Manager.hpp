@@ -30,7 +30,7 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~Manager();
-   }
+   };
 }
 
 #endif
