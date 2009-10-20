@@ -22,17 +22,18 @@ namespace Chain
       
    }
    //------------------------------------------------ DisplayObject::IsRoot
-   bool DisplayObject::IsRoot()
+   bool DisplayObject::IsRoot() const
    {
       return false;
    }
    //------------------------------------------------ DisplayObject::Root
-   Root* DisplayObject::Root ()
+   Root* DisplayObject::Root () const
    {
       return m_root;
    }
    //------------------------------------------------ DisplayObject::Parent
-   Container* DisplayObject::Parent (){
+   Container* DisplayObject::Parent () const
+   {
       return m_parent;
    }
 }

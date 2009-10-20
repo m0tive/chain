@@ -24,7 +24,7 @@ namespace Chain
    }
    
    //------------------------------------------------ Object::GetId
-   unsigned int Object::GetId() 
+   unsigned int Object::GetId() const
    {
       return m_id;
    }
