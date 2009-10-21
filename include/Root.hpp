@@ -14,12 +14,14 @@
 #define _Chain_Root_h_
 
 #include "Container.hpp"
-#include "SceneManager.hpp"
+//#include "SceneManager.hpp"
 
 namespace Chain
 {
+   class SceneManager;
+   
    /// \brief The root object of a scene
-   /// \details These are created and managed in Chain::RootManager
+   /// \details These are created and managed in Chain::SceneManager
    class Root : public Container
    {
       friend class SceneManager;

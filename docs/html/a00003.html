@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>FRM: Chain::DisplayObject Class Reference</title>
+<title>Chain: Chain::Container Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,70 +21,55 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00034.html">Chain</a>::<a class="el" href="a00003.html">DisplayObject</a>
+  <div class="navpath"><a class="el" href="a00037.html">Chain</a>::<a class="el" href="a00003.html">Container</a>
   </div>
 </div>
 <div class="contents">
-<h1>Chain::DisplayObject Class Reference</h1><!-- doxytag: class="Chain::DisplayObject" --><!-- doxytag: inherits="Chain::Transform" -->...  
+<h1>Chain::Container Class Reference</h1><!-- doxytag: class="Chain::Container" --><!-- doxytag: inherits="Chain::DisplayObject" -->...  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;<a class="el" href="a00041.html">DisplayObject.hpp</a>&gt;</code>
+<code>#include &lt;<a class="el" href="a00044.html">Container.hpp</a>&gt;</code>
 <p>
 <div class="dynheader">
-Inheritance diagram for Chain::DisplayObject:</div>
+Inheritance diagram for Chain::Container:</div>
 <div class="dynsection">
 
-<p><center><img src="a00003.png" usemap="#Chain::DisplayObject_map" border="0" alt=""></center>
-<map name="Chain::DisplayObject_map">
-<area href="a00011.html" alt="Chain::Transform" shape="rect" coords="77,112,221,136">
-<area href="a00004.html" alt="Chain::EventDispatcher" shape="rect" coords="77,56,221,80">
-<area href="a00007.html" alt="Chain::Object" shape="rect" coords="77,0,221,24">
-<area href="a00002.html" alt="Chain::Container" shape="rect" coords="77,224,221,248">
-<area href="a00005.html" alt="Chain::Instance" shape="rect" coords="0,280,144,304">
-<area href="a00008.html" alt="Chain::Root" shape="rect" coords="154,280,298,304">
-<area href="a00010.html" alt="Chain::Sprite" shape="rect" coords="0,336,144,360">
+<p><center><img src="a00003.png" usemap="#Chain::Container_map" border="0" alt=""></center>
+<map name="Chain::Container_map">
+<area href="a00004.html" alt="Chain::DisplayObject" shape="rect" coords="77,168,221,192">
+<area href="a00012.html" alt="Chain::Transform" shape="rect" coords="77,112,221,136">
+<area href="a00005.html" alt="Chain::EventDispatcher" shape="rect" coords="77,56,221,80">
+<area href="a00008.html" alt="Chain::Object" shape="rect" coords="77,0,221,24">
+<area href="a00006.html" alt="Chain::Instance" shape="rect" coords="0,280,144,304">
+<area href="a00009.html" alt="Chain::Root" shape="rect" coords="154,280,298,304">
+<area href="a00011.html" alt="Chain::Sprite" shape="rect" coords="0,336,144,360">
 </map>
 </div>
 
 <p>
-<a href="a00060.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00065.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#1d5de93ce08fa614f09a7a46dfc7ddd8">~DisplayObject</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#e3554b00093f64151e093cd90f7fc0aa">~Container</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#93ae3c520fb788159e785cc3a5c1dc9a">IsRoot</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#de08f2cebe657538b820f5e0aa264647">AddChild</a> (<a class="el" href="a00004.html">DisplayObject</a> const &amp;child)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a pointer to the root object of the Scene hierarchy.  <a href="#93ae3c520fb788159e785cc3a5c1dc9a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00008.html">Root</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#4c9f5cc5d6579a3de0f480117f9d4e3f">Root</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a pointer to the root object of the scene hierarchy.  <a href="#4c9f5cc5d6579a3de0f480117f9d4e3f"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00002.html">Container</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#f6ae084b8eb12ef04246ddacd6375895">Parent</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a pointer to the parent <a class="el" href="a00002.html" title="...">Chain::Container</a>.  <a href="#f6ae084b8eb12ef04246ddacd6375895"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#846a4a0e6b036b1b67fb3247c3f56147">DisplayObject</a> ()</td></tr>
-
-<tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00008.html">Root</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#5d3b78c9f081ebf5d82fdab9b452f33a">m_root</a></td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00002.html">Container</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#2c2a08446cf44d16790e722225425457">m_parent</a></td></tr>
-
-<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#ee29d97f7e87f0263024133085c28e3d">Container</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00003.html#b23f5c0fdac72e6e8276ac6e3a023395">Container</a> ()</td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 ... 
 <p>
 ... 
-<p>Definition at line <a class="el" href="a00041.html#l00025">25</a> of file <a class="el" href="a00041.html">DisplayObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="a00044.html#l00022">22</a> of file <a class="el" href="a00044.html">Container.hpp</a>.</p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="846a4a0e6b036b1b67fb3247c3f56147"></a><!-- doxytag: member="Chain::DisplayObject::DisplayObject" ref="846a4a0e6b036b1b67fb3247c3f56147" args="()" -->
+<a class="anchor" name="b23f5c0fdac72e6e8276ac6e3a023395"></a><!-- doxytag: member="Chain::Container::Container" ref="b23f5c0fdac72e6e8276ac6e3a023395" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Chain::DisplayObject::DisplayObject           </td>
+          <td class="memname">Chain::Container::Container           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -96,16 +81,16 @@ Inheritance diagram for Chain::DisplayObject:</div>
 
 <p>
 Default Constructor 
-<p>Definition at line <a class="el" href="a00040.html#l00015">15</a> of file <a class="el" href="a00040.html">DisplayObject.cpp</a>.</p>
+<p>Definition at line <a class="el" href="a00043.html#l00014">14</a> of file <a class="el" href="a00043.html">Container.cpp</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="1d5de93ce08fa614f09a7a46dfc7ddd8"></a><!-- doxytag: member="Chain::DisplayObject::~DisplayObject" ref="1d5de93ce08fa614f09a7a46dfc7ddd8" args="()" -->
+<a class="anchor" name="e3554b00093f64151e093cd90f7fc0aa"></a><!-- doxytag: member="Chain::Container::~Container" ref="e3554b00093f64151e093cd90f7fc0aa" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Chain::DisplayObject::~DisplayObject           </td>
+          <td class="memname">Chain::Container::~Container           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -117,90 +102,22 @@ Default Constructor
 
 <p>
 Destructor 
-<p>Definition at line <a class="el" href="a00040.html#l00020">20</a> of file <a class="el" href="a00040.html">DisplayObject.cpp</a>.</p>
+<p>Definition at line <a class="el" href="a00043.html#l00019">19</a> of file <a class="el" href="a00043.html">Container.cpp</a>.</p>
 
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="93ae3c520fb788159e785cc3a5c1dc9a"></a><!-- doxytag: member="Chain::DisplayObject::IsRoot" ref="93ae3c520fb788159e785cc3a5c1dc9a" args="() const " -->
+<a class="anchor" name="de08f2cebe657538b820f5e0aa264647"></a><!-- doxytag: member="Chain::Container::AddChild" ref="de08f2cebe657538b820f5e0aa264647" args="(DisplayObject const &amp;child)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Chain::DisplayObject::IsRoot           </td>
+          <td class="memname">void Chain::Container::AddChild           </td>
           <td>(</td>
-          <td class="paramname">          </td>
+          <td class="paramtype"><a class="el" href="a00004.html">DisplayObject</a> const &amp;&nbsp;</td>
+          <td class="paramname"> <em>child</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get a pointer to the root object of the Scene hierarchy. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>Root* - pointer to the <a class="el" href="a00008.html" title="The root object of a scene.">Chain::Root</a> object, </dd></dl>
-
-<p>Definition at line <a class="el" href="a00040.html#l00025">25</a> of file <a class="el" href="a00040.html">DisplayObject.cpp</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="f6ae084b8eb12ef04246ddacd6375895"></a><!-- doxytag: member="Chain::DisplayObject::Parent" ref="f6ae084b8eb12ef04246ddacd6375895" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00002.html">Container</a> * Chain::DisplayObject::Parent           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get a pointer to the parent <a class="el" href="a00002.html" title="...">Chain::Container</a>. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>Container* - 0 if not part of scene hierarchy (or root) </dd></dl>
-
-<p>Definition at line <a class="el" href="a00040.html#l00035">35</a> of file <a class="el" href="a00040.html">DisplayObject.cpp</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="4c9f5cc5d6579a3de0f480117f9d4e3f"></a><!-- doxytag: member="Chain::DisplayObject::Root" ref="4c9f5cc5d6579a3de0f480117f9d4e3f" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00008.html">Root</a> * Chain::DisplayObject::Root           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get a pointer to the root object of the scene hierarchy. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>Root* - 0 if not part of scene hierarchy (or root) </dd></dl>
-
-<p>Definition at line <a class="el" href="a00040.html#l00030">30</a> of file <a class="el" href="a00040.html">DisplayObject.cpp</a>.</p>
-
-</div>
-</div><p>
-<hr><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" name="ee29d97f7e87f0263024133085c28e3d"></a><!-- doxytag: member="Chain::DisplayObject::Container" ref="ee29d97f7e87f0263024133085c28e3d" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class <a class="el" href="a00002.html">Container</a><code> [friend]</code>          </td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -208,49 +125,14 @@ Get a pointer to the root object of the scene hierarchy.
 
 <p>
 
-<p>Definition at line <a class="el" href="a00041.html#l00029">29</a> of file <a class="el" href="a00041.html">DisplayObject.hpp</a>.</p>
-
-</div>
-</div><p>
-<hr><h2>Member Data Documentation</h2>
-<a class="anchor" name="2c2a08446cf44d16790e722225425457"></a><!-- doxytag: member="Chain::DisplayObject::m_parent" ref="2c2a08446cf44d16790e722225425457" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00002.html">Container</a>* <a class="el" href="a00003.html#2c2a08446cf44d16790e722225425457">Chain::DisplayObject::m_parent</a><code> [private]</code>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>Definition at line <a class="el" href="a00041.html#l00055">55</a> of file <a class="el" href="a00041.html">DisplayObject.hpp</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="5d3b78c9f081ebf5d82fdab9b452f33a"></a><!-- doxytag: member="Chain::DisplayObject::m_root" ref="5d3b78c9f081ebf5d82fdab9b452f33a" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00008.html">Root</a>* <a class="el" href="a00003.html#5d3b78c9f081ebf5d82fdab9b452f33a">Chain::DisplayObject::m_root</a><code> [private]</code>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>Definition at line <a class="el" href="a00041.html#l00054">54</a> of file <a class="el" href="a00041.html">DisplayObject.hpp</a>.</p>
+<p>Definition at line <a class="el" href="a00043.html#l00024">24</a> of file <a class="el" href="a00043.html">Container.cpp</a>.</p>
 
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00041.html">DisplayObject.hpp</a><li><a class="el" href="a00040.html">DisplayObject.cpp</a></ul>
+<li><a class="el" href="a00044.html">Container.hpp</a><li><a class="el" href="a00043.html">Container.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Tue Oct 20 16:55:34 2009 for FRM by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 21 13:50:08 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

@@ -32,11 +32,11 @@ namespace Chain
       
          //---------------------------------------
          /// \details Get the object's unique id
-         unsigned int GetId() const;
+         unsigned long GetId() const;
       
       private:
-         unsigned int m_id;
-         static unsigned int m_id_incrementer;
+         unsigned long m_id;
+         static unsigned long m_id_incrementer;
    };
 }
 

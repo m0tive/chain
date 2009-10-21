@@ -18,6 +18,9 @@
 
 #include "EventDispatcher.hpp"
 
+// Manager classes
+#include "SceneManager.hpp"
+
 namespace Chain
 {
    /// \brief Class to define the main game application.
@@ -39,7 +42,7 @@ namespace Chain
          //---------------------------------------
          /// \details Main application function. 
          /// Calls App::Init(), starts main loop updating App::dt
-         void Run ();
+         virtual void Run ();
       
       private:
          //---------------------------------------
@@ -49,6 +52,9 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~App();
+         
+      public:
+         SceneManager sceneManager;
    };
 }
 
