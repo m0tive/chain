@@ -21,6 +21,7 @@ namespace Chain
    /// \details ...
    class EventDispatcher : public Object
    {
+     DECLARE_CHAIN_CLASS(COb::EventDispatcher,Object,"eventDispatcher")
       protected:
          //---------------------------------------
          /// \details Default Constructor

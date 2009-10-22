@@ -27,6 +27,7 @@ namespace Chain
    /// \details ...
    class SceneManager : public Manager
    {
+     DECLARE_CHAIN_CLASS(COb::SceneManager,Manager,"sceneManager")
       friend class App;
       protected:
          //---------------------------------------

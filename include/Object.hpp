@@ -14,26 +14,43 @@
 #ifndef _Chain_Object_h_
 #define _Chain_Object_h_
 
+#include <string>
+
 namespace Chain
 {
-   struct OType {
-      enum Type {
+  #define DECLARE_CHAIN_CLASS(OBJTYPE,PARENT,TYPENAME)    \
+    public:                                               \
+    static COb::eType GetType () {                        \
+      return OBJTYPE;                                     \
+    };                                                    \
+    static std::string GetTypeName () {                   \
+      return TYPENAME;                                    \
+    };                                                    \
+    static bool IsType (const COb::eType& _type) {        \
+      if(_type != OBJTYPE) return PARENT::IsType(_type);  \
+      else return true;                                   \
+    };
+
+
+   struct COb {
+      enum eType {
          Object=0,
-            App,
-            Manager,
-               RenderManager,
-               SceneManager,
-            RenderLayer,
-            Transform,
-               DisplayObject,
-                  Camera,
-                  Container,
-                     Instance,
-                        Sprite,
-                     Root,
-                  Geometry,
-                     Mesh,
-         
+            EventDispatcher,
+              App,
+              Manager,
+                 RenderManager,
+                 SceneManager,
+              RenderLayer,
+              Transform,
+                 DisplayObject,
+                    Camera,
+                    Container,
+                       Instance,
+                          Sprite,
+                       Root,
+                    Geometry,
+                       Mesh,
+           
          Last,
          Max=0xFFFF
       };
@@ -44,13 +61,28 @@ namespace Chain
    class Object 
    {
       public:
-         virtual unsigned int GetType () const
-         {
-            return OType::App;
-         }
-         
-         /*OType::Type */
-      
+        // -----------------------------------
+        /// \brief Get the Chain::COb type of the object
+        /// \returns COb::eType - The object's type
+        static COb::eType GetType () {
+          return COb::Object;
+        };
+        // -----------------------------------
+        /// \brief Get the Chain::COb type as a string
+        /// \returns std::string - The object's type
+        static std::string GetTypeName () {
+          return "object";
+        };
+        // -----------------------------------
+        /// \brief Test if a class is of a certain type, or derived from that type.
+        /// \details This function looks down the class hierarchy for the class type.
+        /// \param _type - Chain::COb type being checked against
+        /// \returns bool - True if part of type
+        static bool IsType(const COb::eType& _type) {
+          return (_type == COb::Object);
+        }
+
+
       protected:
          //---------------------------------------
          /// \details Default Constructor
