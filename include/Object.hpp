@@ -16,10 +16,41 @@
 
 namespace Chain
 {
+   struct OType {
+      enum Type {
+         Object=0,
+            App,
+            Manager,
+               RenderManager,
+               SceneManager,
+            RenderLayer,
+            Transform,
+               DisplayObject,
+                  Camera,
+                  Container,
+                     Instance,
+                        Sprite,
+                     Root,
+                  Geometry,
+                     Mesh,
+         
+         Last,
+         Max=0xFFFF
+      }
+   }
+   
    /// \brief ...
    /// \details ...
    class Object 
    {
+      public:
+         virtual unsigned int GetType () const;
+         {
+            return OType::App;
+         }
+         
+         /*OType::Type */
+      
       protected:
          //---------------------------------------
          /// \details Default Constructor

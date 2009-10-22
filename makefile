@@ -30,7 +30,7 @@ ifeq "$(BUILD)" "debug"
 FLAGS += -g
 DEFINES += -D_DEBUG
 LIBS +=
-OBJDIR := obj/Debug
+OBJDIR := $(ROOT)/obj/Debug
 TARGET := lib$(NAME)_Debug.a
 
 else ## Non-debug setup
@@ -38,7 +38,7 @@ else ## Non-debug setup
 FLAGS +=
 DEFINES += -DNDEBUG
 LIBS +=
-OBJDIR := obj/Release
+OBJDIR := $(ROOT)/obj/Release
 TARGET := lib$(NAME).a
 
 endif

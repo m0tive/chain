@@ -15,7 +15,6 @@
 
 #include "Manager.hpp"
 #include "DisplayObject.hpp"
-#include "Container.hpp"
 #include "Root.hpp"
 
 #include <vector>
@@ -42,15 +41,17 @@ namespace Chain
          /// \return Root* - Pointer to the scene's root
          virtual Root * NewScene ();
          //---------------------------------------
-         /// \brief Create a new scene hierarchy
+         /// \brief Delete a scene hierarchy
          /// \param root Pointer to the scene's root
+         /// \param recursive true to also delete all the children of \c root
          /// \return std::vector<Container*> - Children of the root, empty if \c recursive is true
-         std::vector<DisplayObject* > DeleteScene (Root * root, bool recursive = false);
+         std::vector<DisplayObject* > DeleteScene (Root * root, bool recursive = true);
          //---------------------------------------
          /// \brief Delete a Chain::Container safely
-         /// \param cont Chain::Container to be deleted
+         /// \param cont Chain::DisplayObject to be deleted
+         /// \param recursive true to also delete all the children of \c cont
          /// \return std::vector<Container*> - Children of the container, empty if \c recursive is true
-         std::vector<DisplayObject* > DeleteContainer (Container * cont, bool recursive = false);
+         std::vector<DisplayObject* > DeleteDisplayObject (DisplayObject * obj, bool recursive = false);
          
       protected:
          /// \brief Pointer to scene roots

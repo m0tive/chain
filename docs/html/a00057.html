@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: SceneManager.cpp Source File</title>
+<title>Chain: DisplayObject.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -20,7 +20,7 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>SceneManager.cpp</h1><a href="a00031.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<h1>DisplayObject.cpp</h1><a href="a00023.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 
@@ -28,47 +28,40 @@
 <a name="l00006"></a>00006 
 <a name="l00007"></a>00007 <span class="comment">//------------------------------------------------------------------------------</span>
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="a00032.html">SceneManager.hpp</a>"</span>
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">namespace </span>Chain 
-<a name="l00012"></a>00012 {
-<a name="l00013"></a>00013    <span class="comment">//------------------------------------------------ SceneManager::SceneManager</span>
-<a name="l00014"></a><a class="code" href="a00010.html#5d116ce0eb28bcd9a59a5a189f53965b">00014</a>    <a class="code" href="a00010.html#5d116ce0eb28bcd9a59a5a189f53965b">SceneManager::SceneManager</a>()
-<a name="l00015"></a>00015    {
-<a name="l00016"></a>00016       
-<a name="l00017"></a>00017    }
-<a name="l00018"></a>00018    <span class="comment">//------------------------------------------------ SceneManager::~SceneManager</span>
-<a name="l00019"></a><a class="code" href="a00010.html#76926786c1dbaf04ec30f2f09e76acf1">00019</a>    <a class="code" href="a00010.html#76926786c1dbaf04ec30f2f09e76acf1">SceneManager::~SceneManager</a>()
-<a name="l00020"></a>00020    {
-<a name="l00021"></a>00021       
-<a name="l00022"></a>00022    }
-<a name="l00023"></a>00023    <span class="comment">//------------------------------------------------ SceneManager::NewScene</span>
-<a name="l00024"></a><a class="code" href="a00010.html#50bb1d742bca8f7db49fd4b71109dc2e">00024</a>    <a class="code" href="a00009.html" title="The root object of a scene.">Root</a> * <a class="code" href="a00010.html#50bb1d742bca8f7db49fd4b71109dc2e" title="Create a new scene hierarchy.">SceneManager::NewScene</a> ()
-<a name="l00025"></a>00025    {
-<a name="l00026"></a>00026       <a class="code" href="a00010.html#3f4451878fdd3b504cca1d6a69f54f77" title="Pointer to scene roots.">m_scenes</a>.push_back(<span class="keyword">new</span> <a class="code" href="a00009.html" title="The root object of a scene.">Root</a>());
-<a name="l00027"></a>00027       <span class="comment">// TODO some setup</span>
-<a name="l00028"></a>00028       <span class="keywordflow">return</span> <a class="code" href="a00010.html#3f4451878fdd3b504cca1d6a69f54f77" title="Pointer to scene roots.">m_scenes</a>.back();
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="a00024.html">DisplayObject.hpp</a>"</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="a00022.html">Container.hpp</a>"</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include "<a class="code" href="a00042.html">Root.hpp</a>"</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="keyword">namespace </span>Chain 
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015    <span class="comment">//------------------------------------------------ DisplayObject::DisplayObject</span>
+<a name="l00016"></a><a class="code" href="a00004.html#846a4a0e6b036b1b67fb3247c3f56147">00016</a>    <a class="code" href="a00004.html#846a4a0e6b036b1b67fb3247c3f56147">DisplayObject::DisplayObject</a>() <span class="comment">//: m_root(0), m_parent(0)</span>
+<a name="l00017"></a>00017    {
+<a name="l00018"></a>00018       
+<a name="l00019"></a>00019    }
+<a name="l00020"></a>00020    <span class="comment">//------------------------------------------------ DisplayObject::~DisplayObject</span>
+<a name="l00021"></a><a class="code" href="a00004.html#1d5de93ce08fa614f09a7a46dfc7ddd8">00021</a>    <a class="code" href="a00004.html#1d5de93ce08fa614f09a7a46dfc7ddd8">DisplayObject::~DisplayObject</a>()
+<a name="l00022"></a>00022    {
+<a name="l00023"></a>00023       
+<a name="l00024"></a>00024    }
+<a name="l00025"></a>00025    <span class="comment">//------------------------------------------------ DisplayObject::IsRoot</span>
+<a name="l00026"></a><a class="code" href="a00004.html#93ae3c520fb788159e785cc3a5c1dc9a">00026</a>    <span class="keywordtype">bool</span> <a class="code" href="a00004.html#93ae3c520fb788159e785cc3a5c1dc9a" title="Get a pointer to the root object of the Scene hierarchy.">DisplayObject::IsRoot</a>()<span class="keyword"> const</span>
+<a name="l00027"></a>00027 <span class="keyword">   </span>{
+<a name="l00028"></a>00028       <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00029"></a>00029    }
-<a name="l00030"></a>00030    <span class="comment">//------------------------------------------------ SceneManager::DeleteScene</span>
-<a name="l00031"></a><a class="code" href="a00010.html#fcfa1023fbe227f407e6b3f8e985bb74">00031</a>    std::vector&lt;Container* &gt; <a class="code" href="a00010.html#fcfa1023fbe227f407e6b3f8e985bb74" title="Create a new scene hierarchy.">SceneManager::DeleteScene</a> (<a class="code" href="a00009.html" title="The root object of a scene.">Root</a> * root, <span class="keywordtype">bool</span> recursive = <span class="keyword">false</span>)
-<a name="l00032"></a>00032    {
-<a name="l00033"></a>00033       std::vector&lt;Container* &gt; children;
-<a name="l00034"></a>00034       <span class="keywordflow">if</span>(recursive)
-<a name="l00035"></a>00035          children = root-&gt;children;
-<a name="l00036"></a>00036       
-<a name="l00037"></a>00037       <a class="code" href="a00010.html#87847d2f1a86fa7a9eb0ef8412a38d88" title="Delete a Chain::Container safely.">DeleteContainer</a>(root,recursive);
-<a name="l00038"></a>00038       
-<a name="l00039"></a>00039       <span class="keywordflow">return</span> children;
-<a name="l00040"></a>00040    }
-<a name="l00041"></a>00041    <span class="comment">//------------------------------------------------ SceneManager::DeleteContainer</span>
-<a name="l00042"></a><a class="code" href="a00010.html#87847d2f1a86fa7a9eb0ef8412a38d88">00042</a>    std::vector&lt;Container* &gt; <a class="code" href="a00010.html#87847d2f1a86fa7a9eb0ef8412a38d88" title="Delete a Chain::Container safely.">SceneManager::DeleteContainer</a> (<a class="code" href="a00003.html" title="...">Container</a> * cont, <span class="keywordtype">bool</span> recursive = <span class="keyword">false</span>)
-<a name="l00043"></a>00043    {
-<a name="l00044"></a>00044       <span class="comment">// TODO</span>
-<a name="l00045"></a>00045       <span class="keywordflow">return</span> std::vector&lt;Container* &gt;;
-<a name="l00046"></a>00046    }
-<a name="l00047"></a>00047 }
+<a name="l00030"></a>00030    <span class="comment">//------------------------------------------------ DisplayObject::Root</span>
+<a name="l00031"></a><a class="code" href="a00004.html#82306cfa1a7ffec3c7c98abe10a719b3">00031</a>    <a class="code" href="a00013.html" title="The root object of a scene.">Root</a>* <a class="code" href="a00004.html#82306cfa1a7ffec3c7c98abe10a719b3" title="Get a pointer to the root object of the scene hierarchy.">DisplayObject::SceneRoot</a> ()<span class="keyword"> const</span>
+<a name="l00032"></a>00032 <span class="keyword">   </span>{
+<a name="l00033"></a>00033       <span class="keywordflow">return</span> 0;<span class="comment">//m_root;</span>
+<a name="l00034"></a>00034    }
+<a name="l00035"></a>00035    <span class="comment">//------------------------------------------------ DisplayObject::Parent</span>
+<a name="l00036"></a><a class="code" href="a00004.html#f6ae084b8eb12ef04246ddacd6375895">00036</a>    <a class="code" href="a00003.html" title="...">Container</a>* <a class="code" href="a00004.html#f6ae084b8eb12ef04246ddacd6375895" title="Get a pointer to the parent Chain::Container.">DisplayObject::Parent</a> ()<span class="keyword"> const</span>
+<a name="l00037"></a>00037 <span class="keyword">   </span>{
+<a name="l00038"></a>00038       <span class="keywordflow">return</span> 0;<span class="comment">//m_parent;</span>
+<a name="l00039"></a>00039    }
+<a name="l00040"></a>00040 }
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 21 13:50:08 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Thu Oct 22 15:08:27 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

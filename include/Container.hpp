@@ -19,20 +19,22 @@
 
 namespace Chain
 {
+   class SceneManager;
+   
    /// \brief ...
    /// \details ...
    class Container : public DisplayObject
    {
+      friend class SceneManager;
       protected:
          //---------------------------------------
          /// \details Default Constructor
          Container();
-         
-      public:
          //---------------------------------------
          /// \details Destructor
          virtual ~Container();
          
+      public:
          void AddChild (DisplayObject const& child);
          
          std::vector<DisplayObject* > children;

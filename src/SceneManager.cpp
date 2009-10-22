@@ -31,18 +31,29 @@ namespace Chain
    std::vector<DisplayObject* > SceneManager::DeleteScene (Root * root, bool recursive)
    {
       std::vector<DisplayObject* > children;
-      if(recursive)
+      if(!recursive)
          children = root->children;
       
-      DeleteContainer(root,recursive);
+      DeleteDisplayObject(static_cast<DisplayObject* >(root),recursive);
       
       return children;
    }
-   //------------------------------------------------ SceneManager::DeleteContainer
-   std::vector<DisplayObject* > SceneManager::DeleteContainer (Container * cont, bool recursive)
+   //------------------------------------------------ SceneManager::DeleteDisplayObject
+   std::vector<DisplayObject* > SceneManager::DeleteDisplayObject (DisplayObject * obj, bool recursive)
    {
       std::vector<DisplayObject* > children;
-      // TODO
+      Container* cont;
+      // If not recursive
+      if(0){ /* check obj is a container */
+         cont = static_cast<Container* >(obj);
+         children = cont->children;
+         if(recursive){
+            
+         }
+      }
+      
+      // TODO Delete the object
+      
       return children;
    }
 }
