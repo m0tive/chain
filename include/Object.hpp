@@ -36,15 +36,15 @@ namespace Chain
          
          Last,
          Max=0xFFFF
-      }
-   }
+      };
+   };
    
    /// \brief ...
    /// \details ...
    class Object 
    {
       public:
-         virtual unsigned int GetType () const;
+         virtual unsigned int GetType () const
          {
             return OType::App;
          }
