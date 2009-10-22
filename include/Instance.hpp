@@ -1,4 +1,4 @@
-/// \file Instance.cpp
+/// \file Instance.hpp
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds

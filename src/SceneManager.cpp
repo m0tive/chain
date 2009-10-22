@@ -13,7 +13,7 @@ namespace Chain
    //------------------------------------------------ SceneManager::SceneManager
    SceneManager::SceneManager()
    {
-      
+
    }
    //------------------------------------------------ SceneManager::~SceneManager
    SceneManager::~SceneManager()

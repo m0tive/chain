@@ -171,6 +171,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\ScriptManager.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\src\Sprite.cpp"
 				>
 			</File>
@@ -218,6 +222,10 @@
 			</File>
 			<File
 				RelativePath=".\include\SceneManager.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\include\ScriptManager.hpp"
 				>
 			</File>
 			<File

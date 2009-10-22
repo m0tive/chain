@@ -11,3 +11,4 @@
 *GraphicsLib*
 *.lib
 *.a
+./include/lua
