@@ -44,7 +44,7 @@ namespace Chain
          //---------------------------------------
          /// \brief Get a pointer to the root object of the scene hierarchy
          /// \return Root* - 0 if not part of scene hierarchy (or root)
-         Root* Root () const;
+         Root* SceneRoot () const;
          //---------------------------------------
          /// \brief Get a pointer to the parent Chain::Container
          /// \return Container* - 0 if not part of scene hierarchy (or root)

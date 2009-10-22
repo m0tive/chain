@@ -28,7 +28,7 @@ namespace Chain
       return false;
    }
    //------------------------------------------------ DisplayObject::Root
-   Root* DisplayObject::Root () const
+   Root* DisplayObject::SceneRoot () const
    {
       return 0;//m_root;
    }

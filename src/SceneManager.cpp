@@ -28,9 +28,9 @@ namespace Chain
       return m_scenes.back();
    }
    //------------------------------------------------ SceneManager::DeleteScene
-   std::vector<Container* > SceneManager::DeleteScene (Root * root, bool recursive = false)
+   std::vector<DisplayObject* > SceneManager::DeleteScene (Root * root, bool recursive)
    {
-      std::vector<Container* > children;
+      std::vector<DisplayObject* > children;
       if(recursive)
          children = root->children;
       
@@ -39,9 +39,10 @@ namespace Chain
       return children;
    }
    //------------------------------------------------ SceneManager::DeleteContainer
-   std::vector<Container* > SceneManager::DeleteContainer (Container * cont, bool recursive = false)
+   std::vector<DisplayObject* > SceneManager::DeleteContainer (Container * cont, bool recursive)
    {
+      std::vector<DisplayObject* > children;
       // TODO
-      return std::vector<Container* >;
+      return children;
    }
 }

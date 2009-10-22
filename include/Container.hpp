@@ -15,6 +15,8 @@
 
 #include "DisplayObject.hpp"
 
+#include <vector>
+
 namespace Chain
 {
    /// \brief ...
@@ -32,6 +34,8 @@ namespace Chain
          virtual ~Container();
          
          void AddChild (DisplayObject const& child);
+         
+         std::vector<DisplayObject* > children;
    };
 }
 
