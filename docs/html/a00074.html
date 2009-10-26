@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: RenderManager.hpp Source File</title>
+<title>Chain: Log.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -20,7 +20,7 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>RenderManager.hpp</h1><a href="a00040.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<h1>Log.hpp</h1><a href="a00036.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 
@@ -32,27 +32,62 @@
 <a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">   #pragma once</span>
 <a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
 <a name="l00012"></a>00012 <span class="preprocessor"></span>
-<a name="l00013"></a>00013 <span class="preprocessor">#ifndef _Chain_RenderManager_h_</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define _Chain_RenderManager_h_</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#ifndef _Chain_Logger_h_</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define _Chain_Logger_h_</span>
 <a name="l00015"></a>00015 <span class="preprocessor"></span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="a00032.html">Manager.hpp</a>"</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>Chain
-<a name="l00019"></a>00019 {
-<a name="l00022"></a><a class="code" href="a00012.html">00022</a>    <span class="keyword">class </span><a class="code" href="a00012.html" title="...">RenderManager</a> : <span class="keyword">public</span> <a class="code" href="a00008.html" title="...">Manager</a>
-<a name="l00023"></a>00023    {
-<a name="l00024"></a>00024       <span class="keyword">protected</span>:
-<a name="l00025"></a>00025          <span class="comment">//---------------------------------------</span>
-<a name="l00027"></a>00027 <span class="comment"></span>         <a class="code" href="a00012.html#6fc330747365cd9c956f9b2bf3c0c579">RenderManager</a>();
-<a name="l00028"></a>00028       <span class="keyword">public</span>:
-<a name="l00029"></a>00029          <span class="comment">//---------------------------------------</span>
-<a name="l00031"></a>00031 <span class="comment"></span>         <span class="keyword">virtual</span> <a class="code" href="a00012.html#69bc40c166672c3a79e23dbf33445b18">~RenderManager</a>();
-<a name="l00032"></a>00032    };
-<a name="l00033"></a>00033 }
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="preprocessor">#endif</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="a00030.html">EventDispatcher.hpp</a>"</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>Chain
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021 <span class="preprocessor">   #ifdef _DEBUG</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span><span class="preprocessor">      #ifndef DOUT</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">         #define DOUT std::cout &lt;&lt; "&gt;&gt; " &lt;&lt; __FILE__ &lt;&lt; " (" &lt;&lt; __LINE__ &lt;&lt; "): "</span>
+<a name="l00024"></a>00024 <span class="preprocessor"></span><span class="preprocessor">      #endif</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span>
+<a name="l00026"></a>00026 <span class="preprocessor">      #ifndef DERR</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">         #define DERR std::cerr &lt;&lt; "&gt;&gt; " &lt;&lt; __FILE__ &lt;&lt; " (" &lt;&lt; __LINE__ &lt;&lt; "): "</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span><span class="preprocessor">      #endif</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span><span class="preprocessor">   #else</span>
+<a name="l00030"></a><a class="code" href="a00036.html#0b93cd51079c0fa8e21ee4faf2da1a27">00030</a> <span class="preprocessor"></span><span class="preprocessor">      #define DOUT</span>
+<a name="l00031"></a><a class="code" href="a00036.html#6a49e20215e82bf0117864b0d673c0ed">00031</a> <span class="preprocessor"></span><span class="preprocessor">      #define DERR</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span><span class="preprocessor">   #endif</span>
+<a name="l00033"></a>00033 <span class="preprocessor"></span>   
+<a name="l00034"></a>00034    <span class="keyword">class </span>Logger;
+<a name="l00035"></a>00035    
+<a name="l00038"></a><a class="code" href="a00009.html">00038</a>    <span class="keyword">class </span><a class="code" href="a00009.html" title="...">Log</a> : <span class="keyword">public</span> <a class="code" href="a00006.html" title="...">EventDispatcher</a> {
+<a name="l00039"></a>00039      <a class="code" href="a00042.html#ea2814fa4df16226353440db8e8d7290">DECLARE_CHAIN_CLASS</a>(<a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727f85e31c2ec3d89cd409ab1653a0c62e2">COb::Log</a>,<a class="code" href="a00006.html" title="...">EventDispatcher</a>,<span class="stringliteral">"log"</span>)
+<a name="l00040"></a><a class="code" href="a00009.html#ff02b76416d2846736b7ecd798921a0a">00040</a>       friend class <a class="code" href="a00010.html" title="Interface to Chain::Log.">Logger</a>;
+<a name="l00041"></a>00041       private:
+<a name="l00042"></a>00042          <span class="comment">//---------------------------------------</span>
+<a name="l00044"></a><a class="code" href="a00009.html#781b4f0bc8a1239fcf3638976ab61732">00044</a> <span class="comment"></span>         <a class="code" href="a00009.html" title="...">Log</a>() {}
+<a name="l00045"></a>00045          <span class="comment">//---------------------------------------</span>
+<a name="l00047"></a><a class="code" href="a00009.html#31981393bc3fa0e6ce2f4c759bef2b23">00047</a> <span class="comment"></span>         <span class="keyword">virtual</span> <a class="code" href="a00009.html#31981393bc3fa0e6ce2f4c759bef2b23">~Log</a>() {}
+<a name="l00048"></a>00048       
+<a name="l00049"></a>00049       <span class="keyword">public</span>:
+<a name="l00050"></a>00050          <span class="comment">//Log * Instance () {return th}</span>
+<a name="l00051"></a>00051    };
+<a name="l00052"></a>00052    
+<a name="l00055"></a><a class="code" href="a00010.html">00055</a>    <span class="keyword">class </span><a class="code" href="a00010.html" title="Interface to Chain::Log.">Logger</a>
+<a name="l00056"></a>00056    {
+<a name="l00057"></a>00057       <span class="keyword">public</span>:
+<a name="l00058"></a>00058          <span class="comment">//---------------------------------------</span>
+<a name="l00060"></a><a class="code" href="a00010.html#33fca7037948ac8e0dd1d950b6379069">00060</a> <span class="comment"></span>         <a class="code" href="a00010.html#33fca7037948ac8e0dd1d950b6379069">Logger</a>() {}
+<a name="l00061"></a>00061          <span class="comment">//---------------------------------------</span>
+<a name="l00063"></a><a class="code" href="a00010.html#95d1e6d4814766a10e457736414c9e73">00063</a> <span class="comment"></span>         <span class="keyword">virtual</span> <a class="code" href="a00010.html#95d1e6d4814766a10e457736414c9e73">~Logger</a>() {}
+<a name="l00064"></a>00064          
+<a name="l00065"></a>00065       <span class="keyword">protected</span>:
+<a name="l00066"></a><a class="code" href="a00010.html#0220d8b9af28d5e6f9ff417ab8136e02">00066</a>          <a class="code" href="a00009.html" title="...">Log</a> * <a class="code" href="a00010.html#0220d8b9af28d5e6f9ff417ab8136e02">m_log</a>;
+<a name="l00067"></a>00067    };
+<a name="l00068"></a>00068    
+<a name="l00069"></a>00069    <span class="keyword">extern</span> <a class="code" href="a00010.html" title="Interface to Chain::Log.">Logger</a> <a class="code" href="a00057.html#3f8b13a4928a05d2f51b255a264d171d">log</a>;
+<a name="l00070"></a>00070    <span class="keyword">extern</span> <a class="code" href="a00010.html" title="Interface to Chain::Log.">Logger</a> <a class="code" href="a00057.html#63eff10a192af3ce7e80d3062e6e6e07">lwar</a>;
+<a name="l00071"></a>00071    <span class="keyword">extern</span> <a class="code" href="a00010.html" title="Interface to Chain::Log.">Logger</a> <a class="code" href="a00057.html#487e5dc85c6760866debdd9932265f71">lerr</a>;
+<a name="l00072"></a>00072 }
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Thu Oct 22 15:08:27 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Oct 26 11:56:49 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

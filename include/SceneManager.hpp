@@ -49,7 +49,7 @@ namespace Chain
          std::vector<DisplayObject* > DeleteScene (Root * root, bool recursive = true);
          //---------------------------------------
          /// \brief Delete a Chain::Container safely
-         /// \param cont Chain::DisplayObject to be deleted
+         /// \param obj Chain::DisplayObject to be deleted
          /// \param recursive true to also delete all the children of \c cont
          /// \return std::vector<Container*> - Children of the container, empty if \c recursive is true
          std::vector<DisplayObject* > DeleteDisplayObject (DisplayObject * obj, bool recursive = false);

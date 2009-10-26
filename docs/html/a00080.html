@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: Sprite.hpp Source File</title>
+<title>Chain: Object.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -20,38 +20,104 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>Sprite.hpp</h1><a href="a00046.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<h1>Object.hpp</h1><a href="a00042.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 
 <a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="comment">//------------------------------------------------------------------------------</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">   #pragma once</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00012"></a>00012 <span class="preprocessor"></span>
-<a name="l00013"></a>00013 <span class="preprocessor">#ifndef _Chain_Sprite_h_</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define _Chain_Sprite_h_</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="a00030.html">Instance.hpp</a>"</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>Chain
-<a name="l00019"></a>00019 {
-<a name="l00022"></a><a class="code" href="a00015.html">00022</a>    <span class="keyword">class </span><a class="code" href="a00015.html" title="...">Sprite</a> : <span class="keyword">public</span> <a class="code" href="a00007.html" title="...">Instance</a>
-<a name="l00023"></a>00023    {
-<a name="l00024"></a>00024       <span class="keyword">public</span>:
-<a name="l00025"></a>00025          <span class="comment">//---------------------------------------</span>
-<a name="l00027"></a>00027 <span class="comment"></span>         <a class="code" href="a00015.html#c71d62b8491521cdf8f16f3c9587cdab">Sprite</a>();
-<a name="l00028"></a>00028          <span class="comment">//---------------------------------------</span>
-<a name="l00030"></a>00030 <span class="comment"></span>         <span class="keyword">virtual</span> <a class="code" href="a00015.html#863574eb37083bedd0939484d8fe390c">~Sprite</a>();
-<a name="l00031"></a>00031    };
-<a name="l00032"></a>00032 }
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="preprocessor">#endif</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="comment">//------------------------------------------------------------------------------</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">   #pragma once</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#ifndef _Chain_Object_h_</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define _Chain_Object_h_</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span>
+<a name="l00017"></a><a class="code" href="a00042.html#527b0baffaf90ebb36ba551bcc942742">00017</a> <span class="preprocessor">#define __Chain</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="keyword">namespace </span>Chain
+<a name="l00022"></a>00022 {
+<a name="l00023"></a><a class="code" href="a00042.html#ea2814fa4df16226353440db8e8d7290">00023</a> <span class="preprocessor">  #define DECLARE_CHAIN_CLASS(OBJTYPE,PARENT,TYPENAME)    \</span>
+<a name="l00024"></a>00024 <span class="preprocessor">    public:                                               \</span>
+<a name="l00025"></a>00025 <span class="preprocessor">    static COb::eType GetType () {                        \</span>
+<a name="l00026"></a>00026 <span class="preprocessor">      return OBJTYPE;                                     \</span>
+<a name="l00027"></a>00027 <span class="preprocessor">    };                                                    \</span>
+<a name="l00028"></a>00028 <span class="preprocessor">    static std::string GetTypeName () {                   \</span>
+<a name="l00029"></a>00029 <span class="preprocessor">      return TYPENAME;                                    \</span>
+<a name="l00030"></a>00030 <span class="preprocessor">    };                                                    \</span>
+<a name="l00031"></a>00031 <span class="preprocessor">    static bool IsType (const COb::eType&amp; _type) {        \</span>
+<a name="l00032"></a>00032 <span class="preprocessor">      if(_type != OBJTYPE) return PARENT::IsType(_type);  \</span>
+<a name="l00033"></a>00033 <span class="preprocessor">      else return true;                                   \</span>
+<a name="l00034"></a>00034 <span class="preprocessor">    };</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span>
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="a00003.html">00037</a>    <span class="keyword">struct </span><a class="code" href="a00003.html">COb</a> {
+<a name="l00038"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727">00038</a>       <span class="keyword">enum</span> <a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727">eType</a> {
+<a name="l00039"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d17275babfc18875dca42812ab5dad91827d6">00039</a>          <a class="code" href="a00013.html" title="...">Object</a>=0,
+<a name="l00040"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d172727d3e3be65820af99a696104f18edba4">00040</a>             <a class="code" href="a00006.html" title="...">EventDispatcher</a>,
+<a name="l00041"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727f85e31c2ec3d89cd409ab1653a0c62e2">00041</a>               <a class="code" href="a00009.html" title="...">Log</a>,
+<a name="l00042"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727771559b641830ed60177d925d832758f">00042</a>               <a class="code" href="a00001.html" title="Class to define the main game application.">App</a>,
+<a name="l00043"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727ed6a6f627c3ebb5ee83db5e5755f348c">00043</a>               <a class="code" href="a00011.html" title="...">Manager</a>,
+<a name="l00044"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727a44285b08024529d301fb2c3b120b6eb">00044</a>                  <a class="code" href="a00015.html" title="...">RenderManager</a>,
+<a name="l00045"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727d3dc6ec7eb4aab6ac1f3a622e1abfa58">00045</a>                  <a class="code" href="a00017.html" title="...">SceneManager</a>,
+<a name="l00046"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727922d4164be8c71feb0e80e234e8734a1">00046</a>               <a class="code" href="a00014.html" title="...">RenderLayer</a>,
+<a name="l00047"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d17271c2257b836d40486e6f934773d0f7474">00047</a>               <a class="code" href="a00020.html" title="...">Transform</a>,
+<a name="l00048"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d172786f3e9c03616da068d6d36c857f9b9c7">00048</a>                  <a class="code" href="a00005.html" title="...">DisplayObject</a>,
+<a name="l00049"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727305796d8968da61af89c49ccb04fb447">00049</a>                     <a class="code" href="a00002.html" title="...">Camera</a>,
+<a name="l00050"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d172719ed5ab4a364b7fbfb3731337752afe0">00050</a>                     <a class="code" href="a00004.html" title="...">Container</a>,
+<a name="l00051"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d172723252c433b360c2f457d62bbf29f988c">00051</a>                        <a class="code" href="a00008.html" title="...">Instance</a>,
+<a name="l00052"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727fc0b7a406d5fa772a969e13811b4f54d">00052</a>                           <a class="code" href="a00019.html" title="...">Sprite</a>,
+<a name="l00053"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d172786d23ccd1e7796f43e9f5e3f11112e0b">00053</a>                        <a class="code" href="a00016.html" title="The root object of a scene.">Root</a>,
+<a name="l00054"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727a58efd2317bdda9ad2af827fe57a8441">00054</a>                     <a class="code" href="a00007.html" title="...">Geometry</a>,
+<a name="l00055"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d17275d2d62e860be90e7632dab690c41cf9f">00055</a>                        <a class="code" href="a00012.html" title="...">Mesh</a>,
+<a name="l00056"></a>00056            
+<a name="l00057"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d17279bf607ff1f93437dc7b0bd3b629208b9">00057</a>          <a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d17279bf607ff1f93437dc7b0bd3b629208b9">Last</a>,
+<a name="l00058"></a><a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727915d75cba5605a75277f8afc94c3978d">00058</a>          <a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727915d75cba5605a75277f8afc94c3978d">Max</a>=0xFFFF
+<a name="l00059"></a>00059       };
+<a name="l00060"></a>00060    };
+<a name="l00061"></a>00061    
+<a name="l00064"></a><a class="code" href="a00013.html">00064</a>    <span class="keyword">class </span><a class="code" href="a00013.html" title="...">Object</a> 
+<a name="l00065"></a>00065    {
+<a name="l00066"></a>00066       <span class="keyword">public</span>:
+<a name="l00067"></a>00067         <span class="comment">// -----------------------------------</span>
+<a name="l00070"></a><a class="code" href="a00013.html#7a1fa2b2c612057e6111d9c1ce044437">00070</a> <span class="comment"></span>        <span class="keyword">static</span> <a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727">COb::eType</a> <a class="code" href="a00013.html#7a1fa2b2c612057e6111d9c1ce044437" title="Get the Chain::COb type of the object.">GetType</a> () {
+<a name="l00071"></a>00071           <span class="keywordflow">return</span> <a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d17275babfc18875dca42812ab5dad91827d6">COb::Object</a>;
+<a name="l00072"></a>00072         };
+<a name="l00073"></a>00073         <span class="comment">// -----------------------------------</span>
+<a name="l00076"></a><a class="code" href="a00013.html#1e3ce0737c6088aa725147fd6cb9116c">00076</a> <span class="comment"></span>        <span class="keyword">static</span> std::string <a class="code" href="a00013.html#1e3ce0737c6088aa725147fd6cb9116c" title="Get the Chain::COb type as a string.">GetTypeName</a> () {
+<a name="l00077"></a>00077           <span class="keywordflow">return</span> <span class="stringliteral">"object"</span>;
+<a name="l00078"></a>00078         };
+<a name="l00079"></a>00079         <span class="comment">// -----------------------------------</span>
+<a name="l00084"></a><a class="code" href="a00013.html#83e6c01c692e602cee0c9240cc910ce5">00084</a> <span class="comment"></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="a00013.html#83e6c01c692e602cee0c9240cc910ce5" title="Test if a class is of a certain type, or derived from that type.">IsType</a>(<span class="keyword">const</span> <a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d1727">COb::eType</a>&amp; _type) {
+<a name="l00085"></a>00085           <span class="keywordflow">return</span> (_type == <a class="code" href="a00003.html#05c492249d4fb9d5eebcda5b081d17275babfc18875dca42812ab5dad91827d6">COb::Object</a>);
+<a name="l00086"></a>00086         }
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089       <span class="keyword">protected</span>:
+<a name="l00090"></a>00090          <span class="comment">//---------------------------------------</span>
+<a name="l00092"></a>00092 <span class="comment"></span>         <a class="code" href="a00013.html#747708c9db6db03409cfc9d388ec3bfb">Object</a>();
+<a name="l00093"></a>00093          
+<a name="l00094"></a>00094       <span class="keyword">public</span>:
+<a name="l00095"></a>00095          <span class="comment">//---------------------------------------</span>
+<a name="l00097"></a>00097 <span class="comment"></span>         <span class="keyword">virtual</span> <a class="code" href="a00013.html#e3b51cbc660fddb651e5c921b0ea4174">~Object</a>();
+<a name="l00098"></a>00098       
+<a name="l00099"></a>00099          <span class="comment">//---------------------------------------</span>
+<a name="l00101"></a>00101 <span class="comment"></span>         <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="a00013.html#9e57f4a82e9482735860384b6810338a">GetId</a>() <span class="keyword">const</span>;
+<a name="l00102"></a>00102       
+<a name="l00103"></a>00103       <span class="keyword">private</span>:
+<a name="l00104"></a><a class="code" href="a00013.html#a4bb3966aaec5a723592c5cfa73342a0">00104</a>          <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="a00013.html#a4bb3966aaec5a723592c5cfa73342a0">m_id</a>;
+<a name="l00105"></a><a class="code" href="a00013.html#40a5faa03ca04e1ee0f758771deb8526">00105</a>          <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="a00013.html#40a5faa03ca04e1ee0f758771deb8526">m_id_incrementer</a>;
+<a name="l00106"></a>00106    };
+<a name="l00107"></a>00107 }
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Thu Oct 22 15:08:27 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Oct 26 11:56:49 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
