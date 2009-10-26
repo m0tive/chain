@@ -14,6 +14,8 @@
 #ifndef _Chain_Object_h_
 #define _Chain_Object_h_
 
+#define __Chain
+
 #include <string>
 
 namespace Chain
@@ -36,6 +38,7 @@ namespace Chain
       enum eType {
          Object=0,
             EventDispatcher,
+              Log,
               App,
               Manager,
                  RenderManager,

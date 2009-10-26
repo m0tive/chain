@@ -14,12 +14,11 @@
 #ifndef _Chain_App_h_
 #define _Chain_App_h_
 
-#define __Chain
-
 #include "EventDispatcher.hpp"
 
 // Manager classes
 #include "SceneManager.hpp"
+#include "Log.hpp"
 
 namespace Chain
 {
@@ -55,6 +54,7 @@ namespace Chain
          
       public:
          SceneManager sceneManager;
+         Log * log;
    };
 }
 
