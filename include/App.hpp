@@ -18,6 +18,7 @@
 
 // Manager classes
 #include "SceneManager.hpp"
+#include "ScriptManager.hpp"
 #include "Log.hpp"
 
 namespace Chain
@@ -54,6 +55,7 @@ namespace Chain
          
       public:
          SceneManager sceneManager;
+         ScriptManager scriptManager;
          Log * log;
    };
 }

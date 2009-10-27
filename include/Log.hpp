@@ -24,7 +24,7 @@ namespace Chain
       #endif
 
       #ifndef DERR
-         #define DERR std::cerr << ">> " << __FILE__ << " (" << __LINE__ << "): "
+         #define DERR std::cerr << "!! " << __FILE__ << " (" << __LINE__ << "): "
       #endif
    #else
       #define DOUT

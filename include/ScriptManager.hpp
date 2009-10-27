@@ -33,7 +33,7 @@ namespace Chain
 		~ScriptManager();
 		
   protected:
-    lua_State* luaState;
+    lua_State* m_luaState;
 	};
 }
 
