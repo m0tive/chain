@@ -13,3 +13,4 @@
 *.a
 ./include/lua
 backup.bzr
+*.layout

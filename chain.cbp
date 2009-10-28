@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="chain" />
+		<Option makefile="makefile" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="lib/chain" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="$make -f $makefile" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="lib/chain" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make -f $makefile BUILD:=release" />
+					<CompileFile command="$make -f $makefile BUILD:=release $file" />
+					<Clean command="$make -f $makefile BUILD:=release clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="include/App.hpp" />
+		<Unit filename="include/Camera.hpp" />
+		<Unit filename="include/Container.hpp" />
+		<Unit filename="include/DisplayObject.hpp" />
+		<Unit filename="include/EventDispatcher.hpp" />
+		<Unit filename="include/Geometry.hpp" />
+		<Unit filename="include/Instance.hpp" />
+		<Unit filename="include/Log.hpp" />
+		<Unit filename="include/Manager.hpp" />
+		<Unit filename="include/Mesh.hpp" />
+		<Unit filename="include/Object.hpp" />
+		<Unit filename="include/RenderLayer.hpp" />
+		<Unit filename="include/RenderManager.hpp" />
+		<Unit filename="include/Root.hpp" />
+		<Unit filename="include/SceneManager.hpp" />
+		<Unit filename="include/ScriptManager.hpp" />
+		<Unit filename="include/Sprite.hpp" />
+		<Unit filename="include/Transform.hpp" />
+		<Unit filename="src/App.cpp" />
+		<Unit filename="src/Camera.cpp" />
+		<Unit filename="src/Container.cpp" />
+		<Unit filename="src/DisplayObject.cpp" />
+		<Unit filename="src/EventDispatcher.cpp" />
+		<Unit filename="src/Geometry.cpp" />
+		<Unit filename="src/Instance.cpp" />
+		<Unit filename="src/Log.cpp" />
+		<Unit filename="src/Manager.cpp" />
+		<Unit filename="src/Mesh.cpp" />
+		<Unit filename="src/Object.cpp" />
+		<Unit filename="src/RenderLayer.cpp" />
+		<Unit filename="src/RenderManager.cpp" />
+		<Unit filename="src/Root.cpp" />
+		<Unit filename="src/SceneManager.cpp" />
+		<Unit filename="src/ScriptManager.cpp" />
+		<Unit filename="src/Sprite.cpp" />
+		<Unit filename="src/Transform.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
