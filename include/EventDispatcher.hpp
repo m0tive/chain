@@ -2,31 +2,31 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
    #pragma once
 #endif
 
-#ifndef _Chain_EventDispatcher_h_
-#define _Chain_EventDispatcher_h_
+#ifndef _chain_EventDispatcher_h_
+#define _chain_EventDispatcher_h_
 
 #include "Object.hpp"
 
-namespace Chain
+namespace chain
 {
    /// \brief ...
    /// \details ...
    class EventDispatcher : public Object
    {
-     DECLARE_CHAIN_CLASS(COb::EventDispatcher,Object,"eventDispatcher")
+     DECLARE_chain_CLASS(COb::EventDispatcher,Object,"eventDispatcher")
       protected:
          //---------------------------------------
          /// \details Default Constructor
          EventDispatcher();
-         
+
       public:
          //---------------------------------------
          /// \details Destructor

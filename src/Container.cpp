@@ -2,23 +2,23 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #include "Container.hpp"
 
-namespace Chain 
+namespace chain
 {
    //------------------------------------------------ Container::Container
    Container::Container()
    {
-      
+
    }
    //------------------------------------------------ Container::~Container
    Container::~Container()
    {
-      
+
    }
    //------------------------------------------------ Container::~Container
    void Container::AddChild(DisplayObject const& child)

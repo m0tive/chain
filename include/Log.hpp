@@ -2,21 +2,21 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
    #pragma once
 #endif
 
-#ifndef _Chain_Logger_h_
-#define _Chain_Logger_h_
+#ifndef _chain_Logger_h_
+#define _chain_Logger_h_
 
 #include "EventDispatcher.hpp"
 #include <iostream>
 
-namespace Chain
+namespace chain
 {
    #ifdef _DEBUG
       #ifndef DOUT
@@ -30,13 +30,13 @@ namespace Chain
       #define DOUT
       #define DERR
    #endif
-   
+
    class Logger;
-   
+
    /// \brief ...
    /// \details ...
    class Log : public EventDispatcher {
-     DECLARE_CHAIN_CLASS(COb::Log,EventDispatcher,"log")
+     DECLARE_chain_CLASS(COb::Log,EventDispatcher,"log")
       friend class Logger;
       private:
          //---------------------------------------
@@ -45,12 +45,12 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~Log() {}
-      
+
       public:
          //Log * Instance () {return th}
    };
-   
-   /// \brief Interface to Chain::Log
+
+   /// \brief Interface to chain::Log
    /// \details ...
    class Logger
    {
@@ -61,11 +61,11 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~Logger() {}
-         
+
       protected:
          Log * m_log;
    };
-   
+
    extern Logger log;
    extern Logger lwar;
    extern Logger lerr;

@@ -2,8 +2,8 @@
 /// \date 2009/10/22
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -15,12 +15,13 @@
 
 #include "Manager.hpp"
 
-namespace Chain
+namespace chain
 {
    /// \brief ...
    /// \details ...
    class RenderManager : public Manager
    {
+     DECLARE_chain_CLASS(COb::RenderManager,Manager,"renderManager")
       protected:
          //---------------------------------------
          /// \details Default Constructor

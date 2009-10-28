@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: ScriptManager.hpp Source File</title>
+<title>Chain: EulerAngle.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -9,6 +9,7 @@
   <div class="tabs">
     <ul>
       <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -20,45 +21,99 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>ScriptManager.hpp</h1><a href="a00052.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<h1>EulerAngle.cpp</h1><a href="a00038.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 
 <a name="l00006"></a>00006 <span class="comment">//------------------------------------------------------------------------------</span>
 <a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span>
-<a name="l00012"></a>00012 <span class="preprocessor">#ifndef _Chain_ScriptManager_h_</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define _Chain_ScriptManager_h_</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include "<a class="code" href="a00038.html">Manager.hpp</a>"</span>
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="preprocessor">#include "lua/lua.hpp"</span>
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="keyword">namespace </span>Chain
-<a name="l00020"></a>00020 {
-<a name="l00021"></a>00021   <span class="keyword">class </span>App;
-<a name="l00022"></a>00022 
-<a name="l00024"></a><a class="code" href="a00018.html">00024</a>   <span class="keyword">class </span><a class="code" href="a00018.html">ScriptManager</a> : <span class="keyword">public</span> <a class="code" href="a00011.html" title="...">Manager</a>
-<a name="l00025"></a>00025    {
-<a name="l00026"></a><a class="code" href="a00018.html#4097b3e04a4f8ece21f5abe1b10e6323">00026</a>     <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="a00001.html" title="Class to define the main game application.">App</a>;
-<a name="l00027"></a>00027   <span class="keyword">protected</span>:
-<a name="l00028"></a>00028       <span class="comment">//---------------------------------------</span>
-<a name="l00030"></a>00030 <span class="comment"></span>      <a class="code" href="a00018.html#7ea78dce5976cffa1174a8db80706ee1">ScriptManager</a>();
-<a name="l00031"></a>00031       <span class="comment">//---------------------------------------</span>
-<a name="l00033"></a>00033 <span class="comment"></span>      <a class="code" href="a00018.html#3f2bdf4b9a89027cb1261dcd1ec54164">~ScriptManager</a>();
-<a name="l00034"></a>00034       
-<a name="l00035"></a>00035   <span class="keyword">protected</span>:
-<a name="l00036"></a><a class="code" href="a00018.html#9f568f9e8b599f04f15ad7bf0fe5b0ab">00036</a>     lua_State* <a class="code" href="a00018.html#9f568f9e8b599f04f15ad7bf0fe5b0ab">luaState</a>;
-<a name="l00037"></a>00037    };
-<a name="l00038"></a>00038 }
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="preprocessor">#endif</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="a00039.html">EulerAngle.hpp</a>"</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="a00057.html">Quaternion.hpp</a>"</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="a00051.html">Matrix.hpp</a>"</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>chain
+<a name="l00013"></a>00013 {
+<a name="l00014"></a>00014   <span class="comment">//------------------------------------------------ EulerAngle::EulerAngle</span>
+<a name="l00015"></a><a class="code" href="a00006.html#21908c3b04349a996b3bf3e9bcb2f733">00015</a>   <a class="code" href="a00006.html#21908c3b04349a996b3bf3e9bcb2f733">EulerAngle::EulerAngle</a>( <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _x <span class="comment">/*= 0*/</span>, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _y <span class="comment">/*= 0*/</span>, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _z <span class="comment">/*= 0*/</span> ) : x (_x), y (_y), z (_z)
+<a name="l00016"></a>00016   {
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018   }
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020   <span class="comment">//------------------------------------------------ EulerAngle::EulerAngle</span>
+<a name="l00021"></a><a class="code" href="a00006.html#8fc3cfe291f847404e4cad8f3e29e676">00021</a>   <a class="code" href="a00006.html#21908c3b04349a996b3bf3e9bcb2f733">EulerAngle::EulerAngle</a>( <span class="keyword">const</span> <a class="code" href="a00006.html" title="Structure to hold a set of euler angles in the format XYZ.">EulerAngle</a>&amp; ea ) : x (ea.x), y (ea.y), z (ea.z)
+<a name="l00022"></a>00022   {
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024   }
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026   <span class="comment">//------------------------------------------------ EulerAngle::EulerAngle</span>
+<a name="l00027"></a><a class="code" href="a00006.html#3fa3cb798d34d2218099b79420caec9f">00027</a>   <a class="code" href="a00006.html#21908c3b04349a996b3bf3e9bcb2f733">EulerAngle::EulerAngle</a>( <span class="keyword">const</span> <a class="code" href="a00013.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; m )
+<a name="l00028"></a>00028   {
+<a name="l00029"></a>00029     <a class="code" href="a00006.html#4e513c2c815e46829c935ba0df283805" title="Set the value of this from a Matrix.">FromMatrix</a>(m);
+<a name="l00030"></a>00030   }
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032   <span class="comment">//------------------------------------------------ EulerAngle::EulerAngle</span>
+<a name="l00033"></a><a class="code" href="a00006.html#f347866037ed7ae36a95a41e0401b8fc">00033</a>   <a class="code" href="a00006.html#21908c3b04349a996b3bf3e9bcb2f733">EulerAngle::EulerAngle</a>( <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q )
+<a name="l00034"></a>00034   {
+<a name="l00035"></a>00035     <a class="code" href="a00006.html#4e513c2c815e46829c935ba0df283805" title="Set the value of this from a Matrix.">FromMatrix</a>(q.<a class="code" href="a00016.html#3a2c8754d9a626e508e0c87aeda5dc2f" title="Convert quaternion to a rotation matrix.">ToMatrix</a>());
+<a name="l00036"></a>00036   }
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038   <span class="comment">//------------------------------------------------ EulerAngle::operator=</span>
+<a name="l00039"></a><a class="code" href="a00006.html#151980bffe47e27bfd3d62b11f0ca20c">00039</a>   <span class="keyword">const</span> <a class="code" href="a00006.html" title="Structure to hold a set of euler angles in the format XYZ.">EulerAngle</a>&amp; <a class="code" href="a00006.html#151980bffe47e27bfd3d62b11f0ca20c">EulerAngle::operator=</a>( <span class="keyword">const</span> <a class="code" href="a00006.html" title="Structure to hold a set of euler angles in the format XYZ.">EulerAngle</a>&amp; ea )
+<a name="l00040"></a>00040   {
+<a name="l00041"></a>00041     <a class="code" href="a00006.html#51719cd10de64f9f8a963ac04cb0a281">x</a> = ea.<a class="code" href="a00006.html#51719cd10de64f9f8a963ac04cb0a281">x</a>; <a class="code" href="a00006.html#145160b9c26c9aa7dd3a870f76a5aaf5">y</a> = ea.<a class="code" href="a00006.html#145160b9c26c9aa7dd3a870f76a5aaf5">y</a>; <a class="code" href="a00006.html#d81407a883906131e94d07230ff81732">z</a> = ea.<a class="code" href="a00006.html#d81407a883906131e94d07230ff81732">z</a>;
+<a name="l00042"></a>00042     <span class="keywordflow">return</span> *<span class="keyword">this</span>;
+<a name="l00043"></a>00043   }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045   <span class="comment">//------------------------------------------------ EulerAngle::FromMatrix</span>
+<a name="l00046"></a><a class="code" href="a00006.html#4e513c2c815e46829c935ba0df283805">00046</a>   <span class="keyword">const</span> <a class="code" href="a00006.html" title="Structure to hold a set of euler angles in the format XYZ.">EulerAngle</a>&amp; <a class="code" href="a00006.html#4e513c2c815e46829c935ba0df283805" title="Set the value of this from a Matrix.">EulerAngle::FromMatrix</a>( <span class="keyword">const</span> <a class="code" href="a00013.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; m )
+<a name="l00047"></a>00047   {
+<a name="l00048"></a>00048     <span class="comment">// http://vered.rose.utoronto.ca/people/david_dir/GEMS/GEMS.html</span>
+<a name="l00049"></a>00049     <span class="comment">// assuming that angle is in static XYZ order</span>
+<a name="l00050"></a>00050     <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> cy = <a class="code" href="a00034.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT</a>(m.<a class="code" href="a00013.html#e013eb6d6a26b442be5accf1e4169609">m00</a>*m.<a class="code" href="a00013.html#e013eb6d6a26b442be5accf1e4169609">m00</a> + m.<a class="code" href="a00013.html#82f319633a08aad08b3ce9a5343eeb8d">m10</a>*m.<a class="code" href="a00013.html#82f319633a08aad08b3ce9a5343eeb8d">m10</a>);
+<a name="l00051"></a>00051     <span class="keywordflow">if</span> (cy &gt; 16*0.00001) {
+<a name="l00052"></a>00052       <a class="code" href="a00006.html#51719cd10de64f9f8a963ac04cb0a281">x</a> = <a class="code" href="a00034.html#de70bfcfa930d7f7377f50fb5807badb" title="Maths function interface.">CH_ATAN2</a>(m.<a class="code" href="a00013.html#949933435a4731276590c11f00a71d1d">m21</a>, m.<a class="code" href="a00013.html#d2f4cd10ad7af812452896529b71bbdf">m22</a>);
+<a name="l00053"></a>00053       <a class="code" href="a00006.html#145160b9c26c9aa7dd3a870f76a5aaf5">y</a> = <a class="code" href="a00034.html#de70bfcfa930d7f7377f50fb5807badb" title="Maths function interface.">CH_ATAN2</a>(-m.<a class="code" href="a00013.html#d813fd94c0efffb9ba33935a7a01f563">m20</a>, cy);
+<a name="l00054"></a>00054       <a class="code" href="a00006.html#d81407a883906131e94d07230ff81732">z</a> = <a class="code" href="a00034.html#de70bfcfa930d7f7377f50fb5807badb" title="Maths function interface.">CH_ATAN2</a>(m.<a class="code" href="a00013.html#82f319633a08aad08b3ce9a5343eeb8d">m10</a>, m.<a class="code" href="a00013.html#e013eb6d6a26b442be5accf1e4169609">m00</a>);
+<a name="l00055"></a>00055     } <span class="keywordflow">else</span> {
+<a name="l00056"></a>00056       <a class="code" href="a00006.html#51719cd10de64f9f8a963ac04cb0a281">x</a> = <a class="code" href="a00034.html#de70bfcfa930d7f7377f50fb5807badb" title="Maths function interface.">CH_ATAN2</a>(-m.<a class="code" href="a00013.html#829f9cd6becd6cfd9bdbe03a0636400e">m12</a>, m.<a class="code" href="a00013.html#ee755e658397e1ee4bda9ede265c48d3">m11</a>);
+<a name="l00057"></a>00057       <a class="code" href="a00006.html#145160b9c26c9aa7dd3a870f76a5aaf5">y</a> = <a class="code" href="a00034.html#de70bfcfa930d7f7377f50fb5807badb" title="Maths function interface.">CH_ATAN2</a>(-m.<a class="code" href="a00013.html#d813fd94c0efffb9ba33935a7a01f563">m20</a>, cy);
+<a name="l00058"></a>00058       <a class="code" href="a00006.html#d81407a883906131e94d07230ff81732">z</a> = 0;
+<a name="l00059"></a>00059     }
+<a name="l00060"></a>00060     <span class="keywordflow">return</span> *<span class="keyword">this</span>;
+<a name="l00061"></a>00061   }
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063   <span class="comment">//------------------------------------------------ EulerAngle::FromQuat</span>
+<a name="l00064"></a><a class="code" href="a00006.html#d5cfff8addcbc09b24a689e43ae507f3">00064</a>   <span class="keyword">const</span> <a class="code" href="a00006.html" title="Structure to hold a set of euler angles in the format XYZ.">EulerAngle</a>&amp; <a class="code" href="a00006.html#d5cfff8addcbc09b24a689e43ae507f3" title="Set the value of this from a Quaternion.">EulerAngle::FromQuat</a>( <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q )
+<a name="l00065"></a>00065   {
+<a name="l00066"></a>00066     <span class="keywordflow">return</span> <a class="code" href="a00006.html#4e513c2c815e46829c935ba0df283805" title="Set the value of this from a Matrix.">FromMatrix</a>(q.<a class="code" href="a00016.html#3a2c8754d9a626e508e0c87aeda5dc2f" title="Convert quaternion to a rotation matrix.">ToMatrix</a>());
+<a name="l00067"></a>00067   }
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069   <span class="comment">//------------------------------------------------ EulerAngle::ToQuat</span>
+<a name="l00070"></a><a class="code" href="a00006.html#6fca1c8f835f063d4410099fa8fa29a1">00070</a>   <a class="code" href="a00016.html" title="Structure to hold a quaternion.">chain::Quaternion</a> <a class="code" href="a00006.html#6fca1c8f835f063d4410099fa8fa29a1" title="Convert this into a Quaternion.">EulerAngle::ToQuat</a>()
+<a name="l00071"></a>00071   {
+<a name="l00072"></a>00072     <span class="comment">// http://vered.rose.utoronto.ca/people/david_dir/GEMS/GEMS.html</span>
+<a name="l00073"></a>00073     <span class="comment">// assuming that angle is in static XYZ order</span>
+<a name="l00074"></a>00074     <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> q;
+<a name="l00075"></a>00075     <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> ti, tj, th, ci, cj, ch, si, sj, sh, cc, cs, sc, ss;
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077     ti = <a class="code" href="a00006.html#51719cd10de64f9f8a963ac04cb0a281">x</a>*0.5; tj = <a class="code" href="a00006.html#145160b9c26c9aa7dd3a870f76a5aaf5">y</a>*0.5; th = <a class="code" href="a00006.html#d81407a883906131e94d07230ff81732">z</a>*0.5;
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079     ci = <a class="code" href="a00034.html#86a2b95404021aa0771b7641ca941602" title="Maths function interface.">CH_COS</a>(ti);  cj = <a class="code" href="a00034.html#86a2b95404021aa0771b7641ca941602" title="Maths function interface.">CH_COS</a>(tj);  ch = <a class="code" href="a00034.html#86a2b95404021aa0771b7641ca941602" title="Maths function interface.">CH_COS</a>(th);
+<a name="l00080"></a>00080     si = <a class="code" href="a00034.html#3fefdcd2d8071b492c1c75752cd97e7a" title="Maths function interface.">CH_SIN</a>(ti);  sj = <a class="code" href="a00034.html#3fefdcd2d8071b492c1c75752cd97e7a" title="Maths function interface.">CH_SIN</a>(tj);  sh = <a class="code" href="a00034.html#3fefdcd2d8071b492c1c75752cd97e7a" title="Maths function interface.">CH_SIN</a>(th);
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082     cc = ci*ch; cs = ci*sh; sc = si*ch; ss = si*sh;
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084     q.<a class="code" href="a00016.html#d40e939a4e8627ab5f0db344550233dd">x</a> = cj*sc - sj*cs;
+<a name="l00085"></a>00085     q.<a class="code" href="a00016.html#88357eb1fd5e07c5f8b55ce1a6155c95">y</a> = cj*ss + sj*cc;
+<a name="l00086"></a>00086     q.<a class="code" href="a00016.html#2297cc3382a110f9fcfc252c42214e5b">z</a> = cj*cs - sj*sc;
+<a name="l00087"></a>00087     q.<a class="code" href="a00016.html#cfdd8944f533f20911d4aaf41c96d260">w</a> = cj*cc + sj*ss;
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089     <span class="keywordflow">return</span> q;
+<a name="l00090"></a>00090   }
+<a name="l00091"></a>00091 }
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Tue Oct 27 13:00:11 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 28 16:50:42 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

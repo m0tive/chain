@@ -2,22 +2,22 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #include "Camera.hpp"
 
-namespace Chain 
+namespace chain
 {
    //------------------------------------------------ Camera::Camera
    Camera::Camera()
    {
-      
+
    }
    //------------------------------------------------ Camera::~Camera
    Camera::~Camera()
    {
-      
+
    }
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: Chain::SceneManager Class Reference</title>
+<title>Chain: chain::RenderLayer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -9,6 +9,7 @@
   <div class="tabs">
     <ul>
       <li><a href="main.html"><span>Main&nbsp;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&nbsp;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -21,65 +22,50 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00057.html">Chain</a>::<a class="el" href="a00017.html">SceneManager</a>
+  <div class="navpath"><a class="el" href="a00035.html">chain</a>::<a class="el" href="a00017.html">RenderLayer</a>
   </div>
 </div>
 <div class="contents">
-<h1>Chain::SceneManager Class Reference</h1><!-- doxytag: class="Chain::SceneManager" --><!-- doxytag: inherits="Chain::Manager" -->...  
+<h1>chain::RenderLayer Class Reference</h1><!-- doxytag: class="chain::RenderLayer" --><!-- doxytag: inherits="chain::EventDispatcher" -->...  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;<a class="el" href="a00088.html">SceneManager.hpp</a>&gt;</code>
+<code>#include &lt;<a class="el" href="a00112.html">RenderLayer.hpp</a>&gt;</code>
 <p>
 <div class="dynheader">
-Inheritance diagram for Chain::SceneManager:</div>
+Inheritance diagram for chain::RenderLayer:</div>
 <div class="dynsection">
 
-<p><center><img src="a00017.png" usemap="#Chain::SceneManager_map" border="0" alt=""></center>
-<map name="Chain::SceneManager_map">
-<area href="a00011.html" alt="Chain::Manager" shape="rect" coords="0,112,144,136">
-<area href="a00006.html" alt="Chain::EventDispatcher" shape="rect" coords="0,56,144,80">
-<area href="a00013.html" alt="Chain::Object" shape="rect" coords="0,0,144,24">
+<p><center><img src="a00017.png" usemap="#chain::RenderLayer_map" border="0" alt=""></center>
+<map name="chain::RenderLayer_map">
+<area href="a00007.html" alt="chain::EventDispatcher" shape="rect" coords="0,56,142,80">
+<area href="a00015.html" alt="chain::Object" shape="rect" coords="0,0,142,24">
 </map>
 </div>
 
 <p>
-<a href="a00111.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00156.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#76926786c1dbaf04ec30f2f09e76acf1">~SceneManager</a> ()</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual <a class="el" href="a00016.html">Root</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#50bb1d742bca8f7db49fd4b71109dc2e">NewScene</a> ()</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a new scene hierarchy.  <a href="#50bb1d742bca8f7db49fd4b71109dc2e"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; <a class="el" href="a00005.html">DisplayObject</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#dfb1bddb565a99e4749be46825149fbe">DeleteScene</a> (<a class="el" href="a00016.html">Root</a> *root, bool recursive=true)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Delete a scene hierarchy.  <a href="#dfb1bddb565a99e4749be46825149fbe"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; <a class="el" href="a00005.html">DisplayObject</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#24bd7300733329389da2aab156ea38e4">DeleteDisplayObject</a> (<a class="el" href="a00005.html">DisplayObject</a> *obj, bool recursive=false)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Delete a <a class="el" href="a00004.html" title="...">Chain::Container</a> safely.  <a href="#24bd7300733329389da2aab156ea38e4"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#5d116ce0eb28bcd9a59a5a189f53965b">SceneManager</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#fd3c5a8b519e3e4f96c3e51530a2c712">RenderLayer</a> ()</td></tr>
 
-<tr><td colspan="2"><br><h2>Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; <a class="el" href="a00016.html">Root</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#3f4451878fdd3b504cca1d6a69f54f77">m_scenes</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#89c5d261ebb53fa40c888879b87673ec">~RenderLayer</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pointer to scene roots.  <a href="#3f4451878fdd3b504cca1d6a69f54f77"></a><br></td></tr>
-<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#4097b3e04a4f8ece21f5abe1b10e6323">App</a></td></tr>
+<tr><td colspan="2"><br><h2>Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#84acc21a8ec14a2b0e3925ce508fb10b">DECLARE_chain_CLASS</a> (COb::RenderLayer, <a class="el" href="a00007.html">EventDispatcher</a>,&quot;renderLayer&quot;) friend class <a class="el" href="a00018.html">RenderManager</a></td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 ... 
 <p>
 ... 
-<p>Definition at line <a class="el" href="a00088.html#l00028">28</a> of file <a class="el" href="a00088.html">SceneManager.hpp</a>.</p>
+<p>Definition at line <a class="el" href="a00112.html#l00022">22</a> of file <a class="el" href="a00112.html">RenderLayer.hpp</a>.</p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="5d116ce0eb28bcd9a59a5a189f53965b"></a><!-- doxytag: member="Chain::SceneManager::SceneManager" ref="5d116ce0eb28bcd9a59a5a189f53965b" args="()" -->
+<a class="anchor" name="fd3c5a8b519e3e4f96c3e51530a2c712"></a><!-- doxytag: member="chain::RenderLayer::RenderLayer" ref="fd3c5a8b519e3e4f96c3e51530a2c712" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Chain::SceneManager::SceneManager           </td>
+          <td class="memname">chain::RenderLayer::RenderLayer           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -91,20 +77,20 @@ Inheritance diagram for Chain::SceneManager:</div>
 
 <p>
 Default Constructor 
-<p>Definition at line <a class="el" href="a00087.html#l00014">14</a> of file <a class="el" href="a00087.html">SceneManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="a00111.html#l00014">14</a> of file <a class="el" href="a00111.html">RenderLayer.cpp</a>.</p>
 
 </div>
 </div><p>
-<a class="anchor" name="76926786c1dbaf04ec30f2f09e76acf1"></a><!-- doxytag: member="Chain::SceneManager::~SceneManager" ref="76926786c1dbaf04ec30f2f09e76acf1" args="()" -->
+<a class="anchor" name="89c5d261ebb53fa40c888879b87673ec"></a><!-- doxytag: member="chain::RenderLayer::~RenderLayer" ref="89c5d261ebb53fa40c888879b87673ec" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Chain::SceneManager::~SceneManager           </td>
+          <td class="memname">chain::RenderLayer::~RenderLayer           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -112,157 +98,50 @@ Default Constructor
 
 <p>
 Destructor 
-<p>Definition at line <a class="el" href="a00087.html#l00019">19</a> of file <a class="el" href="a00087.html">SceneManager.cpp</a>.</p>
+<p>Definition at line <a class="el" href="a00111.html#l00019">19</a> of file <a class="el" href="a00111.html">RenderLayer.cpp</a>.</p>
 
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="24bd7300733329389da2aab156ea38e4"></a><!-- doxytag: member="Chain::SceneManager::DeleteDisplayObject" ref="24bd7300733329389da2aab156ea38e4" args="(DisplayObject *obj, bool recursive=false)" -->
+<a class="anchor" name="84acc21a8ec14a2b0e3925ce508fb10b"></a><!-- doxytag: member="chain::RenderLayer::DECLARE_chain_CLASS" ref="84acc21a8ec14a2b0e3925ce508fb10b" args="(COb::RenderLayer, EventDispatcher,&quot;renderLayer&quot;) friend class RenderManager" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="a00005.html">DisplayObject</a> * &gt; Chain::SceneManager::DeleteDisplayObject           </td>
+          <td class="memname">chain::RenderLayer::DECLARE_chain_CLASS           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="a00005.html">DisplayObject</a> *&nbsp;</td>
-          <td class="paramname"> <em>obj</em>, </td>
+          <td class="paramtype">COb::RenderLayer&nbsp;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>recursive</em> = <code>false</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Delete a <a class="el" href="a00004.html" title="...">Chain::Container</a> safely. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>obj</em>&nbsp;</td><td><a class="el" href="a00005.html" title="...">Chain::DisplayObject</a> to be deleted </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>recursive</em>&nbsp;</td><td>true to also delete all the children of <code>cont</code> </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>std::vector&lt;Container*&gt; - Children of the container, empty if <code>recursive</code> is true </dd></dl>
-
-<p>Definition at line <a class="el" href="a00087.html#l00042">42</a> of file <a class="el" href="a00087.html">SceneManager.cpp</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="dfb1bddb565a99e4749be46825149fbe"></a><!-- doxytag: member="Chain::SceneManager::DeleteScene" ref="dfb1bddb565a99e4749be46825149fbe" args="(Root *root, bool recursive=true)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="a00005.html">DisplayObject</a> * &gt; Chain::SceneManager::DeleteScene           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00016.html">Root</a> *&nbsp;</td>
-          <td class="paramname"> <em>root</em>, </td>
+          <td class="paramtype"><a class="el" href="a00007.html">EventDispatcher</a>&nbsp;</td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>recursive</em> = <code>true</code></td><td>&nbsp;</td>
+          <td class="paramtype">&quot;renderLayer&quot;&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td></td>
+          <td></td><td></td><td><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Delete a scene hierarchy. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>root</em>&nbsp;</td><td>Pointer to the scene's root </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>recursive</em>&nbsp;</td><td>true to also delete all the children of <code>root</code> </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>std::vector&lt;Container*&gt; - Children of the root, empty if <code>recursive</code> is true </dd></dl>
-
-<p>Definition at line <a class="el" href="a00087.html#l00031">31</a> of file <a class="el" href="a00087.html">SceneManager.cpp</a>.</p>
-
-</div>
-</div><p>
-<a class="anchor" name="50bb1d742bca8f7db49fd4b71109dc2e"></a><!-- doxytag: member="Chain::SceneManager::NewScene" ref="50bb1d742bca8f7db49fd4b71109dc2e" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00016.html">Root</a> * Chain::SceneManager::NewScene           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Create a new scene hierarchy. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>Root* - Pointer to the scene's root </dd></dl>
-
-<p>Definition at line <a class="el" href="a00087.html#l00024">24</a> of file <a class="el" href="a00087.html">SceneManager.cpp</a>.</p>
-
-</div>
-</div><p>
-<hr><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" name="4097b3e04a4f8ece21f5abe1b10e6323"></a><!-- doxytag: member="Chain::SceneManager::App" ref="4097b3e04a4f8ece21f5abe1b10e6323" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class <a class="el" href="a00001.html">App</a><code> [friend]</code>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-
-<p>Definition at line <a class="el" href="a00088.html#l00031">31</a> of file <a class="el" href="a00088.html">SceneManager.hpp</a>.</p>
-
-</div>
-</div><p>
-<hr><h2>Member Data Documentation</h2>
-<a class="anchor" name="3f4451878fdd3b504cca1d6a69f54f77"></a><!-- doxytag: member="Chain::SceneManager::m_scenes" ref="3f4451878fdd3b504cca1d6a69f54f77" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="a00016.html">Root</a>* &gt; <a class="el" href="a00017.html#3f4451878fdd3b504cca1d6a69f54f77">Chain::SceneManager::m_scenes</a><code> [protected]</code>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Pointer to scene roots. 
-<p>
-
-<p>Definition at line <a class="el" href="a00088.html#l00059">59</a> of file <a class="el" href="a00088.html">SceneManager.hpp</a>.</p>
 
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00088.html">SceneManager.hpp</a><li><a class="el" href="a00087.html">SceneManager.cpp</a></ul>
+<li><a class="el" href="a00112.html">RenderLayer.hpp</a><li><a class="el" href="a00111.html">RenderLayer.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Tue Oct 27 13:00:12 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 28 16:50:43 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

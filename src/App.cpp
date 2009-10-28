@@ -4,12 +4,12 @@
 /// \author Peter Dodds
 /// \brief Top level application class.
 /// A singleton that acts as the root object for the application
-/// \note 
+/// \note
 //------------------------------------------------------------------------------
 
 #include "App.hpp"
 
-namespace Chain 
+namespace chain
 {
    //------------------------------------------------ App::App
    App::App()
@@ -19,12 +19,12 @@ namespace Chain
    //------------------------------------------------ App::~App
    App::~App()
    {
-      
+
    }
 
    //------------------------------------------------ App::Run
    void App::Run()
    {
-      
+
    }
 }

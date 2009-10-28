@@ -3,21 +3,21 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief Parent class for all Chain classes.
-/// \note 
+/// \note
 //------------------------------------------------------------------------------
 
 #include "EventDispatcher.hpp"
 
-namespace Chain 
+namespace chain
 {
    //------------------------------------------------ EventDispatcher::EventDispatcher
    EventDispatcher::EventDispatcher()
    {
-      
+
    }
    //------------------------------------------------ EventDispatcher::~EventDispatcher
    EventDispatcher::~EventDispatcher()
    {
-      
+
    }
 }

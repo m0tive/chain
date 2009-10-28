@@ -2,13 +2,13 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #include "SceneManager.hpp"
 
-namespace Chain 
+namespace chain
 {
    //------------------------------------------------ SceneManager::SceneManager
    SceneManager::SceneManager()
@@ -18,7 +18,7 @@ namespace Chain
    //------------------------------------------------ SceneManager::~SceneManager
    SceneManager::~SceneManager()
    {
-      
+
    }
    //------------------------------------------------ SceneManager::NewScene
    Root * SceneManager::NewScene ()
@@ -33,9 +33,9 @@ namespace Chain
       std::vector<DisplayObject* > children;
       if(!recursive)
          children = root->children;
-      
+
       DeleteDisplayObject(static_cast<DisplayObject* >(root),recursive);
-      
+
       return children;
    }
    //------------------------------------------------ SceneManager::DeleteDisplayObject
@@ -48,12 +48,12 @@ namespace Chain
          cont = static_cast<Container* >(obj);
          children = cont->children;
          if(recursive){
-            
+
          }
       }
-      
+
       // TODO Delete the object
-      
+
       return children;
    }
 }

@@ -3,15 +3,15 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief Parent class for all Chain classes.
-/// \note 
+/// \note
 //------------------------------------------------------------------------------
 
 #include "Object.hpp"
 
-namespace Chain 
+namespace chain
 {
    unsigned long Object::m_id_incrementer = 0;
-   
+
    //------------------------------------------------ Object::Object
    Object::Object()
    {
@@ -20,9 +20,9 @@ namespace Chain
    //------------------------------------------------ Object::~Object
    Object::~Object()
    {
-      
+
    }
-   
+
    //------------------------------------------------ Object::GetId
    unsigned long Object::GetId() const
    {

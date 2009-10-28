@@ -2,29 +2,29 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
    #pragma once
 #endif
 
-#ifndef _Chain_Root_h_
-#define _Chain_Root_h_
+#ifndef _chain_Root_h_
+#define _chain_Root_h_
 
 #include "Container.hpp"
 //#include "SceneManager.hpp"
 
-namespace Chain
+namespace chain
 {
    class SceneManager;
-   
+
    /// \brief The root object of a scene
-   /// \details These are created and managed in Chain::SceneManager
+   /// \details These are created and managed in chain::SceneManager
    class Root : public Container
    {
-     DECLARE_CHAIN_CLASS(COb::Root,Container,"root")
+     DECLARE_chain_CLASS(COb::Root,Container,"root")
       friend class SceneManager;
       protected:
          //---------------------------------------
@@ -34,7 +34,7 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~Root();
-         
+
          // bool IsRoot() const;
    };
 }

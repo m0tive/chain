@@ -2,31 +2,31 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
    #pragma once
 #endif
 
-#ifndef _Chain_Manager_h_
-#define _Chain_Manager_h_
+#ifndef _chain_Manager_h_
+#define _chain_Manager_h_
 
 #include "EventDispatcher.hpp"
 
-namespace Chain
+namespace chain
 {
    /// \brief ...
    /// \details ...
    class Manager : public EventDispatcher
    {
-     DECLARE_CHAIN_CLASS(COb::Manager,EventDispatcher,"manager")
+     DECLARE_chain_CLASS(COb::Manager,EventDispatcher,"manager")
       protected:
          //---------------------------------------
          /// \details Default Constructor
          Manager();
-         
+
       public:
          //---------------------------------------
          /// \details Destructor

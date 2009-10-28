@@ -2,25 +2,25 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #include "DisplayObject.hpp"
 #include "Container.hpp"
 #include "Root.hpp"
 
-namespace Chain 
+namespace chain
 {
    //------------------------------------------------ DisplayObject::DisplayObject
    DisplayObject::DisplayObject() //: m_root(0), m_parent(0)
    {
-      
+
    }
    //------------------------------------------------ DisplayObject::~DisplayObject
    DisplayObject::~DisplayObject()
    {
-      
+
    }
    //------------------------------------------------ DisplayObject::IsRoot
    bool DisplayObject::IsRoot() const

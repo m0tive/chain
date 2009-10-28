@@ -4,7 +4,7 @@
 /// \author Peter Dodds
 /// \brief Top level application class.
 /// A singleton that acts as the root object for the application
-/// \note 
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -21,13 +21,14 @@
 #include "ScriptManager.hpp"
 #include "Log.hpp"
 
-namespace Chain
+namespace chain
 {
    /// \brief Class to define the main game application.
    /// \details To start the client, create a new application,
    /// and call App::Run()
    class App : public EventDispatcher
    {
+     DECLARE_chain_CLASS(COb::App,EventDispatcher,"app")
       public:
          // -----------------------------------
          /// \details Get an instance of this singleton.
@@ -38,21 +39,21 @@ namespace Chain
             static App singleton;
             return singleton;
          }
-         
+
          //---------------------------------------
-         /// \details Main application function. 
+         /// \details Main application function.
          /// Calls App::Init(), starts main loop updating App::dt
          virtual void Run ();
-      
+
       private:
          //---------------------------------------
          /// \details Default Constructor
          App();
-         
+
          //---------------------------------------
          /// \details Destructor
          virtual ~App();
-         
+
       public:
          SceneManager sceneManager;
          ScriptManager scriptManager;

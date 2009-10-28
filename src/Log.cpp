@@ -2,14 +2,14 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #include "Log.hpp"
 #include <assert.h>
 
-namespace Chain 
+namespace chain
 {
    Logger log; // TODO set logtype using constructor
    Logger lwar; // TODO set logtype using constructor

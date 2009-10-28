@@ -2,8 +2,8 @@
 /// \date 2009/10/22
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -15,12 +15,13 @@
 
 #include "Geometry.hpp"
 
-namespace Chain
+namespace chain
 {
    /// \brief ...
    /// \details ...
    class Mesh : public Geometry
    {
+     DECLARE_chain_CLASS(COb::Mesh,Geometry,"mesh")
       public:
          //---------------------------------------
          /// \details Default Constructor

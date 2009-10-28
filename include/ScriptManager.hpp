@@ -1,7 +1,7 @@
 /// \file ScriptManager.hpp
 /// \date 2009/10/22
 /// \author Peter Dodds
-/// \brief 
+/// \brief
 /// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
@@ -16,13 +16,14 @@
 
 #include "lua/lua.hpp"
 
-namespace Chain
+namespace chain
 {
   class App;
 
 	/// \brief
   class ScriptManager : public Manager
 	{
+     DECLARE_chain_CLASS(COb::ScriptManager,Manager,"scriptManager")
     friend class App;
   protected:
 		//---------------------------------------
@@ -31,7 +32,7 @@ namespace Chain
 		//---------------------------------------
 		/// \details Destructor
 		~ScriptManager();
-		
+
   protected:
     lua_State* m_luaState;
 	};

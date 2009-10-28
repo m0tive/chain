@@ -2,26 +2,26 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
    #pragma once
 #endif
 
-#ifndef _Chain_Instance_h_
-#define _Chain_Instance_h_
+#ifndef _chain_Instance_h_
+#define _chain_Instance_h_
 
 #include "Container.hpp"
 
-namespace Chain
+namespace chain
 {
    /// \brief ...
    /// \details ...
    class Instance : public Container
    {
-     DECLARE_CHAIN_CLASS(COb::Instance,Container,"instance")
+     DECLARE_chain_CLASS(COb::Instance,Container,"instance")
       public:
          //---------------------------------------
          /// \details Default Constructor

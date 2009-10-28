@@ -3,21 +3,21 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief Parent class for all Chain classes.
-/// \note 
+/// \note
 //------------------------------------------------------------------------------
 
 #include "Manager.hpp"
 
-namespace Chain 
+namespace chain
 {
    //------------------------------------------------ Manager::Manager
    Manager::Manager()
    {
-      
+
    }
    //------------------------------------------------ Manager::~Manager
    Manager::~Manager()
    {
-      
+
    }
 }

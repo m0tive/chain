@@ -2,8 +2,8 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -17,14 +17,15 @@
 
 #include <vector>
 
-namespace Chain
+namespace chain
 {
    class SceneManager;
-   
+
    /// \brief ...
    /// \details ...
    class Container : public DisplayObject
    {
+     DECLARE_chain_CLASS(COb::Container,DisplayObject,"container")
       friend class SceneManager;
       protected:
          //---------------------------------------
@@ -33,10 +34,10 @@ namespace Chain
          //---------------------------------------
          /// \details Destructor
          virtual ~Container();
-         
+
       public:
          void AddChild (DisplayObject const& child);
-         
+
          std::vector<DisplayObject* > children;
    };
 }

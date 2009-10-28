@@ -2,8 +2,8 @@
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -15,12 +15,13 @@
 
 #include "DisplayObject.hpp"
 
-namespace Chain
+namespace chain
 {
    /// \brief ...
    /// \details ...
    class Camera : public DisplayObject
    {
+     DECLARE_chain_CLASS(COb::Camera,DisplayObject,"camera")
       public:
          //---------------------------------------
          /// \details Default Constructor

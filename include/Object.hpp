@@ -4,23 +4,23 @@
 /// \author Peter Dodds
 /// \brief Top level application class.
 /// A singleton that acts as the root object for the application
-/// \note 
+/// \note
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
    #pragma once
 #endif
 
-#ifndef _Chain_Object_h_
-#define _Chain_Object_h_
+#ifndef _chain_Object_h_
+#define _chain_Object_h_
 
 #define __Chain
 
 #include <string>
 
-namespace Chain
+namespace chain
 {
-  #define DECLARE_CHAIN_CLASS(OBJTYPE,PARENT,TYPENAME)    \
+  #define DECLARE_chain_CLASS(OBJTYPE,PARENT,TYPENAME)    \
     public:                                               \
     static COb::eType GetType () {                        \
       return OBJTYPE;                                     \
@@ -43,6 +43,7 @@ namespace Chain
               Manager,
                  RenderManager,
                  SceneManager,
+                 ScriptManager,
               RenderLayer,
               Transform,
                  DisplayObject,
@@ -53,25 +54,26 @@ namespace Chain
                        Root,
                     Geometry,
                        Mesh,
-           
+
          Last,
          Max=0xFFFF
       };
    };
-   
+
    /// \brief ...
    /// \details ...
-   class Object 
+   class Object
    {
+     // IMPORTANT: No call to DECLARE_chain_CLASS. This is replaced with the following code
       public:
         // -----------------------------------
-        /// \brief Get the Chain::COb type of the object
+        /// \brief Get the chain::COb type of the object
         /// \returns COb::eType - The object's type
         static COb::eType GetType () {
           return COb::Object;
         };
         // -----------------------------------
-        /// \brief Get the Chain::COb type as a string
+        /// \brief Get the chain::COb type as a string
         /// \returns std::string - The object's type
         static std::string GetTypeName () {
           return "object";
@@ -79,7 +81,7 @@ namespace Chain
         // -----------------------------------
         /// \brief Test if a class is of a certain type, or derived from that type.
         /// \details This function looks down the class hierarchy for the class type.
-        /// \param _type - Chain::COb type being checked against
+        /// \param _type - chain::COb type being checked against
         /// \returns bool - True if part of type
         static bool IsType(const COb::eType& _type) {
           return (_type == COb::Object);
@@ -90,16 +92,16 @@ namespace Chain
          //---------------------------------------
          /// \details Default Constructor
          Object();
-         
+
       public:
          //---------------------------------------
          /// \details Destructor
          virtual ~Object();
-      
+
          //---------------------------------------
          /// \details Get the object's unique id
          unsigned long GetId() const;
-      
+
       private:
          unsigned long m_id;
          static unsigned long m_id_incrementer;
