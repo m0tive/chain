@@ -14,7 +14,7 @@
 
 #include "Manager.hpp"
 
-#include "lua/lua.hpp"
+#include <lua/lua.hpp>
 
 namespace chain
 {
@@ -23,7 +23,7 @@ namespace chain
 	/// \brief
   class ScriptManager : public Manager
 	{
-     DECLARE_chain_CLASS(COb::ScriptManager,Manager,"scriptManager")
+     DECLARE_CHAIN_CLASS(COb::ScriptManager,Manager,"scriptManager")
     friend class App;
   protected:
 		//---------------------------------------
@@ -33,6 +33,15 @@ namespace chain
 		/// \details Destructor
 		~ScriptManager();
 
+  public:
+    bool executeFile (const char* filename);
+    bool execute(const char* script);
+    bool execute(const std::string& script);
+
+  private:
+    int lua_print(lua_State *L);
+    int getErrors();
+  
   protected:
     lua_State* m_luaState;
 	};

@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Mesh : public Geometry
    {
-     DECLARE_chain_CLASS(COb::Mesh,Geometry,"mesh")
+     DECLARE_CHAIN_CLASS(COb::Mesh,Geometry,"mesh")
       public:
          //---------------------------------------
          /// \details Default Constructor

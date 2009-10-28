@@ -25,7 +25,7 @@ namespace chain
    /// \details ...
    class Container : public DisplayObject
    {
-     DECLARE_chain_CLASS(COb::Container,DisplayObject,"container")
+     DECLARE_CHAIN_CLASS(COb::Container,DisplayObject,"container")
       friend class SceneManager;
       protected:
          //---------------------------------------

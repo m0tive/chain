@@ -24,7 +24,7 @@ namespace chain
    /// \details These are created and managed in chain::SceneManager
    class Root : public Container
    {
-     DECLARE_chain_CLASS(COb::Root,Container,"root")
+     DECLARE_CHAIN_CLASS(COb::Root,Container,"root")
       friend class SceneManager;
       protected:
          //---------------------------------------

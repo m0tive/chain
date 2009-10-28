@@ -28,7 +28,7 @@ namespace chain
    /// and call App::Run()
    class App : public EventDispatcher
    {
-     DECLARE_chain_CLASS(COb::App,EventDispatcher,"app")
+     DECLARE_CHAIN_CLASS(COb::App,EventDispatcher,"app")
       public:
          // -----------------------------------
          /// \details Get an instance of this singleton.

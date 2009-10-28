@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Camera : public DisplayObject
    {
-     DECLARE_chain_CLASS(COb::Camera,DisplayObject,"camera")
+     DECLARE_CHAIN_CLASS(COb::Camera,DisplayObject,"camera")
       public:
          //---------------------------------------
          /// \details Default Constructor

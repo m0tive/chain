@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Transform : public EventDispatcher
    {
-     DECLARE_chain_CLASS(COb::Transform,EventDispatcher,"transform")
+     DECLARE_CHAIN_CLASS(COb::Transform,EventDispatcher,"transform")
       protected:
          //---------------------------------------
          /// \details Default Constructor

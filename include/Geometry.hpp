@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Geometry : public DisplayObject
    {
-     DECLARE_chain_CLASS(COb::Geometry,DisplayObject,"geometry")
+     DECLARE_CHAIN_CLASS(COb::Geometry,DisplayObject,"geometry")
       protected:
          //---------------------------------------
          /// \details Default Constructor

@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class RenderManager : public Manager
    {
-     DECLARE_chain_CLASS(COb::RenderManager,Manager,"renderManager")
+     DECLARE_CHAIN_CLASS(COb::RenderManager,Manager,"renderManager")
       protected:
          //---------------------------------------
          /// \details Default Constructor

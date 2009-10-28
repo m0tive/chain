@@ -36,7 +36,7 @@ namespace chain
    /// \brief ...
    /// \details ...
    class Log : public EventDispatcher {
-     DECLARE_chain_CLASS(COb::Log,EventDispatcher,"log")
+     DECLARE_CHAIN_CLASS(COb::Log,EventDispatcher,"log")
       friend class Logger;
       private:
          //---------------------------------------

@@ -8,50 +8,40 @@
 #include "ScriptManager.hpp"
 #include "Log.hpp"
 
-// basic lua code interpreted from http://csl.sublevel3.org/lua/
-
-int myFunt (lua_State *L){
-   int argc = lua_gettop(L);
-
-   std::cout << "$$ ";
-
-   for(int i=1;i<=argc;++i){
-      std::cout << lua_tostring(L, i);
-   }
-   std::cout << "\n";
-   return 1;
-}
-
-void report_errors(lua_State *L, int status)
+int _lua_print (lua_State* L)
 {
-  if ( status!=0 ) {
-    DOUT << "-- " << lua_tostring(L, -1) << "\n";
-    lua_pop(L, 1); // remove error message
-  }
-}
+  // basic lua code interpreted from http://csl.sublevel3.org/lua/
+  int argc = lua_gettop(L);
 
+  std::cout << "$$ ";
+
+  for(int i=1;i<=argc;++i){
+    std::cout << lua_tostring(L, i);
+  }
+  std::cout << "\n";
+  return 1;
+}
 
 namespace chain
 {
   //------------------------------------------------ ScriptManager::ScriptManager
   ScriptManager::ScriptManager()
   {
-    // initilise the lua script interpreter
+    // initialise the lua script interpreter
     DOUT << "initialising lua\n";
     m_luaState = lua_open();
     luaL_openlibs(m_luaState);
 
-    lua_register(m_luaState, "ch_print", myFunt);
+    lua_register(m_luaState, "ch_print", _lua_print);
 
-    // hardcode replacement for lua's default io.write function
-    /*int s = */luaL_dostring(m_luaState, "\
+    // hard code replacement for lua's default io.write function
+    if(luaL_dostring(m_luaState, "\
        io.write = ch_print \
        print = ch_print \
-       print \"attempted to bind ch_print to io.write and print\"");
-
-    //DOUT << "-- " << lua_tostring(m_luaState, -1) << "\n";
-
-    //report_errors(m_luaState,s);
+       print \"attempted to bind ch_print to io.write and print\""))
+    {
+      DOUT << "error setting ch_print";
+    }
   }
 
   //------------------------------------------------ ScriptManager::~ScriptManager
@@ -59,5 +49,47 @@ namespace chain
   {
     DOUT << "closing lua\n";
     lua_close(m_luaState);
+  }
+
+  //------------------------------------------------ ScriptManager::executeFile
+  bool ScriptManager::executeFile( const char* filename )
+  {
+    int TODO;///\todo 2009/10/28 21:50 : Load file
+    return execute(std::string("print \"execute file '") + filename + "'\"");
+  }
+
+  //------------------------------------------------ ScriptManager::execute
+  bool ScriptManager::execute( const char* script )
+  {
+    return false;
+  }
+
+  //------------------------------------------------ ScriptManager::execute
+  bool ScriptManager::execute( const std::string& script )
+  {
+    return false;
+  }
+
+  //------------------------------------------------ ScriptManager::lua_print
+  int ScriptManager::lua_print( lua_State *L )
+  {
+    // basic lua code interpreted from http://csl.sublevel3.org/lua/
+    int argc = lua_gettop(L);
+
+    std::cout << "$$ ";
+
+    for(int i=1;i<=argc;++i){
+      std::cout << lua_tostring(L, i);
+    }
+    std::cout << "\n";
+    return 1;
+  }
+
+  //------------------------------------------------ ScriptManager::getErrors
+  int ScriptManager::getErrors()
+  {
+    //DOUT << "-- " << lua_tostring(m_luaState, -1) << "\n";
+    //lua_pop(m_luaState, 1); // remove error message
+    return 0;
   }
 }

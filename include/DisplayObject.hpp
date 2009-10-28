@@ -24,7 +24,7 @@ namespace chain
    /// \details ...
    class DisplayObject : public Transform
    {
-     DECLARE_chain_CLASS(COb::DisplayObject,Transform,"displayObject")
+     DECLARE_CHAIN_CLASS(COb::DisplayObject,Transform,"displayObject")
       // The Container needs access to m_root and m_parent, which are updated
       // when added as a child
       friend class Container;

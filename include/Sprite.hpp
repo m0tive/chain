@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Sprite : public Instance
    {
-     DECLARE_chain_CLASS(COb::Sprite,Instance,"sprite")
+     DECLARE_CHAIN_CLASS(COb::Sprite,Instance,"sprite")
       public:
          //---------------------------------------
          /// \details Default Constructor

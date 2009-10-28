@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class RenderLayer : public EventDispatcher
    {
-     DECLARE_chain_CLASS(COb::RenderLayer,EventDispatcher,"renderLayer")
+     DECLARE_CHAIN_CLASS(COb::RenderLayer,EventDispatcher,"renderLayer")
       friend class RenderManager;
       protected:
          //---------------------------------------

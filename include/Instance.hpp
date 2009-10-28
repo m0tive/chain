@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Instance : public Container
    {
-     DECLARE_chain_CLASS(COb::Instance,Container,"instance")
+     DECLARE_CHAIN_CLASS(COb::Instance,Container,"instance")
       public:
          //---------------------------------------
          /// \details Default Constructor

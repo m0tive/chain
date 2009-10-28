@@ -20,7 +20,7 @@
 
 namespace chain
 {
-  #define DECLARE_chain_CLASS(OBJTYPE,PARENT,TYPENAME)    \
+  #define DECLARE_CHAIN_CLASS(OBJTYPE,PARENT,TYPENAME)    \
     public:                                               \
     static COb::eType GetType () {                        \
       return OBJTYPE;                                     \
@@ -54,6 +54,7 @@ namespace chain
                        Root,
                     Geometry,
                        Mesh,
+             Script,
 
          Last,
          Max=0xFFFF
@@ -64,7 +65,7 @@ namespace chain
    /// \details ...
    class Object
    {
-     // IMPORTANT: No call to DECLARE_chain_CLASS. This is replaced with the following code
+     // IMPORTANT: No call to DECLARE_CHAIN_CLASS. This is replaced with the following code
       public:
         // -----------------------------------
         /// \brief Get the chain::COb type of the object
