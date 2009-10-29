@@ -25,7 +25,7 @@ int _lua_print (lua_State* L)
 namespace chain
 {
   //------------------------------------------------ ScriptManager::ScriptManager
-  ScriptManager::ScriptManager()
+  ScriptManager::ScriptManager() : m_scriptCounter(0)
   {
     // initialise the lua script interpreter
     DOUT << "initialising lua\n";
@@ -51,25 +51,6 @@ namespace chain
     lua_close(m_luaState);
   }
 
-  //------------------------------------------------ ScriptManager::executeFile
-  bool ScriptManager::executeFile( const char* filename )
-  {
-    int TODO;///\todo 2009/10/28 21:50 : Load file
-    return execute(std::string("print \"execute file '") + filename + "'\"");
-  }
-
-  //------------------------------------------------ ScriptManager::execute
-  bool ScriptManager::execute( const char* script )
-  {
-    return false;
-  }
-
-  //------------------------------------------------ ScriptManager::execute
-  bool ScriptManager::execute( const std::string& script )
-  {
-    return false;
-  }
-
   //------------------------------------------------ ScriptManager::lua_print
   int ScriptManager::lua_print( lua_State *L )
   {
@@ -85,8 +66,8 @@ namespace chain
     return 1;
   }
 
-  //------------------------------------------------ ScriptManager::getErrors
-  int ScriptManager::getErrors()
+  //------------------------------------------------ ScriptManager::LuaErrorCheck
+  int ScriptManager::LuaErrorCheck()
   {
     //DOUT << "-- " << lua_tostring(m_luaState, -1) << "\n";
     //lua_pop(m_luaState, 1); // remove error message

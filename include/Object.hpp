@@ -54,7 +54,6 @@ namespace chain
                        Root,
                     Geometry,
                        Mesh,
-             Script,
 
          Last,
          Max=0xFFFF

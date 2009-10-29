@@ -9,9 +9,10 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="lib/chain" prefix_auto="1" extension_auto="1" />
+				<Option output="lib/libchain" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
-				<Option type="1" />
+				<Option type="2" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
@@ -24,9 +25,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="Release">
-				<Option output="lib/chain" prefix_auto="1" extension_auto="1" />
+				<Option output="lib/libchain" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
 				<Option object_output="obj/Release/" />
-				<Option type="1" />
+				<Option type="2" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
@@ -48,39 +50,56 @@
 		<Unit filename="include/App.hpp" />
 		<Unit filename="include/Camera.hpp" />
 		<Unit filename="include/Container.hpp" />
+		<Unit filename="include/Def.hpp" />
 		<Unit filename="include/DisplayObject.hpp" />
+		<Unit filename="include/EulerAngle.hpp" />
 		<Unit filename="include/EventDispatcher.hpp" />
 		<Unit filename="include/Geometry.hpp" />
 		<Unit filename="include/Instance.hpp" />
 		<Unit filename="include/Log.hpp" />
 		<Unit filename="include/Manager.hpp" />
+		<Unit filename="include/Matrix.hpp" />
 		<Unit filename="include/Mesh.hpp" />
 		<Unit filename="include/Object.hpp" />
+		<Unit filename="include/Quaternion.hpp" />
 		<Unit filename="include/RenderLayer.hpp" />
 		<Unit filename="include/RenderManager.hpp" />
 		<Unit filename="include/Root.hpp" />
 		<Unit filename="include/SceneManager.hpp" />
+		<Unit filename="include/Script.hpp" />
 		<Unit filename="include/ScriptManager.hpp" />
 		<Unit filename="include/Sprite.hpp" />
 		<Unit filename="include/Transform.hpp" />
+		<Unit filename="include/Utl.hpp" />
+		<Unit filename="include/Vector2.hpp" />
+		<Unit filename="include/Vector3.hpp" />
+		<Unit filename="include/Vector4.hpp" />
 		<Unit filename="src/App.cpp" />
 		<Unit filename="src/Camera.cpp" />
 		<Unit filename="src/Container.cpp" />
 		<Unit filename="src/DisplayObject.cpp" />
+		<Unit filename="src/EulerAngle.cpp" />
 		<Unit filename="src/EventDispatcher.cpp" />
 		<Unit filename="src/Geometry.cpp" />
 		<Unit filename="src/Instance.cpp" />
 		<Unit filename="src/Log.cpp" />
 		<Unit filename="src/Manager.cpp" />
+		<Unit filename="src/Matrix.cpp" />
 		<Unit filename="src/Mesh.cpp" />
 		<Unit filename="src/Object.cpp" />
+		<Unit filename="src/Quaternion.cpp" />
 		<Unit filename="src/RenderLayer.cpp" />
 		<Unit filename="src/RenderManager.cpp" />
 		<Unit filename="src/Root.cpp" />
 		<Unit filename="src/SceneManager.cpp" />
+		<Unit filename="src/Script.cpp" />
 		<Unit filename="src/ScriptManager.cpp" />
 		<Unit filename="src/Sprite.cpp" />
 		<Unit filename="src/Transform.cpp" />
+		<Unit filename="src/Utl.cpp" />
+		<Unit filename="src/Vector2.cpp" />
+		<Unit filename="src/Vector3.cpp" />
+		<Unit filename="src/Vector4.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -1,46 +1,48 @@
 /// \file Script.cpp
 /// \date 2009/10/28
 /// \author Peter Dodds
-/// \brief 
-/// \note 
+/// \brief
+/// \note
 //------------------------------------------------------------------------------
 
 #include "Script.hpp"
 #include <lua/lua.hpp>
 #include <fstream>
 
+#include "ScriptManager.hpp"
+
+
 namespace chain
 {
 	//------------------------------------------------ Script::run
-  bool Script::run()
+  bool Script::Run()
   {
-    //luaL_dostring(m_luaState, this->c_str());
-    return false;
+    return m_manager->Run(text.c_str());
   }
 
   //------------------------------------------------ Script::load
-  bool Script::load( const char* filename )
+  bool Script::Load( const char* filename )
   {
     std::ifstream file;
     file.open(filename, std::ios::in);
     if (!file.is_open())
       return false;
-    
+
     while(!file.eof())
-      this->push_back(static_cast<char >(file.get()));
+      text.push_back(static_cast<char >(file.get()));
 
     return true;
   }
 
   //------------------------------------------------ Script::save
-  bool Script::save( const char* filename )
+  bool Script::Save( const char* filename )
   {
     std::ofstream file (filename,std::ios::out);
     if (!file.is_open())
       return false;
-    
-    std::string::iterator i = this->begin();
-    for (;i!=this->end();++i)
+
+    std::string::iterator i = text.begin();
+    for (;i!=text.end();++i)
       file.put(*i);
 
     file.close();
