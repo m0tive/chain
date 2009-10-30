@@ -11,20 +11,21 @@
 
 namespace chain
 {
-   //------------------------------------------------ App::App
-   App::App()
-   {
-      DOUT << "libChain App created\n";
-   }
-   //------------------------------------------------ App::~App
-   App::~App()
-   {
+  //------------------------------------------------ App::App
+  App::App()
+  {
+    DOUT << "libChain App created\n";
+  }
+  //------------------------------------------------ App::~App
+  App::~App()
+  {
 
-   }
+  }
 
-   //------------------------------------------------ App::Run
-   void App::Run()
-   {
-
-   }
+  //------------------------------------------------ App::Run
+  bool App::Run(const char* script)
+  {
+    bool s = scriptManager.Run(script);
+    return s;
+  }
 }

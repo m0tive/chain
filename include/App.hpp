@@ -42,8 +42,8 @@ namespace chain
 
          //---------------------------------------
          /// \details Main application function.
-         /// Calls App::Init(), starts main loop updating App::dt
-         virtual void Run ();
+         ///
+         virtual bool Run (const char* script);
 
       private:
          //---------------------------------------

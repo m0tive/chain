@@ -69,7 +69,15 @@ namespace chain
   //------------------------------------------------ ScriptManager::LuaErrorCheck
   int ScriptManager::LuaErrorCheck()
   {
-    //DOUT << "-- " << lua_tostring(m_luaState, -1) << "\n";
+    //std::string str;
+    while (!lua_isnil(m_luaState, -1))
+    {
+      /* uses 'key' (at index -2) and 'value' (at index -1) */
+      std::cout << "$$ " << lua_tostring(m_luaState, -1) << "\n";
+      /* removes 'value'; keeps 'key' for next iteration */
+      lua_pop(m_luaState, 1);
+    }
+
     //lua_pop(m_luaState, 1); // remove error message
     return 0;
   }

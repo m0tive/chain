@@ -92,8 +92,10 @@ namespace chain
 
     bool Run (const char* str)
     {
-      luaL_dostring(m_luaState, str);
-      return LuaErrorCheck();
+      int s = luaL_dostring(m_luaState, str);
+      if(s != 0)
+        return LuaErrorCheck();
+      return false;
     }
 
     bool RunFile (const char* filename) {return false;}
