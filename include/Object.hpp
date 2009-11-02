@@ -17,6 +17,7 @@
 #define __Chain
 
 #include <string>
+#include "Def.hpp"
 
 namespace chain
 {
@@ -100,11 +101,11 @@ namespace chain
 
          //---------------------------------------
          /// \details Get the object's unique id
-         unsigned long GetId() const;
+         Uint64 GetId() const;
 
       private:
-         unsigned long m_id;
-         static unsigned long m_id_incrementer;
+         Uint64 m_id;
+         static Uint64 m_id_incrementer;
    };
 }
 

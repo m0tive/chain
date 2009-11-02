@@ -11,17 +11,6 @@
 
 namespace chain
 {
-  //------------------------------------------------ App::App
-  App::App()
-  {
-    DOUT << "libChain App created\n";
-  }
-  //------------------------------------------------ App::~App
-  App::~App()
-  {
-
-  }
-
   //------------------------------------------------ App::Run
   bool App::Run(const char* script)
   {

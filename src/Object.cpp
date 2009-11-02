@@ -10,7 +10,7 @@
 
 namespace chain
 {
-   unsigned long Object::m_id_incrementer = 0;
+   Uint64 Object::m_id_incrementer = 0;
 
    //------------------------------------------------ Object::Object
    Object::Object()
@@ -24,7 +24,7 @@ namespace chain
    }
 
    //------------------------------------------------ Object::GetId
-   unsigned long Object::GetId() const
+   Uint64 Object::GetId() const
    {
       return m_id;
    }

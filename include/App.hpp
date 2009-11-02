@@ -19,46 +19,47 @@
 // Manager classes
 #include "SceneManager.hpp"
 #include "ScriptManager.hpp"
+#include "RenderManager.hpp"
 #include "Log.hpp"
 
 namespace chain
 {
-   /// \brief Class to define the main game application.
-   /// \details To start the client, create a new application,
-   /// and call App::Run()
-   class App : public EventDispatcher
-   {
-     DECLARE_CHAIN_CLASS(COb::App,EventDispatcher,"app")
-      public:
-         // -----------------------------------
-         /// \details Get an instance of this singleton.
-         /// The first call to this will create the singleton.
-         /// \returns Application& - the application
-         static App& Instance ()
-         {
-            static App singleton;
-            return singleton;
-         }
+  /// \brief Class to define the main game application.
+  /// \details To start the client, create a new application,
+  /// and call App::Run()
+  class App : public EventDispatcher
+  {
+    DECLARE_CHAIN_CLASS(COb::App,EventDispatcher,"app")
+    public:
+      // -----------------------------------
+      /// \details Get an instance of this singleton.
+      /// The first call to this will create the singleton.
+      /// \returns Application& - the application
+      static App& Instance ()
+      {
+        static App singleton;
+        return singleton;
+      }
 
-         //---------------------------------------
-         /// \details Main application function.
-         ///
-         virtual bool Run (const char* script);
+      //---------------------------------------
+      /// \details Main application function.
+      ///
+      virtual bool Run (const char* script);
 
-      private:
-         //---------------------------------------
-         /// \details Default Constructor
-         App();
+    private:
+      //---------------------------------------
+      /// \details Default Constructor
+      App() {}
+      //---------------------------------------
+      /// \details Destructor
+      virtual ~App() {}
 
-         //---------------------------------------
-         /// \details Destructor
-         virtual ~App();
-
-      public:
-         SceneManager sceneManager;
-         ScriptManager scriptManager;
-         Log * log;
-   };
+    public:
+      RenderManager renderManager;
+      SceneManager sceneManager;
+      ScriptManager scriptManager;
+      Log * log;
+  };
 }
 
 #endif
