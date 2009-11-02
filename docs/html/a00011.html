@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: chain::Logger Class Reference</title>
+<title>Chain: chain::Log Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,42 +22,52 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00036.html">chain</a>::<a class="el" href="a00011.html">Logger</a>
+  <div class="navpath"><a class="el" href="a00037.html">chain</a>::<a class="el" href="a00011.html">Log</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::Logger Class Reference</h1><!-- doxytag: class="chain::Logger" -->Interface to <a class="el" href="a00010.html" title="...">chain::Log</a>.  
+<h1>chain::Log Class Reference</h1><!-- doxytag: class="chain::Log" --><!-- doxytag: inherits="chain::EventDispatcher" -->...  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;Log.hpp&gt;</code>
 <p>
+<div class="dynheader">
+Inheritance diagram for chain::Log:</div>
+<div class="dynsection">
+
+<p><center><img src="a00011.png" usemap="#chain::Log_map" border="0" alt=""></center>
+<map name="chain::Log_map">
+<area href="a00007.html" alt="chain::EventDispatcher" shape="rect" coords="0,56,142,80">
+<area href="a00016.html" alt="chain::Object" shape="rect" coords="0,0,142,24">
+</map>
+</div>
 
 <p>
-<a href="a00150.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00155.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#969e56cddb5d287e2431b1b370c4d46c">Logger</a> ()</td></tr>
+<tr><td colspan="2"><br><h2>Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#4b768c508b0e7e99cbf10b7f35841337">Log</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#7992d96d5bbc7ce820d542a16b183364">~Logger</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a84ce5d00672903e9ec1015e3f040e82">~Log</a> ()</td></tr>
 
-<tr><td colspan="2"><br><h2>Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00010.html">Log</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#1d28f3db4046092bdf19404f70d9b51b">m_log</a></td></tr>
+<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#ff02b76416d2846736b7ecd798921a0a">Logger</a></td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
-Interface to <a class="el" href="a00010.html" title="...">chain::Log</a>. 
+... 
 <p>
 ... <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="969e56cddb5d287e2431b1b370c4d46c"></a><!-- doxytag: member="chain::Logger::Logger" ref="969e56cddb5d287e2431b1b370c4d46c" args="()" -->
+<a class="anchor" name="4b768c508b0e7e99cbf10b7f35841337"></a><!-- doxytag: member="chain::Log::Log" ref="4b768c508b0e7e99cbf10b7f35841337" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Logger::Logger           </td>
+          <td class="memname">chain::Log::Log           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
+          <td><code> [inline, private]</code></td>
         </tr>
       </table>
 </div>
@@ -67,16 +77,16 @@ Interface to <a class="el" href="a00010.html" title="...">chain::Log</a>.
 Default Constructor 
 </div>
 </div><p>
-<a class="anchor" name="7992d96d5bbc7ce820d542a16b183364"></a><!-- doxytag: member="chain::Logger::~Logger" ref="7992d96d5bbc7ce820d542a16b183364" args="()" -->
+<a class="anchor" name="a84ce5d00672903e9ec1015e3f040e82"></a><!-- doxytag: member="chain::Log::~Log" ref="a84ce5d00672903e9ec1015e3f040e82" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual chain::Logger::~Logger           </td>
+          <td class="memname">virtual chain::Log::~Log           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline, virtual]</code></td>
+          <td><code> [inline, private, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -86,13 +96,13 @@ Default Constructor
 Destructor 
 </div>
 </div><p>
-<hr><h2>Member Data Documentation</h2>
-<a class="anchor" name="1d28f3db4046092bdf19404f70d9b51b"></a><!-- doxytag: member="chain::Logger::m_log" ref="1d28f3db4046092bdf19404f70d9b51b" args="" -->
+<hr><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" name="ff02b76416d2846736b7ecd798921a0a"></a><!-- doxytag: member="chain::Log::Logger" ref="ff02b76416d2846736b7ecd798921a0a" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00010.html">Log</a>* <a class="el" href="a00011.html#1d28f3db4046092bdf19404f70d9b51b">chain::Logger::m_log</a><code> [protected]</code>          </td>
+          <td class="memname">friend class <a class="el" href="a00012.html">Logger</a><code> [friend]</code>          </td>
         </tr>
       </table>
 </div>
@@ -103,9 +113,9 @@ Destructor
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00048.html">Log.hpp</a></ul>
+<li><a class="el" href="a00049.html">Log.hpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 11:34:15 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 16:45:16 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

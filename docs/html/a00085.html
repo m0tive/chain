@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: App.hpp Source File</title>
+<title>Chain: Vector4.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,62 +21,31 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>App.hpp</h1><a href="a00030.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00002"></a>00002 
-<a name="l00003"></a>00003 
-<a name="l00004"></a>00004 
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="comment">//------------------------------------------------------------------------------</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">   #pragma once</span>
-<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span>
-<a name="l00014"></a>00014 <span class="preprocessor">#ifndef _Chain_App_h_</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#define _Chain_App_h_</span>
-<a name="l00016"></a>00016 <span class="preprocessor"></span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include "<a class="code" href="a00042.html">EventDispatcher.hpp</a>"</span>
-<a name="l00018"></a>00018 
-<a name="l00019"></a>00019 <span class="comment">// Manager classes</span>
-<a name="l00020"></a>00020 <span class="preprocessor">#include "<a class="code" href="a00066.html">SceneManager.hpp</a>"</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include "<a class="code" href="a00070.html">ScriptManager.hpp</a>"</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include "<a class="code" href="a00048.html">Log.hpp</a>"</span>
-<a name="l00023"></a>00023 
-<a name="l00024"></a><a class="code" href="a00036.html">00024</a> <span class="keyword">namespace </span>chain
-<a name="l00025"></a>00025 {
-<a name="l00029"></a><a class="code" href="a00001.html">00029</a>    <span class="keyword">class </span><a class="code" href="a00001.html" title="Class to define the main game application.">App</a> : <span class="keyword">public</span> <a class="code" href="a00007.html" title="...">EventDispatcher</a>
-<a name="l00030"></a>00030    {
-<a name="l00031"></a>00031      <a class="code" href="a00056.html#ea2814fa4df16226353440db8e8d7290">DECLARE_CHAIN_CLASS</a>(<a class="code" href="a00003.html#e379502854cdb2272013bd16dde8bbc726a8b5efe2464b6f7c1977363f78d662">COb::App</a>,<a class="code" href="a00007.html" title="...">EventDispatcher</a>,<span class="stringliteral">"app"</span>)
-<a name="l00032"></a>00032       <span class="keyword">public</span>:
-<a name="l00033"></a>00033          <span class="comment">// -----------------------------------</span>
-<a name="l00037"></a><a class="code" href="a00001.html#8ed6a948d6e3b7d5267f106f2c5a9ed4">00037</a> <span class="comment"></span>         <span class="keyword">static</span> <a class="code" href="a00001.html" title="Class to define the main game application.">App</a>&amp; <a class="code" href="a00001.html#8ed6a948d6e3b7d5267f106f2c5a9ed4">Instance</a> ()
-<a name="l00038"></a>00038          {
-<a name="l00039"></a>00039             <span class="keyword">static</span> <a class="code" href="a00001.html" title="Class to define the main game application.">App</a> singleton;
-<a name="l00040"></a>00040             <span class="keywordflow">return</span> singleton;
-<a name="l00041"></a>00041          }
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043          <span class="comment">//---------------------------------------</span>
-<a name="l00046"></a>00046 <span class="comment"></span>         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="a00001.html#77d2d8326a7ad037930e3a1e56627cd6">Run</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* script);
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048       <span class="keyword">private</span>:
-<a name="l00049"></a>00049          <span class="comment">//---------------------------------------</span>
-<a name="l00051"></a>00051 <span class="comment"></span>         <a class="code" href="a00001.html#115ac31052c236f9b655ad3ae6988afb">App</a>();
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053          <span class="comment">//---------------------------------------</span>
-<a name="l00055"></a>00055 <span class="comment"></span>         <span class="keyword">virtual</span> <a class="code" href="a00001.html#0d807ccc516b997918a079027a297ca5">~App</a>();
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057       <span class="keyword">public</span>:
-<a name="l00058"></a><a class="code" href="a00001.html#8c6f62ee98e8737b5004c74b42103162">00058</a>          <a class="code" href="a00020.html" title="...">SceneManager</a> <a class="code" href="a00001.html#8c6f62ee98e8737b5004c74b42103162">sceneManager</a>;
-<a name="l00059"></a><a class="code" href="a00001.html#0be4f7747aac33c803570ac74286658e">00059</a>          <a class="code" href="a00022.html">ScriptManager</a> <a class="code" href="a00001.html#0be4f7747aac33c803570ac74286658e">scriptManager</a>;
-<a name="l00060"></a><a class="code" href="a00001.html#4cdf62c71bcff1e747a91a1bfc4a9581">00060</a>          <a class="code" href="a00010.html" title="...">Log</a> * <a class="code" href="a00001.html#4cdf62c71bcff1e747a91a1bfc4a9581">log</a>;
-<a name="l00061"></a>00061    };
-<a name="l00062"></a>00062 }
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif</span>
-</pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 09:29:25 2009 for Chain by&nbsp;
+</div>
+<div class="contents">
+<h1>Vector4.hpp File Reference</h1><a class="el" href="a00029.html" title="Structure to hold a vector contain four values.">chain::Vector4</a> structure declaration  
+<a href="#_details">More...</a>
+<p>
+<code>#include &quot;<a class="el" href="a00036.html">Def.hpp</a>&quot;</code><br>
+<code>#include &lt;ostream&gt;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Classes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html">chain::Vector4</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Structure to hold a vector contain four values.  <a href="a00029.html#_details">More...</a><br></td></tr>
+<tr><td colspan="2"><br><h2>Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">namespace &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00037.html">chain</a></td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Detailed Description</h2>
+<a class="el" href="a00029.html" title="Structure to hold a vector contain four values.">chain::Vector4</a> structure declaration 
+<p>
+<dl class="date" compact><dt><b>Date:</b></dt><dd>2007/11/18 </dd></dl>
+<dl class="author" compact><dt><b>Author:</b></dt><dd>Peter Dodds </dd></dl>
+<dl class="note" compact><dt><b>Note:</b></dt><dd></dd></dl>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 16:45:16 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
