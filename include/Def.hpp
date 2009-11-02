@@ -1,4 +1,4 @@
-/// \file Def.h
+/// \file Def.hpp
 /// \date 2008/04/19
 /// \author Peter Dodds
 /// \brief Definitions of basic data types, associated function and constants
@@ -14,8 +14,6 @@
 
 #include <math.h>
 
-/// \brief Maths datatypes and functions
-/// \details These have are associated with (and optimised for) computer graphics and games
 namespace chain
 {
   /// \todo make 64bit compatible

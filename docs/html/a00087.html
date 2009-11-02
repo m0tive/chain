@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: Def.hpp Source File</title>
+<title>Chain: Camera.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,106 +21,39 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>Def.hpp</h1><a href="a00034.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<h1>Camera.hpp</h1><a href="a00032.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="comment">//------------------------------------------------------------------------------</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span>
-<a name="l00012"></a>00012 <span class="preprocessor">#ifndef _chain_Def_h_</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define _chain_Def_h_</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;math.h&gt;</span>
-<a name="l00016"></a>00016 
-<a name="l00019"></a>00019 <span class="keyword">namespace </span>chain
-<a name="l00020"></a>00020 {
-<a name="l00023"></a><a class="code" href="a00035.html#6848b9670d9fc314c960dbb458e33cc8">00023</a>   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="a00035.html#6848b9670d9fc314c960dbb458e33cc8" title="Unsigned data 8 bytes in length.">Uint8</a>;
-<a name="l00025"></a><a class="code" href="a00035.html#b14160d4d3dd2b5668fbb59ca88a125e">00025</a>   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <a class="code" href="a00035.html#b14160d4d3dd2b5668fbb59ca88a125e" title="Unsigned data 32 bytes in length.">Uint32</a>;
-<a name="l00027"></a><a class="code" href="a00035.html#a443f3ee0d9c73f667421c108473ffd7">00027</a>   <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="a00035.html#a443f3ee0d9c73f667421c108473ffd7" title="Unsigned data 64 bytes in length.">Uint64</a>;
-<a name="l00028"></a>00028 
-<a name="l00032"></a>00032 <span class="preprocessor">#ifdef CH_DOUBLE_ACCURACY</span>
-<a name="l00033"></a>00033 <span class="preprocessor"></span>  <span class="keyword">typedef</span> <span class="keywordtype">double</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>;
-<a name="l00034"></a>00034 <span class="preprocessor">  #define CH_COS(X) cos(X)</span>
-<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="preprocessor">  #define CH_SIN(X) sin(X)</span>
-<a name="l00036"></a>00036 <span class="preprocessor"></span><span class="preprocessor">  #define CH_TAN(X) tan(X)</span>
-<a name="l00037"></a>00037 <span class="preprocessor"></span><span class="preprocessor">  #define CH_ACOS(X) acos(X)</span>
-<a name="l00038"></a>00038 <span class="preprocessor"></span><span class="preprocessor">  #define CH_ASIN(X) asin(X)</span>
-<a name="l00039"></a>00039 <span class="preprocessor"></span><span class="preprocessor">  #define CH_ATAN(X) atan(X)</span>
-<a name="l00040"></a>00040 <span class="preprocessor"></span><span class="preprocessor">  #define CH_ATAN2(X,Y) atan2(X,Y)</span>
-<a name="l00041"></a>00041 <span class="preprocessor"></span>
-<a name="l00042"></a>00042 <span class="preprocessor">  #define CH_POW(X,Y) pow(X,Y)</span>
-<a name="l00043"></a>00043 <span class="preprocessor"></span><span class="preprocessor">  #define CH_SQRT(X) sqrt(X)</span>
-<a name="l00044"></a>00044 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-<a name="l00045"></a><a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d">00045</a> <span class="preprocessor"></span>  <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>;
-<a name="l00046"></a>00046 <span class="preprocessor">  #define CH_COS(X) cosf(X)</span>
-<a name="l00047"></a>00047 <span class="preprocessor"></span><span class="preprocessor">  #define CH_SIN(X) sinf(X)</span>
-<a name="l00048"></a>00048 <span class="preprocessor"></span><span class="preprocessor">  #define CH_TAN(X) tanf(X)</span>
-<a name="l00049"></a>00049 <span class="preprocessor"></span><span class="preprocessor">  #define CH_ACOS(X) acosf(X)</span>
-<a name="l00050"></a>00050 <span class="preprocessor"></span><span class="preprocessor">  #define CH_ASIN(X) asinf(X)</span>
-<a name="l00051"></a>00051 <span class="preprocessor"></span><span class="preprocessor">  #define CH_ATAN(X) atanf(X)</span>
-<a name="l00052"></a>00052 <span class="preprocessor"></span><span class="preprocessor">  #define CH_ATAN2(X,Y) atan2f(X,Y)</span>
-<a name="l00053"></a>00053 <span class="preprocessor"></span>
-<a name="l00054"></a>00054 <span class="preprocessor">  #define CH_POW(X,Y) powf(X,Y)</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span><span class="preprocessor">  #define CH_SQRT(X) (float)(sqrt(X))</span>
-<a name="l00056"></a>00056 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00057"></a>00057 <span class="preprocessor"></span>
-<a name="l00059"></a><a class="code" href="a00035.html#ac9f5484fdefc7ce07dcbad21bb3ee38">00059</a>   <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00035.html#ac9f5484fdefc7ce07dcbad21bb3ee38">g_vecEpsilon</a> = 0.001f;
-<a name="l00060"></a>00060 
-<a name="l00063"></a><a class="code" href="a00035.html#c0fbb56a70e9e136794e2fc46cf55739">00063</a>   <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00035.html#c0fbb56a70e9e136794e2fc46cf55739">PI_OVER_180</a> = 0.017453292519943295769236907684886f;
-<a name="l00064"></a>00064 
-<a name="l00067"></a><a class="code" href="a00035.html#656caf850ecb993f4308ca424a00d0d5">00067</a>   <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00035.html#656caf850ecb993f4308ca424a00d0d5">_180_OVER_PI</a> = 57.295779513082320876798154814105f;
-<a name="l00068"></a>00068 
-<a name="l00070"></a><a class="code" href="a00035.html#e57233517a840433cbe79b64dd1337bb">00070</a>   <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00035.html#e57233517a840433cbe79b64dd1337bb" title="PI constant.">PI</a>          = 3.1415926535897932384626433832795f;
-<a name="l00071"></a>00071 
-<a name="l00073"></a><a class="code" href="a00035.html#00e50f11906c597ad46edd156f9d4cd6">00073</a>   <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00035.html#00e50f11906c597ad46edd156f9d4cd6" title="2*PI constant">_2_PI</a>       = 6.283185307179586476925286766558f;
-<a name="l00074"></a>00074 
-<a name="l00076"></a><a class="code" href="a00035.html#c440faa5e3512277ad9c9abc276d1c43">00076</a>   <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00035.html#c440faa5e3512277ad9c9abc276d1c43" title="PI/2 constant.">PI_OVER_2</a>   = 1.5707963267948966192313216916395f;
-<a name="l00077"></a>00077 }
-<a name="l00078"></a>00078 <span class="preprocessor">#ifdef FCOMPARE</span>
-<a name="l00079"></a>00079 <span class="preprocessor"></span><span class="preprocessor">  #undef FCOMPARE</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00081"></a>00081 <span class="preprocessor"></span>
-<a name="l00082"></a>00082 <span class="preprocessor">#ifdef DEG2RAD</span>
-<a name="l00083"></a>00083 <span class="preprocessor"></span><span class="preprocessor">  #undef DEG2RAD</span>
-<a name="l00084"></a>00084 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00085"></a>00085 <span class="preprocessor"></span>
-<a name="l00086"></a>00086 <span class="preprocessor">#ifdef RAD2DEG</span>
-<a name="l00087"></a>00087 <span class="preprocessor"></span><span class="preprocessor">  #undef RAD2DEG</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00089"></a>00089 <span class="preprocessor"></span>
-<a name="l00092"></a><a class="code" href="a00034.html#bfefa7f89e0452bc225dc1a7882bfdbf">00092</a> <span class="preprocessor">#define FCOMPARE(X,Y) (((X)&gt;((Y) - chain::g_vecEpsilon)) &amp;&amp; ( (X) &lt; ((Y)+ chain::g_vecEpsilon)))</span>
-<a name="l00095"></a><a class="code" href="a00034.html#cc24cd392f19e7515db8d6cc653b4147">00095</a> <span class="preprocessor">#define DEG2RAD(X) (chain::PI_OVER_180 * (X))</span>
-<a name="l00098"></a><a class="code" href="a00034.html#a5ca60aad2a2a7a4576c3dcaa20660eb">00098</a> <span class="preprocessor">#define RAD2DEG(X) (chain::_180_OVER_PI * (X))</span>
-<a name="l00099"></a>00099 <span class="preprocessor"></span>
-<a name="l00100"></a>00100 <span class="comment">// Doxygen notation</span>
-<a name="l00101"></a>00101 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00107"></a>00107 <span class="comment"></span>
-<a name="l00108"></a>00108 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00114"></a>00114 <span class="comment"></span>
-<a name="l00115"></a>00115 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00121"></a>00121 <span class="comment"></span>
-<a name="l00122"></a>00122 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00128"></a>00128 <span class="comment"></span>
-<a name="l00129"></a>00129 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00135"></a>00135 <span class="comment"></span>
-<a name="l00136"></a>00136 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00142"></a>00142 <span class="comment"></span>
-<a name="l00143"></a>00143 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00149"></a>00149 <span class="comment"></span>
-<a name="l00150"></a>00150 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00156"></a>00156 <span class="comment"></span>
-<a name="l00157"></a>00157 <span class="comment">//----------------------------------------------------------------------</span>
-<a name="l00163"></a>00163 <span class="comment"></span>
-<a name="l00164"></a>00164 
-<a name="l00165"></a>00165 
-<a name="l00166"></a>00166 <span class="preprocessor">#endif</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="comment">//------------------------------------------------------------------------------</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">   #pragma once</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#ifndef _Chain_Camera_h_</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define _Chain_Camera_h_</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="a00038.html">DisplayObject.hpp</a>"</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>chain
+<a name="l00019"></a>00019 {
+<a name="l00022"></a><a class="code" href="a00002.html">00022</a>    <span class="keyword">class </span><a class="code" href="a00002.html" title="...">Camera</a> : <span class="keyword">public</span> <a class="code" href="a00005.html" title="...">DisplayObject</a>
+<a name="l00023"></a>00023    {
+<a name="l00024"></a>00024      <a class="code" href="a00056.html#ea2814fa4df16226353440db8e8d7290">DECLARE_CHAIN_CLASS</a>(<a class="code" href="a00003.html#e379502854cdb2272013bd16dde8bbc7c0ad2915a6ea510b1c30ef934fd5de97">COb::Camera</a>,<a class="code" href="a00005.html" title="...">DisplayObject</a>,<span class="stringliteral">"camera"</span>)
+<a name="l00025"></a>00025       <span class="keyword">public</span>:
+<a name="l00026"></a>00026          <span class="comment">//---------------------------------------</span>
+<a name="l00028"></a>00028 <span class="comment"></span>         <a class="code" href="a00002.html#c09f62781fc203fd47e291af0a66ab3b">Camera</a>();
+<a name="l00029"></a>00029          <span class="comment">//---------------------------------------</span>
+<a name="l00031"></a>00031 <span class="comment"></span>         <span class="keyword">virtual</span> <a class="code" href="a00002.html#193f55239668c7c43751686ed09f7d75">~Camera</a>();
+<a name="l00032"></a>00032    };
+<a name="l00033"></a>00033 }
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 28 16:50:42 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 09:29:25 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

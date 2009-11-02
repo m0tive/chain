@@ -1,4 +1,4 @@
-/// \file Vector3.h
+/// \file Vector3.hpp
 /// \date 2007/11/13
 /// \author Peter Dodds
 /// \brief chain::Vector3 structure declaration

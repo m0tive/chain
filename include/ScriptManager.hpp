@@ -18,6 +18,8 @@
 #include <map>
 #include "Script.hpp"
 
+//#ifndef
+
 namespace chain
 {
   class App;
@@ -103,12 +105,16 @@ namespace chain
     //lua_State* GetLuaState () {return m_luaState;}
 
   private:
-    int lua_print(lua_State *L);
     int LuaErrorCheck();
+
 
     unsigned int m_scriptCounter;
 
+  public:
+    static std::string path;
+
   protected:
+
     lua_State* m_luaState;
     std::map<unsigned int,Script* > m_scripts;
 	};

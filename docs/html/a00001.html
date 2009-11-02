@@ -22,14 +22,14 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00035.html">chain</a>::<a class="el" href="a00001.html">App</a>
+  <div class="navpath"><a class="el" href="a00036.html">chain</a>::<a class="el" href="a00001.html">App</a>
   </div>
 </div>
 <div class="contents">
 <h1>chain::App Class Reference</h1><!-- doxytag: class="chain::App" --><!-- doxytag: inherits="chain::EventDispatcher" -->Class to define the main game application.  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;<a class="el" href="a00082.html">App.hpp</a>&gt;</code>
+<code>#include &lt;App.hpp&gt;</code>
 <p>
 <div class="dynheader">
 Inheritance diagram for chain::App:</div>
@@ -43,20 +43,22 @@ Inheritance diagram for chain::App:</div>
 </div>
 
 <p>
-<a href="a00133.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00138.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#77d2d8326a7ad037930e3a1e56627cd6">Run</a> (const char *script)</td></tr>
+
+<tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00001.html">App</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#8ed6a948d6e3b7d5267f106f2c5a9ed4">Instance</a> ()</td></tr>
+
 <tr><td colspan="2"><br><h2>Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00020.html">SceneManager</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#8c6f62ee98e8737b5004c74b42103162">sceneManager</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">ScriptManager</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#0be4f7747aac33c803570ac74286658e">scriptManager</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00022.html">ScriptManager</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#0be4f7747aac33c803570ac74286658e">scriptManager</a></td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00010.html">Log</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#4cdf62c71bcff1e747a91a1bfc4a9581">log</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Private Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#812e402eef23d91fa3c93319d41df3a9">DECLARE_chain_CLASS</a> (COb::App, <a class="el" href="a00007.html">EventDispatcher</a>,&quot;app&quot;) public</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#26a8dd01bfc963f9ccef6eb55ab3f4d5">Run</a> ()</td></tr>
-
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#115ac31052c236f9b655ad3ae6988afb">App</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#0d807ccc516b997918a079027a297ca5">~App</a> ()</td></tr>
@@ -65,9 +67,7 @@ Inheritance diagram for chain::App:</div>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Class to define the main game application. 
 <p>
-To start the client, create a new application, and call <a class="el" href="a00001.html#26a8dd01bfc963f9ccef6eb55ab3f4d5">App::Run()</a> 
-<p>Definition at line <a class="el" href="a00082.html#l00029">29</a> of file <a class="el" href="a00082.html">App.hpp</a>.</p>
-<hr><h2>Constructor &amp; Destructor Documentation</h2>
+To start the client, create a new application, and call <a class="el" href="a00001.html#77d2d8326a7ad037930e3a1e56627cd6">App::Run()</a> <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="115ac31052c236f9b655ad3ae6988afb"></a><!-- doxytag: member="chain::App::App" ref="115ac31052c236f9b655ad3ae6988afb" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -85,8 +85,6 @@ To start the client, create a new application, and call <a class="el" href="a000
 
 <p>
 Default Constructor 
-<p>Definition at line <a class="el" href="a00081.html#l00015">15</a> of file <a class="el" href="a00081.html">App.cpp</a>.</p>
-
 </div>
 </div><p>
 <a class="anchor" name="0d807ccc516b997918a079027a297ca5"></a><!-- doxytag: member="chain::App::~App" ref="0d807ccc516b997918a079027a297ca5" args="()" -->
@@ -106,37 +104,19 @@ Default Constructor
 
 <p>
 Destructor 
-<p>Definition at line <a class="el" href="a00081.html#l00020">20</a> of file <a class="el" href="a00081.html">App.cpp</a>.</p>
-
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="812e402eef23d91fa3c93319d41df3a9"></a><!-- doxytag: member="chain::App::DECLARE_chain_CLASS" ref="812e402eef23d91fa3c93319d41df3a9" args="(COb::App, EventDispatcher,&quot;app&quot;) public" -->
+<a class="anchor" name="8ed6a948d6e3b7d5267f106f2c5a9ed4"></a><!-- doxytag: member="chain::App::Instance" ref="8ed6a948d6e3b7d5267f106f2c5a9ed4" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::App::DECLARE_chain_CLASS           </td>
+          <td class="memname">static <a class="el" href="a00001.html">App</a>&amp; chain::App::Instance           </td>
           <td>(</td>
-          <td class="paramtype">COb::App&nbsp;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00007.html">EventDispatcher</a>&nbsp;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&quot;app&quot;&nbsp;</td>
-          <td class="paramname"></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [inline, private]</code></td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
         </tr>
       </table>
 </div>
@@ -145,29 +125,26 @@ Destructor
 <p>
 Get an instance of this singleton. The first call to this will create the singleton. <dl class="return" compact><dt><b>Returns:</b></dt><dd>Application&amp; - the application </dd></dl>
 
-<p>Definition at line <a class="el" href="a00082.html#l00031">31</a> of file <a class="el" href="a00082.html">App.hpp</a>.</p>
-
 </div>
 </div><p>
-<a class="anchor" name="26a8dd01bfc963f9ccef6eb55ab3f4d5"></a><!-- doxytag: member="chain::App::Run" ref="26a8dd01bfc963f9ccef6eb55ab3f4d5" args="()" -->
+<a class="anchor" name="77d2d8326a7ad037930e3a1e56627cd6"></a><!-- doxytag: member="chain::App::Run" ref="77d2d8326a7ad037930e3a1e56627cd6" args="(const char *script)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void chain::App::Run           </td>
+          <td class="memname">bool chain::App::Run           </td>
           <td>(</td>
-          <td class="paramname">          </td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>script</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [private, virtual]</code></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Main application function. Calls App::Init(), starts main loop updating App::dt 
-<p>Definition at line <a class="el" href="a00081.html#l00026">26</a> of file <a class="el" href="a00081.html">App.cpp</a>.</p>
-
+Main application function. 
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
@@ -184,8 +161,6 @@ Main application function. Calls App::Init(), starts main loop updating App::dt
 
 <p>
 
-<p>Definition at line <a class="el" href="a00082.html#l00060">60</a> of file <a class="el" href="a00082.html">App.hpp</a>.</p>
-
 </div>
 </div><p>
 <a class="anchor" name="8c6f62ee98e8737b5004c74b42103162"></a><!-- doxytag: member="chain::App::sceneManager" ref="8c6f62ee98e8737b5004c74b42103162" args="" -->
@@ -201,8 +176,6 @@ Main application function. Calls App::Init(), starts main loop updating App::dt
 
 <p>
 
-<p>Definition at line <a class="el" href="a00082.html#l00058">58</a> of file <a class="el" href="a00082.html">App.hpp</a>.</p>
-
 </div>
 </div><p>
 <a class="anchor" name="0be4f7747aac33c803570ac74286658e"></a><!-- doxytag: member="chain::App::scriptManager" ref="0be4f7747aac33c803570ac74286658e" args="" -->
@@ -210,7 +183,7 @@ Main application function. Calls App::Init(), starts main loop updating App::dt
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00021.html">ScriptManager</a> <a class="el" href="a00001.html#0be4f7747aac33c803570ac74286658e">chain::App::scriptManager</a>          </td>
+          <td class="memname"><a class="el" href="a00022.html">ScriptManager</a> <a class="el" href="a00001.html#0be4f7747aac33c803570ac74286658e">chain::App::scriptManager</a>          </td>
         </tr>
       </table>
 </div>
@@ -218,14 +191,12 @@ Main application function. Calls App::Init(), starts main loop updating App::dt
 
 <p>
 
-<p>Definition at line <a class="el" href="a00082.html#l00059">59</a> of file <a class="el" href="a00082.html">App.hpp</a>.</p>
-
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00082.html">App.hpp</a><li><a class="el" href="a00081.html">App.cpp</a></ul>
+<li><a class="el" href="a00030.html">App.hpp</a><li><a class="el" href="a00029.html">App.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 28 16:50:43 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 11:34:15 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

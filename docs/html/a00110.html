@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: Quaternion.hpp Source File</title>
+<title>Chain: Object.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,128 +21,39 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>Quaternion.hpp</h1><a href="a00057.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<h1>Object.cpp</h1><a href="a00055.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="comment">//------------------------------------------------------------------------------</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span>
-<a name="l00012"></a>00012 <span class="preprocessor">#ifndef _chain_Quaternion_h_</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define _chain_Quaternion_h_</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;iostream&gt;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="a00034.html">Def.hpp</a>"</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>chain
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020   <span class="keyword">struct </span>Matrix;
-<a name="l00021"></a>00021   <span class="keyword">struct </span>EulerAngle;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="preprocessor">#pragma pack(push,1)</span>
-<a name="l00024"></a>00024 <span class="preprocessor"></span>
-<a name="l00027"></a><a class="code" href="a00016.html">00027</a>   <span class="keyword">struct </span><a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>
-<a name="l00028"></a>00028   {
-<a name="l00029"></a>00029   <span class="keyword">public</span>:
-<a name="l00030"></a>00030     <span class="comment">// -----------------------------------</span>
-<a name="l00037"></a>00037 <span class="comment"></span>    <a class="code" href="a00016.html#eade3eec291fc8ce71a4fd2684d9bd4a">Quaternion</a>(<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _x = 0, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _y = 0, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _z = 0, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _w = 1);
-<a name="l00038"></a>00038     <span class="comment">// -----------------------------------</span>
-<a name="l00041"></a>00041 <span class="comment"></span>    <a class="code" href="a00016.html#eade3eec291fc8ce71a4fd2684d9bd4a">Quaternion</a> (<span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q);
-<a name="l00042"></a>00042     <span class="comment">// -----------------------------------</span>
-<a name="l00046"></a>00046 <span class="comment"></span>    <a class="code" href="a00016.html#eade3eec291fc8ce71a4fd2684d9bd4a">Quaternion</a> (<a class="code" href="a00013.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; m);
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048     <span class="comment">// -----------------------------------</span>
-<a name="l00056"></a>00056 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; <a class="code" href="a00016.html#8b1f873d6e646fb2ba0f96fe8373f463" title="Set the values of x, y, z and w.">Set</a> (<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _x = 0, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _y = 0, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _z = 0, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _w = 1);
-<a name="l00057"></a>00057     <span class="comment">// -----------------------------------</span>
-<a name="l00066"></a>00066 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; <a class="code" href="a00016.html#373b48024f1fdc369f47f768bdc0cf36" title="Set the value of the rotation using an axis angle.">SetAxisAngle</a> (<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; angle, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _x, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _y, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _z );
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068     <span class="comment">// -----------------------------------</span>
-<a name="l00071"></a>00071 <span class="comment"></span>    <a class="code" href="a00013.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> <a class="code" href="a00016.html#3a2c8754d9a626e508e0c87aeda5dc2f" title="Convert quaternion to a rotation matrix.">ToMatrix</a> () <span class="keyword">const</span>;
-<a name="l00072"></a>00072     <span class="comment">// -----------------------------------</span>
-<a name="l00080"></a>00080 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00016.html#5c219bbabd1dc40f8dc0241f36237c15" title="Convert quaternion to a axis angle.">ToAxisAngles</a> (<a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; angle, <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _x, <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _y, <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _z) <span class="keyword">const</span>;
-<a name="l00081"></a>00081     <span class="comment">// -----------------------------------</span>
-<a name="l00086"></a>00086 <span class="comment"></span>    <a class="code" href="a00006.html" title="Structure to hold a set of euler angles in the format XYZ.">EulerAngle</a> <a class="code" href="a00016.html#efd420df4c173c9c592d662e16821b4e" title="Convert quaternion to euler angles.">ToEulerAngles</a> () <span class="keyword">const</span>;
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088     <span class="comment">// -----------------------------------</span>
-<a name="l00091"></a>00091 <span class="comment"></span>    <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00016.html#c8d211e4b802093ea160f5a8f6256b89" title="Get the angle of rotation.">GetAngle</a> ();
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093     <span class="comment">// -----------------------------------</span>
-<a name="l00101"></a>00101 <span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="a00016.html#b93bb8e0e851eae128c750518ebe00ab" title="Split quaternion rotation into component rotations.">Split</a> (<a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; _x, <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; _y, <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; _z) <span class="keyword">const</span>;
-<a name="l00102"></a>00102     <span class="comment">//Quaternion GetRoll () const;</span>
-<a name="l00103"></a>00103     <span class="comment">//Quaternion GetPitch () const;</span>
-<a name="l00104"></a>00104     <span class="comment">//Quaternion GetYaw () const;</span>
-<a name="l00105"></a>00105     <span class="comment">//Real GetRollAngle () const;</span>
-<a name="l00106"></a>00106     <span class="comment">//Real GetPitchAngle () const;</span>
-<a name="l00107"></a>00107     <span class="comment">//Real GetYawAngle () const;</span>
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109     <span class="comment">// -----------------------------------</span>
-<a name="l00112"></a>00112 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; <a class="code" href="a00016.html#13a0841f7b92667c8cbac5d4c8fd7a51" title="Normalise this quaternion.">Normalise</a> ();
-<a name="l00113"></a>00113     <span class="comment">// -----------------------------------</span>
-<a name="l00116"></a>00116 <span class="comment"></span>    <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> <a class="code" href="a00016.html#f5812f94fabbd0f6622df4a0919940e7" title="Calculate the normalised quaternion.">Normalised</a>() <span class="keyword">const</span>;
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118     <span class="comment">// -----------------------------------</span>
-<a name="l00122"></a>00122 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; <a class="code" href="a00016.html#5bd0e02893cdf50b4cf4479e0244bec8" title="ScaleTo this quaternion to a new angle.">ScaleTo</a> (<a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> s);
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124     <span class="comment">// -----------------------------------</span>
-<a name="l00128"></a>00128 <span class="comment"></span>    <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00016.html#5e2681b0971b172ed31623e6cd965c81" title="Calculate quaternion&amp;#39;s magnitude squared.">MagnitudeSquared</a> () <span class="keyword">const</span>;
-<a name="l00129"></a>00129     <span class="comment">// -----------------------------------</span>
-<a name="l00133"></a>00133 <span class="comment"></span>    <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00016.html#e73be66ee624799bf1ff2cfafc3ef5d9" title="Calculate quaternion&amp;#39;s magnitude.">Magnitude</a> () <span class="keyword">const</span>;
-<a name="l00134"></a>00134 
-<a name="l00135"></a>00135     <span class="comment">// -----------------------------------</span>
-<a name="l00141"></a>00141 <span class="comment"></span>    <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> <a class="code" href="a00016.html#794266f7ba564a9a1642576d14875e90" title="Calculate the conjugate of this quaternion.">Conjugate</a> () <span class="keyword">const</span>;
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143     <span class="comment">// -----------------------------------</span>
-<a name="l00148"></a>00148 <span class="comment"></span>    <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> <a class="code" href="a00016.html#667d19ec9762a2960af23623ddc74e0f" title="Get the inverse of this quaternion.">operator- </a>() <span class="keyword">const</span>;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150     <span class="comment">// -----------------------------------</span>
-<a name="l00154"></a>00154 <span class="comment"></span>    <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> <a class="code" href="a00016.html#02303d0a493e0f49a92c763941a3fced">operator* </a>(<span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q) <span class="keyword">const</span>;
-<a name="l00155"></a>00155     <span class="comment">// -----------------------------------</span>
-<a name="l00157"></a>00157 <span class="comment"></span>    <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> <a class="code" href="a00016.html#02303d0a493e0f49a92c763941a3fced">operator* </a>(<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; r) <span class="keyword">const</span>;
-<a name="l00158"></a>00158     <span class="comment">// -----------------------------------</span>
-<a name="l00160"></a>00160 <span class="comment"></span>    <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> <a class="code" href="a00016.html#d9d6399888d36016899cbdf85c4f8ba3">operator/ </a>(<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; r) <span class="keyword">const</span>;
-<a name="l00161"></a>00161 
-<a name="l00162"></a>00162     <span class="comment">// -----------------------------------</span>
-<a name="l00164"></a>00164 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; <a class="code" href="a00016.html#adbc28dd6db5b6e3d577c40e6049d3d5">operator= </a>(<span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q);
-<a name="l00165"></a>00165     <span class="comment">// -----------------------------------</span>
-<a name="l00168"></a>00168 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; <a class="code" href="a00016.html#adbc28dd6db5b6e3d577c40e6049d3d5">operator= </a>(<span class="keyword">const</span> <a class="code" href="a00013.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; m);
-<a name="l00169"></a>00169 
-<a name="l00170"></a>00170     <span class="comment">// -----------------------------------</span>
-<a name="l00172"></a>00172 <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="a00016.html#15278d917c0d63c0dc6511484b3983fb">operator== </a>(<span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q) <span class="keyword">const</span>;
-<a name="l00173"></a>00173     <span class="comment">// -----------------------------------</span>
-<a name="l00175"></a>00175 <span class="comment"></span>    <span class="keywordtype">bool</span> <a class="code" href="a00016.html#ec5dd98992fed4481b5822694c7b6075">operator!= </a>(<span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q) <span class="keyword">const</span>;
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177     <span class="comment">// -----------------------------------</span>
-<a name="l00184"></a>00184 <span class="comment"></span>    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="a00016.html#9dc71eaedf4486dc005fa9a67c6da866" title="Out stream operator.">operator &lt;&lt; </a>(std::ostream&amp; os,<span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> &amp;q);
-<a name="l00185"></a>00185 
-<a name="l00186"></a>00186     <span class="comment">// -----------------------------------</span>
-<a name="l00193"></a>00193 <span class="comment"></span>    <span class="keyword">friend</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> <a class="code" href="a00016.html#e2a6c5f79257af7e70a181d6140f0f8a" title="Spherical Linear Interpolation.">SLERP</a> (<span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q1, <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; q2, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; t);
-<a name="l00194"></a>00194     <span class="comment">// -----------------------------------</span>
-<a name="l00201"></a>00201 <span class="comment"></span>    <span class="keyword">friend</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a> <a class="code" href="a00016.html#4bf23da80ab314ab4ebd1693ca283a36" title="Get the difference between two quaternions.">DIFF</a> (<span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; orig, <span class="keyword">const</span> <a class="code" href="a00016.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; dest);
-<a name="l00202"></a>00202 
-<a name="l00203"></a>00203     <span class="keyword">union</span>
-<a name="l00204"></a>00204     {
-<a name="l00205"></a>00205       <span class="keyword">struct</span>
-<a name="l00206"></a>00206       {
-<a name="l00207"></a><a class="code" href="a00016.html#2297cc3382a110f9fcfc252c42214e5b">00207</a>         <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00016.html#d40e939a4e8627ab5f0db344550233dd">x</a>, <a class="code" href="a00016.html#88357eb1fd5e07c5f8b55ce1a6155c95">y</a>, <a class="code" href="a00016.html#2297cc3382a110f9fcfc252c42214e5b">z</a>, <a class="code" href="a00016.html#cfdd8944f533f20911d4aaf41c96d260">w</a>;
-<a name="l00208"></a>00208       };
-<a name="l00209"></a><a class="code" href="a00016.html#423adbd3310c03925b593cd686c00483">00209</a>       <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> <a class="code" href="a00016.html#423adbd3310c03925b593cd686c00483" title="Array data interface.">m_data</a>[4];
-<a name="l00210"></a>00210     };
-<a name="l00211"></a>00211 
-<a name="l00214"></a>00214 
-<a name="l00217"></a>00217 
-<a name="l00220"></a>00220 
-<a name="l00223"></a>00223 
-<a name="l00227"></a>00227   };
-<a name="l00228"></a>00228 <span class="preprocessor">#pragma pack(pop)</span>
-<a name="l00229"></a>00229 <span class="preprocessor"></span>}
-<a name="l00230"></a>00230 
-<a name="l00231"></a>00231 <span class="preprocessor">#endif</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="comment">//------------------------------------------------------------------------------</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="a00056.html" title="Top level application class. A singleton that acts as the root object for the application...">Object.hpp</a>"</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">namespace </span>chain
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="a00015.html#dd1ced213fd8e53f7a6b09c1297ce6b3">Object::m_id_incrementer</a> = 0;
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015    <span class="comment">//------------------------------------------------ Object::Object</span>
+<a name="l00016"></a><a class="code" href="a00015.html#454b49200a6f23e077a0c4ed3299250f">00016</a>    <a class="code" href="a00015.html#454b49200a6f23e077a0c4ed3299250f">Object::Object</a>()
+<a name="l00017"></a>00017    {
+<a name="l00018"></a>00018       <a class="code" href="a00015.html#87813d2a5a035260bee1e62394b343e3">m_id</a> = ++<a class="code" href="a00015.html#dd1ced213fd8e53f7a6b09c1297ce6b3">m_id_incrementer</a>;
+<a name="l00019"></a>00019    }
+<a name="l00020"></a>00020    <span class="comment">//------------------------------------------------ Object::~Object</span>
+<a name="l00021"></a><a class="code" href="a00015.html#56fc3e5f5499e233601eafc074d90a19">00021</a>    <a class="code" href="a00015.html#56fc3e5f5499e233601eafc074d90a19">Object::~Object</a>()
+<a name="l00022"></a>00022    {
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024    }
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026    <span class="comment">//------------------------------------------------ Object::GetId</span>
+<a name="l00027"></a><a class="code" href="a00015.html#603371985f5ba8303e6dde14addd690d">00027</a>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="a00015.html#603371985f5ba8303e6dde14addd690d">Object::GetId</a>()<span class="keyword"> const</span>
+<a name="l00028"></a>00028 <span class="keyword">   </span>{
+<a name="l00029"></a>00029       <span class="keywordflow">return</span> <a class="code" href="a00015.html#87813d2a5a035260bee1e62394b343e3">m_id</a>;
+<a name="l00030"></a>00030    }
+<a name="l00031"></a>00031 }
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 28 16:50:42 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 09:29:25 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

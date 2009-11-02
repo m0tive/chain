@@ -1,4 +1,4 @@
-/// \file Script.h
+/// \file Script.hpp
 /// \date 2009/10/28
 /// \author Peter Dodds
 /// \brief

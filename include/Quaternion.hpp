@@ -1,4 +1,4 @@
-/// \file Quaternion.h
+/// \file Quaternion.hpp
 /// \date 2007/12/07
 /// \author Peter Dodds
 /// \brief chain::Quaternion structure declaration

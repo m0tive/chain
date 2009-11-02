@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: Vector2.hpp Source File</title>
+<title>Chain: Transform.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,112 +21,31 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>Vector2.hpp</h1><a href="a00075.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<h1>Transform.cpp</h1><a href="a00073.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="comment">//------------------------------------------------------------------------------</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span>
-<a name="l00012"></a>00012 <span class="preprocessor">#ifndef _chain_Vector2_h_</span>
-<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define _chain_Vector2_h_</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include "<a class="code" href="a00034.html">Def.hpp</a>"</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;ostream&gt;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>chain
-<a name="l00019"></a>00019 {
-<a name="l00020"></a>00020   <span class="keyword">struct </span>Vector3;
-<a name="l00021"></a>00021   <span class="keyword">struct </span>Vector4;
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="preprocessor">#pragma pack(push,1)</span>
-<a name="l00026"></a><a class="code" href="a00025.html">00026</a> <span class="preprocessor">   struct Vector2</span>
-<a name="l00027"></a>00027 <span class="preprocessor"></span>   {
-<a name="l00028"></a>00028     <span class="comment">// -----------------------------------</span>
-<a name="l00032"></a>00032 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>(<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> _x = 0, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> _y = 0);
-<a name="l00033"></a>00033     <span class="comment">// -----------------------------------</span>
-<a name="l00036"></a>00036 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>(<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v);
-<a name="l00037"></a>00037     <span class="comment">// -----------------------------------</span>
-<a name="l00041"></a>00041 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>(<span class="keyword">const</span> <a class="code" href="a00026.html" title="Structure to hold a vector contain three values.">Vector3</a>&amp; v);
-<a name="l00042"></a>00042     <span class="comment">// -----------------------------------</span>
-<a name="l00046"></a>00046 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>(<span class="keyword">const</span> <a class="code" href="a00027.html" title="Structure to hold a vector contain four values.">Vector4</a>&amp; v);
-<a name="l00047"></a>00047     <span class="comment">// -----------------------------------</span>
-<a name="l00049"></a>00049 <span class="comment"></span>    ~<a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>();
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051     <span class="comment">// -----------------------------------</span>
-<a name="l00056"></a>00056 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; Set (<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _x = 0, <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a>&amp; _y = 0);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058     <span class="comment">// -----------------------------------</span>
-<a name="l00063"></a>00063 <span class="comment"></span>    <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> MagnitudeSquared () <span class="keyword">const</span>;
-<a name="l00064"></a>00064     <span class="comment">// -----------------------------------</span>
-<a name="l00069"></a>00069 <span class="comment"></span>    <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> Magnitude () <span class="keyword">const</span>;
-<a name="l00070"></a>00070     <span class="comment">// -----------------------------------</span>
-<a name="l00075"></a>00075 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; Normalise ();
-<a name="l00076"></a>00076     <span class="comment">// -----------------------------------</span>
-<a name="l00082"></a>00082 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; Scale( <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> s );
-<a name="l00083"></a>00083     <span class="comment">// -----------------------------------</span>
-<a name="l00090"></a>00090 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; Truncate ( <span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> s );
-<a name="l00091"></a>00091 
-<a name="l00092"></a>00092     <span class="comment">// -----------------------------------</span>
-<a name="l00095"></a>00095 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a> operator - () <span class="keyword">const</span>;
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097     <span class="comment">// -----------------------------------</span>
-<a name="l00101"></a>00101 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a> operator + (<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v) <span class="keyword">const</span>;
-<a name="l00102"></a>00102     <span class="comment">// -----------------------------------</span>
-<a name="l00106"></a>00106 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a> operator - (<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v) <span class="keyword">const</span>;
-<a name="l00107"></a>00107     <span class="comment">// -----------------------------------</span>
-<a name="l00112"></a>00112 <span class="comment"></span>    <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> operator * (<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v) <span class="keyword">const</span>;
-<a name="l00113"></a>00113     <span class="comment">// -----------------------------------</span>
-<a name="l00117"></a>00117 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a> operator * (<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> f) <span class="keyword">const</span>;
-<a name="l00118"></a>00118     <span class="comment">// -----------------------------------</span>
-<a name="l00122"></a>00122 <span class="comment"></span>    <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a> operator / (<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> f) <span class="keyword">const</span>;
-<a name="l00123"></a>00123 
-<a name="l00124"></a>00124     <span class="comment">// -----------------------------------</span>
-<a name="l00128"></a>00128 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v);
-<a name="l00129"></a>00129     <span class="comment">// -----------------------------------</span>
-<a name="l00134"></a>00134 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="a00026.html" title="Structure to hold a vector contain three values.">Vector3</a>&amp; v);
-<a name="l00135"></a>00135     <span class="comment">// -----------------------------------</span>
-<a name="l00140"></a>00140 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; operator = (<span class="keyword">const</span> <a class="code" href="a00027.html" title="Structure to hold a vector contain four values.">Vector4</a>&amp; v);
-<a name="l00141"></a>00141 
-<a name="l00142"></a>00142     <span class="comment">// -----------------------------------</span>
-<a name="l00146"></a>00146 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; operator += (<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v);
-<a name="l00147"></a>00147     <span class="comment">// -----------------------------------</span>
-<a name="l00151"></a>00151 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; operator -= (<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v);
-<a name="l00152"></a>00152     <span class="comment">// -----------------------------------</span>
-<a name="l00156"></a>00156 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; operator *= (<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> f);
-<a name="l00157"></a>00157     <span class="comment">// -----------------------------------</span>
-<a name="l00161"></a>00161 <span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; operator /= (<span class="keyword">const</span> <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> f);
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163     <span class="comment">// -----------------------------------</span>
-<a name="l00167"></a>00167 <span class="comment"></span>    <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v) <span class="keyword">const</span>;
-<a name="l00168"></a>00168     <span class="comment">// -----------------------------------</span>
-<a name="l00172"></a>00172 <span class="comment"></span>    <span class="keywordtype">bool</span> operator != (<span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v) <span class="keyword">const</span>;
-<a name="l00173"></a>00173 
-<a name="l00174"></a>00174     <span class="comment">// -----------------------------------</span>
-<a name="l00181"></a>00181 <span class="comment"></span>    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="a00035.html#b7644519ab3fa34b551214715e5cda8c">operator &lt;&lt; </a>(std::ostream &amp;s, <span class="keyword">const</span> <a class="code" href="a00025.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; v);
-<a name="l00182"></a>00182 
-<a name="l00183"></a>00183     <span class="keyword">union</span>
-<a name="l00184"></a>00184     {
-<a name="l00185"></a>00185       <span class="keyword">struct</span>
-<a name="l00186"></a>00186       {
-<a name="l00187"></a><a class="code" href="a00025.html#c59c093ba112087472c6eabb7bdc1ada">00187</a>         <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> x, y;
-<a name="l00188"></a>00188       };
-<a name="l00189"></a><a class="code" href="a00025.html#af63a9995b321cb518e37b1d404058eb">00189</a>       <a class="code" href="a00035.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">Real</a> m_data[2];
-<a name="l00190"></a>00190     };
-<a name="l00191"></a>00191 
-<a name="l00194"></a>00194 
-<a name="l00197"></a>00197 
-<a name="l00201"></a>00201    };
-<a name="l00202"></a>00202 <span class="preprocessor">#pragma pack(pop)</span>
-<a name="l00203"></a>00203 <span class="preprocessor"></span>}
-<a name="l00204"></a>00204 
-<a name="l00205"></a>00205 <span class="preprocessor">#endif</span>
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="comment">//------------------------------------------------------------------------------</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="a00074.html">Transform.hpp</a>"</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">namespace </span>chain
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013    <span class="comment">//------------------------------------------------ Transform::Transform</span>
+<a name="l00014"></a><a class="code" href="a00024.html#b2d813d4830e9566d6c120762ca311d8">00014</a>    <a class="code" href="a00024.html#b2d813d4830e9566d6c120762ca311d8">Transform::Transform</a>()
+<a name="l00015"></a>00015    {
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017    }
+<a name="l00018"></a>00018    <span class="comment">//------------------------------------------------ Transform::~Transform</span>
+<a name="l00019"></a><a class="code" href="a00024.html#9bc1bb5620acab8d88f8bf6489c211dc">00019</a>    <a class="code" href="a00024.html#9bc1bb5620acab8d88f8bf6489c211dc">Transform::~Transform</a>()
+<a name="l00020"></a>00020    {
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022    }
+<a name="l00023"></a>00023 }
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 28 16:50:42 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 09:29:25 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

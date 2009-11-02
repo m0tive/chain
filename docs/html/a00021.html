@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: chain::ScriptManager Class Reference</title>
+<title>Chain: chain::Script Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,53 +22,54 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00035.html">chain</a>::<a class="el" href="a00021.html">ScriptManager</a>
+  <div class="navpath"><a class="el" href="a00036.html">chain</a>::<a class="el" href="a00021.html">Script</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::ScriptManager Class Reference</h1><!-- doxytag: class="chain::ScriptManager" --><!-- doxytag: inherits="chain::Manager" --><code>#include &lt;<a class="el" href="a00120.html">ScriptManager.hpp</a>&gt;</code>
+<h1>chain::Script Class Reference</h1><!-- doxytag: class="chain::Script" --><code>#include &lt;Script.hpp&gt;</code>
 <p>
-<div class="dynheader">
-Inheritance diagram for chain::ScriptManager:</div>
-<div class="dynsection">
-
-<p><center><img src="a00021.png" usemap="#chain::ScriptManager_map" border="0" alt=""></center>
-<map name="chain::ScriptManager_map">
-<area href="a00012.html" alt="chain::Manager" shape="rect" coords="0,112,142,136">
-<area href="a00007.html" alt="chain::EventDispatcher" shape="rect" coords="0,56,142,80">
-<area href="a00015.html" alt="chain::Object" shape="rect" coords="0,0,142,24">
-</map>
-</div>
 
 <p>
-<a href="a00160.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00165.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
-<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#38341e4f8dc985c64e8c14243c2bfe25">ScriptManager</a> ()</td></tr>
+<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#2532a456544f95152f758a4f4f919a08">Run</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#f2825df3d3d5f0078df9d2263c253a20">~ScriptManager</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#c98adbfcc8f60a1cb850a6c0405cc3b1">Load</a> (const char *filename)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#80317addd0cd4f7f87731c0be6ccb1ca">Save</a> (const char *filename)</td></tr>
+
+<tr><td colspan="2"><br><h2>Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#ff9ce4ecee5527227557075189d2fc3c">text</a></td></tr>
+
+<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#b9e505635c6c88912a5a99f557e7b17b">Script</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#59d81353f91fd03d3db9fca8b578aa93">~Script</a> ()</td></tr>
 
 <tr><td colspan="2"><br><h2>Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">lua_State *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#9e806a9c581b851b0dfa05cd08295a79">m_luaState</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00022.html">ScriptManager</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#d92b03f00a184acd4043f92778fd47f3">m_manager</a></td></tr>
 
-<tr><td colspan="2"><br><h2>Private Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#78e17f78a4afff052e23e41fef03b1a6">DECLARE_chain_CLASS</a> (COb::ScriptManager, <a class="el" href="a00012.html">Manager</a>,&quot;scriptManager&quot;) friend class <a class="el" href="a00001.html">App</a></td></tr>
+<tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#32536088377d341b017d30352076aed3">m_id</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#573a4d2b0a9311f1b0e43879a50e8966">m_name</a></td></tr>
+
+<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#ceb1c0cbe6f75084ac212e62c900f33b">ScriptManager</a></td></tr>
 
 </table>
-<hr><a name="_details"></a><h2>Detailed Description</h2>
-
-<p>Definition at line <a class="el" href="a00120.html#l00024">24</a> of file <a class="el" href="a00120.html">ScriptManager.hpp</a>.</p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="38341e4f8dc985c64e8c14243c2bfe25"></a><!-- doxytag: member="chain::ScriptManager::ScriptManager" ref="38341e4f8dc985c64e8c14243c2bfe25" args="()" -->
+<a class="anchor" name="b9e505635c6c88912a5a99f557e7b17b"></a><!-- doxytag: member="chain::Script::Script" ref="b9e505635c6c88912a5a99f557e7b17b" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::ScriptManager::ScriptManager           </td>
+          <td class="memname">chain::Script::Script           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [protected]</code></td>
+          <td><code> [inline, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -76,20 +77,18 @@ Inheritance diagram for chain::ScriptManager:</div>
 
 <p>
 Default Constructor 
-<p>Definition at line <a class="el" href="a00119.html#l00037">37</a> of file <a class="el" href="a00119.html">ScriptManager.cpp</a>.</p>
-
 </div>
 </div><p>
-<a class="anchor" name="f2825df3d3d5f0078df9d2263c253a20"></a><!-- doxytag: member="chain::ScriptManager::~ScriptManager" ref="f2825df3d3d5f0078df9d2263c253a20" args="()" -->
+<a class="anchor" name="59d81353f91fd03d3db9fca8b578aa93"></a><!-- doxytag: member="chain::Script::~Script" ref="59d81353f91fd03d3db9fca8b578aa93" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::ScriptManager::~ScriptManager           </td>
+          <td class="memname">chain::Script::~Script           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [protected]</code></td>
+          <td><code> [inline, protected]</code></td>
         </tr>
       </table>
 </div>
@@ -97,37 +96,75 @@ Default Constructor
 
 <p>
 Destructor 
-<p>Definition at line <a class="el" href="a00119.html#l00058">58</a> of file <a class="el" href="a00119.html">ScriptManager.cpp</a>.</p>
-
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="78e17f78a4afff052e23e41fef03b1a6"></a><!-- doxytag: member="chain::ScriptManager::DECLARE_chain_CLASS" ref="78e17f78a4afff052e23e41fef03b1a6" args="(COb::ScriptManager, Manager,&quot;scriptManager&quot;) friend class App" -->
+<a class="anchor" name="c98adbfcc8f60a1cb850a6c0405cc3b1"></a><!-- doxytag: member="chain::Script::Load" ref="c98adbfcc8f60a1cb850a6c0405cc3b1" args="(const char *filename)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::ScriptManager::DECLARE_chain_CLASS           </td>
+          <td class="memname">bool chain::Script::Load           </td>
           <td>(</td>
-          <td class="paramtype">COb::ScriptManager&nbsp;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>filename</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="a00012.html">Manager</a>&nbsp;</td>
-          <td class="paramname">, </td>
         </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="2532a456544f95152f758a4f4f919a08"></a><!-- doxytag: member="chain::Script::Run" ref="2532a456544f95152f758a4f4f919a08" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
         <tr>
-          <td class="paramkey"></td>
+          <td class="memname">bool chain::Script::Run           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
           <td></td>
-          <td class="paramtype">&quot;scriptManager&quot;&nbsp;</td>
-          <td class="paramname"></td><td>&nbsp;</td>
         </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="80317addd0cd4f7f87731c0be6ccb1ca"></a><!-- doxytag: member="chain::Script::Save" ref="80317addd0cd4f7f87731c0be6ccb1ca" args="(const char *filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
         <tr>
+          <td class="memname">bool chain::Script::Save           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>filename</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" name="ceb1c0cbe6f75084ac212e62c900f33b"></a><!-- doxytag: member="chain::Script::ScriptManager" ref="ceb1c0cbe6f75084ac212e62c900f33b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="a00022.html">ScriptManager</a><code> [friend]</code>          </td>
         </tr>
       </table>
 </div>
@@ -138,12 +175,12 @@ Destructor
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
-<a class="anchor" name="9e806a9c581b851b0dfa05cd08295a79"></a><!-- doxytag: member="chain::ScriptManager::m_luaState" ref="9e806a9c581b851b0dfa05cd08295a79" args="" -->
+<a class="anchor" name="32536088377d341b017d30352076aed3"></a><!-- doxytag: member="chain::Script::m_id" ref="32536088377d341b017d30352076aed3" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">lua_State* <a class="el" href="a00021.html#9e806a9c581b851b0dfa05cd08295a79">chain::ScriptManager::m_luaState</a><code> [protected]</code>          </td>
+          <td class="memname">unsigned int <a class="el" href="a00021.html#32536088377d341b017d30352076aed3">chain::Script::m_id</a><code> [private]</code>          </td>
         </tr>
       </table>
 </div>
@@ -151,14 +188,57 @@ Destructor
 
 <p>
 
-<p>Definition at line <a class="el" href="a00120.html#l00037">37</a> of file <a class="el" href="a00120.html">ScriptManager.hpp</a>.</p>
+</div>
+</div><p>
+<a class="anchor" name="d92b03f00a184acd4043f92778fd47f3"></a><!-- doxytag: member="chain::Script::m_manager" ref="d92b03f00a184acd4043f92778fd47f3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00022.html">ScriptManager</a>* <a class="el" href="a00021.html#d92b03f00a184acd4043f92778fd47f3">chain::Script::m_manager</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="573a4d2b0a9311f1b0e43879a50e8966"></a><!-- doxytag: member="chain::Script::m_name" ref="573a4d2b0a9311f1b0e43879a50e8966" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="a00021.html#573a4d2b0a9311f1b0e43879a50e8966">chain::Script::m_name</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="ff9ce4ecee5527227557075189d2fc3c"></a><!-- doxytag: member="chain::Script::text" ref="ff9ce4ecee5527227557075189d2fc3c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="a00021.html#ff9ce4ecee5527227557075189d2fc3c">chain::Script::text</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
 
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00120.html">ScriptManager.hpp</a><li><a class="el" href="a00119.html">ScriptManager.cpp</a></ul>
+<li><a class="el" href="a00068.html">Script.hpp</a><li><a class="el" href="a00067.html">Script.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 28 16:50:43 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 11:34:15 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

@@ -1,4 +1,4 @@
-/// \file Matrix.h
+/// \file Matrix.hpp
 /// \date 2007/11/13
 /// \author Peter Dodds
 /// \brief chain::Matrix structure declaration

@@ -1,4 +1,4 @@
-/// \file Vector4.h
+/// \file Vector4.hpp
 /// \date 2007/11/18
 /// \author Peter Dodds
 /// \brief chain::Vector4 structure declaration

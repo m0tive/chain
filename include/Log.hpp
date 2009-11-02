@@ -1,4 +1,4 @@
-/// \file Logger.hpp
+/// \file Log.hpp
 /// \date 2009/10/20
 /// \version 0.01
 /// \author Peter Dodds

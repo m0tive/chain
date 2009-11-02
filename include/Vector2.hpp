@@ -1,4 +1,4 @@
-/// \file Vector2.h
+/// \file Vector2.hpp
 /// \date 2007/11/13
 /// \author Peter Dodds
 /// \brief chain::Vector2 structure declaration

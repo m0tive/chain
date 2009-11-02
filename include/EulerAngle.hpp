@@ -1,4 +1,4 @@
-/// \file EulerAngle.h
+/// \file EulerAngle.hpp
 /// \date 2008/04/16
 /// \author Peter Dodds
 /// \brief chain::EulerAngle structure declaration

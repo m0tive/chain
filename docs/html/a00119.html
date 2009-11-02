@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: ScriptManager.cpp Source File</title>
+<title>Chain: Root.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,71 +21,46 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>ScriptManager.cpp</h1><a href="a00066.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<h1>Root.hpp</h1><a href="a00064.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00002"></a>00002 
 <a name="l00003"></a>00003 
 <a name="l00004"></a>00004 
 <a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="comment">//------------------------------------------------------------------------------</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="a00067.html">ScriptManager.hpp</a>"</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="a00047.html">Log.hpp</a>"</span>
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="comment">// basic lua code interpreted from http://csl.sublevel3.org/lua/</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="a00066.html#7dc082a12dc884e3675dfa20847c69db">00013</a> <span class="keywordtype">int</span> <a class="code" href="a00066.html#7dc082a12dc884e3675dfa20847c69db">myFunt</a> (lua_State *L){
-<a name="l00014"></a>00014    <span class="keywordtype">int</span> argc = lua_gettop(L);
-<a name="l00015"></a>00015 
-<a name="l00016"></a>00016    std::cout &lt;&lt; <span class="stringliteral">"$$ "</span>;
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1;i&lt;=argc;++i){
-<a name="l00019"></a>00019       std::cout &lt;&lt; lua_tostring(L, i);
-<a name="l00020"></a>00020    }
-<a name="l00021"></a>00021    std::cout &lt;&lt; <span class="stringliteral">"\n"</span>;
-<a name="l00022"></a>00022    <span class="keywordflow">return</span> 1;
-<a name="l00023"></a>00023 }
-<a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="a00066.html#1338355912a9690280758995e23b0f5e">00025</a> <span class="keywordtype">void</span> <a class="code" href="a00066.html#1338355912a9690280758995e23b0f5e">report_errors</a>(lua_State *L, <span class="keywordtype">int</span> status)
-<a name="l00026"></a>00026 {
-<a name="l00027"></a>00027   <span class="keywordflow">if</span> ( status!=0 ) {
-<a name="l00028"></a>00028     <a class="code" href="a00047.html#0b93cd51079c0fa8e21ee4faf2da1a27">DOUT</a> &lt;&lt; <span class="stringliteral">"-- "</span> &lt;&lt; lua_tostring(L, -1) &lt;&lt; <span class="stringliteral">"\n"</span>;
-<a name="l00029"></a>00029     lua_pop(L, 1); <span class="comment">// remove error message</span>
-<a name="l00030"></a>00030   }
-<a name="l00031"></a>00031 }
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="keyword">namespace </span>chain
-<a name="l00035"></a>00035 {
-<a name="l00036"></a>00036   <span class="comment">//------------------------------------------------ ScriptManager::ScriptManager</span>
-<a name="l00037"></a><a class="code" href="a00021.html#38341e4f8dc985c64e8c14243c2bfe25">00037</a>   <a class="code" href="a00021.html#38341e4f8dc985c64e8c14243c2bfe25">ScriptManager::ScriptManager</a>()
-<a name="l00038"></a>00038   {
-<a name="l00039"></a>00039     <span class="comment">// initilise the lua script interpreter</span>
-<a name="l00040"></a>00040     <a class="code" href="a00047.html#0b93cd51079c0fa8e21ee4faf2da1a27">DOUT</a> &lt;&lt; <span class="stringliteral">"initialising lua\n"</span>;
-<a name="l00041"></a>00041     <a class="code" href="a00021.html#9e806a9c581b851b0dfa05cd08295a79">m_luaState</a> = lua_open();
-<a name="l00042"></a>00042     luaL_openlibs(<a class="code" href="a00021.html#9e806a9c581b851b0dfa05cd08295a79">m_luaState</a>);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044     lua_register(<a class="code" href="a00021.html#9e806a9c581b851b0dfa05cd08295a79">m_luaState</a>, <span class="stringliteral">"ch_print"</span>, <a class="code" href="a00066.html#7dc082a12dc884e3675dfa20847c69db">myFunt</a>);
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046     <span class="comment">// hardcode replacement for lua's default io.write function</span>
-<a name="l00047"></a>00047     <span class="comment">/*int s = */</span>luaL_dostring(<a class="code" href="a00021.html#9e806a9c581b851b0dfa05cd08295a79">m_luaState</a>, <span class="stringliteral">"\</span>
-<a name="l00048"></a>00048 <span class="stringliteral">       io.write = ch_print \</span>
-<a name="l00049"></a>00049 <span class="stringliteral">       print = ch_print \</span>
-<a name="l00050"></a>00050 <span class="stringliteral">       print \"attempted to bind ch_print to io.write and print\""</span>);
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052     <span class="comment">//DOUT &lt;&lt; "-- " &lt;&lt; lua_tostring(m_luaState, -1) &lt;&lt; "\n";</span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054     <span class="comment">//report_errors(m_luaState,s);</span>
-<a name="l00055"></a>00055   }
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057   <span class="comment">//------------------------------------------------ ScriptManager::~ScriptManager</span>
-<a name="l00058"></a><a class="code" href="a00021.html#f2825df3d3d5f0078df9d2263c253a20">00058</a>   <a class="code" href="a00021.html#f2825df3d3d5f0078df9d2263c253a20">ScriptManager::~ScriptManager</a>()
-<a name="l00059"></a>00059   {
-<a name="l00060"></a>00060     <a class="code" href="a00047.html#0b93cd51079c0fa8e21ee4faf2da1a27">DOUT</a> &lt;&lt; <span class="stringliteral">"closing lua\n"</span>;
-<a name="l00061"></a>00061     lua_close(<a class="code" href="a00021.html#9e806a9c581b851b0dfa05cd08295a79">m_luaState</a>);
-<a name="l00062"></a>00062   }
-<a name="l00063"></a>00063 }
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 <span class="comment">//------------------------------------------------------------------------------</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#ifdef _MSC_VER</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">   #pragma once</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 <span class="preprocessor">#ifndef _chain_Root_h_</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define _chain_Root_h_</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="a00034.html">Container.hpp</a>"</span>
+<a name="l00017"></a>00017 <span class="comment">//#include "SceneManager.hpp"</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>chain
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021    <span class="keyword">class </span>SceneManager;
+<a name="l00022"></a>00022 
+<a name="l00025"></a><a class="code" href="a00019.html">00025</a>    <span class="keyword">class </span><a class="code" href="a00019.html" title="The root object of a scene.">Root</a> : <span class="keyword">public</span> <a class="code" href="a00004.html" title="...">Container</a>
+<a name="l00026"></a>00026    {
+<a name="l00027"></a>00027      <a class="code" href="a00056.html#ea2814fa4df16226353440db8e8d7290">DECLARE_CHAIN_CLASS</a>(<a class="code" href="a00003.html#e379502854cdb2272013bd16dde8bbc7767609c49d73b492d3c12cf9b8397706">COb::Root</a>,<a class="code" href="a00004.html" title="...">Container</a>,<span class="stringliteral">"root"</span>)
+<a name="l00028"></a><a class="code" href="a00019.html#284464b0561a6f2915f04b0245b987f0">00028</a>       friend class <a class="code" href="a00020.html" title="...">SceneManager</a>;
+<a name="l00029"></a>00029       protected:
+<a name="l00030"></a>00030          <span class="comment">//---------------------------------------</span>
+<a name="l00032"></a>00032 <span class="comment"></span>         <a class="code" href="a00019.html" title="The root object of a scene.">Root</a>();
+<a name="l00033"></a>00033       public:
+<a name="l00034"></a>00034          <span class="comment">//---------------------------------------</span>
+<a name="l00036"></a>00036 <span class="comment"></span>         virtual ~Root();
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038          <span class="comment">// bool IsRoot() const;</span>
+<a name="l00039"></a>00039    };
+<a name="l00040"></a>00040 }
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Wed Oct 28 16:50:42 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 09:29:25 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
