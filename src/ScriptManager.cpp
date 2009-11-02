@@ -8,6 +8,8 @@
 #include "ScriptManager.hpp"
 #include "Log.hpp"
 
+#include "LuaGL.h"
+
 namespace chain
 {
   std::string ScriptManager::path = "";
@@ -48,9 +50,12 @@ namespace chain
     DOUT << "initialising lua\n";
     m_luaState = lua_open();
     luaL_openlibs(m_luaState);
+    luaopen_opengl(m_luaState);
 
     lua_register(m_luaState, "_chain_print", chain_lua_print);
     lua_register(m_luaState, "_chain_path", chain_lua_path);
+
+    int TODO; /// \todo Improve chain lua table
 
     // hard code replacement for lua's default io.write function
     if(luaL_dostring(m_luaState, "\
