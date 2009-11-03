@@ -12,6 +12,8 @@
 *.lib
 *.a
 ./include/lua
+./include/GL
+./include/SDL
 backup.bzr
 *.orig
 *.layout

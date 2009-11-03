@@ -40,7 +40,7 @@
 				AdditionalIncludeDirectories=".\include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
 				MinimalRebuild="true"
-				RuntimeLibrary="1"
+				RuntimeLibrary="2"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
@@ -157,6 +157,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\EulerAngle.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\src\EventDispatcher.cpp"
 				>
 			</File>
@@ -173,7 +177,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\LuaGL.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\src\Manager.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\Matrix.cpp"
 				>
 			</File>
 			<File
@@ -182,6 +194,10 @@
 			</File>
 			<File
 				RelativePath=".\src\Object.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\Quaternion.cpp"
 				>
 			</File>
 			<File
@@ -214,6 +230,22 @@
 			</File>
 			<File
 				RelativePath=".\src\Transform.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\Utl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\Vector2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\Vector3.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\Vector4.cpp"
 				>
 			</File>
 		</Filter>
@@ -260,6 +292,10 @@
 			</File>
 			<File
 				RelativePath=".\include\Log.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\include\LuaGL.h"
 				>
 			</File>
 			<File

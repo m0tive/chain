@@ -30,19 +30,20 @@ extern "C" {
 #endif
 
 #ifdef _WIN32
-  #ifdef BUILDING_LUAGL_DLL
+  /*#ifdef BUILDING_LUAGL_DLL
     #define LUAGL_API __declspec(dllexport)
   #else
     #define LUAGL_API __declspec(dllimport)
-  #endif
+  #endif*/
   #include <windows.h>
-#else
+#endif//#else
+
   #ifdef BUILDING_LUAGL_DLL
     #define LUAGL_API
   #else
     #define LUAGL_API extern
   #endif
-#endif
+//#endif
 
 #include <lua/lualib.h>
 #include <GL/gl.h>
