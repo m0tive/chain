@@ -12,7 +12,7 @@
 namespace chain
 {
   //------------------------------------------------ App::Run
-  bool App::Run(const char* script)
+  bool App::Run(const char* script/* = 0*/)
   {
     bool s = scriptManager.Run(script);
     return s;

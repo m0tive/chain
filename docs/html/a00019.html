@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: chain::RenderManager Class Reference</title>
+<title>Chain: chain::Object Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,59 +22,85 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00037.html">chain</a>::<a class="el" href="a00019.html">RenderManager</a>
+  <div class="navpath"><a class="el" href="a00040.html">chain</a>::<a class="el" href="a00019.html">Object</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::RenderManager Class Reference</h1><!-- doxytag: class="chain::RenderManager" --><!-- doxytag: inherits="chain::Manager" -->...  
+<h1>chain::Object Class Reference</h1><!-- doxytag: class="chain::Object" -->...  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;RenderManager.hpp&gt;</code>
+<code>#include &lt;Object.hpp&gt;</code>
 <p>
 <div class="dynheader">
-Inheritance diagram for chain::RenderManager:</div>
+Inheritance diagram for chain::Object:</div>
 <div class="dynsection">
 
-<p><center><img src="a00019.png" usemap="#chain::RenderManager_map" border="0" alt=""></center>
-<map name="chain::RenderManager_map">
-<area href="a00013.html" alt="chain::Manager" shape="rect" coords="0,112,142,136">
-<area href="a00007.html" alt="chain::EventDispatcher" shape="rect" coords="0,56,142,80">
-<area href="a00016.html" alt="chain::Object" shape="rect" coords="0,0,142,24">
+<p><center><img src="a00019.png" usemap="#chain::Object_map" border="0" alt=""></center>
+<map name="chain::Object_map">
+<area href="a00008.html" alt="chain::Event" shape="rect" coords="0,56,142,80">
+<area href="a00009.html" alt="chain::EventDispatcher" shape="rect" coords="304,56,446,80">
+<area href="a00001.html" alt="chain::App" shape="rect" coords="0,112,142,136">
+<area href="a00014.html" alt="chain::Log" shape="rect" coords="152,112,294,136">
+<area href="a00016.html" alt="chain::Manager" shape="rect" coords="304,112,446,136">
+<area href="a00021.html" alt="chain::RenderLayer" shape="rect" coords="456,112,598,136">
+<area href="a00028.html" alt="chain::Transform" shape="rect" coords="684,112,826,136">
+<area href="a00010.html" alt="chain::EventManager" shape="rect" coords="76,168,218,192">
+<area href="a00022.html" alt="chain::RenderManager" shape="rect" coords="228,168,370,192">
+<area href="a00024.html" alt="chain::SceneManager" shape="rect" coords="380,168,522,192">
+<area href="a00026.html" alt="chain::ScriptManager" shape="rect" coords="532,168,674,192">
+<area href="a00005.html" alt="chain::DisplayObject" shape="rect" coords="684,168,826,192">
+<area href="a00002.html" alt="chain::Camera" shape="rect" coords="532,224,674,248">
+<area href="a00004.html" alt="chain::Container" shape="rect" coords="684,224,826,248">
+<area href="a00011.html" alt="chain::Geometry" shape="rect" coords="912,224,1054,248">
+<area href="a00013.html" alt="chain::Instance" shape="rect" coords="608,280,750,304">
+<area href="a00023.html" alt="chain::Root" shape="rect" coords="760,280,902,304">
+<area href="a00018.html" alt="chain::Mesh" shape="rect" coords="912,280,1054,304">
+<area href="a00027.html" alt="chain::Sprite" shape="rect" coords="608,336,750,360">
 </map>
 </div>
 
 <p>
-<a href="a00168.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00175.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#489fab2b5dcf4de65dea8c2ab8aa9ee9">Init</a> (const int width, const int height, const int sdlFlags=SDL_INIT_VIDEO, const int glFlags=SDL_OPENGL|SDL_HWSURFACE)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#56fc3e5f5499e233601eafc074d90a19">~Object</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00040.html#a443f3ee0d9c73f667421c108473ffd7">Uint64</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#6084ab2a12567ee93ec47fa83daa6ee0">GetId</a> () const </td></tr>
+
+<tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#992f67d724cab79a23a0cee41d4b9f92">GetType</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the <a class="el" href="a00003.html">chain::COb</a> type of the object.  <a href="#992f67d724cab79a23a0cee41d4b9f92"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#3e7b5552e3406769b0e3ccac86015bde">GetTypeName</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the <a class="el" href="a00003.html">chain::COb</a> type as a string.  <a href="#3e7b5552e3406769b0e3ccac86015bde"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#429e6dbc1f436332e56b3b52cc5074b0">IsType</a> (const <a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> &amp;_type)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Test if a class is of a certain type, or derived from that type.  <a href="#429e6dbc1f436332e56b3b52cc5074b0"></a><br></td></tr>
 <tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#3c3c12e28b4a90f3ed512eed9594c8ec">RenderManager</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#454b49200a6f23e077a0c4ed3299250f">Object</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#33847c81eb2f9c80936ba753e474a6d2">~RenderManager</a> ()</td></tr>
+<tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00040.html#a443f3ee0d9c73f667421c108473ffd7">Uint64</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#ecaba6d2bfe643f4339674f6b26df462">m_id</a></td></tr>
 
-<tr><td colspan="2"><br><h2>Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">SDL_Surface *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#bc29d9f27030b10da01518750bc404c5">m_sdlSurface</a></td></tr>
-
-<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#4097b3e04a4f8ece21f5abe1b10e6323">App</a></td></tr>
+<tr><td colspan="2"><br><h2>Static Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00040.html#a443f3ee0d9c73f667421c108473ffd7">Uint64</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#02664faca535be82b0596583667e479e">m_id_incrementer</a> = 0</td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 ... 
 <p>
 ... <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="3c3c12e28b4a90f3ed512eed9594c8ec"></a><!-- doxytag: member="chain::RenderManager::RenderManager" ref="3c3c12e28b4a90f3ed512eed9594c8ec" args="()" -->
+<a class="anchor" name="454b49200a6f23e077a0c4ed3299250f"></a><!-- doxytag: member="chain::Object::Object" ref="454b49200a6f23e077a0c4ed3299250f" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::RenderManager::RenderManager           </td>
+          <td class="memname">chain::Object::Object           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline, protected]</code></td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -84,16 +110,16 @@ Inheritance diagram for chain::RenderManager:</div>
 Default Constructor 
 </div>
 </div><p>
-<a class="anchor" name="33847c81eb2f9c80936ba753e474a6d2"></a><!-- doxytag: member="chain::RenderManager::~RenderManager" ref="33847c81eb2f9c80936ba753e474a6d2" args="()" -->
+<a class="anchor" name="56fc3e5f5499e233601eafc074d90a19"></a><!-- doxytag: member="chain::Object::~Object" ref="56fc3e5f5499e233601eafc074d90a19" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::RenderManager::~RenderManager           </td>
+          <td class="memname">chain::Object::~Object           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [protected, virtual]</code></td>
+          <td><code> [virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -104,73 +130,121 @@ Destructor
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="489fab2b5dcf4de65dea8c2ab8aa9ee9"></a><!-- doxytag: member="chain::RenderManager::Init" ref="489fab2b5dcf4de65dea8c2ab8aa9ee9" args="(const int width, const int height, const int sdlFlags=SDL_INIT_VIDEO, const int glFlags=SDL_OPENGL|SDL_HWSURFACE)" -->
+<a class="anchor" name="6084ab2a12567ee93ec47fa83daa6ee0"></a><!-- doxytag: member="chain::Object::GetId" ref="6084ab2a12567ee93ec47fa83daa6ee0" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void chain::RenderManager::Init           </td>
+          <td class="memname"><a class="el" href="a00040.html#a443f3ee0d9c73f667421c108473ffd7">Uint64</a> chain::Object::GetId           </td>
           <td>(</td>
-          <td class="paramtype">const int&nbsp;</td>
-          <td class="paramname"> <em>width</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&nbsp;</td>
-          <td class="paramname"> <em>height</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&nbsp;</td>
-          <td class="paramname"> <em>sdlFlags</em> = <code>SDL_INIT_VIDEO</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&nbsp;</td>
-          <td class="paramname"> <em>glFlags</em> = <code>SDL_OPENGL&nbsp;|&nbsp;SDL_HWSURFACE</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
+Get the object's unique id 
+</div>
+</div><p>
+<a class="anchor" name="992f67d724cab79a23a0cee41d4b9f92"></a><!-- doxytag: member="chain::Object::GetType" ref="992f67d724cab79a23a0cee41d4b9f92" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> chain::Object::GetType           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Catch this error </dd></dl>
+Get the <a class="el" href="a00003.html">chain::COb</a> type of the object. 
+<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> - The object's type </dd></dl>
+
+<p>Reimplemented in <a class="el" href="a00008.html#ff2aaf41d5cf0323334eda135b8916bf">chain::Event</a>.</p>
 
 </div>
 </div><p>
-<hr><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" name="4097b3e04a4f8ece21f5abe1b10e6323"></a><!-- doxytag: member="chain::RenderManager::App" ref="4097b3e04a4f8ece21f5abe1b10e6323" args="" -->
+<a class="anchor" name="3e7b5552e3406769b0e3ccac86015bde"></a><!-- doxytag: member="chain::Object::GetTypeName" ref="3e7b5552e3406769b0e3ccac86015bde" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="a00001.html">App</a><code> [friend]</code>          </td>
+          <td class="memname">static std::string chain::Object::GetTypeName           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
+Get the <a class="el" href="a00003.html">chain::COb</a> type as a string. 
+<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>std::string - The object's type </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="429e6dbc1f436332e56b3b52cc5074b0"></a><!-- doxytag: member="chain::Object::IsType" ref="429e6dbc1f436332e56b3b52cc5074b0" args="(const COb::eType &amp;_type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool chain::Object::IsType           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>_type</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Test if a class is of a certain type, or derived from that type. 
+<p>
+This function looks down the class hierarchy for the class type. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>_type</em>&nbsp;</td><td>- <a class="el" href="a00003.html">chain::COb</a> type being checked against </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - True if part of type </dd></dl>
 
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
-<a class="anchor" name="bc29d9f27030b10da01518750bc404c5"></a><!-- doxytag: member="chain::RenderManager::m_sdlSurface" ref="bc29d9f27030b10da01518750bc404c5" args="" -->
+<a class="anchor" name="ecaba6d2bfe643f4339674f6b26df462"></a><!-- doxytag: member="chain::Object::m_id" ref="ecaba6d2bfe643f4339674f6b26df462" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SDL_Surface* <a class="el" href="a00019.html#bc29d9f27030b10da01518750bc404c5">chain::RenderManager::m_sdlSurface</a><code> [protected]</code>          </td>
+          <td class="memname"><a class="el" href="a00040.html#a443f3ee0d9c73f667421c108473ffd7">Uint64</a> <a class="el" href="a00019.html#ecaba6d2bfe643f4339674f6b26df462">chain::Object::m_id</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="02664faca535be82b0596583667e479e"></a><!-- doxytag: member="chain::Object::m_id_incrementer" ref="02664faca535be82b0596583667e479e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00040.html#a443f3ee0d9c73f667421c108473ffd7">Uint64</a> <a class="el" href="a00019.html#02664faca535be82b0596583667e479e">chain::Object::m_id_incrementer</a> = 0<code> [static, private]</code>          </td>
         </tr>
       </table>
 </div>
@@ -181,9 +255,9 @@ Destructor
 </div>
 </div><p>
 <hr>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00065.html">RenderManager.hpp</a><li><a class="el" href="a00064.html">RenderManager.cpp</a></ul>
+<li><a class="el" href="a00066.html">Object.hpp</a><li><a class="el" href="a00065.html">Object.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 16:45:16 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Thu Nov 5 16:50:24 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

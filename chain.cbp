@@ -53,7 +53,9 @@
 		<Unit filename="include/Def.hpp" />
 		<Unit filename="include/DisplayObject.hpp" />
 		<Unit filename="include/EulerAngle.hpp" />
+		<Unit filename="include/Event.hpp" />
 		<Unit filename="include/EventDispatcher.hpp" />
+		<Unit filename="include/EventManager.hpp" />
 		<Unit filename="include/Geometry.hpp" />
 		<Unit filename="include/Instance.hpp" />
 		<Unit filename="include/Log.hpp" />
@@ -75,12 +77,15 @@
 		<Unit filename="include/Vector2.hpp" />
 		<Unit filename="include/Vector3.hpp" />
 		<Unit filename="include/Vector4.hpp" />
+		<Unit filename="makefile" />
 		<Unit filename="src/App.cpp" />
 		<Unit filename="src/Camera.cpp" />
 		<Unit filename="src/Container.cpp" />
 		<Unit filename="src/DisplayObject.cpp" />
 		<Unit filename="src/EulerAngle.cpp" />
+		<Unit filename="src/Event.cpp" />
 		<Unit filename="src/EventDispatcher.cpp" />
+		<Unit filename="src/EventManager.cpp" />
 		<Unit filename="src/Geometry.cpp" />
 		<Unit filename="src/Instance.cpp" />
 		<Unit filename="src/Log.cpp" />

@@ -10,14 +10,5 @@
 
 namespace chain
 {
-   //------------------------------------------------ EventDispatcher::EventDispatcher
-   EventDispatcher::EventDispatcher()
-   {
 
-   }
-   //------------------------------------------------ EventDispatcher::~EventDispatcher
-   EventDispatcher::~EventDispatcher()
-   {
-
-   }
 }

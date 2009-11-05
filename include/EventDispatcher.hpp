@@ -25,12 +25,10 @@ namespace chain
       protected:
          //---------------------------------------
          /// \details Default Constructor
-         EventDispatcher();
-
-      public:
+         EventDispatcher() {}
          //---------------------------------------
          /// \details Destructor
-         virtual ~EventDispatcher();
+         virtual ~EventDispatcher() {}
    };
 }
 

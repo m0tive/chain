@@ -27,6 +27,7 @@ namespace chain
   /// \brief Class to define the main game application.
   /// \details To start the client, create a new application,
   /// and call App::Run()
+  /// \todo Change name: App -> Application
   class App : public EventDispatcher
   {
     DECLARE_CHAIN_CLASS(COb::App,EventDispatcher,"app")
@@ -41,10 +42,8 @@ namespace chain
         return singleton;
       }
 
-      //---------------------------------------
-      /// \details Main application function.
-      ///
-      virtual bool Run (const char* script);
+      // Main application function.
+      virtual bool Run (const char* script = 0);
 
     private:
       //---------------------------------------

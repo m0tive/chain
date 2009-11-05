@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: chain::Instance Class Reference</title>
+<title>Chain: chain::EventManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,53 +22,61 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00037.html">chain</a>::<a class="el" href="a00010.html">Instance</a>
+  <div class="navpath"><a class="el" href="a00040.html">chain</a>::<a class="el" href="a00010.html">EventManager</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::Instance Class Reference</h1><!-- doxytag: class="chain::Instance" --><!-- doxytag: inherits="chain::Container" -->...  
+<h1>chain::EventManager Class Reference</h1><!-- doxytag: class="chain::EventManager" --><!-- doxytag: inherits="chain::Manager" -->...  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;Instance.hpp&gt;</code>
+<code>#include &lt;EventManager.hpp&gt;</code>
 <p>
 <div class="dynheader">
-Inheritance diagram for chain::Instance:</div>
+Inheritance diagram for chain::EventManager:</div>
 <div class="dynsection">
 
-<p><center><img src="a00010.png" usemap="#chain::Instance_map" border="0" alt=""></center>
-<map name="chain::Instance_map">
-<area href="a00004.html" alt="chain::Container" shape="rect" coords="0,224,142,248">
-<area href="a00005.html" alt="chain::DisplayObject" shape="rect" coords="0,168,142,192">
-<area href="a00025.html" alt="chain::Transform" shape="rect" coords="0,112,142,136">
-<area href="a00007.html" alt="chain::EventDispatcher" shape="rect" coords="0,56,142,80">
-<area href="a00016.html" alt="chain::Object" shape="rect" coords="0,0,142,24">
-<area href="a00024.html" alt="chain::Sprite" shape="rect" coords="0,336,142,360">
+<p><center><img src="a00010.png" usemap="#chain::EventManager_map" border="0" alt=""></center>
+<map name="chain::EventManager_map">
+<area href="a00016.html" alt="chain::Manager" shape="rect" coords="0,112,142,136">
+<area href="a00009.html" alt="chain::EventDispatcher" shape="rect" coords="0,56,142,80">
+<area href="a00019.html" alt="chain::Object" shape="rect" coords="0,0,142,24">
 </map>
 </div>
 
 <p>
-<a href="a00154.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00164.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#e070f5aa04d8f93faeb961696d5621ec">Instance</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#9abc6f48ca0cb445659c24bd5a35a26e">EventManager</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#8531775d850a39709284ba65b98053e7">~Instance</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#7d41087cb3cf9b731804940fa2b14e8c">~EventManager</a> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#8fcf89e95d0c22041510b7aa5ec8c810">AddEvent</a> (const <a class="el" href="a00008.html">Event</a> *event)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#41bd8434c2bf0222f7dd159fb3591154">DeleteEvent</a> (const <a class="el" href="a00008.html">Event</a> *event)</td></tr>
+
+<tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::vector&lt; <a class="el" href="a00008.html">Event</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#2ce09d7327ccc4f1864533ad9798cd0d">m_events</a></td></tr>
+
+<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00010.html#3c7b3c89bf96f51e80a919b3a82a3915">Event</a></td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 ... 
 <p>
 ... <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="e070f5aa04d8f93faeb961696d5621ec"></a><!-- doxytag: member="chain::Instance::Instance" ref="e070f5aa04d8f93faeb961696d5621ec" args="()" -->
+<a class="anchor" name="9abc6f48ca0cb445659c24bd5a35a26e"></a><!-- doxytag: member="chain::EventManager::EventManager" ref="9abc6f48ca0cb445659c24bd5a35a26e" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Instance::Instance           </td>
+          <td class="memname">chain::EventManager::EventManager           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td></td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -78,12 +86,12 @@ Inheritance diagram for chain::Instance:</div>
 Default Constructor 
 </div>
 </div><p>
-<a class="anchor" name="8531775d850a39709284ba65b98053e7"></a><!-- doxytag: member="chain::Instance::~Instance" ref="8531775d850a39709284ba65b98053e7" args="()" -->
+<a class="anchor" name="7d41087cb3cf9b731804940fa2b14e8c"></a><!-- doxytag: member="chain::EventManager::~EventManager" ref="7d41087cb3cf9b731804940fa2b14e8c" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Instance::~Instance           </td>
+          <td class="memname">virtual chain::EventManager::~EventManager           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -97,10 +105,83 @@ Default Constructor
 Destructor 
 </div>
 </div><p>
-<hr>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00047.html">Instance.hpp</a><li><a class="el" href="a00046.html">Instance.cpp</a></ul>
+<hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="8fcf89e95d0c22041510b7aa5ec8c810"></a><!-- doxytag: member="chain::EventManager::AddEvent" ref="8fcf89e95d0c22041510b7aa5ec8c810" args="(const Event *event)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chain::EventManager::AddEvent           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00008.html">Event</a> *&nbsp;</td>
+          <td class="paramname"> <em>event</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, private]</code></td>
+        </tr>
+      </table>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 16:45:16 2009 for Chain by&nbsp;
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="41bd8434c2bf0222f7dd159fb3591154"></a><!-- doxytag: member="chain::EventManager::DeleteEvent" ref="41bd8434c2bf0222f7dd159fb3591154" args="(const Event *event)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chain::EventManager::DeleteEvent           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00008.html">Event</a> *&nbsp;</td>
+          <td class="paramname"> <em>event</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" name="3c7b3c89bf96f51e80a919b3a82a3915"></a><!-- doxytag: member="chain::EventManager::Event" ref="3c7b3c89bf96f51e80a919b3a82a3915" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="a00008.html">Event</a><code> [friend]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Member Data Documentation</h2>
+<a class="anchor" name="2ce09d7327ccc4f1864533ad9798cd0d"></a><!-- doxytag: member="chain::EventManager::m_events" ref="2ce09d7327ccc4f1864533ad9798cd0d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="a00008.html">Event</a>* &gt; <a class="el" href="a00010.html#2ce09d7327ccc4f1864533ad9798cd0d">chain::EventManager::m_events</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00050.html">EventManager.hpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated on Thu Nov 5 16:50:24 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

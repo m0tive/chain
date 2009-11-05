@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: chain::Geometry Class Reference</title>
+<title>Chain: chain::Event Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,53 +22,71 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00037.html">chain</a>::<a class="el" href="a00008.html">Geometry</a>
+  <div class="navpath"><a class="el" href="a00040.html">chain</a>::<a class="el" href="a00008.html">Event</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::Geometry Class Reference</h1><!-- doxytag: class="chain::Geometry" --><!-- doxytag: inherits="chain::DisplayObject" -->...  
+<h1>chain::Event Class Reference</h1><!-- doxytag: class="chain::Event" --><!-- doxytag: inherits="chain::Object" -->...  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;Geometry.hpp&gt;</code>
+<code>#include &lt;Event.hpp&gt;</code>
 <p>
 <div class="dynheader">
-Inheritance diagram for chain::Geometry:</div>
+Inheritance diagram for chain::Event:</div>
 <div class="dynsection">
 
-<p><center><img src="a00008.png" usemap="#chain::Geometry_map" border="0" alt=""></center>
-<map name="chain::Geometry_map">
-<area href="a00005.html" alt="chain::DisplayObject" shape="rect" coords="0,168,142,192">
-<area href="a00025.html" alt="chain::Transform" shape="rect" coords="0,112,142,136">
-<area href="a00007.html" alt="chain::EventDispatcher" shape="rect" coords="0,56,142,80">
-<area href="a00016.html" alt="chain::Object" shape="rect" coords="0,0,142,24">
-<area href="a00015.html" alt="chain::Mesh" shape="rect" coords="0,280,142,304">
+<p><center><img src="a00008.png" usemap="#chain::Event_map" border="0" alt=""></center>
+<map name="chain::Event_map">
+<area href="a00019.html" alt="chain::Object" shape="rect" coords="0,0,86,24">
 </map>
 </div>
 
 <p>
-<a href="a00153.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00161.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#7ea494e1a2a531d276c82a35e2959b1d">~Geometry</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#ff42be43749362801faa76c004f342d7">Event</a> (const <a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a> type, const bool propagate)</td></tr>
 
-<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#6ed09d7c881f2139ed0990eb8ed5e2ac">Geometry</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#0c36e0434a511d57681aed71f1ee24d6">~Event</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#ff2aaf41d5cf0323334eda135b8916bf">GetType</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the <a class="el" href="a00003.html">chain::COb</a> type of the object.  <a href="#ff2aaf41d5cf0323334eda135b8916bf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#792b7d321ccd8de90041b460b1665815">DoesPropagate</a> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#d523f5940b30df70a90d8a4283b3fd65">m_type</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#1b40f033b14235f1a5e73ef2eab6b572">m_propagate</a></td></tr>
+
+<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#ba45a46c615e2683daffdae82e2d3b8f">EventManager</a></td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 ... 
 <p>
 ... <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="6ed09d7c881f2139ed0990eb8ed5e2ac"></a><!-- doxytag: member="chain::Geometry::Geometry" ref="6ed09d7c881f2139ed0990eb8ed5e2ac" args="()" -->
+<a class="anchor" name="ff42be43749362801faa76c004f342d7"></a><!-- doxytag: member="chain::Event::Event" ref="ff42be43749362801faa76c004f342d7" args="(const EType::T type, const bool propagate)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Geometry::Geometry           </td>
+          <td class="memname">chain::Event::Event           </td>
           <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [protected]</code></td>
+          <td class="paramtype">const <a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a>&nbsp;</td>
+          <td class="paramname"> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&nbsp;</td>
+          <td class="paramname"> <em>propagate</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -78,16 +96,16 @@ Inheritance diagram for chain::Geometry:</div>
 Default Constructor 
 </div>
 </div><p>
-<a class="anchor" name="7ea494e1a2a531d276c82a35e2959b1d"></a><!-- doxytag: member="chain::Geometry::~Geometry" ref="7ea494e1a2a531d276c82a35e2959b1d" args="()" -->
+<a class="anchor" name="0c36e0434a511d57681aed71f1ee24d6"></a><!-- doxytag: member="chain::Event::~Event" ref="0c36e0434a511d57681aed71f1ee24d6" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Geometry::~Geometry           </td>
+          <td class="memname">virtual chain::Event::~Event           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td><code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -97,10 +115,101 @@ Default Constructor
 Destructor 
 </div>
 </div><p>
-<hr>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00045.html">Geometry.hpp</a><li><a class="el" href="a00044.html">Geometry.cpp</a></ul>
+<hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="792b7d321ccd8de90041b460b1665815"></a><!-- doxytag: member="chain::Event::DoesPropagate" ref="792b7d321ccd8de90041b460b1665815" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chain::Event::DoesPropagate           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 16:45:16 2009 for Chain by&nbsp;
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="ff2aaf41d5cf0323334eda135b8916bf"></a><!-- doxytag: member="chain::Event::GetType" ref="ff2aaf41d5cf0323334eda135b8916bf" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a> chain::Event::GetType           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get the <a class="el" href="a00003.html">chain::COb</a> type of the object. 
+<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> - The object's type </dd></dl>
+
+<p>Reimplemented from <a class="el" href="a00019.html#992f67d724cab79a23a0cee41d4b9f92">chain::Object</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" name="ba45a46c615e2683daffdae82e2d3b8f"></a><!-- doxytag: member="chain::Event::EventManager" ref="ba45a46c615e2683daffdae82e2d3b8f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="a00010.html">EventManager</a><code> [friend]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Member Data Documentation</h2>
+<a class="anchor" name="1b40f033b14235f1a5e73ef2eab6b572"></a><!-- doxytag: member="chain::Event::m_propagate" ref="1b40f033b14235f1a5e73ef2eab6b572" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="a00008.html#1b40f033b14235f1a5e73ef2eab6b572">chain::Event::m_propagate</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="d523f5940b30df70a90d8a4283b3fd65"></a><!-- doxytag: member="chain::Event::m_type" ref="d523f5940b30df70a90d8a4283b3fd65" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a> <a class="el" href="a00008.html#d523f5940b30df70a90d8a4283b3fd65">chain::Event::m_type</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="a00046.html">Event.hpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated on Thu Nov 5 16:50:24 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

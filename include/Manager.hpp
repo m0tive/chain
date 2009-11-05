@@ -25,12 +25,10 @@ namespace chain
       protected:
          //---------------------------------------
          /// \details Default Constructor
-         Manager();
-
-      public:
+         Manager() {}
          //---------------------------------------
          /// \details Destructor
-         virtual ~Manager();
+         virtual ~Manager() {}
    };
 }
 

@@ -10,14 +10,5 @@
 
 namespace chain
 {
-   //------------------------------------------------ Manager::Manager
-   Manager::Manager()
-   {
 
-   }
-   //------------------------------------------------ Manager::~Manager
-   Manager::~Manager()
-   {
-
-   }
 }
