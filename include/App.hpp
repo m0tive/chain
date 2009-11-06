@@ -31,7 +31,10 @@ namespace chain
   class App : public EventDispatcher
   {
     DECLARE_CHAIN_CLASS(COb::App,EventDispatcher,"app")
+    CH_SINGLETON(App)
+
     public:
+  #if 0
       // -----------------------------------
       /// \details Get an instance of this singleton.
       /// The first call to this will create the singleton.
@@ -41,6 +44,7 @@ namespace chain
         static App singleton;
         return singleton;
       }
+  #endif
 
       // Main application function.
       virtual bool Run (const char* script = 0);

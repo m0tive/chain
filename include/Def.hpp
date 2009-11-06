@@ -160,5 +160,13 @@ namespace chain
 /// sqrt()</A>
 
 
+/// \brief Create the instancing function for a singleton class
+/// \par CLASSNAME The name of the class (used to declare the singleton)
+#define CH_SINGLETON(CLASSNAME)       \
+  public:                             \
+    static CLASSNAME & Instance () {  \
+      static CLASSNAME singleton;     \
+      return singleton;               \
+    };
 
 #endif

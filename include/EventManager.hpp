@@ -31,14 +31,18 @@ namespace chain
   };
 
   class Event;
+  class EventDispatcher;
 
   /// \brief ...
   /// \details ...
   class EventManager : public Manager
   {
-    friend class Event;
     DECLARE_CHAIN_CLASS(COb::EventManager,Manager,"eventManager")
-    public:
+    CH_SINGLETON(EventDispatcher)
+
+    friend class EventDispatcher;
+
+    protected:
       //---------------------------------------
       /// \details Default Constructor
       EventManager() {}

@@ -14,10 +14,23 @@
 #define _chain_Event_h_
 
 #include "Object.hpp"
-#include "EventManager.hpp"
+//#include "EventManager.hpp"
+
+#include <assert.h>
 
 namespace chain
 {
+  struct EType {
+    enum T {
+      Dummy=0,
+
+      Force_Quit,
+
+      Last,
+      Max=0xFFFF
+    };
+  };
+
   /// \brief ...
   /// \details ...
   class Event : public Object
@@ -28,19 +41,21 @@ namespace chain
     public:
       //---------------------------------------
       /// \details Default Constructor
-      Event(const EType::T type, const bool propagate)
+      Event(int type, const bool propagate)
         : m_type(type), m_propagate(propagate)
-      {}
+      {
+        assert(type <= EType::Max);
+      }
 
       //---------------------------------------
       /// \details Destructor
       virtual ~Event() {}
 
-      EType::T GetType() {return m_type;}
-      bool DoesPropagate() {return m_propagate;}
+      const int GetEventType() const {return m_type;}
+      const bool DoesPropagate() const {return m_propagate;}
 
     private:
-      EType::T m_type;
+      int m_type;
       bool m_propagate;
   };
 }

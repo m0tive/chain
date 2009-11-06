@@ -17,19 +17,19 @@
 
 namespace chain
 {
-   /// \brief ...
-   /// \details ...
-   class Manager : public EventDispatcher
-   {
-     DECLARE_CHAIN_CLASS(COb::Manager,EventDispatcher,"manager")
-      protected:
-         //---------------------------------------
-         /// \details Default Constructor
-         Manager() {}
-         //---------------------------------------
-         /// \details Destructor
-         virtual ~Manager() {}
-   };
+  /// \brief ...
+  /// \details ...
+  class Manager : public EventDispatcher
+  {
+    DECLARE_CHAIN_CLASS(COb::Manager,EventDispatcher,"manager")
+    protected:
+      //---------------------------------------
+      /// \details Default Constructor
+      Manager() {}
+      //---------------------------------------
+      /// \details Destructor
+      virtual ~Manager() {}
+  };
 }
 
 #endif

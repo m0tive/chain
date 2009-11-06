@@ -38,6 +38,7 @@ namespace chain
    struct COb {
       enum eType {
          Object=0,
+            Event,
             EventDispatcher,
               Log,
               App,
