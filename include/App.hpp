@@ -20,6 +20,7 @@
 #include "SceneManager.hpp"
 #include "ScriptManager.hpp"
 #include "RenderManager.hpp"
+#include "InputManager.hpp"
 #include "Log.hpp"
 
 namespace chain
@@ -52,16 +53,28 @@ namespace chain
     private:
       //---------------------------------------
       /// \details Default Constructor
-      App() {}
+      App() : m_shutdown(false), m_isRunning(false) {}
       //---------------------------------------
       /// \details Destructor
       virtual ~App() {}
 
     public:
+      void Shutdown ()
+      {
+        if(m_isRunning)
+          m_shutdown = true;
+      }
+
       RenderManager renderManager;
       SceneManager sceneManager;
       ScriptManager scriptManager;
+      InputManager inputManager;
+
       Log * log;
+
+    private:
+      bool m_isRunning;
+      bool m_shutdown;
   };
 }
 

@@ -19,9 +19,9 @@ namespace chain
 {
   /// \brief ...
   /// \details ...
-  class Manager : public EventDispatcher
+  class Manager //: public EventDispatcher
   {
-    DECLARE_CHAIN_CLASS(COb::Manager,EventDispatcher,"manager")
+    //DECLARE_CHAIN_CLASS(COb::Manager,EventDispatcher,"manager")
     protected:
       //---------------------------------------
       /// \details Default Constructor

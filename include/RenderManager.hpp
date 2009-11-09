@@ -34,7 +34,7 @@ namespace chain
   {
     friend class App;
 
-    DECLARE_CHAIN_CLASS(COb::RenderManager,Manager,"renderManager")
+    //DECLARE_CHAIN_CLASS(COb::RenderManager,Manager,"renderManager")
     protected:
       //---------------------------------------
       /// \details Default Constructor

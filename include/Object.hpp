@@ -46,6 +46,7 @@ namespace chain
                  RenderManager,
                  SceneManager,
                  ScriptManager,
+                 InputManager,
               RenderLayer,
               Transform,
                  DisplayObject,

@@ -8,7 +8,10 @@
 
 #include "EventDispatcher.hpp"
 #include "Event.hpp"
+#include "DisplayObject.hpp"
 #include "Container.hpp"
+
+#include "Log.hpp"
 
 namespace chain
 {
@@ -29,10 +32,11 @@ namespace chain
       }
     }
 
-    Container* con_this = dynamic_cast<Container* >(this);
-    if(con_this != 0 && event.DoesPropagate())
+    // try to cast this to a DisplayObject, and then propergate the event
+    DisplayObject* dis_this;
+    if(event.DoesPropagate() && (dis_this = dynamic_cast<DisplayObject* >(this)) != 0 )
     {
-      con_this->DispatchEvent(event);
+      dis_this->Parent()->DispatchEvent(event);
     }
   }
 

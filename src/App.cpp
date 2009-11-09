@@ -8,13 +8,31 @@
 //------------------------------------------------------------------------------
 
 #include "App.hpp"
+#include "Event.hpp"
 
 namespace chain
 {
   //------------------------------------------------ App::Run
   bool App::Run(const char* script/* = 0*/)
   {
-    bool s = scriptManager.Run(script);
-    return s;
+    //bool s = scriptManager.Run(script);
+
+    DispatchEvent(Event(EType::Application_Start));
+
+    m_isRunning = true;
+    while(!m_shutdown){
+      //draw
+      DispatchEvent(Event(EType::Application_Render));
+      //events
+      DispatchEvent(Event(EType::Application_PollInputs));
+
+      Shutdown();
+    }
+    m_isRunning = false;
+    // while loop
+
+    DispatchEvent(Event(EType::Application_Stop));
+
+    return true;
   }
 }

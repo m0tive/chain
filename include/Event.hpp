@@ -22,9 +22,15 @@ namespace chain
 {
   struct EType {
     enum T {
-      Dummy=0,
+      Null=0,
 
-      Force_Quit,
+      Application_Start, /// Before the application while loop starts
+      Application_Stop, /// After the application while loop finishes
+      Application_Render,
+      Application_PollInputs,
+
+      Input_Quit,
+      Input_ForceQuit,
 
       Last,
       Max=0xFFFF
@@ -33,25 +39,21 @@ namespace chain
 
   /// \brief ...
   /// \details ...
-  class Event : public Object
+  class Event// : public Object
   {
     friend class EventManager;
 
-    DECLARE_CHAIN_CLASS(COb::Event,Object,"event")
+    //DECLARE_CHAIN_CLASS(COb::Event,Object,"event")
     public:
       //---------------------------------------
       /// \details Default Constructor
-      Event(int type, const bool propagate)
-        : m_type(type), m_propagate(propagate)
-      {
-        assert(type <= EType::Max);
-      }
+      Event(int type, const bool propagate = false);
 
       //---------------------------------------
       /// \details Destructor
       virtual ~Event() {}
 
-      const int GetEventType() const {return m_type;}
+      const int GetType() const {return m_type;}
       const bool DoesPropagate() const {return m_propagate;}
 
     private:

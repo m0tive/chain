@@ -27,7 +27,7 @@ namespace chain
 	/// \brief
   class ScriptManager : public Manager
 	{
-     DECLARE_CHAIN_CLASS(COb::ScriptManager,Manager,"scriptManager")
+    // DECLARE_CHAIN_CLASS(COb::ScriptManager,Manager,"scriptManager")
     friend class App;
   protected:
 		//---------------------------------------

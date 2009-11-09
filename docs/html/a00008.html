@@ -22,40 +22,30 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00040.html">chain</a>::<a class="el" href="a00008.html">Event</a>
+  <div class="navpath"><a class="el" href="a00041.html">chain</a>::<a class="el" href="a00008.html">Event</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::Event Class Reference</h1><!-- doxytag: class="chain::Event" --><!-- doxytag: inherits="chain::Object" -->...  
+<h1>chain::Event Class Reference</h1><!-- doxytag: class="chain::Event" -->...  
 <a href="#_details">More...</a>
 <p>
 <code>#include &lt;Event.hpp&gt;</code>
 <p>
-<div class="dynheader">
-Inheritance diagram for chain::Event:</div>
-<div class="dynsection">
-
-<p><center><img src="a00008.png" usemap="#chain::Event_map" border="0" alt=""></center>
-<map name="chain::Event_map">
-<area href="a00019.html" alt="chain::Object" shape="rect" coords="0,0,86,24">
-</map>
-</div>
 
 <p>
-<a href="a00161.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00167.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#ff42be43749362801faa76c004f342d7">Event</a> (const <a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a> type, const bool propagate)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#129bfb6b7b944b6b6844cf8c8433ec0f">Event</a> (int type, const bool propagate=false)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#0c36e0434a511d57681aed71f1ee24d6">~Event</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#ff2aaf41d5cf0323334eda135b8916bf">GetType</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#62e4a87c3ba3c505580bbd42a83fdb00">GetType</a> () const </td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the <a class="el" href="a00003.html">chain::COb</a> type of the object.  <a href="#ff2aaf41d5cf0323334eda135b8916bf"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#792b7d321ccd8de90041b460b1665815">DoesPropagate</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#9c3682de7d7a2a1eea14bddf3c0962b9">DoesPropagate</a> () const </td></tr>
 
 <tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#d523f5940b30df70a90d8a4283b3fd65">m_type</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#3f6916a9f51e207c36cdb9843f231bc2">m_type</a></td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00008.html#1b40f033b14235f1a5e73ef2eab6b572">m_propagate</a></td></tr>
 
@@ -67,26 +57,26 @@ Inheritance diagram for chain::Event:</div>
 ... 
 <p>
 ... <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="ff42be43749362801faa76c004f342d7"></a><!-- doxytag: member="chain::Event::Event" ref="ff42be43749362801faa76c004f342d7" args="(const EType::T type, const bool propagate)" -->
+<a class="anchor" name="129bfb6b7b944b6b6844cf8c8433ec0f"></a><!-- doxytag: member="chain::Event::Event" ref="129bfb6b7b944b6b6844cf8c8433ec0f" args="(int type, const bool propagate=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">chain::Event::Event           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a>&nbsp;</td>
+          <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const bool&nbsp;</td>
-          <td class="paramname"> <em>propagate</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>propagate</em> = <code>false</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td><code> [inline]</code></td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
 </div>
@@ -116,16 +106,16 @@ Destructor
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="792b7d321ccd8de90041b460b1665815"></a><!-- doxytag: member="chain::Event::DoesPropagate" ref="792b7d321ccd8de90041b460b1665815" args="()" -->
+<a class="anchor" name="9c3682de7d7a2a1eea14bddf3c0962b9"></a><!-- doxytag: member="chain::Event::DoesPropagate" ref="9c3682de7d7a2a1eea14bddf3c0962b9" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool chain::Event::DoesPropagate           </td>
+          <td class="memname">const bool chain::Event::DoesPropagate           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -135,27 +125,22 @@ Destructor
 
 </div>
 </div><p>
-<a class="anchor" name="ff2aaf41d5cf0323334eda135b8916bf"></a><!-- doxytag: member="chain::Event::GetType" ref="ff2aaf41d5cf0323334eda135b8916bf" args="()" -->
+<a class="anchor" name="62e4a87c3ba3c505580bbd42a83fdb00"></a><!-- doxytag: member="chain::Event::GetType" ref="62e4a87c3ba3c505580bbd42a83fdb00" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a> chain::Event::GetType           </td>
+          <td class="memname">const int chain::Event::GetType           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
+          <td> const<code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Get the <a class="el" href="a00003.html">chain::COb</a> type of the object. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> - The object's type </dd></dl>
-
-<p>Reimplemented from <a class="el" href="a00019.html#992f67d724cab79a23a0cee41d4b9f92">chain::Object</a>.</p>
 
 </div>
 </div><p>
@@ -191,12 +176,12 @@ Get the <a class="el" href="a00003.html">chain::COb</a> type of the object.
 
 </div>
 </div><p>
-<a class="anchor" name="d523f5940b30df70a90d8a4283b3fd65"></a><!-- doxytag: member="chain::Event::m_type" ref="d523f5940b30df70a90d8a4283b3fd65" args="" -->
+<a class="anchor" name="3f6916a9f51e207c36cdb9843f231bc2"></a><!-- doxytag: member="chain::Event::m_type" ref="3f6916a9f51e207c36cdb9843f231bc2" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00006.html#5917175ef1322996786efc593b0c092e">EType::T</a> <a class="el" href="a00008.html#d523f5940b30df70a90d8a4283b3fd65">chain::Event::m_type</a><code> [private]</code>          </td>
+          <td class="memname">int <a class="el" href="a00008.html#3f6916a9f51e207c36cdb9843f231bc2">chain::Event::m_type</a><code> [private]</code>          </td>
         </tr>
       </table>
 </div>
@@ -206,10 +191,10 @@ Get the <a class="el" href="a00003.html">chain::COb</a> type of the object.
 
 </div>
 </div><p>
-<hr>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="a00046.html">Event.hpp</a></ul>
+<hr>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00047.html">Event.hpp</a><li><a class="el" href="a00046.html">Event.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Thu Nov 5 16:50:24 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 9 15:09:56 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
