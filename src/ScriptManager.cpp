@@ -52,6 +52,26 @@ namespace chain
     luaL_openlibs(m_luaState);
     luaopen_opengl(m_luaState);
 
+#if 1
+    luaL_Reg chainlib[] = {
+      {"print",chain_lua_print},
+      {"path",chain_lua_path},
+      {NULL,NULL}
+    };
+
+
+    luaL_register(m_luaState, "ch", chainlib);
+
+    if(luaL_dostring(m_luaState, "\
+       ch.print(\"this worked\") \
+       io.write = ch.print; \
+       print = ch.print; \
+       print \"--\""))
+    {
+      DOUT << "error setting ch.print";
+    }
+
+#elif
     lua_register(m_luaState, "_chain_print", chain_lua_print);
     lua_register(m_luaState, "_chain_path", chain_lua_path);
 
@@ -70,6 +90,7 @@ namespace chain
     {
       DOUT << "error setting ch.print";
     }
+#endif
   }
 
   //------------------------------------------------ ScriptManager::~ScriptManager

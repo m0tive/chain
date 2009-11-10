@@ -20,7 +20,8 @@ namespace chain
     DispatchEvent(Event(EType::Application_Start));
 
     m_isRunning = true;
-    while(!m_shutdown){
+    while(!m_shutdown)
+    {
       //draw
       DispatchEvent(Event(EType::Application_Render));
       //events
