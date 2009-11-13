@@ -53,8 +53,21 @@ namespace chain
     luaopen_opengl(m_luaState);
 
 #if 1
+    // overload io.write
+    AddFunction(chain_lua_print,"write","io"); /// \todo change this
+
+    //lua_getglobal(m_luaState,"io");
+    //lua_pushcfunction(m_luaState,chain_lua_print);
+    //lua_setfield(m_luaState,-2,"write");
+
+    // overload print
+    AddFunction(chain_lua_print,"print");
+
+    //lua_register(m_luaState,"print",chain_lua_print);
+
+
     luaL_Reg chainlib[] = {
-      {"print",chain_lua_print},
+      //{"print",chain_lua_print},
       {"path",chain_lua_path},
       {NULL,NULL}
     };
@@ -62,14 +75,25 @@ namespace chain
 
     luaL_register(m_luaState, "ch", chainlib);
 
+    /*lua_pushnil(m_luaState);
+    lua_setglobal(m_luaState,"ch");*/
+
     if(luaL_dostring(m_luaState, "\
-       ch.print(\"this worked\") \
-       io.write = ch.print; \
-       print = ch.print; \
-       print \"--\""))
+       io.write(\"io.write\") \
+       print \"print\""))
     {
       DOUT << "error setting ch.print";
     }
+    /*lua_pushnil(m_luaState);
+    lua_setfield(m_luaState,-2,"");
+    lua_setfield(m_luaState,-2,"print2");
+
+    if(luaL_dostring(m_luaState, "\
+       io.write(\"io.write worked\")"))
+    {
+      DOUT << "failed to run io.write\n";
+    }*/
+
 
 #elif
     lua_register(m_luaState, "_chain_print", chain_lua_print);

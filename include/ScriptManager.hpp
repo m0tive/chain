@@ -22,6 +22,9 @@
 
 namespace chain
 {
+  typedef int (*ScriptFunction) (lua_State *L);
+  typedef luaL_Reg ScriptFunctionTable;
+
   class App;
 
 	/// \brief
@@ -100,13 +103,32 @@ namespace chain
       return false;
     }
 
-    bool RunFile (const char* filename) {return false;}
+    void RunFile (const char* filename) {}
+
+    void AddFunction (ScriptFunction funct, const char* name, const char* table = 0)
+    {
+      /// \todo Make some lua functions protected
+
+      if(table == 0) // The function is global
+      {
+        lua_register(m_luaState,name,funct);
+      }
+      else
+      {
+        lua_getglobal(m_luaState,table); /// \todo Catch errors if table isn't global
+        lua_pushcfunction(m_luaState,funct);
+        lua_setfield(m_luaState,-2,name);
+      }
+    }
+
+    void AddTable (const char* name, const ScriptFunctionTable* t = 0)
+    {
+    }
 
     //lua_State* GetLuaState () {return m_luaState;}
 
   private:
     int LuaErrorCheck();
-
 
     unsigned int m_scriptCounter;
 
