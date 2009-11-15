@@ -87,6 +87,14 @@ namespace chain
   ScriptManager::~ScriptManager()
   {
     DOUT << "closing lua\n";
+    std::map<unsigned int, Script*>::iterator it = m_scripts.begin(),
+      endit = m_scripts.end();
+    for(;it!=endit;++it)
+    {
+      delete it->second;
+    }
+
+
     lua_close(m_L);
   }
 

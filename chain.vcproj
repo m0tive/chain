@@ -162,11 +162,23 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\Event.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\src\EventDispatcher.cpp"
 				>
 			</File>
 			<File
+				RelativePath=".\src\EventManager.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\src\Geometry.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\InputManager.cpp"
 				>
 			</File>
 			<File
