@@ -50,6 +50,9 @@ namespace chain
   //------------------------------------------------ EventDispatcher::GetEventListeners
   const std::vector<Script* >& EventDispatcher::GetEventListeners (const int type)
   {
+    int TODO;///\todo 2009/11/14 21:07 : Test this. 
+    /// the compiler thinks matches will go out of scope before returning properly
+
     std::vector<Script* > matches;
 
     std::vector<std::pair<int, Script* > >::iterator it = m_eventListeners.begin(),

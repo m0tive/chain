@@ -47,7 +47,7 @@ namespace chain
     public:
       //---------------------------------------
       /// \details Default Constructor
-      Event(int type, const bool propagate = false);
+      Event(int type, bool propagate = false);
 
       //---------------------------------------
       /// \details Destructor

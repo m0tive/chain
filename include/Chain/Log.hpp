@@ -27,8 +27,8 @@ namespace chain
          #define DERR std::cerr << "!! " << __FILE__ << " (" << __LINE__ << "): "
       #endif
    #else
-      #define DOUT
-      #define DERR
+      #define DOUT std::cerr << ">> " << __FILE__ << " (" << __LINE__ << "): "
+      #define DERR std::cerr << "!! " << __FILE__ << " (" << __LINE__ << "): "
    #endif
 
    class Logger;

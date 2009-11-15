@@ -8,7 +8,9 @@
 #include "ScriptManager.hpp"
 #include "Log.hpp"
 
+#ifndef DOXYGEN_PROCESSING
 #include "LuaGL.h"
+#endif
 
 namespace chain
 {
@@ -48,69 +50,33 @@ namespace chain
   {
     // initialise the lua script interpreter
     DOUT << "initialising lua\n";
-    m_luaState = lua_open();
-    luaL_openlibs(m_luaState);
-    luaopen_opengl(m_luaState);
+    m_L = lua_open();
+    luaL_openlibs(m_L);
+    luaopen_opengl(m_L);
 
-#if 1
     // overload io.write
-    AddFunction(chain_lua_print,"write","io"); /// \todo change this
-
-    //lua_getglobal(m_luaState,"io");
-    //lua_pushcfunction(m_luaState,chain_lua_print);
-    //lua_setfield(m_luaState,-2,"write");
+    lua_getglobal(m_L,"io");
+    lua_pushcfunction(m_L,chain_lua_print);
+    lua_setfield(m_L,-2,"write");
 
     // overload print
-    AddFunction(chain_lua_print,"print");
+    lua_register(m_L,"print",chain_lua_print);
 
-    //lua_register(m_luaState,"print",chain_lua_print);
+    // add path
+    lua_register(m_L,"path",chain_lua_path);
 
 
-    luaL_Reg chainlib[] = {
+    /* luaL_Reg chainlib[] = {
       //{"print",chain_lua_print},
-      {"path",chain_lua_path},
+      //{"path",chain_lua_path},
       {NULL,NULL}
     };
+    luaL_register(m_L, "ch", chainlib); */
 
-
-    luaL_register(m_luaState, "ch", chainlib);
-
-    /*lua_pushnil(m_luaState);
-    lua_setglobal(m_luaState,"ch");*/
-
+#if 0
     if(luaL_dostring(m_luaState, "\
        io.write(\"io.write\") \
        print \"print\""))
-    {
-      DOUT << "error setting ch.print";
-    }
-    /*lua_pushnil(m_luaState);
-    lua_setfield(m_luaState,-2,"");
-    lua_setfield(m_luaState,-2,"print2");
-
-    if(luaL_dostring(m_luaState, "\
-       io.write(\"io.write worked\")"))
-    {
-      DOUT << "failed to run io.write\n";
-    }*/
-
-
-#elif
-    lua_register(m_luaState, "_chain_print", chain_lua_print);
-    lua_register(m_luaState, "_chain_path", chain_lua_path);
-
-    int TODO; /// \todo Improve chain lua table
-
-    // hard code replacement for lua's default io.write function
-    if(luaL_dostring(m_luaState, "\
-       ch = {}; \
-       ch.print = _chain_print; \
-       ch.path = _chain_path; \
-       \
-       \
-       io.write = ch.print; \
-       print = ch.print; \
-       print \"--\""))
     {
       DOUT << "error setting ch.print";
     }
@@ -121,22 +87,94 @@ namespace chain
   ScriptManager::~ScriptManager()
   {
     DOUT << "closing lua\n";
-    lua_close(m_luaState);
+    lua_close(m_L);
   }
 
   //------------------------------------------------ ScriptManager::LuaErrorCheck
   int ScriptManager::LuaErrorCheck()
   {
     //std::string str;
-    while (!lua_isnil(m_luaState, -1))
+    while (!lua_isnil(m_L, -1))
     {
       /* uses 'key' (at index -2) and 'value' (at index -1) */
-      std::cout << "$$ " << lua_tostring(m_luaState, -1) << "\n";
+      std::cout << "$$ " << lua_tostring(m_L, -1) << "\n";
       /* removes 'value'; keeps 'key' for next iteration */
-      lua_pop(m_luaState, 1);
+      lua_pop(m_L, 1);
     }
 
-    //lua_pop(m_luaState, 1); // remove error message
+    //lua_pop(m_L, 1); // remove error message
     return 0;
+  }
+
+  //------------------------------------------------ ScriptManager::NewScript
+  Script* ScriptManager::NewScript( const char* str /*= ""*/, const char* name /*= 0*/ )
+  {
+    Script* s = new Script;
+    s->text = str;
+    s->m_manager = this;
+    s->m_id = m_scriptCounter++;
+    if(name != 0)
+      s->m_name = name;
+    else
+      s->m_name = s->m_id;
+    int TODO; /// \todo Check the script name is unique
+    m_scripts[s->m_id] = s;
+
+    return s;
+  }
+
+  //------------------------------------------------ ScriptManager::NewScript
+  Script* ScriptManager::NewScript( const std::string& str, const char* name /*= 0*/ )
+  {
+    return NewScript(str.c_str(),name);
+  }
+
+  //------------------------------------------------ ScriptManager::NewScript
+  Script* ScriptManager::NewScript( const Script* s, const char* name /*= 0*/ )
+  {
+    return NewScript(s->text.c_str(),name);
+  }
+
+  //------------------------------------------------ ScriptManager::GetScript
+  Script* ScriptManager::GetScript( const char* name )
+  {
+    std::map<unsigned int,Script* >::iterator it = m_scripts.begin();
+    for(;it!=m_scripts.end();++it)
+    {
+      if(it->second->m_name == name)
+        return it->second;
+    }
+    return 0;
+  }
+
+  //------------------------------------------------ ScriptManager::GetScript
+  Script* ScriptManager::GetScript( const unsigned int id )
+  {
+    std::map<unsigned int,Script* >::iterator it = m_scripts.find(id);
+    if(it != m_scripts.end())
+      return it->second;
+    return 0;
+  }
+
+  //------------------------------------------------ ScriptManager::DeleteScript
+  bool ScriptManager::DeleteScript( Script* s )
+  {
+    std::map<unsigned int,Script* >::iterator it = m_scripts.find(s->m_id);
+    if(it != m_scripts.end())
+    {
+      m_scripts.erase(it);
+      delete s;
+      return true;
+    }
+    return false;
+  }
+
+  //------------------------------------------------ ScriptManager::Run
+  bool ScriptManager::Run( const char* str )
+  {
+    int s = luaL_dostring(m_L, str);
+    if(s != 0)
+      return LuaErrorCheck();
+    return false;
   }
 }

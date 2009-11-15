@@ -15,7 +15,7 @@
 namespace chain
 {
   //------------------------------------------------ Event::Event
-  Event::Event(int type, const bool propagate/* = false*/)
+  Event::Event(int type, bool propagate/* = false*/)
     : m_type(type), m_propagate(propagate)
   {
     assert(type <= EType::Max);

@@ -37,10 +37,10 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".\include"
+				AdditionalIncludeDirectories=".\include;.\include\Chain;.\externals\include"
 				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
 				MinimalRebuild="true"
-				RuntimeLibrary="2"
+				RuntimeLibrary="3"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
@@ -98,8 +98,9 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories=".\include"
+				AdditionalIncludeDirectories=".\include;.\include\Chain;.\externals\include"
 				PreprocessorDefinitions="WIN32;NDEBUG;_LIB"
+				RuntimeLibrary="2"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -177,10 +178,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\src\LuaGL.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\src\Manager.cpp"
 				>
 			</File>
@@ -255,123 +252,139 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\include\App.hpp"
+				RelativePath=".\include\Chain\App.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Camera.hpp"
+				RelativePath=".\include\Chain\Camera.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Container.hpp"
+				RelativePath=".\include\Chain\Container.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Def.hpp"
+				RelativePath=".\include\Chain\Def.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\DisplayObject.hpp"
+				RelativePath=".\include\Chain\DisplayObject.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\EulerAngle.hpp"
+				RelativePath=".\include\Chain\EulerAngle.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\EventDispatcher.hpp"
+				RelativePath=".\include\Chain\Event.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Geometry.hpp"
+				RelativePath=".\include\Chain\EventDispatcher.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Instance.hpp"
+				RelativePath=".\include\Chain\EventManager.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Log.hpp"
+				RelativePath=".\include\Chain\Geometry.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\LuaGL.h"
+				RelativePath=".\include\Chain\InputManager.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Manager.hpp"
+				RelativePath=".\include\Chain\Instance.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Matrix.hpp"
+				RelativePath=".\include\Chain\Log.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Mesh.hpp"
+				RelativePath=".\include\Chain\LuaGL.h"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Object.hpp"
+				RelativePath=".\include\Chain\Manager.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Quaternion.hpp"
+				RelativePath=".\include\Chain\Matrix.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\RenderLayer.hpp"
+				RelativePath=".\include\Chain\Mesh.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\RenderManager.hpp"
+				RelativePath=".\include\Chain\Object.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Root.hpp"
+				RelativePath=".\include\Chain\Quaternion.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\SceneManager.hpp"
+				RelativePath=".\include\Chain\RenderLayer.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Script.hpp"
+				RelativePath=".\include\Chain\RenderManager.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\ScriptManager.hpp"
+				RelativePath=".\include\Chain\Root.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Sprite.hpp"
+				RelativePath=".\include\Chain\SceneManager.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Transform.hpp"
+				RelativePath=".\include\Chain\Script.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Utl.hpp"
+				RelativePath=".\include\Chain\ScriptManager.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Vector2.hpp"
+				RelativePath=".\include\Chain\Sprite.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Vector3.hpp"
+				RelativePath=".\include\Chain\Transform.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\include\Vector4.hpp"
+				RelativePath=".\include\Chain\Utl.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\include\Chain\Vector2.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\include\Chain\Vector3.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\include\Chain\Vector4.hpp"
 				>
 			</File>
 		</Filter>
 		<Filter
-			Name="Resource Files"
+			Name="Script Binding Files"
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
+			<File
+				RelativePath=".\src\Bindings\LuaGL.cpp"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>
