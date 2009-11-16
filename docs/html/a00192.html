@@ -24,23 +24,27 @@
   </div>
 </div>
 <div class="contents">
-<h1>chain::Transform Member List</h1>This is the complete list of members for <a class="el" href="a00029.html">chain::Transform</a>, including all inherited members.<p><table>
-  <tr class="memlist"><td><a class="el" href="a00009.html#434e64ede037df57e8600d632f103812">AddEventListener</a>(const int type, Script *script)</td><td><a class="el" href="a00009.html">chain::EventDispatcher</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00009.html#3aecbd5fbb13eb258f6df5f1803b1ab9">DispatchEvent</a>(const Event &amp;event)</td><td><a class="el" href="a00009.html">chain::EventDispatcher</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00009.html#9ed8d61b0716e2c1bb455cf5de4d6e60">EventDispatcher</a>()</td><td><a class="el" href="a00009.html">chain::EventDispatcher</a></td><td><code> [inline, protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00009.html#262a9ae8665fb4850b59cf5874e04548">GetEventListeners</a>(const int type)</td><td><a class="el" href="a00009.html">chain::EventDispatcher</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00020.html#6084ab2a12567ee93ec47fa83daa6ee0">GetId</a>() const </td><td><a class="el" href="a00020.html">chain::Object</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00020.html#992f67d724cab79a23a0cee41d4b9f92">GetType</a>()</td><td><a class="el" href="a00020.html">chain::Object</a></td><td><code> [inline, static]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00020.html#3e7b5552e3406769b0e3ccac86015bde">GetTypeName</a>()</td><td><a class="el" href="a00020.html">chain::Object</a></td><td><code> [inline, static]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00020.html#429e6dbc1f436332e56b3b52cc5074b0">IsType</a>(const COb::eType &amp;_type)</td><td><a class="el" href="a00020.html">chain::Object</a></td><td><code> [inline, static]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00009.html#b629f8f3309c92260576e236f992206d">m_eventListeners</a></td><td><a class="el" href="a00009.html">chain::EventDispatcher</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00020.html#454b49200a6f23e077a0c4ed3299250f">Object</a>()</td><td><a class="el" href="a00020.html">chain::Object</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00029.html#b2d813d4830e9566d6c120762ca311d8">Transform</a>()</td><td><a class="el" href="a00029.html">chain::Transform</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00009.html#df2a41132ba2e4050a6425597dec4d5a">~EventDispatcher</a>()</td><td><a class="el" href="a00009.html">chain::EventDispatcher</a></td><td><code> [inline, protected, virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00020.html#56fc3e5f5499e233601eafc074d90a19">~Object</a>()</td><td><a class="el" href="a00020.html">chain::Object</a></td><td><code> [virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00029.html#9bc1bb5620acab8d88f8bf6489c211dc">~Transform</a>()</td><td><a class="el" href="a00029.html">chain::Transform</a></td><td><code> [virtual]</code></td></tr>
+<h1>chain::ScriptManager Member List</h1>This is the complete list of members for <a class="el" href="a00027.html">chain::ScriptManager</a>, including all inherited members.<p><table>
+  <tr class="memlist"><td><a class="el" href="a00027.html#4097b3e04a4f8ece21f5abe1b10e6323">App</a> class</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [friend]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#96aa693634566d8b8c5a34c9b8eb9cdb">DeleteScript</a>(Script *s)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#44a9e3f531d9943509cd29c95d0189ab">GetScript</a>(const char *name)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#16d61c1c06755ac1585a796757ae4a18">GetScript</a>(const unsigned int id)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#a84f074d5bfe0e15706d775945ab380c">LuaErrorCheck</a>()</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#e131bee86f56d6356984e37985c65bbc">m_L</a></td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#787c4eaded8c099a81385b97861a0e3d">m_scriptCounter</a></td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#81ed065bb8fdd4a33c9f1a57f311422a">m_scripts</a></td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00017.html#6c6a18c2e125964f41e38ad573ce3c18">Manager</a>()</td><td><a class="el" href="a00017.html">chain::Manager</a></td><td><code> [inline, protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#260950129d3aac53dd65f41c0bf48223">NewScript</a>(const char *str=&quot;&quot;, const char *name=0)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#07d176027a91cc8866531222b66702dd">NewScript</a>(const std::string &amp;str, const char *name=0)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#19e7a80fa0881056142f5f7e85f8e6a9">NewScript</a>(const Script *s, const char *name=0)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#e2e5e55f44ae06d4831ced5e16a29ba0">path</a></td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#58897dd8167dc2b8953bac83c8395600">Run</a>(const char *str)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#ad5f25d5069e021637e64e3ede5ab774">RunFile</a>(const char *filename)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#38341e4f8dc985c64e8c14243c2bfe25">ScriptManager</a>()</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00017.html#3ddf21a302279456b85dded8ce5ae935">~Manager</a>()</td><td><a class="el" href="a00017.html">chain::Manager</a></td><td><code> [inline, protected, virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00027.html#f2825df3d3d5f0078df9d2263c253a20">~ScriptManager</a>()</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [protected]</code></td></tr>
 </table></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Nov 13 16:55:05 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 16 13:38:13 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

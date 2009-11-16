@@ -12,6 +12,7 @@ namespace chain
 {
    Uint64 Object::m_id_incrementer = 0;
 
+#if 0
    //------------------------------------------------ Object::Object
    Object::Object()
    {
@@ -22,6 +23,7 @@ namespace chain
    {
 
    }
+#endif
 
    //------------------------------------------------ Object::GetId
    Uint64 Object::GetId() const

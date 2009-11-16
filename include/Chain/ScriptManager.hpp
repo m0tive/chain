@@ -54,6 +54,7 @@ namespace chain
 
     void RunFile (const char* filename) {}
 
+#if 0
     void AddFunction (ScriptFunction funct, const char* name, const char* table = 0)
     {
       /// \todo Make some lua functions protected
@@ -73,6 +74,7 @@ namespace chain
     void AddTable (const char* name, const ScriptFunctionTable* t = 0)
     {
     }
+#endif
 
     //lua_State* GetLuaState () {return m_L;}
 

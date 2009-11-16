@@ -19,6 +19,8 @@
 #include <string>
 #include "Def.hpp"
 
+struct lua_State;
+
 namespace chain
 {
   #define DECLARE_CHAIN_CLASS(OBJTYPE,PARENT,TYPENAME)    \
@@ -34,80 +36,82 @@ namespace chain
       else return true;                                   \
     };
 
+  struct COb {
+    enum eType {
+      Object=0,
+        Event,
+        EventDispatcher,
+          Log,
+          App,
+          Manager,
+            RenderManager,
+            SceneManager,
+            ScriptManager,
+            InputManager,
+          RenderLayer,
+          Transform,
+            DisplayObject,
+              Camera,
+              Container,
+                Instance,
+                  Sprite,
+                Root,
+              Geometry,
+                Mesh,
 
-   struct COb {
-      enum eType {
-         Object=0,
-            Event,
-            EventDispatcher,
-              Log,
-              App,
-              Manager,
-                 RenderManager,
-                 SceneManager,
-                 ScriptManager,
-                 InputManager,
-              RenderLayer,
-              Transform,
-                 DisplayObject,
-                    Camera,
-                    Container,
-                       Instance,
-                          Sprite,
-                       Root,
-                    Geometry,
-                       Mesh,
+      Last,
+      Max=0xFFFF
+    };
+  };
 
-         Last,
-         Max=0xFFFF
+  /// \brief ...
+  /// \details ...
+  class Object
+  {
+   // IMPORTANT: No call to DECLARE_CHAIN_CLASS. This is replaced with the following code
+    public:
+      // -----------------------------------
+      /// \brief Get the chain::COb type of the object
+      /// \returns COb::eType - The object's type
+      static COb::eType GetType () {
+        return COb::Object;
       };
-   };
+      // -----------------------------------
+      /// \brief Get the chain::COb type as a string
+      /// \returns std::string - The object's type
+      static std::string GetTypeName () {
+        return "object";
+      };
+      // -----------------------------------
+      /// \brief Test if a class is of a certain type, or derived from that type.
+      /// \details This function looks down the class hierarchy for the class type.
+      /// \param _type - chain::COb type being checked against
+      /// \returns bool - True if part of type
+      static bool IsType(const COb::eType& _type) {
+        return (_type == COb::Object);
+      }
 
-   /// \brief ...
-   /// \details ...
-   class Object
-   {
-     // IMPORTANT: No call to DECLARE_CHAIN_CLASS. This is replaced with the following code
-      public:
-        // -----------------------------------
-        /// \brief Get the chain::COb type of the object
-        /// \returns COb::eType - The object's type
-        static COb::eType GetType () {
-          return COb::Object;
-        };
-        // -----------------------------------
-        /// \brief Get the chain::COb type as a string
-        /// \returns std::string - The object's type
-        static std::string GetTypeName () {
-          return "object";
-        };
-        // -----------------------------------
-        /// \brief Test if a class is of a certain type, or derived from that type.
-        /// \details This function looks down the class hierarchy for the class type.
-        /// \param _type - chain::COb type being checked against
-        /// \returns bool - True if part of type
-        static bool IsType(const COb::eType& _type) {
-          return (_type == COb::Object);
-        }
+      void LoadIntoLua (lua_State *L) {};
+
+    protected:
 
 
-      protected:
-         //---------------------------------------
-         /// \details Default Constructor
-         Object();
+       //---------------------------------------
+       /// \details Default Constructor
+       Object() {}
+       //---------------------------------------
+       /// \details Destructor
+       virtual ~Object() {}
 
-      public:
-         //---------------------------------------
-         /// \details Destructor
-         virtual ~Object();
+  #if 0
+       //---------------------------------------
+       /// \details Get the object's unique id
+       Uint64 GetId() const;
 
-         //---------------------------------------
-         /// \details Get the object's unique id
-         Uint64 GetId() const;
-
-      private:
-         Uint64 m_id;
-         static Uint64 m_id_incrementer;
+    private:
+       Uint64 m_id;
+       static Uint64 m_id_incrementer;
+  #endif
    };
 }
 

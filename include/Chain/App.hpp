@@ -32,23 +32,16 @@ namespace chain
   class App : public EventDispatcher
   {
     DECLARE_CHAIN_CLASS(COb::App,EventDispatcher,"app")
+    // -----------------------------------
+    /// \details Get an instance of this singleton.
+    /// The first call to this will create the singleton.
+    /// \returns Application& - the application
     CH_SINGLETON(App)
 
     public:
-  #if 0
-      // -----------------------------------
-      /// \details Get an instance of this singleton.
-      /// The first call to this will create the singleton.
-      /// \returns Application& - the application
-      static App& Instance ()
-      {
-        static App singleton;
-        return singleton;
-      }
-  #endif
-
       // Main application function.
       virtual bool Run (const char* script = 0);
+      virtual void LoadIntoLua (lua_State *L);
 
     private:
       //---------------------------------------

@@ -9,11 +9,10 @@
 ./Release
 *.lib
 *.a
-include/Chain
-include/lua
-include/SDL
-include/GL
-include/boost
+lua
+SDL
+GL
+boost
 lib/*Chain*
 lib/*
 bin/simpleApp*

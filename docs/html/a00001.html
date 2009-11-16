@@ -43,10 +43,12 @@ Inheritance diagram for chain::App:</div>
 </div>
 
 <p>
-<a href="a00158.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00160.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#f050dee13c618abca644f80f8d2eec7a">Run</a> (const char *script=0)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#b76a4f209db82798e75be22919564504">LoadIntoLua</a> (lua_State *L)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00001.html#11d8cd066ccb4c167ff03c05fd679a2b">Shutdown</a> ()</td></tr>
 
@@ -116,6 +118,28 @@ Destructor
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="b76a4f209db82798e75be22919564504"></a><!-- doxytag: member="chain::App::LoadIntoLua" ref="b76a4f209db82798e75be22919564504" args="(lua_State *L)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void chain::App::LoadIntoLua           </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&nbsp;</td>
+          <td class="paramname"> <em>L</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>Reimplemented from <a class="el" href="a00020.html#e660a8158c43845e4d3bbe78f012e4cc">chain::Object</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="f050dee13c618abca644f80f8d2eec7a"></a><!-- doxytag: member="chain::App::Run" ref="f050dee13c618abca644f80f8d2eec7a" args="(const char *script=0)" -->
 <div class="memitem">
 <div class="memproto">
@@ -133,6 +157,7 @@ Destructor
 <div class="memdoc">
 
 <p>
+Get an instance of this singleton. The first call to this will create the singleton. <dl class="return" compact><dt><b>Returns:</b></dt><dd>Application&amp; - the application </dd></dl>
 
 </div>
 </div><p>
@@ -264,7 +289,7 @@ Destructor
 <hr>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="a00035.html">App.hpp</a><li><a class="el" href="a00034.html">App.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Nov 13 16:55:05 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 16 13:38:13 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

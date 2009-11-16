@@ -24,29 +24,18 @@
   </div>
 </div>
 <div class="contents">
-<h1>chain::ScriptManager Member List</h1>This is the complete list of members for <a class="el" href="a00027.html">chain::ScriptManager</a>, including all inherited members.<p><table>
-  <tr class="memlist"><td><a class="el" href="a00027.html#f559a8e8573289a4afafc1c89618d981">AddFunction</a>(ScriptFunction funct, const char *name, const char *table=0)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#cc45fd868f606775f25c15b31cd0fdad">AddTable</a>(const char *name, const ScriptFunctionTable *t=0)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#4097b3e04a4f8ece21f5abe1b10e6323">App</a> class</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [friend]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#96aa693634566d8b8c5a34c9b8eb9cdb">DeleteScript</a>(Script *s)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#861cfbf8300d97082d4ebd3cf26acd58">GetScript</a>(const char *name)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#57624fb859a1352d2cb40d0f2d959143">GetScript</a>(const unsigned int id)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#a84f074d5bfe0e15706d775945ab380c">LuaErrorCheck</a>()</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [private]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#9e806a9c581b851b0dfa05cd08295a79">m_luaState</a></td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#787c4eaded8c099a81385b97861a0e3d">m_scriptCounter</a></td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [private]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#81ed065bb8fdd4a33c9f1a57f311422a">m_scripts</a></td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [protected]</code></td></tr>
+<h1>chain::SceneManager Member List</h1>This is the complete list of members for <a class="el" href="a00025.html">chain::SceneManager</a>, including all inherited members.<p><table>
+  <tr class="memlist"><td><a class="el" href="a00025.html#4097b3e04a4f8ece21f5abe1b10e6323">App</a> class</td><td><a class="el" href="a00025.html">chain::SceneManager</a></td><td><code> [friend]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00025.html#04537342b4f09a7c4004433b326fa15b">DeleteDisplayObject</a>(DisplayObject *obj, bool recursive=false)</td><td><a class="el" href="a00025.html">chain::SceneManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00025.html#167edbfb9773c27c9765e91716a1991b">DeleteScene</a>(Root *root, bool recursive=true)</td><td><a class="el" href="a00025.html">chain::SceneManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00025.html#8b89fecd1ee2f55fec0e4bb65d40dc5e">m_scenes</a></td><td><a class="el" href="a00025.html">chain::SceneManager</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="a00017.html#6c6a18c2e125964f41e38ad573ce3c18">Manager</a>()</td><td><a class="el" href="a00017.html">chain::Manager</a></td><td><code> [inline, protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#57c4fd8bf191fd3eb3f0bd73d3b7d297">NewScript</a>(const char *str=&quot;&quot;, const char *name=0)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#d430b9d3f77b83d3cc8c9dff32412a43">NewScript</a>(const std::string &amp;str, const char *name=0)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#a34c2bd11e3caa9bec161c2fe8ce89ec">NewScript</a>(const Script *s, const char *name=0)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#e2e5e55f44ae06d4831ced5e16a29ba0">path</a></td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [static]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#58897dd8167dc2b8953bac83c8395600">Run</a>(const char *str)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#ad5f25d5069e021637e64e3ede5ab774">RunFile</a>(const char *filename)</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#38341e4f8dc985c64e8c14243c2bfe25">ScriptManager</a>()</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00025.html#fd4f9d86b7109169b72484930bfc3d63">NewScene</a>()</td><td><a class="el" href="a00025.html">chain::SceneManager</a></td><td><code> [virtual]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00025.html#501269e70b090293d170fd2aba1987b4">SceneManager</a>()</td><td><a class="el" href="a00025.html">chain::SceneManager</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="a00017.html#3ddf21a302279456b85dded8ce5ae935">~Manager</a>()</td><td><a class="el" href="a00017.html">chain::Manager</a></td><td><code> [inline, protected, virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="a00027.html#f2825df3d3d5f0078df9d2263c253a20">~ScriptManager</a>()</td><td><a class="el" href="a00027.html">chain::ScriptManager</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="a00025.html#ee4fbde4083ffa8536ea364369066c74">~SceneManager</a>()</td><td><a class="el" href="a00025.html">chain::SceneManager</a></td><td><code> [virtual]</code></td></tr>
 </table></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Fri Nov 13 16:55:05 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 16 13:38:13 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

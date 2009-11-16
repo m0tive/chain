@@ -7,6 +7,7 @@
 		<Option makefile_is_custom="1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Bindings/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="lib/libchain" prefix_auto="1" extension_auto="1" />
@@ -47,37 +48,37 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="include/App.hpp" />
-		<Unit filename="include/Camera.hpp" />
-		<Unit filename="include/Container.hpp" />
-		<Unit filename="include/Def.hpp" />
-		<Unit filename="include/DisplayObject.hpp" />
-		<Unit filename="include/EulerAngle.hpp" />
-		<Unit filename="include/Event.hpp" />
-		<Unit filename="include/EventDispatcher.hpp" />
-		<Unit filename="include/EventManager.hpp" />
-		<Unit filename="include/Geometry.hpp" />
-		<Unit filename="include/InputManager.hpp" />
-		<Unit filename="include/Instance.hpp" />
-		<Unit filename="include/Log.hpp" />
-		<Unit filename="include/LuaGL.h" />
-		<Unit filename="include/Manager.hpp" />
-		<Unit filename="include/Matrix.hpp" />
-		<Unit filename="include/Mesh.hpp" />
-		<Unit filename="include/Object.hpp" />
-		<Unit filename="include/Quaternion.hpp" />
-		<Unit filename="include/RenderLayer.hpp" />
-		<Unit filename="include/RenderManager.hpp" />
-		<Unit filename="include/Root.hpp" />
-		<Unit filename="include/SceneManager.hpp" />
-		<Unit filename="include/Script.hpp" />
-		<Unit filename="include/ScriptManager.hpp" />
-		<Unit filename="include/Sprite.hpp" />
-		<Unit filename="include/Transform.hpp" />
-		<Unit filename="include/Utl.hpp" />
-		<Unit filename="include/Vector2.hpp" />
-		<Unit filename="include/Vector3.hpp" />
-		<Unit filename="include/Vector4.hpp" />
+		<Unit filename="include/Chain/App.hpp" />
+		<Unit filename="include/Chain/Camera.hpp" />
+		<Unit filename="include/Chain/Container.hpp" />
+		<Unit filename="include/Chain/Def.hpp" />
+		<Unit filename="include/Chain/DisplayObject.hpp" />
+		<Unit filename="include/Chain/EulerAngle.hpp" />
+		<Unit filename="include/Chain/Event.hpp" />
+		<Unit filename="include/Chain/EventDispatcher.hpp" />
+		<Unit filename="include/Chain/EventManager.hpp" />
+		<Unit filename="include/Chain/Geometry.hpp" />
+		<Unit filename="include/Chain/InputManager.hpp" />
+		<Unit filename="include/Chain/Instance.hpp" />
+		<Unit filename="include/Chain/Log.hpp" />
+		<Unit filename="include/Chain/LuaGL.h" />
+		<Unit filename="include/Chain/Manager.hpp" />
+		<Unit filename="include/Chain/Matrix.hpp" />
+		<Unit filename="include/Chain/Mesh.hpp" />
+		<Unit filename="include/Chain/Object.hpp" />
+		<Unit filename="include/Chain/Quaternion.hpp" />
+		<Unit filename="include/Chain/RenderLayer.hpp" />
+		<Unit filename="include/Chain/RenderManager.hpp" />
+		<Unit filename="include/Chain/Root.hpp" />
+		<Unit filename="include/Chain/SceneManager.hpp" />
+		<Unit filename="include/Chain/Script.hpp" />
+		<Unit filename="include/Chain/ScriptManager.hpp" />
+		<Unit filename="include/Chain/Sprite.hpp" />
+		<Unit filename="include/Chain/Transform.hpp" />
+		<Unit filename="include/Chain/Utl.hpp" />
+		<Unit filename="include/Chain/Vector2.hpp" />
+		<Unit filename="include/Chain/Vector3.hpp" />
+		<Unit filename="include/Chain/Vector4.hpp" />
 		<Unit filename="makefile" />
 		<Unit filename="src/App.cpp" />
 		<Unit filename="src/Camera.cpp" />
@@ -91,7 +92,12 @@
 		<Unit filename="src/InputManager.cpp" />
 		<Unit filename="src/Instance.cpp" />
 		<Unit filename="src/Log.cpp" />
-		<Unit filename="src/LuaGL.cpp" />
+		<Unit filename="src/LuaApp.cpp">
+			<Option virtualFolder="Bindings/" />
+		</Unit>
+		<Unit filename="src/LuaGL.cpp">
+			<Option virtualFolder="Bindings/" />
+		</Unit>
 		<Unit filename="src/Manager.cpp" />
 		<Unit filename="src/Matrix.cpp" />
 		<Unit filename="src/Mesh.cpp" />

@@ -10,17 +10,17 @@ FLAGS := -Wall
 DEFINES := -DUNIX -DLINUX
 
 ## Default library, include, source and output directory
-LIBDIR := $(ROOT)/../../lib
-INCDIR := $(ROOT)/../../include
+#LIBDIR := $(ROOT)/../../lib
+#INCDIR := $(ROOT)/../../include
 SRCDIR := $(ROOT)
-OUTDIR := $(ROOT)
+OUTDIR := $(ROOT)/../../bin
 
 #LIBS := -lGLEW -lGL -lGLU -lSDL -lIL -lILU -lILUT -lMCG
 LIBS := -llua5.1 -llualib50 -lGL -lGLU -lboost_filesystem-mt
 LIBS += $(shell sdl-config --cflags  --libs --static-libs)
 
-LIBPATH := -L$(LIBDIR)
-INCLUDE := -I$(INCDIR)
+LIBPATH := -L$(ROOT)/../../externals/lib -L$(ROOT)/../../lib
+INCLUDE := -I$(ROOT)/../../include -I$(ROOT)/../../externals/include
 
 ifeq "$(BUILD)" "debug"
 

@@ -10,8 +10,8 @@ FLAGS := -Wall
 DEFINES := -DUNIX -DLINUX -DLIB
 
 ## Default library, include, source and output directory
-LIBDIR := $(ROOT)/lib
-INCDIR := $(ROOT)/include
+#LIBDIR := $(ROOT)/lib
+#INCDIR := $(ROOT)/include/Chain
 SRCDIR := $(ROOT)/src
 OUTDIR := $(ROOT)/lib
 
@@ -19,10 +19,10 @@ OUTDIR := $(ROOT)/lib
 # LIBS := -lGLEW -lGL -lGLU $(shell Magick++-config --cppflags --ldflags --libs)
 LIBS :=
 
-#LIBS += 
+#LIBS +=
 
-LIBPATH := -L$(LIBDIR)
-INCLUDE := -I$(INCDIR)
+LIBPATH := -L$(ROOT)/externals/lib
+INCLUDE := -I$(ROOT)/include/Chain -I$(ROOT)/externals/include
 
 ## Debug setup
 ifeq "$(BUILD)" "debug"
