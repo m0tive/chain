@@ -131,6 +131,10 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a></td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A real number.  <a href="#d5c27125ffb58164eddb4b998e0b299d"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef int(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#d1ca072ce0401fd1d6a97db12f8cdb8d">ScriptFunction</a> )(lua_State *L)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef luaL_Reg&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#08e68dc81b962f9ac84fb99819f41f79">ScriptFunctionTable</a></td></tr>
+
 <tr><td colspan="2"><br><h2>Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00041.html#b7644519ab3fa34b551214715e5cda8c">operator&lt;&lt;</a> (std::ostream &amp;s, const <a class="el" href="a00018.html">Matrix</a> &amp;m)</td></tr>
 
@@ -185,6 +189,36 @@
 A real number. 
 <p>
 A float or double depending on if CH_DOUBLE_ACCURACY has been defined 
+</div>
+</div><p>
+<a class="anchor" name="d1ca072ce0401fd1d6a97db12f8cdb8d"></a><!-- doxytag: member="chain::ScriptFunction" ref="d1ca072ce0401fd1d6a97db12f8cdb8d" args=")(lua_State *L)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* <a class="el" href="a00041.html#d1ca072ce0401fd1d6a97db12f8cdb8d">chain::ScriptFunction</a>)(lua_State *L)          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="08e68dc81b962f9ac84fb99819f41f79"></a><!-- doxytag: member="chain::ScriptFunctionTable" ref="08e68dc81b962f9ac84fb99819f41f79" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef luaL_Reg <a class="el" href="a00041.html#08e68dc81b962f9ac84fb99819f41f79">chain::ScriptFunctionTable</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
 </div>
 </div><p>
 <a class="anchor" name="b14160d4d3dd2b5668fbb59ca88a125e"></a><!-- doxytag: member="chain::Uint32" ref="b14160d4d3dd2b5668fbb59ca88a125e" args="" -->
@@ -276,7 +310,7 @@ Calculate the rotation between two normalised quaternion rotations. This is the 
 <dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00021.html#02303d0a493e0f49a92c763941a3fced">Quaternion::operator*()</a> </dd></dl>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>expand this out </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>expand this out </dd></dl>
 
 </div>
 </div><p>
@@ -626,7 +660,7 @@ PI/2 constant.
 </div>
 </div><p>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 9 15:09:56 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Nov 13 16:55:05 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

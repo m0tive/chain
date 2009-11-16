@@ -56,7 +56,11 @@ Inheritance diagram for chain::ScriptManager:</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#58897dd8167dc2b8953bac83c8395600">Run</a> (const char *str)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#8f7b75d7282ab00199278d108166d797">RunFile</a> (const char *filename)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#ad5f25d5069e021637e64e3ede5ab774">RunFile</a> (const char *filename)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#f559a8e8573289a4afafc1c89618d981">AddFunction</a> (<a class="el" href="a00041.html#d1ca072ce0401fd1d6a97db12f8cdb8d">ScriptFunction</a> funct, const char *name, const char *table=0)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#cc45fd868f606775f25c15b31cd0fdad">AddTable</a> (const char *name, const <a class="el" href="a00041.html#08e68dc81b962f9ac84fb99819f41f79">ScriptFunctionTable</a> *t=0)</td></tr>
 
 <tr><td colspan="2"><br><h2>Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00027.html#e2e5e55f44ae06d4831ced5e16a29ba0">path</a> = &quot;&quot;</td></tr>
@@ -100,7 +104,9 @@ Inheritance diagram for chain::ScriptManager:</div>
 <p>
 Default Constructor 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Improve <a class="el" href="a00041.html">chain</a> lua table </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>change this </dd></dl>
+<p>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>Improve <a class="el" href="a00041.html">chain</a> lua table </dd></dl>
 
 </div>
 </div><p>
@@ -124,6 +130,75 @@ Destructor
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="f559a8e8573289a4afafc1c89618d981"></a><!-- doxytag: member="chain::ScriptManager::AddFunction" ref="f559a8e8573289a4afafc1c89618d981" args="(ScriptFunction funct, const char *name, const char *table=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chain::ScriptManager::AddFunction           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00041.html#d1ca072ce0401fd1d6a97db12f8cdb8d">ScriptFunction</a>&nbsp;</td>
+          <td class="paramname"> <em>funct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>table</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Make some lua functions protected </dd></dl>
+<p>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Catch errors if table isn't global </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="cc45fd868f606775f25c15b31cd0fdad"></a><!-- doxytag: member="chain::ScriptManager::AddTable" ref="cc45fd868f606775f25c15b31cd0fdad" args="(const char *name, const ScriptFunctionTable *t=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chain::ScriptManager::AddTable           </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00041.html#08e68dc81b962f9ac84fb99819f41f79">ScriptFunctionTable</a> *&nbsp;</td>
+          <td class="paramname"> <em>t</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
 <a class="anchor" name="96aa693634566d8b8c5a34c9b8eb9cdb"></a><!-- doxytag: member="chain::ScriptManager::DeleteScript" ref="96aa693634566d8b8c5a34c9b8eb9cdb" args="(Script *s)" -->
 <div class="memitem">
 <div class="memproto">
@@ -313,12 +388,12 @@ Destructor
 
 </div>
 </div><p>
-<a class="anchor" name="8f7b75d7282ab00199278d108166d797"></a><!-- doxytag: member="chain::ScriptManager::RunFile" ref="8f7b75d7282ab00199278d108166d797" args="(const char *filename)" -->
+<a class="anchor" name="ad5f25d5069e021637e64e3ede5ab774"></a><!-- doxytag: member="chain::ScriptManager::RunFile" ref="ad5f25d5069e021637e64e3ede5ab774" args="(const char *filename)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool chain::ScriptManager::RunFile           </td>
+          <td class="memname">void chain::ScriptManager::RunFile           </td>
           <td>(</td>
           <td class="paramtype">const char *&nbsp;</td>
           <td class="paramname"> <em>filename</em>          </td>
@@ -413,7 +488,7 @@ Destructor
 <hr>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="a00083.html">ScriptManager.hpp</a><li><a class="el" href="a00082.html">ScriptManager.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 9 15:09:56 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Fri Nov 13 16:55:05 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
