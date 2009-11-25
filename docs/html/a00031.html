@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: chain::Vector2 Struct Reference</title>
+<title>Chain: chain::Utl Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,898 +22,709 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00041.html">chain</a>::<a class="el" href="a00031.html">Vector2</a>
+  <div class="navpath"><a class="el" href="a00042.html">chain</a>::<a class="el" href="a00031.html">Utl</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::Vector2 Struct Reference</h1><!-- doxytag: class="chain::Vector2" -->Structure to hold a vector contain two values.  
+<h1>chain::Utl Class Reference</h1><!-- doxytag: class="chain::Utl" -->Class holding static maths utility functions.  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;Vector2.hpp&gt;</code>
+<code>#include &lt;Utl.hpp&gt;</code>
 <p>
 
 <p>
-<a href="a00196.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00199.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
-<tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#b9d7a7e44444ef16d89ddca1c4b204f2">Vector2</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> _x=0, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> _y=0)</td></tr>
+<tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#6ece2cc0a236a9cfef1135c497546fa2">PointWithin</a> (const <a class="el" href="a00032.html">Vector2</a> &amp;subject, <a class="el" href="a00032.html">Vector2</a> upper, <a class="el" href="a00032.html">Vector2</a> lower, bool sorted=true)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#a889ce400123f3c5570dd884461b3e65">Vector2</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Test if a point is within a 2D square.  <a href="#6ece2cc0a236a9cfef1135c497546fa2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#6a32d00fd01de73ac4bb561fbcc2c151">PointWithin</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;subject, <a class="el" href="a00033.html">Vector3</a> upper, <a class="el" href="a00033.html">Vector3</a> lower, bool sorted=true)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor using a <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>.  <a href="#a889ce400123f3c5570dd884461b3e65"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#24b73e85141c7c9eb5d2daf78ce86104">Vector2</a> (const <a class="el" href="a00032.html">Vector3</a> &amp;v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Test if a point is within a 3D cube.  <a href="#6a32d00fd01de73ac4bb561fbcc2c151"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#662278a8dce8e7341286e7963eb28c0e">DistanceToLine</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;point, const <a class="el" href="a00033.html">Vector3</a> &amp;lineA, const <a class="el" href="a00033.html">Vector3</a> &amp;lineB)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor using a <a class="el" href="a00032.html" title="Structure to hold a vector contain three values.">Vector3</a>.  <a href="#24b73e85141c7c9eb5d2daf78ce86104"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#320b6544ac82a29b68b31807db2ea64e">Vector2</a> (const <a class="el" href="a00033.html">Vector4</a> &amp;v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate the shortest distance between a point and a line.  <a href="#662278a8dce8e7341286e7963eb28c0e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#d1a0af5c1ce11d2072050375e44351b7">DistanceToLineSquared</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;point, const <a class="el" href="a00033.html">Vector3</a> &amp;lineA, const <a class="el" href="a00033.html">Vector3</a> &amp;lineB)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor using a <a class="el" href="a00033.html" title="Structure to hold a vector contain four values.">Vector4</a>.  <a href="#320b6544ac82a29b68b31807db2ea64e"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#54511c2e06d7aa2cee21d29d22916912">~Vector2</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate the shortest distance squared between a point and a line.  <a href="#d1a0af5c1ce11d2072050375e44351b7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#8ab0ae28fb5182f0b2709f0b399ab2a5">DistanceToLineSegment</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;point, const <a class="el" href="a00033.html">Vector3</a> &amp;lineA, const <a class="el" href="a00033.html">Vector3</a> &amp;lineB, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;distance)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#93debe357713f5c83b7b382215ac4096">Set</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_x=0, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_y=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate the shortest distance between a point and a line segment.  <a href="#8ab0ae28fb5182f0b2709f0b399ab2a5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#2987da72113d0d3ff2327407e901172a">DistanceToLineSegmentSquared</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;point, const <a class="el" href="a00033.html">Vector3</a> &amp;lineA, const <a class="el" href="a00033.html">Vector3</a> &amp;lineB, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;distance_squared)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the values of <em>x</em> and <em>y</em>.  <a href="#93debe357713f5c83b7b382215ac4096"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#3b95a27b08149d73cb49b68fbc776169">MagnitudeSquared</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate the shortest distance squared between a point and a line segment.  <a href="#2987da72113d0d3ff2327407e901172a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#6e0435083f4c54cec27df96625f7cbc6">LineSphereIntersection</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;lineA, const <a class="el" href="a00033.html">Vector3</a> &amp;lineB, const <a class="el" href="a00033.html">Vector3</a> &amp;sC, const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;sR, <a class="el" href="a00033.html">Vector3</a> *iA, <a class="el" href="a00033.html">Vector3</a> *iB)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate vector's length squared.  <a href="#3b95a27b08149d73cb49b68fbc776169"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#03ef0160de683d7109933ea9509fec73">Magnitude</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate the points of intersection between a line and a sphere.  <a href="#6e0435083f4c54cec27df96625f7cbc6"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#f4285e2c529fc2e8e9bfe4f46b3e3dca">EstimateRotationBetween</a> (const <a class="el" href="a00022.html">Quaternion</a> &amp;A, const <a class="el" href="a00022.html">Quaternion</a> &amp;B)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate vector's length.  <a href="#03ef0160de683d7109933ea9509fec73"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#2fd2f21e9625f07ab5a824fbdf9e2b80">Normalise</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get difference in rotation between two chain::Quaternions.  <a href="#f4285e2c529fc2e8e9bfe4f46b3e3dca"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#187b75a1705a2396dbad2223ade42bf9">RotationBetween</a> (const <a class="el" href="a00022.html">Quaternion</a> &amp;A, const <a class="el" href="a00022.html">Quaternion</a> &amp;B)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Normalise this vector.  <a href="#2fd2f21e9625f07ab5a824fbdf9e2b80"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#5e183a9a15009475405d08d0b9f080f9">Scale</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> s)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get angle between two chain::Quaternions.  <a href="#187b75a1705a2396dbad2223ade42bf9"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#2fcb4ec6493d495f0389c0ae696f89bf">ChordToArc</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;chord, const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;radius)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Scale this vector to a new length.  <a href="#5e183a9a15009475405d08d0b9f080f9"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#57c296da39cec70fab146f546b44e054">Truncate</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> s)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert the length of a chord to the length of it's associated arc.  <a href="#2fcb4ec6493d495f0389c0ae696f89bf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#4179f3567484ebea166e227df2a79adb">ArcToChord</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;arc, const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;radius)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Truncate this vector.  <a href="#57c296da39cec70fab146f546b44e054"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00031.html">Vector2</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#e8b303f0697e0f6509097b8320786e72">operator-</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert the length of an arc to the length of it's associated chord.  <a href="#4179f3567484ebea166e227df2a79adb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#c1b70f7889518c2930821e291f55be51">ChordToAngle</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;chord, const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;radius)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00031.html">Vector2</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#6c9280572a794d5b69fdb9952d218e5d">operator+</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert the angle traveled by a chord.  <a href="#c1b70f7889518c2930821e291f55be51"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#39802be68c7db01507c25f707bd8a926">ArcToAngle</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;arc, const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;radius)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00031.html">Vector2</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#2117b6261ad04fec0dc0c0d130b5440c">operator-</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert the angle traveled by an arc.  <a href="#39802be68c7db01507c25f707bd8a926"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Private Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#fee085c0fa3e895702a11b442bd2b2f2">Utl</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#4fe7fa96c1a1ceaac693343f733eac04">operator*</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v) const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#f27eb361104b89de7801db5f1ebd520b">~Utl</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Scalar/Dot product.  <a href="#4fe7fa96c1a1ceaac693343f733eac04"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00031.html">Vector2</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#ffc571a6447229f5cb64bd55f73908b4">operator*</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> f) const </td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00031.html">Vector2</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#4127cc003f105dbbefbda340f55e75aa">operator/</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> f) const </td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#da22b750d359dd6061c9f36523129ae3">operator=</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#0639c2da86cfce5285ed4d5925985611">operator=</a> (const <a class="el" href="a00032.html">Vector3</a> &amp;v)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#9027c511b5aae600fd55b0817f56edbb">operator=</a> (const <a class="el" href="a00033.html">Vector4</a> &amp;v)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#4bd2755e769fe966851c61efdc69bd6c">operator+=</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#6f553e69b99a10793e662a7dd6d4b47b">operator-=</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#2f710fa047b86c738529dc9ec0b7cb4e">operator*=</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> f)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#2208fdb2c162596528101f86e42c3c2e">operator/=</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> f)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#a6106278987349114dcf8453e7109a48">operator==</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v) const </td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#7fa6c5e4967e7a77f947f367494694b7">operator!=</a> (const <a class="el" href="a00031.html">Vector2</a> &amp;v) const </td></tr>
-
-<tr><td colspan="2"><br><h2>Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap>union {</td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;struct {</td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00031.html#b9f5b9c5c7443ace86d9748cabdc41ef">x</a></td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00031.html#c59c093ba112087472c6eabb7bdc1ada">y</a></td></tr>
-
-<tr><td class="memItemLeft" nowrap valign="top">&nbsp;&nbsp;&nbsp;}&nbsp;</td><td class="memItemRight" valign="bottom"></td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00031.html#af63a9995b321cb518e37b1d404058eb">m_data</a> [2]</td></tr>
-
-<tr><td class="memItemLeft" nowrap valign="top">};&nbsp;</td><td class="memItemRight" valign="bottom"></td></tr>
-
-<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00031.html#dce9a28e1f68d47c74f9eff277179350">operator&lt;&lt;</a> (std::ostream &amp;s, const <a class="el" href="a00031.html">Vector2</a> &amp;v)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Out stream operator.  <a href="#dce9a28e1f68d47c74f9eff277179350"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
-Structure to hold a vector contain two values. 
-<p>
-Used to define interaction in 2D <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="b9d7a7e44444ef16d89ddca1c4b204f2"></a><!-- doxytag: member="chain::Vector2::Vector2" ref="b9d7a7e44444ef16d89ddca1c4b204f2" args="(const Real _x=0, const Real _y=0)" -->
+Class holding static maths utility functions. <hr><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" name="fee085c0fa3e895702a11b442bd2b2f2"></a><!-- doxytag: member="chain::Utl::Utl" ref="fee085c0fa3e895702a11b442bd2b2f2" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Vector2::Vector2           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>_x</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>_y</em> = <code>0</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Default Constructor taking initial values for <em>x</em> and <em>y</em> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>_x</em>&nbsp;</td><td>- initial value of <em>x</em> </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_y</em>&nbsp;</td><td>- initial value of <em>y</em> </td></tr>
-  </table>
-</dl>
-
-</div>
-</div><p>
-<a class="anchor" name="a889ce400123f3c5570dd884461b3e65"></a><!-- doxytag: member="chain::Vector2::Vector2" ref="a889ce400123f3c5570dd884461b3e65" args="(const Vector2 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">chain::Vector2::Vector2           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Constructor using a <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- vector </td></tr>
-  </table>
-</dl>
-
-</div>
-</div><p>
-<a class="anchor" name="24b73e85141c7c9eb5d2daf78ce86104"></a><!-- doxytag: member="chain::Vector2::Vector2" ref="24b73e85141c7c9eb5d2daf78ce86104" args="(const Vector3 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">chain::Vector2::Vector2           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00032.html">Vector3</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Constructor using a <a class="el" href="a00032.html" title="Structure to hold a vector contain three values.">Vector3</a>. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- vector </td></tr>
-  </table>
-</dl>
-<dl class="warning" compact><dt><b>Warning:</b></dt><dd><em>v.z</em> will be lost </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="320b6544ac82a29b68b31807db2ea64e"></a><!-- doxytag: member="chain::Vector2::Vector2" ref="320b6544ac82a29b68b31807db2ea64e" args="(const Vector4 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">chain::Vector2::Vector2           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00033.html">Vector4</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Constructor using a <a class="el" href="a00033.html" title="Structure to hold a vector contain four values.">Vector4</a>. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- vector </td></tr>
-  </table>
-</dl>
-<dl class="warning" compact><dt><b>Warning:</b></dt><dd><em>v.z</em> and <em>v.w</em> will be lost </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="54511c2e06d7aa2cee21d29d22916912"></a><!-- doxytag: member="chain::Vector2::~Vector2" ref="54511c2e06d7aa2cee21d29d22916912" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">chain::Vector2::~Vector2           </td>
+          <td class="memname">chain::Utl::Utl           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td></td>
+          <td><code> [inline, private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Destructor 
+locked constructor 
+</div>
+</div><p>
+<a class="anchor" name="f27eb361104b89de7801db5f1ebd520b"></a><!-- doxytag: member="chain::Utl::~Utl" ref="f27eb361104b89de7801db5f1ebd520b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chain::Utl::~Utl           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+locked destructor 
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="03ef0160de683d7109933ea9509fec73"></a><!-- doxytag: member="chain::Vector2::Magnitude" ref="03ef0160de683d7109933ea9509fec73" args="() const " -->
+<a class="anchor" name="39802be68c7db01507c25f707bd8a926"></a><!-- doxytag: member="chain::Utl::ArcToAngle" ref="39802be68c7db01507c25f707bd8a926" args="(const Real &amp;arc, const Real &amp;radius)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Vector2::Magnitude           </td>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Utl::ArcToAngle           </td>
           <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Calculate vector's length. 
-<p>
-similar to <a class="el" href="a00031.html#3b95a27b08149d73cb49b68fbc776169" title="Calculate vector&#39;s length squared.">MagnitudeSquared()</a>, but using <a class="el" href="a00040.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a> <dl class="return" compact><dt><b>Returns:</b></dt><dd>Real - the length </dd></dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00031.html#3b95a27b08149d73cb49b68fbc776169" title="Calculate vector&#39;s length squared.">MagnitudeSquared()</a>, <a class="el" href="a00031.html#2fd2f21e9625f07ab5a824fbdf9e2b80" title="Normalise this vector.">Normalise()</a>, <a class="el" href="a00031.html#5e183a9a15009475405d08d0b9f080f9" title="Scale this vector to a new length.">Scale()</a>, <a class="el" href="a00031.html#57c296da39cec70fab146f546b44e054" title="Truncate this vector.">Truncate()</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="3b95a27b08149d73cb49b68fbc776169"></a><!-- doxytag: member="chain::Vector2::MagnitudeSquared" ref="3b95a27b08149d73cb49b68fbc776169" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Vector2::MagnitudeSquared           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Calculate vector's length squared. 
-<p>
-similar to <a class="el" href="a00031.html#03ef0160de683d7109933ea9509fec73" title="Calculate vector&#39;s length.">Magnitude()</a>, but avoiding <a class="el" href="a00040.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a> <dl class="return" compact><dt><b>Returns:</b></dt><dd>Real - the length squared </dd></dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00031.html#03ef0160de683d7109933ea9509fec73" title="Calculate vector&#39;s length.">Magnitude()</a>, <a class="el" href="a00031.html#2fd2f21e9625f07ab5a824fbdf9e2b80" title="Normalise this vector.">Normalise()</a>, <a class="el" href="a00031.html#5e183a9a15009475405d08d0b9f080f9" title="Scale this vector to a new length.">Scale()</a>, <a class="el" href="a00031.html#57c296da39cec70fab146f546b44e054" title="Truncate this vector.">Truncate()</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="2fd2f21e9625f07ab5a824fbdf9e2b80"></a><!-- doxytag: member="chain::Vector2::Normalise" ref="2fd2f21e9625f07ab5a824fbdf9e2b80" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::Normalise           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Normalise this vector. 
-<p>
-similar to <a class="el" href="a00031.html#5e183a9a15009475405d08d0b9f080f9" title="Scale this vector to a new length.">Scale()</a>, scales the vector to a length of 1 <dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - the new vector </dd></dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00031.html#3b95a27b08149d73cb49b68fbc776169" title="Calculate vector&#39;s length squared.">MagnitudeSquared()</a>, <a class="el" href="a00031.html#03ef0160de683d7109933ea9509fec73" title="Calculate vector&#39;s length.">Magnitude()</a>, <a class="el" href="a00031.html#5e183a9a15009475405d08d0b9f080f9" title="Scale this vector to a new length.">Scale()</a>, <a class="el" href="a00031.html#57c296da39cec70fab146f546b44e054" title="Truncate this vector.">Truncate()</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="7fa6c5e4967e7a77f947f367494694b7"></a><!-- doxytag: member="chain::Vector2::operator!=" ref="7fa6c5e4967e7a77f947f367494694b7" args="(const Vector2 &amp;v) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool chain::Vector2::operator!=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Not-equal comparison operation, using <a class="el" href="a00040.html#bfefa7f89e0452bc225dc1a7882bfdbf" title="Safe comparison of two Real values.">FCOMPARE()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="ffc571a6447229f5cb64bd55f73908b4"></a><!-- doxytag: member="chain::Vector2::operator*" ref="ffc571a6447229f5cb64bd55f73908b4" args="(const Real f) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00031.html">Vector2</a> chain::Vector2::operator*           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>f</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Multiply this vector <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>f</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a> - result vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="4fe7fa96c1a1ceaac693343f733eac04"></a><!-- doxytag: member="chain::Vector2::operator*" ref="4fe7fa96c1a1ceaac693343f733eac04" args="(const Vector2 &amp;v) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> chain::Vector2::operator*           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Scalar/Dot product. 
-<p>
-multiply two vectors together to get a Real <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>Real - result value </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="2f710fa047b86c738529dc9ec0b7cb4e"></a><!-- doxytag: member="chain::Vector2::operator*=" ref="2f710fa047b86c738529dc9ec0b7cb4e" args="(const Real f)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::operator*=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>f</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Multiplication compound assignment see <a class="el" href="a00031.html#4fe7fa96c1a1ceaac693343f733eac04" title="Scalar/Dot product.">operator*()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>f</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - this vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="6c9280572a794d5b69fdb9952d218e5d"></a><!-- doxytag: member="chain::Vector2::operator+" ref="6c9280572a794d5b69fdb9952d218e5d" args="(const Vector2 &amp;v) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00031.html">Vector2</a> chain::Vector2::operator+           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Add two vectors <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a> - result vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="4bd2755e769fe966851c61efdc69bd6c"></a><!-- doxytag: member="chain::Vector2::operator+=" ref="4bd2755e769fe966851c61efdc69bd6c" args="(const Vector2 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::operator+=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Addition compound assignment see <a class="el" href="a00031.html#6c9280572a794d5b69fdb9952d218e5d">operator+()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - this vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="2117b6261ad04fec0dc0c0d130b5440c"></a><!-- doxytag: member="chain::Vector2::operator&#45;" ref="2117b6261ad04fec0dc0c0d130b5440c" args="(const Vector2 &amp;v) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00031.html">Vector2</a> chain::Vector2::operator-           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Subtract two vectors <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a> - result vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="e8b303f0697e0f6509097b8320786e72"></a><!-- doxytag: member="chain::Vector2::operator&#45;" ref="e8b303f0697e0f6509097b8320786e72" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00031.html">Vector2</a> chain::Vector2::operator-           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Negative operator, get the inverse of this vector <dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a> - negative vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="6f553e69b99a10793e662a7dd6d4b47b"></a><!-- doxytag: member="chain::Vector2::operator&#45;=" ref="6f553e69b99a10793e662a7dd6d4b47b" args="(const Vector2 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::operator-=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Subtraction compound assignment see <a class="el" href="a00031.html#e8b303f0697e0f6509097b8320786e72">operator-()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - this vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="4127cc003f105dbbefbda340f55e75aa"></a><!-- doxytag: member="chain::Vector2::operator/" ref="4127cc003f105dbbefbda340f55e75aa" args="(const Real f) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00031.html">Vector2</a> chain::Vector2::operator/           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>f</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Divide this vector <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>f</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a> - result vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="2208fdb2c162596528101f86e42c3c2e"></a><!-- doxytag: member="chain::Vector2::operator/=" ref="2208fdb2c162596528101f86e42c3c2e" args="(const Real f)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::operator/=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>f</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Division compound assignment see <a class="el" href="a00031.html#4127cc003f105dbbefbda340f55e75aa">operator/()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>f</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - this vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="9027c511b5aae600fd55b0817f56edbb"></a><!-- doxytag: member="chain::Vector2::operator=" ref="9027c511b5aae600fd55b0817f56edbb" args="(const Vector4 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::operator=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00033.html">Vector4</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Assignment operator using <a class="el" href="a00033.html" title="Structure to hold a vector contain four values.">Vector4</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - this vector </dd></dl>
-<dl class="warning" compact><dt><b>Warning:</b></dt><dd><em>v.z</em> and <em>v.w</em> will be lost </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="0639c2da86cfce5285ed4d5925985611"></a><!-- doxytag: member="chain::Vector2::operator=" ref="0639c2da86cfce5285ed4d5925985611" args="(const Vector3 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::operator=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00032.html">Vector3</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Assignment operator using <a class="el" href="a00032.html" title="Structure to hold a vector contain three values.">Vector3</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - this vector </dd></dl>
-<dl class="warning" compact><dt><b>Warning:</b></dt><dd><em>v.z</em> will be lost </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="da22b750d359dd6061c9f36523129ae3"></a><!-- doxytag: member="chain::Vector2::operator=" ref="da22b750d359dd6061c9f36523129ae3" args="(const Vector2 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::operator=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Assignment operator using <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - this vector </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="a6106278987349114dcf8453e7109a48"></a><!-- doxytag: member="chain::Vector2::operator==" ref="a6106278987349114dcf8453e7109a48" args="(const Vector2 &amp;v) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool chain::Vector2::operator==           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Equal comparison operation, using <a class="el" href="a00040.html#bfefa7f89e0452bc225dc1a7882bfdbf" title="Safe comparison of two Real values.">FCOMPARE()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="5e183a9a15009475405d08d0b9f080f9"></a><!-- doxytag: member="chain::Vector2::Scale" ref="5e183a9a15009475405d08d0b9f080f9" args="(const Real s)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::Scale           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>s</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Scale this vector to a new length. 
-<p>
-scales the vector to a length of <em>s</em> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>- new length </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - the new vector </dd></dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00031.html#3b95a27b08149d73cb49b68fbc776169" title="Calculate vector&#39;s length squared.">MagnitudeSquared()</a>, <a class="el" href="a00031.html#03ef0160de683d7109933ea9509fec73" title="Calculate vector&#39;s length.">Magnitude()</a>, <a class="el" href="a00031.html#2fd2f21e9625f07ab5a824fbdf9e2b80" title="Normalise this vector.">Normalise()</a>, <a class="el" href="a00031.html#57c296da39cec70fab146f546b44e054" title="Truncate this vector.">Truncate()</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="93debe357713f5c83b7b382215ac4096"></a><!-- doxytag: member="chain::Vector2::Set" ref="93debe357713f5c83b7b382215ac4096" args="(const Real &amp;_x=0, const Real &amp;_y=0)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::Set           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_x</em> = <code>0</code>, </td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>arc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_y</em> = <code>0</code></td><td>&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>radius</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td></td>
+          <td></td><td></td><td><code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Set the values of <em>x</em> and <em>y</em>. 
+Convert the angle traveled by an arc. 
 <p>
 <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>_x</em>&nbsp;</td><td>- new value of <em>x</em> </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_y</em>&nbsp;</td><td>- new value of <em>y</em> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>arc</em>&nbsp;</td><td>- length of the arc </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>radius</em>&nbsp;</td><td>- radius of segment </td></tr>
   </table>
 </dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - this vector </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - angle traveled </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="57c296da39cec70fab146f546b44e054"></a><!-- doxytag: member="chain::Vector2::Truncate" ref="57c296da39cec70fab146f546b44e054" args="(const Real s)" -->
+<a class="anchor" name="4179f3567484ebea166e227df2a79adb"></a><!-- doxytag: member="chain::Utl::ArcToChord" ref="4179f3567484ebea166e227df2a79adb" args="(const Real &amp;arc, const Real &amp;radius)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="a00031.html">Vector2</a> &amp; chain::Vector2::Truncate           </td>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Utl::ArcToChord           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>s</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Truncate this vector. 
-<p>
-similar to <a class="el" href="a00031.html#5e183a9a15009475405d08d0b9f080f9" title="Scale this vector to a new length.">Scale()</a>, but only scales vector to <em>s</em> if it's length is greater than <em>s</em> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>- limiting length </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00031.html" title="Structure to hold a vector contain two values.">Vector2</a>&amp; - the new vector </dd></dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00031.html#3b95a27b08149d73cb49b68fbc776169" title="Calculate vector&#39;s length squared.">MagnitudeSquared()</a>, <a class="el" href="a00031.html#03ef0160de683d7109933ea9509fec73" title="Calculate vector&#39;s length.">Magnitude()</a>, <a class="el" href="a00031.html#2fd2f21e9625f07ab5a824fbdf9e2b80" title="Normalise this vector.">Normalise()</a>, <a class="el" href="a00031.html#5e183a9a15009475405d08d0b9f080f9" title="Scale this vector to a new length.">Scale()</a> </dd></dl>
-
-</div>
-</div><p>
-<hr><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" name="dce9a28e1f68d47c74f9eff277179350"></a><!-- doxytag: member="chain::Vector2::operator&lt;&lt;" ref="dce9a28e1f68d47c74f9eff277179350" args="(std::ostream &amp;s, const Vector2 &amp;v)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt;           </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&nbsp;</td>
-          <td class="paramname"> <em>s</em>, </td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>arc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="a00031.html">Vector2</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>radius</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td><code> [friend]</code></td>
+          <td></td><td></td><td><code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Out stream operator. 
+Convert the length of an arc to the length of it's associated chord. 
 <p>
-In format: <dl class="user" compact><dt><b></b></dt><dd><code>x y</code> </dd></dl>
-<dl class="user" compact><dt><b>See</b></dt><dd><a href="http://www.cplusplus.com/reference/iostream/ostream/" target="_parent">std::ostream</a> </dd></dl>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>arc</em>&nbsp;</td><td>- length of the arc </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>radius</em>&nbsp;</td><td>- radius of segment </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - length of the chord </dd></dl>
 
 </div>
 </div><p>
-<hr><h2>Member Data Documentation</h2>
-<a class="anchor" name="aa8f1df3524217562a88d42b56172a3d"></a><!-- doxytag: member="chain::Vector2::@15" ref="aa8f1df3524217562a88d42b56172a3d" args="" -->
+<a class="anchor" name="c1b70f7889518c2930821e291f55be51"></a><!-- doxytag: member="chain::Utl::ChordToAngle" ref="c1b70f7889518c2930821e291f55be51" args="(const Real &amp;chord, const Real &amp;radius)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union { ... }           </td>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Utl::ChordToAngle           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>chord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>radius</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
+Convert the angle traveled by a chord. 
+<p>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>chord</em>&nbsp;</td><td>- length of the chord </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>radius</em>&nbsp;</td><td>- radius of segment </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - angle traveled </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="af63a9995b321cb518e37b1d404058eb"></a><!-- doxytag: member="chain::Vector2::m_data" ref="af63a9995b321cb518e37b1d404058eb" args="[2]" -->
+<a class="anchor" name="2fcb4ec6493d495f0389c0ae696f89bf"></a><!-- doxytag: member="chain::Utl::ChordToArc" ref="2fcb4ec6493d495f0389c0ae696f89bf" args="(const Real &amp;chord, const Real &amp;radius)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00031.html#af63a9995b321cb518e37b1d404058eb">chain::Vector2::m_data</a>[2]          </td>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Utl::ChordToArc           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>chord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>radius</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Array data interface. 
+Convert the length of a chord to the length of it's associated arc. 
 <p>
-Array to access the two values 
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>chord</em>&nbsp;</td><td>- length of the chord </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>radius</em>&nbsp;</td><td>- radius of segment </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - length of the arc </dd></dl>
+
 </div>
 </div><p>
-<a class="anchor" name="b9f5b9c5c7443ace86d9748cabdc41ef"></a><!-- doxytag: member="chain::Vector2::x" ref="b9f5b9c5c7443ace86d9748cabdc41ef" args="" -->
+<a class="anchor" name="662278a8dce8e7341286e7963eb28c0e"></a><!-- doxytag: member="chain::Utl::DistanceToLine" ref="662278a8dce8e7341286e7963eb28c0e" args="(const Vector3 &amp;point, const Vector3 &amp;lineA, const Vector3 &amp;lineB)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00031.html#b9f5b9c5c7443ace86d9748cabdc41ef">chain::Vector2::x</a>          </td>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Utl::DistanceToLine           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineB</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-First value of vector 
+Calculate the shortest distance between a point and a line. 
+<p>
+The line is defined by two points on it, <em>lineA</em> and <em>lineB</em>. This performs two calls to <a class="el" href="a00033.html#8864d94e67db55a12fdd6e3d9d48452a" title="Calculate vector&#39;s length.">Vector3::Magnitude()</a>, which each call <a class="el" href="a00041.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a>. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>point</em>&nbsp;</td><td>- point to test against line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineA</em>&nbsp;</td><td>- first point on line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineB</em>&nbsp;</td><td>- second point on line </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - shortest distance </dd></dl>
+<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00031.html#d1a0af5c1ce11d2072050375e44351b7" title="Calculate the shortest distance squared between a point and a line.">DistanceToLineSquared()</a> </dd></dl>
+
+<p>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Call <a class="el" href="a00041.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a> once, and use <a class="el" href="a00033.html#0d01f22e510d0eced131ba675eae5420" title="Calculate vector&#39;s length squared.">Vector3::MagnitudeSquared()</a> rather than <a class="el" href="a00033.html#8864d94e67db55a12fdd6e3d9d48452a" title="Calculate vector&#39;s length.">Vector3::Magnitude()</a> </dd></dl>
+
 </div>
 </div><p>
-<a class="anchor" name="c59c093ba112087472c6eabb7bdc1ada"></a><!-- doxytag: member="chain::Vector2::y" ref="c59c093ba112087472c6eabb7bdc1ada" args="" -->
+<a class="anchor" name="8ab0ae28fb5182f0b2709f0b399ab2a5"></a><!-- doxytag: member="chain::Utl::DistanceToLineSegment" ref="8ab0ae28fb5182f0b2709f0b399ab2a5" args="(const Vector3 &amp;point, const Vector3 &amp;lineA, const Vector3 &amp;lineB, Real &amp;distance)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00031.html#c59c093ba112087472c6eabb7bdc1ada">chain::Vector2::y</a>          </td>
+          <td class="memname">bool chain::Utl::DistanceToLineSegment           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>distance</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Second value of vector 
+Calculate the shortest distance between a point and a line segment. 
+<p>
+The line is defined by two points on it, <em>lineA</em> and <em>lineB</em>. This performs two calls to <a class="el" href="a00033.html#0d01f22e510d0eced131ba675eae5420" title="Calculate vector&#39;s length squared.">Vector3::MagnitudeSquared()</a>, which do not call <a class="el" href="a00041.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a>. If the closest point to the line is outside the limits of <em>lineA</em> and <em>lineB</em>. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>point</em>&nbsp;</td><td>- point to test against line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineA</em>&nbsp;</td><td>- first point on line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineB</em>&nbsp;</td><td>- second point on line </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>distance</em>&nbsp;</td><td>- shortest distance </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - if the <code>point</code> is within the limits </dd></dl>
+
 </div>
 </div><p>
-<hr>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="a00092.html">Vector2.hpp</a><li><a class="el" href="a00091.html">Vector2.cpp</a></ul>
+<a class="anchor" name="2987da72113d0d3ff2327407e901172a"></a><!-- doxytag: member="chain::Utl::DistanceToLineSegmentSquared" ref="2987da72113d0d3ff2327407e901172a" args="(const Vector3 &amp;point, const Vector3 &amp;lineA, const Vector3 &amp;lineB, Real &amp;distance_squared)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chain::Utl::DistanceToLineSegmentSquared           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>distance_squared</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 16 13:38:13 2009 for Chain by&nbsp;
+<div class="memdoc">
+
+<p>
+Calculate the shortest distance squared between a point and a line segment. 
+<p>
+The line is defined by two points on it, <em>lineA</em> and <em>lineB</em>. This performs two calls to <a class="el" href="a00033.html#0d01f22e510d0eced131ba675eae5420" title="Calculate vector&#39;s length squared.">Vector3::MagnitudeSquared()</a>, which do not call <a class="el" href="a00041.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a>. If the closest point to the line is outside the limits of <em>lineA</em> and <em>lineB</em>. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>point</em>&nbsp;</td><td>- point to test against line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineA</em>&nbsp;</td><td>- first point on line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineB</em>&nbsp;</td><td>- second point on line </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>distance_squared</em>&nbsp;</td><td>- shortest distance squared </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - if the <code>point</code> is within the limits </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d1a0af5c1ce11d2072050375e44351b7"></a><!-- doxytag: member="chain::Utl::DistanceToLineSquared" ref="d1a0af5c1ce11d2072050375e44351b7" args="(const Vector3 &amp;point, const Vector3 &amp;lineA, const Vector3 &amp;lineB)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Utl::DistanceToLineSquared           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineB</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Calculate the shortest distance squared between a point and a line. 
+<p>
+The line is defined by two points on it, <em>lineA</em> and <em>lineB</em>. This performs two calls to <a class="el" href="a00033.html#0d01f22e510d0eced131ba675eae5420" title="Calculate vector&#39;s length squared.">Vector3::MagnitudeSquared()</a>, which do not call <a class="el" href="a00041.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a>. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>point</em>&nbsp;</td><td>- point to test against line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineA</em>&nbsp;</td><td>- first point on line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineB</em>&nbsp;</td><td>- second point on line </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - shortest distance squared </dd></dl>
+<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00031.html#662278a8dce8e7341286e7963eb28c0e" title="Calculate the shortest distance between a point and a line.">DistanceToLine()</a> </dd></dl>
+<dl compact><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>If <em>point</em> is <b>not</b> equal to (0,0,0) then incorrect answer is returned </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="f4285e2c529fc2e8e9bfe4f46b3e3dca"></a><!-- doxytag: member="chain::Utl::EstimateRotationBetween" ref="f4285e2c529fc2e8e9bfe4f46b3e3dca" args="(const Quaternion &amp;A, const Quaternion &amp;B)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Utl::EstimateRotationBetween           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00022.html">Quaternion</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00022.html">Quaternion</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>B</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get difference in rotation between two chain::Quaternions. 
+<p>
+The returns the value of w for the rotation between <code>A</code> and <code>B</code>. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>A</em>&nbsp;</td><td>- first <a class="el" href="a00022.html" title="Structure to hold a quaternion.">chain::Quaternion</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>B</em>&nbsp;</td><td>- second <a class="el" href="a00022.html" title="Structure to hold a quaternion.">chain::Quaternion</a> </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - w value of <a class="el" href="a00022.html" title="Structure to hold a quaternion.">chain::Quaternion</a> between <code>A</code> and <code>B</code> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6e0435083f4c54cec27df96625f7cbc6"></a><!-- doxytag: member="chain::Utl::LineSphereIntersection" ref="6e0435083f4c54cec27df96625f7cbc6" args="(const Vector3 &amp;lineA, const Vector3 &amp;lineB, const Vector3 &amp;sC, const Real &amp;sR, Vector3 *iA, Vector3 *iB)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chain::Utl::LineSphereIntersection           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>lineB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>sC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>sR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00033.html">Vector3</a> *&nbsp;</td>
+          <td class="paramname"> <em>iA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00033.html">Vector3</a> *&nbsp;</td>
+          <td class="paramname"> <em>iB</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Calculate the points of intersection between a line and a sphere. 
+<p>
+The line is defined by two points on it, <em>lineA</em> and <em>lineB</em>, and the sphere is defined by its centre and radius, <em>sC</em> and <em>sR</em>. If there were line-sphere intersections they will be returned in <em>iA</em> and <em>iB</em>. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>lineA</em>&nbsp;</td><td>- first point on line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lineB</em>&nbsp;</td><td>- second point on line </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sC</em>&nbsp;</td><td>- Centre of sphere </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sR</em>&nbsp;</td><td>- Radius of sphere </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>iA</em>&nbsp;</td><td>- first point of intersection </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>iB</em>&nbsp;</td><td>- second point of intersection </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - true if intersections occurred </dd></dl>
+<dl class="note" compact><dt><b>Note:</b></dt><dd>points of intersection may be equal in the case of glancing intersections. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6a32d00fd01de73ac4bb561fbcc2c151"></a><!-- doxytag: member="chain::Utl::PointWithin" ref="6a32d00fd01de73ac4bb561fbcc2c151" args="(const Vector3 &amp;subject, Vector3 upper, Vector3 lower, bool sorted=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chain::Utl::PointWithin           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>subject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00033.html">Vector3</a>&nbsp;</td>
+          <td class="paramname"> <em>upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00033.html">Vector3</a>&nbsp;</td>
+          <td class="paramname"> <em>lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>sorted</em> = <code>true</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Test if a point is within a 3D cube. 
+<p>
+The point <em>subject</em> is tested against a axis aligned cube defined by the far upper right point <em>upper</em>, and the near lower left point <em>lower</em> <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>subject</em>&nbsp;</td><td>- The test point </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>upper</em>&nbsp;</td><td>- The squares far upper right corner </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lower</em>&nbsp;</td><td>- The squares near lower left corner </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sorted</em>&nbsp;</td><td>- If the upper and lower limits have been correctly sorted. (ie all values in upper &gt; lower) </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - true if inside the square </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="6ece2cc0a236a9cfef1135c497546fa2"></a><!-- doxytag: member="chain::Utl::PointWithin" ref="6ece2cc0a236a9cfef1135c497546fa2" args="(const Vector2 &amp;subject, Vector2 upper, Vector2 lower, bool sorted=true)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chain::Utl::PointWithin           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00032.html">Vector2</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>subject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00032.html">Vector2</a>&nbsp;</td>
+          <td class="paramname"> <em>upper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00032.html">Vector2</a>&nbsp;</td>
+          <td class="paramname"> <em>lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>sorted</em> = <code>true</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Test if a point is within a 2D square. 
+<p>
+The point <em>subject</em> is tested against a axis aligned square defined by the upper right point <em>upper</em>, and the lower left point <em>lower</em> <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>subject</em>&nbsp;</td><td>- The test point </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>upper</em>&nbsp;</td><td>- The squares upper right corner </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lower</em>&nbsp;</td><td>- The squares lower left corner </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sorted</em>&nbsp;</td><td>- If the upper and lower limits have been correctly sorted. (ie all values in upper &gt; lower) </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - true if inside the square </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="187b75a1705a2396dbad2223ade42bf9"></a><!-- doxytag: member="chain::Utl::RotationBetween" ref="187b75a1705a2396dbad2223ade42bf9" args="(const Quaternion &amp;A, const Quaternion &amp;B)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Utl::RotationBetween           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00022.html">Quaternion</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00022.html">Quaternion</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>B</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get angle between two chain::Quaternions. 
+<p>
+The returns the angle of the rotation between <code>A</code> and <code>B</code>. <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>A</em>&nbsp;</td><td>- first <a class="el" href="a00022.html" title="Structure to hold a quaternion.">chain::Quaternion</a> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>B</em>&nbsp;</td><td>- second <a class="el" href="a00022.html" title="Structure to hold a quaternion.">chain::Quaternion</a> </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - angle between <code>A</code> and <code>B</code> </dd></dl>
+
+</div>
+</div><p>
+<hr>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00092.html">Utl.hpp</a><li><a class="el" href="a00091.html">Utl.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated on Wed Nov 25 18:58:23 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
