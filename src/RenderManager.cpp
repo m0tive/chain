@@ -27,7 +27,11 @@ namespace chain
     // SDL init originally referenced from NCCA Graphics Library
 
     int TODO; /// \todo Catch this error
-    if(SDL_Init(sdlFlags) != 0)
+    if(SDL_Init(sdlFlags 
+#ifdef _DEBUG
+      | SDL_INIT_NOPARACHUTE // Tell SDL not to catch fatal errors
+#endif
+        ) != 0)
     {
       DERR << "error init'ing SDL\n";
       exit(EXIT_FAILURE);

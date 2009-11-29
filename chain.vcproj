@@ -56,8 +56,9 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				AdditionalDependencies="lua5.1.lib"
 				OutputFile="$(OutDir)\Chain-$(ConfigurationName).lib"
-				AdditionalLibraryDirectories=".\lib"
+				AdditionalLibraryDirectories=".\externals\lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -113,8 +114,9 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				AdditionalDependencies="lua5.1.lib"
 				OutputFile="$(OutDir)\Chain.lib"
-				AdditionalLibraryDirectories=".\lib"
+				AdditionalLibraryDirectories=".\externals\lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -187,6 +189,10 @@
 			</File>
 			<File
 				RelativePath=".\src\Log.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\LuaGL.cpp"
 				>
 			</File>
 			<File
@@ -393,10 +399,6 @@
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
-			<File
-				RelativePath=".\src\Bindings\LuaGL.cpp"
-				>
-			</File>
 		</Filter>
 	</Files>
 	<Globals>

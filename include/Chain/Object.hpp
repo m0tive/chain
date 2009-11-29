@@ -98,7 +98,7 @@ namespace chain
 
        //---------------------------------------
        /// \details Default Constructor
-       Object() {}
+       Object();
        //---------------------------------------
        /// \details Destructor
        virtual ~Object() {}

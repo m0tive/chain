@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "chain", "chain.vcproj", "{D5285D74-3C54-48DC-ABBD-F0CF0CC1B520}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simpleApp", "examples\simpleApp\simpleApp-vs8.vcproj", "{F2C9A222-4567-4237-A7EB-4F9DF32AD8E1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChainApp", "examples\simpleApp\simpleApp-vs8.vcproj", "{F2C9A222-4567-4237-A7EB-4F9DF32AD8E1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D5285D74-3C54-48DC-ABBD-F0CF0CC1B520} = {D5285D74-3C54-48DC-ABBD-F0CF0CC1B520}
 	EndProjectSection

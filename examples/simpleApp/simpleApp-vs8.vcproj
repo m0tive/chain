@@ -37,7 +37,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\include"
+				AdditionalIncludeDirectories="..\..\include;..\..\externals\include"
 				PreprocessorDefinitions="WIN32;_DEBUG"
 				MinimalRebuild="true"
 				RuntimeLibrary="3"
@@ -56,10 +56,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="Chain-Debug.lib lua5.1.lib SDL.lib SDLmain.lib OpenGL32.lib GLu32.lib "
+				AdditionalDependencies="Chain-Debug.lib SDL.lib SDLmain.lib OpenGL32.lib GLu32.lib "
 				OutputFile="$(OutDir)\$(ProjectName)_Debug.exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="..\..\lib"
+				AdditionalLibraryDirectories="..\..\lib;..\..\externals\lib"
 				IgnoreAllDefaultLibraries="false"
 				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="true"
@@ -93,7 +93,7 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="."
+			OutputDirectory="..\..\bin"
 			IntermediateDirectory="..\..\obj\$(ConfigurationName)"
 			ConfigurationType="1"
 			>
@@ -114,7 +114,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="..\..\include"
+				AdditionalIncludeDirectories="..\..\include;..\..\externals\include"
 				PreprocessorDefinitions="WIN32 NDEBUG"
 				RuntimeLibrary="2"
 				WarningLevel="3"
@@ -130,8 +130,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="Chain.lib lua5.1.lib OpenGL32.lib GLu32.lib SDL.lib SDLmain.lib"
-				AdditionalLibraryDirectories="..\..\lib"
+				AdditionalDependencies="Chain.lib OpenGL32.lib GLu32.lib SDL.lib SDLmain.lib"
+				AdditionalLibraryDirectories="..\..\lib;..\..\externals\lib"
+				SubSystem="2"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -179,18 +180,10 @@
 			>
 		</Filter>
 		<Filter
-			Name="Script Files"
+			Name="Resource Files"
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 			>
-			<File
-				RelativePath=".\scripts\hello.lua"
-				>
-			</File>
-			<File
-				RelativePath=".\scripts\init.lua"
-				>
-			</File>
 		</Filter>
 	</Files>
 	<Globals>

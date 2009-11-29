@@ -41,7 +41,6 @@ namespace chain
     public:
       // Main application function.
       virtual bool Run (const char* script = 0);
-      virtual void LoadIntoLua (lua_State *L);
 
     private:
       //---------------------------------------

@@ -8,23 +8,21 @@
   #endif
 #endif
 
-#include <iostream>
+// #include <iostream>
 #include <stdlib.h>
-#include <string.h>
-#include <string>
-
-#include <boost/filesystem/operations.hpp>
-#include <boost/filesystem/path.hpp>
-
+// 
+// #include <boost/filesystem/operations.hpp>
+// #include <boost/filesystem/path.hpp>
+// 
 #include "Chain/App.hpp"
 #include "Chain/Event.hpp"
+// 
+// namespace fs = boost::filesystem;
 
-namespace fs = boost::filesystem;
-
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
   chain::App& app = chain::App::Instance();
-
+/*
 
   // get the path to try and find the script files
   fs::path full_path( fs::current_path<fs::path>() );
@@ -52,9 +50,9 @@ int main(int argc, char **argv)
   pathStr.append("\"); dofile(path() .. \"init.lua\");");
 
 
-  app.AddEventListener(chain::EType::Application_Start,
-    app.scriptManager.NewScript(/*pathStr + */"io.write(\"Application start script\")"));
-
+  //app.AddEventListener(chain::EType::Application_Start,
+  //  app.scriptManager.NewScript(pathStr + "io.write(\"Application start script\")"));
+*/
   app.AddEventListener(chain::EType::Application_Stop,
     app.scriptManager.NewScript("io.write(\"Application stop script\")"));
 
@@ -72,7 +70,6 @@ int main(int argc, char **argv)
 #ifdef _MSC_VER
   system("pause");
 #endif
-
   return EXIT_SUCCESS;
 }
 

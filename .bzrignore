@@ -13,10 +13,13 @@ lua
 SDL
 GL
 boost
+vld*
 lib/*Chain*
 lib/*
 bin/simpleApp*
+bin/std*.txt
 backup.bzr
 *.orig
+*.moved
 *.layout
 *.dll
