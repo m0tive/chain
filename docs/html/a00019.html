@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: chain::Mesh Class Reference</title>
+<title>Chain: chain::Matrix Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,48 +22,345 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00041.html">chain</a>::<a class="el" href="a00019.html">Mesh</a>
+  <div class="navpath"><a class="el" href="a00042.html">chain</a>::<a class="el" href="a00019.html">Matrix</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::Mesh Class Reference</h1><!-- doxytag: class="chain::Mesh" --><!-- doxytag: inherits="chain::Geometry" -->...  
+<h1>chain::Matrix Struct Reference</h1><!-- doxytag: class="chain::Matrix" -->Structure to hold a 4x4 matrix, in openGL format.  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;Mesh.hpp&gt;</code>
+<code>#include &lt;Matrix.hpp&gt;</code>
 <p>
-<div class="dynheader">
-Inheritance diagram for chain::Mesh:</div>
-<div class="dynsection">
-
-<p><center><img src="a00019.png" usemap="#chain::Mesh_map" border="0" alt=""></center>
-<map name="chain::Mesh_map">
-<area href="a00011.html" alt="chain::Geometry" shape="rect" coords="0,224,142,248">
-<area href="a00005.html" alt="chain::DisplayObject" shape="rect" coords="0,168,142,192">
-<area href="a00029.html" alt="chain::Transform" shape="rect" coords="0,112,142,136">
-<area href="a00009.html" alt="chain::EventDispatcher" shape="rect" coords="0,56,142,80">
-<area href="a00020.html" alt="chain::Object" shape="rect" coords="0,0,142,24">
-</map>
-</div>
 
 <p>
-<a href="a00181.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00182.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#80568750687d0c70f2d32bc05c2501bb">Mesh</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#3ac22ba7e3206d65237ba83ade43c78a">Matrix</a> (<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> x0=1, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> y0=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> z0=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> w0=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> x1=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> y1=1, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> z1=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> w1=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> x2=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> y2=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> z2=1, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> w2=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> tx=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> ty=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> tz=0, <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> tw=1)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#0892503829dee93a300036bff45f547e">~Mesh</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#b2e1fed5f1e9ad8b141936dd61b4de17">Matrix</a> (const <a class="el" href="a00019.html">Matrix</a> &amp;m)</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#2203cdd7e060593fe6bbffa9ec845973">Matrix</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;translation)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#81a23c1498a48548b66fa989010cb1c5">Matrix</a> (const <a class="el" href="a00022.html">Quaternion</a> &amp;rotation)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#fbe7a40b71a094646be102992bfb9065">~Matrix</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#b33cb86022e253da8a0d7a9e1537942f">Identity</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load the identity matrix.  <a href="#b33cb86022e253da8a0d7a9e1537942f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#ae22b3139f27ad0e8a2c11eeba2002e2">Transpose</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Transpose this matrix.  <a href="#ae22b3139f27ad0e8a2c11eeba2002e2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#dcada7024d63481133e8c3dd4b36ff06">GetTranspose</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the transpose of this matrix.  <a href="#dcada7024d63481133e8c3dd4b36ff06"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#bbcfde0efd459b2ab2724ab3482f3d32">Determinant</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate the determinant of this matrix.  <a href="#bbcfde0efd459b2ab2724ab3482f3d32"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#94a1a622beaee79538f8a7e145f41552">Invert</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Invert this matrix.  <a href="#94a1a622beaee79538f8a7e145f41552"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#97d71ea202cdd77bf02cd1a87fce4e7f">GetInverse</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the inverse of this matrix.  <a href="#97d71ea202cdd77bf02cd1a87fce4e7f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00022.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#0a623f48e0b557d8746f3f08e7750403">ToQuat</a> () const </td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the quaternion rotation of this matrix.  <a href="#0a623f48e0b557d8746f3f08e7750403"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#8b980bfc0fc49c79398ee96f4d6d369a">operator*</a> (const <a class="el" href="a00019.html">Matrix</a> &amp;m) const </td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00033.html">Vector3</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#18687cef07b4feb7852993ed84303c6d">operator*</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;v) const </td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#62beeef4c1ea5f358280d59f0d17e5a5">operator*=</a> (const <a class="el" href="a00019.html">Matrix</a> &amp;m)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#effa1a77843bd1961fbf56ca52b1bf68">operator*</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;d) const </td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#227dba7478249743cb48fef584a5798e">operator/</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;d) const </td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#a6a58a3e8a5409d29c7b2072a773663a">operator*=</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;d)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#023b85cc5490a2ddf2deae4ba6c5b195">operator/=</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;d)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#42276c254924bed0e7509eb8863d738f">operator=</a> (const <a class="el" href="a00019.html">Matrix</a> &amp;m)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#4a87e7a016041c416d0d8ec71dd402ab">operator=</a> (<a class="el" href="a00022.html">Quaternion</a> &amp;q)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#1e8a708b14bdae7849d6669577b04d3a">operator==</a> (const <a class="el" href="a00019.html">Matrix</a> &amp;m) const </td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#351c5a8ebf494694c678797432c7dec4">operator!=</a> (const <a class="el" href="a00019.html">Matrix</a> &amp;m) const </td></tr>
+
+<tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#cb5c0eae087ca7ab44e67f78f2cfa19f">NewXAxisRotation</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;a)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#39b5002f3090d1e3b34b89f4d95ce4b5">NewYAxisRotation</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;a)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#1e39e20cac45d0ceb3fde796fed74683">NewZAxisRotation</a> (const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;a)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#c5c616f88057b035050a0b52c3f7fd9f">NewQuaternionRotation</a> (const <a class="el" href="a00022.html">Quaternion</a> &amp;q)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00019.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#6a5594c2851ab81dc6aaa984e3735e93">NewTranslation</a> (const <a class="el" href="a00033.html">Vector3</a> &amp;t)</td></tr>
+
+<tr><td colspan="2"><br><h2>Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" nowrap>union {</td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;struct {</td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#e013eb6d6a26b442be5accf1e4169609">m00</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#12fc97151cb0e786f58f4287f273d64a">m01</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#0177c98202b1a9574408aa994da0ac47">m02</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#866400d30749323f61467574d92cbad8">m03</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#82f319633a08aad08b3ce9a5343eeb8d">m10</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#ee755e658397e1ee4bda9ede265c48d3">m11</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#829f9cd6becd6cfd9bdbe03a0636400e">m12</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#b04d08eb3388820043d147edbefa8921">m13</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#d813fd94c0efffb9ba33935a7a01f563">m20</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#949933435a4731276590c11f00a71d1d">m21</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#d2f4cd10ad7af812452896529b71bbdf">m22</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#dfe4454b6b08bb79ec470495a8e2fabc">m23</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#15f87c31dc1bd37ff46e6ae0e47ffff6">m30</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#b60ac1b378da02fc972a41236394fa4a">m31</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#3c18c6ccb1713a16fd3dfca8c45b78da">m32</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#57c1baf781f30813314bc2fec7285eaa">m33</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap valign="top">&nbsp;&nbsp;&nbsp;}&nbsp;</td><td class="memItemRight" valign="bottom"></td></tr>
+
+<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;<a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00019.html#dadf3ece49f3a0c4e350cad1a082ae57">m_data</a> [16]</td></tr>
+
+<tr><td class="memItemLeft" nowrap valign="top">};&nbsp;</td><td class="memItemRight" valign="bottom"></td></tr>
+
+<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00019.html#8774838e7728b1ec33241585ce8c7c1a">operator&lt;&lt;</a> (std::ostream &amp;s, const <a class="el" href="a00019.html">Matrix</a> &amp;m)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Out stream operator.  <a href="#8774838e7728b1ec33241585ce8c7c1a"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
-... 
+Structure to hold a 4x4 matrix, in openGL format. 
 <p>
-... <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="80568750687d0c70f2d32bc05c2501bb"></a><!-- doxytag: member="chain::Mesh::Mesh" ref="80568750687d0c70f2d32bc05c2501bb" args="()" -->
+<dl class="note" compact><dt><b>Note:</b></dt><dd><a class="el" href="a00019.html#dadf3ece49f3a0c4e350cad1a082ae57" title="Array data interface.">Matrix::m_data</a> in OpenGL format : </dd></dl>
+<dl class="user" compact><dt><b></b></dt><dd><code>|x0 y0 z0 0|</code><br>
+ <code>|x1 y1 z1 0|</code><br>
+ <code>|x2 y2 z2 0|</code><br>
+ <code>|tx ty tz 1|</code><br>
+ </dd></dl>
+<hr><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" name="3ac22ba7e3206d65237ba83ade43c78a"></a><!-- doxytag: member="chain::Matrix::Matrix" ref="3ac22ba7e3206d65237ba83ade43c78a" args="(Real x0=1, Real y0=0, Real z0=0, Real w0=0, Real x1=0, Real y1=1, Real z1=0, Real w1=0, Real x2=0, Real y2=0, Real z2=1, Real w2=0, Real tx=0, Real ty=0, Real tz=0, Real tw=1)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Mesh::Mesh           </td>
+          <td class="memname">chain::Matrix::Matrix           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>x0</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>y0</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>z0</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>w0</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>x1</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>y1</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>z1</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>w1</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>x2</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>y2</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>z2</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>w2</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>tx</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>ty</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>tz</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
+          <td class="paramname"> <em>tw</em> = <code>1</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Default constructor taking initial values for individual matrix elements.<br>
+ In format : <dl class="user" compact><dt><b></b></dt><dd><code>|x0 y0 z0 w0|</code><br>
+ <code>|x1 y1 z1 w1|</code><br>
+ <code>|x2 y2 z2 w2|</code><br>
+ <code>|tx ty tz tw|</code><br>
+ </dd></dl>
+<dl class="note" compact><dt><b>Note:</b></dt><dd>default value is the identity matrix </dd></dl>
+<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00019.html#b33cb86022e253da8a0d7a9e1537942f" title="Load the identity matrix.">Identity()</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b2e1fed5f1e9ad8b141936dd61b4de17"></a><!-- doxytag: member="chain::Matrix::Matrix" ref="b2e1fed5f1e9ad8b141936dd61b4de17" args="(const Matrix &amp;m)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chain::Matrix::Matrix           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>m</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor using a <a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> 
+</div>
+</div><p>
+<a class="anchor" name="2203cdd7e060593fe6bbffa9ec845973"></a><!-- doxytag: member="chain::Matrix::Matrix" ref="2203cdd7e060593fe6bbffa9ec845973" args="(const Vector3 &amp;translation)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chain::Matrix::Matrix           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>translation</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor using a <a class="el" href="a00033.html" title="Structure to hold a vector contain three values.">Vector3</a> to create a translation matrix <dl class="user" compact><dt><b></b></dt><dd><code>|1 0 0 0|</code><br>
+ <code>|0 1 0 0|</code><br>
+ <code>|0 0 1 0|</code><br>
+ <code>|x y z 1|</code><br>
+ </dd></dl>
+<dl compact><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>See <a class="el" href="a00019.html#6a5594c2851ab81dc6aaa984e3735e93">Matrix::NewTranslation()</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="81a23c1498a48548b66fa989010cb1c5"></a><!-- doxytag: member="chain::Matrix::Matrix" ref="81a23c1498a48548b66fa989010cb1c5" args="(const Quaternion &amp;rotation)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chain::Matrix::Matrix           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00022.html">Quaternion</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>rotation</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Constructor taking a <a class="el" href="a00022.html" title="Structure to hold a quaternion.">Quaternion</a> to create a rotation matrix <dl class="user" compact><dt><b></b></dt><dd><code>|R R R 0|</code><br>
+ <code>|R R R 0|</code><br>
+ <code>|R R R 0|</code><br>
+ <code>|0 0 0 1|</code><br>
+ </dd></dl>
+<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00022.html#3a2c8754d9a626e508e0c87aeda5dc2f" title="Convert quaternion to a rotation matrix.">Quaternion::ToMatrix()</a> </dd></dl>
+<dl compact><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>See <a class="el" href="a00019.html#c5c616f88057b035050a0b52c3f7fd9f">Matrix::NewQuaternionRotation()</a> </dd></dl>
+
+<p>
+<dl compact><dt><b><a class="el" href="bug.html#_bug000002">Bug:</a></b></dt><dd>see <a class="el" href="a00022.html#3a2c8754d9a626e508e0c87aeda5dc2f" title="Convert quaternion to a rotation matrix.">Quaternion::ToMatrix()</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="fbe7a40b71a094646be102992bfb9065"></a><!-- doxytag: member="chain::Matrix::~Matrix" ref="fbe7a40b71a094646be102992bfb9065" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chain::Matrix::~Matrix           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -74,32 +371,884 @@ Inheritance diagram for chain::Mesh:</div>
 <div class="memdoc">
 
 <p>
-Default Constructor 
+Destructor 
 </div>
 </div><p>
-<a class="anchor" name="0892503829dee93a300036bff45f547e"></a><!-- doxytag: member="chain::Mesh::~Mesh" ref="0892503829dee93a300036bff45f547e" args="()" -->
+<hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="bbcfde0efd459b2ab2724ab3482f3d32"></a><!-- doxytag: member="chain::Matrix::Determinant" ref="bbcfde0efd459b2ab2724ab3482f3d32" args="() const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Mesh::~Mesh           </td>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> chain::Matrix::Determinant           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [virtual]</code></td>
+          <td> const</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Destructor 
+Calculate the determinant of this matrix. 
+<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>Real - the determinant </dd></dl>
+
 </div>
 </div><p>
-<hr>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="a00068.html">Mesh.hpp</a><li><a class="el" href="a00067.html">Mesh.cpp</a></ul>
+<a class="anchor" name="97d71ea202cdd77bf02cd1a87fce4e7f"></a><!-- doxytag: member="chain::Matrix::GetInverse" ref="97d71ea202cdd77bf02cd1a87fce4e7f" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">Matrix</a> chain::Matrix::GetInverse           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 16 13:38:13 2009 for Chain by&nbsp;
+<div class="memdoc">
+
+<p>
+Get the inverse of this matrix. 
+<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> - the inverted matrix </dd></dl>
+<dl class="note" compact><dt><b>Note:</b></dt><dd>If there is no inverse to this matrix, it has a determinant of 0, the identity matrix will be returned </dd></dl>
+<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00019.html#94a1a622beaee79538f8a7e145f41552" title="Invert this matrix.">Invert()</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="dcada7024d63481133e8c3dd4b36ff06"></a><!-- doxytag: member="chain::Matrix::GetTranspose" ref="dcada7024d63481133e8c3dd4b36ff06" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">Matrix</a> chain::Matrix::GetTranspose           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get the transpose of this matrix. 
+<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> - the transposed matrix </dd></dl>
+<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00019.html#ae22b3139f27ad0e8a2c11eeba2002e2" title="Transpose this matrix.">Transpose()</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b33cb86022e253da8a0d7a9e1537942f"></a><!-- doxytag: member="chain::Matrix::Identity" ref="b33cb86022e253da8a0d7a9e1537942f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00019.html">Matrix</a> &amp; chain::Matrix::Identity           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Load the identity matrix. 
+<p>
+<dl class="user" compact><dt><b></b></dt><dd><code>|1 0 0 0|</code><br>
+ <code>|0 1 0 0|</code><br>
+ <code>|0 0 1 0|</code><br>
+ <code>|0 0 0 1|</code><br>
+ </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="94a1a622beaee79538f8a7e145f41552"></a><!-- doxytag: member="chain::Matrix::Invert" ref="94a1a622beaee79538f8a7e145f41552" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00019.html">Matrix</a> &amp; chain::Matrix::Invert           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Invert this matrix. 
+<p>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; - the inverted matrix </dd></dl>
+<dl class="note" compact><dt><b>Note:</b></dt><dd>If there is no inverse to this matrix, it has a determinant of 0, the identity matrix will be returned </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="c5c616f88057b035050a0b52c3f7fd9f"></a><!-- doxytag: member="chain::Matrix::NewQuaternionRotation" ref="c5c616f88057b035050a0b52c3f7fd9f" args="(const Quaternion &amp;q)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">chain::Matrix</a> chain::Matrix::NewQuaternionRotation           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00022.html">Quaternion</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>q</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="6a5594c2851ab81dc6aaa984e3735e93"></a><!-- doxytag: member="chain::Matrix::NewTranslation" ref="6a5594c2851ab81dc6aaa984e3735e93" args="(const Vector3 &amp;t)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">chain::Matrix</a> chain::Matrix::NewTranslation           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="cb5c0eae087ca7ab44e67f78f2cfa19f"></a><!-- doxytag: member="chain::Matrix::NewXAxisRotation" ref="cb5c0eae087ca7ab44e67f78f2cfa19f" args="(const Real &amp;a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">chain::Matrix</a> chain::Matrix::NewXAxisRotation           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>a</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="39b5002f3090d1e3b34b89f4d95ce4b5"></a><!-- doxytag: member="chain::Matrix::NewYAxisRotation" ref="39b5002f3090d1e3b34b89f4d95ce4b5" args="(const Real &amp;a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">chain::Matrix</a> chain::Matrix::NewYAxisRotation           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>a</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="1e39e20cac45d0ceb3fde796fed74683"></a><!-- doxytag: member="chain::Matrix::NewZAxisRotation" ref="1e39e20cac45d0ceb3fde796fed74683" args="(const Real &amp;a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">chain::Matrix</a> chain::Matrix::NewZAxisRotation           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>a</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="351c5a8ebf494694c678797432c7dec4"></a><!-- doxytag: member="chain::Matrix::operator!=" ref="351c5a8ebf494694c678797432c7dec4" args="(const Matrix &amp;m) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chain::Matrix::operator!=           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>m</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Not-equal comparison operation, using <a class="el" href="a00041.html#bfefa7f89e0452bc225dc1a7882bfdbf" title="Safe comparison of two Real values.">FCOMPARE()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="effa1a77843bd1961fbf56ca52b1bf68"></a><!-- doxytag: member="chain::Matrix::operator*" ref="effa1a77843bd1961fbf56ca52b1bf68" args="(const Real &amp;d) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">Matrix</a> chain::Matrix::operator*           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>d</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Multiply this matrix <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>d</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> - result matrix </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="18687cef07b4feb7852993ed84303c6d"></a><!-- doxytag: member="chain::Matrix::operator*" ref="18687cef07b4feb7852993ed84303c6d" args="(const Vector3 &amp;v) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00033.html">Vector3</a> chain::Matrix::operator*           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">Vector3</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Multiply a <a class="el" href="a00033.html" title="Structure to hold a vector contain three values.">Vector3</a> by this matrix. This is the same as applying the matrix transform onto a 3D point <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00033.html" title="Structure to hold a vector contain three values.">Vector3</a> - result vector </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="8b980bfc0fc49c79398ee96f4d6d369a"></a><!-- doxytag: member="chain::Matrix::operator*" ref="8b980bfc0fc49c79398ee96f4d6d369a" args="(const Matrix &amp;m) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">Matrix</a> chain::Matrix::operator*           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>m</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Multiply two matrices together to get a combined transform <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> - result matrix </dd></dl>
+<dl class="note" compact><dt><b>Note:</b></dt><dd>This operation is not commutative. </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a6a58a3e8a5409d29c7b2072a773663a"></a><!-- doxytag: member="chain::Matrix::operator*=" ref="a6a58a3e8a5409d29c7b2072a773663a" args="(const Real &amp;d)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00019.html">Matrix</a> &amp; chain::Matrix::operator*=           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>d</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Multiplication compound assignment see <a class="el" href="a00019.html#8b980bfc0fc49c79398ee96f4d6d369a">operator*()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>d</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; - result matrix </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="62beeef4c1ea5f358280d59f0d17e5a5"></a><!-- doxytag: member="chain::Matrix::operator*=" ref="62beeef4c1ea5f358280d59f0d17e5a5" args="(const Matrix &amp;m)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00019.html">Matrix</a> &amp; chain::Matrix::operator*=           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>m</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Matrix-Matrix multiplication compound assignment see <a class="el" href="a00019.html#8b980bfc0fc49c79398ee96f4d6d369a">operator*()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; - this matrix </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="227dba7478249743cb48fef584a5798e"></a><!-- doxytag: member="chain::Matrix::operator/" ref="227dba7478249743cb48fef584a5798e" args="(const Real &amp;d) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00019.html">Matrix</a> chain::Matrix::operator/           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>d</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Divide this matrix <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>d</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> - result matrix </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="023b85cc5490a2ddf2deae4ba6c5b195"></a><!-- doxytag: member="chain::Matrix::operator/=" ref="023b85cc5490a2ddf2deae4ba6c5b195" args="(const Real &amp;d)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00019.html">Matrix</a> &amp; chain::Matrix::operator/=           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>d</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Division compound assignment see <a class="el" href="a00019.html#227dba7478249743cb48fef584a5798e">operator/()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>d</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; - result matrix </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="4a87e7a016041c416d0d8ec71dd402ab"></a><!-- doxytag: member="chain::Matrix::operator=" ref="4a87e7a016041c416d0d8ec71dd402ab" args="(Quaternion &amp;q)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00019.html">Matrix</a> &amp; chain::Matrix::operator=           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00022.html">Quaternion</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>q</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Assignment operator using a <a class="el" href="a00022.html" title="Structure to hold a quaternion.">Quaternion</a> to create a rotation matrix <dl class="user" compact><dt><b></b></dt><dd><code>|R R R 0|</code><br>
+ <code>|R R R 0|</code><br>
+ <code>|R R R 0|</code><br>
+ <code>|0 0 0 1|</code><br>
+ </dd></dl>
+<dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>q</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; - this matrix </dd></dl>
+<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00022.html#3a2c8754d9a626e508e0c87aeda5dc2f" title="Convert quaternion to a rotation matrix.">Quaternion::ToMatrix()</a> </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="42276c254924bed0e7509eb8863d738f"></a><!-- doxytag: member="chain::Matrix::operator=" ref="42276c254924bed0e7509eb8863d738f" args="(const Matrix &amp;m)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00019.html">Matrix</a> &amp; chain::Matrix::operator=           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>m</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Assignment operator using a matrix <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; - this matrix </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="1e8a708b14bdae7849d6669577b04d3a"></a><!-- doxytag: member="chain::Matrix::operator==" ref="1e8a708b14bdae7849d6669577b04d3a" args="(const Matrix &amp;m) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chain::Matrix::operator==           </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>m</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Equal comparison operation, using <a class="el" href="a00041.html#bfefa7f89e0452bc225dc1a7882bfdbf" title="Safe comparison of two Real values.">FCOMPARE()</a> <dl compact><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>- rhs of operation </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0a623f48e0b557d8746f3f08e7750403"></a><!-- doxytag: member="chain::Matrix::ToQuat" ref="0a623f48e0b557d8746f3f08e7750403" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00022.html">Quaternion</a> chain::Matrix::ToQuat           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Get the quaternion rotation of this matrix. 
+<p>
+Convert the rotation components of this matrix into a quaternion rotation <dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00022.html" title="Structure to hold a quaternion.">Quaternion</a> - the quaternion rotation </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ae22b3139f27ad0e8a2c11eeba2002e2"></a><!-- doxytag: member="chain::Matrix::Transpose" ref="ae22b3139f27ad0e8a2c11eeba2002e2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00019.html">Matrix</a> &amp; chain::Matrix::Transpose           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Transpose this matrix. 
+<p>
+Reflect matrix by its main diagonal, top left to bottom right. <dl class="user" compact><dt><b></b></dt><dd><code>|01 02 03 04| ---&gt; |01 05 09 13|</code><br>
+ <code>|05 06 07 08| ---&gt; |02 06 10 14|</code><br>
+ <code>|09 10 11 12| ---&gt; |03 07 11 15|</code><br>
+ <code>|13 14 15 16| ---&gt; |04 08 12 16|</code><br>
+ </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00019.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a>&amp; - the transposed matrix </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Friends And Related Function Documentation</h2>
+<a class="anchor" name="8774838e7728b1ec33241585ce8c7c1a"></a><!-- doxytag: member="chain::Matrix::operator&lt;&lt;" ref="8774838e7728b1ec33241585ce8c7c1a" args="(std::ostream &amp;s, const Matrix &amp;m)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt;           </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00019.html">Matrix</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>m</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [friend]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Out stream operator. 
+<p>
+In format: <dl class="user" compact><dt><b></b></dt><dd><code>m00 m01 m02 m03<br>
+ m10 m11 m12 m13<br>
+ m20 m21 m22 m23<br>
+ m30 m31 m32 m33</code> </dd></dl>
+<dl class="user" compact><dt><b>See</b></dt><dd><a href="http://www.cplusplus.com/reference/iostream/ostream/" target="_parent">std::ostream</a> </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Member Data Documentation</h2>
+<a class="anchor" name="a761f32f082998ddbba385fbca4b6243"></a><!-- doxytag: member="chain::Matrix::@7" ref="a761f32f082998ddbba385fbca4b6243" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }           </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="e013eb6d6a26b442be5accf1e4169609"></a><!-- doxytag: member="chain::Matrix::m00" ref="e013eb6d6a26b442be5accf1e4169609" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#e013eb6d6a26b442be5accf1e4169609">chain::Matrix::m00</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+x0 
+</div>
+</div><p>
+<a class="anchor" name="12fc97151cb0e786f58f4287f273d64a"></a><!-- doxytag: member="chain::Matrix::m01" ref="12fc97151cb0e786f58f4287f273d64a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#12fc97151cb0e786f58f4287f273d64a">chain::Matrix::m01</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+y0 
+</div>
+</div><p>
+<a class="anchor" name="0177c98202b1a9574408aa994da0ac47"></a><!-- doxytag: member="chain::Matrix::m02" ref="0177c98202b1a9574408aa994da0ac47" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#0177c98202b1a9574408aa994da0ac47">chain::Matrix::m02</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+z0 
+</div>
+</div><p>
+<a class="anchor" name="866400d30749323f61467574d92cbad8"></a><!-- doxytag: member="chain::Matrix::m03" ref="866400d30749323f61467574d92cbad8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#866400d30749323f61467574d92cbad8">chain::Matrix::m03</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+w0 
+</div>
+</div><p>
+<a class="anchor" name="82f319633a08aad08b3ce9a5343eeb8d"></a><!-- doxytag: member="chain::Matrix::m10" ref="82f319633a08aad08b3ce9a5343eeb8d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#82f319633a08aad08b3ce9a5343eeb8d">chain::Matrix::m10</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+x1 
+</div>
+</div><p>
+<a class="anchor" name="ee755e658397e1ee4bda9ede265c48d3"></a><!-- doxytag: member="chain::Matrix::m11" ref="ee755e658397e1ee4bda9ede265c48d3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#ee755e658397e1ee4bda9ede265c48d3">chain::Matrix::m11</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+y1 
+</div>
+</div><p>
+<a class="anchor" name="829f9cd6becd6cfd9bdbe03a0636400e"></a><!-- doxytag: member="chain::Matrix::m12" ref="829f9cd6becd6cfd9bdbe03a0636400e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#829f9cd6becd6cfd9bdbe03a0636400e">chain::Matrix::m12</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+z1 
+</div>
+</div><p>
+<a class="anchor" name="b04d08eb3388820043d147edbefa8921"></a><!-- doxytag: member="chain::Matrix::m13" ref="b04d08eb3388820043d147edbefa8921" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#b04d08eb3388820043d147edbefa8921">chain::Matrix::m13</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+w1 
+</div>
+</div><p>
+<a class="anchor" name="d813fd94c0efffb9ba33935a7a01f563"></a><!-- doxytag: member="chain::Matrix::m20" ref="d813fd94c0efffb9ba33935a7a01f563" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#d813fd94c0efffb9ba33935a7a01f563">chain::Matrix::m20</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+x2 
+</div>
+</div><p>
+<a class="anchor" name="949933435a4731276590c11f00a71d1d"></a><!-- doxytag: member="chain::Matrix::m21" ref="949933435a4731276590c11f00a71d1d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#949933435a4731276590c11f00a71d1d">chain::Matrix::m21</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+y2 
+</div>
+</div><p>
+<a class="anchor" name="d2f4cd10ad7af812452896529b71bbdf"></a><!-- doxytag: member="chain::Matrix::m22" ref="d2f4cd10ad7af812452896529b71bbdf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#d2f4cd10ad7af812452896529b71bbdf">chain::Matrix::m22</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+z2 
+</div>
+</div><p>
+<a class="anchor" name="dfe4454b6b08bb79ec470495a8e2fabc"></a><!-- doxytag: member="chain::Matrix::m23" ref="dfe4454b6b08bb79ec470495a8e2fabc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#dfe4454b6b08bb79ec470495a8e2fabc">chain::Matrix::m23</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+w2 
+</div>
+</div><p>
+<a class="anchor" name="15f87c31dc1bd37ff46e6ae0e47ffff6"></a><!-- doxytag: member="chain::Matrix::m30" ref="15f87c31dc1bd37ff46e6ae0e47ffff6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#15f87c31dc1bd37ff46e6ae0e47ffff6">chain::Matrix::m30</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+tz - X translation component 
+</div>
+</div><p>
+<a class="anchor" name="b60ac1b378da02fc972a41236394fa4a"></a><!-- doxytag: member="chain::Matrix::m31" ref="b60ac1b378da02fc972a41236394fa4a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#b60ac1b378da02fc972a41236394fa4a">chain::Matrix::m31</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ty - Y translation component 
+</div>
+</div><p>
+<a class="anchor" name="3c18c6ccb1713a16fd3dfca8c45b78da"></a><!-- doxytag: member="chain::Matrix::m32" ref="3c18c6ccb1713a16fd3dfca8c45b78da" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#3c18c6ccb1713a16fd3dfca8c45b78da">chain::Matrix::m32</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+tz - Z translation component 
+</div>
+</div><p>
+<a class="anchor" name="57c1baf781f30813314bc2fec7285eaa"></a><!-- doxytag: member="chain::Matrix::m33" ref="57c1baf781f30813314bc2fec7285eaa" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#57c1baf781f30813314bc2fec7285eaa">chain::Matrix::m33</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+tw 
+</div>
+</div><p>
+<a class="anchor" name="dadf3ece49f3a0c4e350cad1a082ae57"></a><!-- doxytag: member="chain::Matrix::m_data" ref="dadf3ece49f3a0c4e350cad1a082ae57" args="[16]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00019.html#dadf3ece49f3a0c4e350cad1a082ae57">chain::Matrix::m_data</a>[16]          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Array data interface. 
+<p>
+Array to access matrix, compatible with OpenGL 
+</div>
+</div><p>
+<hr>The documentation for this struct was generated from the following files:<ul>
+<li><a class="el" href="a00068.html">Matrix.hpp</a><li><a class="el" href="a00067.html">Matrix.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 30 09:16:43 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

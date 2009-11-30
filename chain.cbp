@@ -62,6 +62,7 @@
 		<Unit filename="include/Chain/Instance.hpp" />
 		<Unit filename="include/Chain/Log.hpp" />
 		<Unit filename="include/Chain/LuaGL.h" />
+		<Unit filename="include/Chain/LuaUtl.hpp" />
 		<Unit filename="include/Chain/Manager.hpp" />
 		<Unit filename="include/Chain/Matrix.hpp" />
 		<Unit filename="include/Chain/Mesh.hpp" />
@@ -92,12 +93,10 @@
 		<Unit filename="src/InputManager.cpp" />
 		<Unit filename="src/Instance.cpp" />
 		<Unit filename="src/Log.cpp" />
-		<Unit filename="src/LuaApp.cpp">
-			<Option virtualFolder="Bindings/" />
-		</Unit>
 		<Unit filename="src/LuaGL.cpp">
 			<Option virtualFolder="Bindings/" />
 		</Unit>
+		<Unit filename="src/LuaUtl.cpp" />
 		<Unit filename="src/Manager.cpp" />
 		<Unit filename="src/Matrix.cpp" />
 		<Unit filename="src/Mesh.cpp" />

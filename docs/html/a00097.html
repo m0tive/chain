@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: EventDispatcher.hpp Source File</title>
+<title>Chain: Vector4.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -21,41 +21,50 @@
       <li><a href="globals.html"><span>File&nbsp;Members</span></a></li>
     </ul>
   </div>
-<h1>EventDispatcher.hpp</h1><a href="a00042.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00002"></a>00002 
-<a name="l00003"></a>00003 
-<a name="l00004"></a>00004 
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="comment">//------------------------------------------------------------------------------</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#ifdef _MSC_VER</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">   #pragma once</span>
-<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00012"></a>00012 <span class="preprocessor"></span>
-<a name="l00013"></a>00013 <span class="preprocessor">#ifndef _chain_EventDispatcher_h_</span>
-<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define _chain_EventDispatcher_h_</span>
-<a name="l00015"></a>00015 <span class="preprocessor"></span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="a00056.html" title="Top level application class. A singleton that acts as the root object for the application...">Object.hpp</a>"</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>chain
-<a name="l00019"></a>00019 {
-<a name="l00022"></a><a class="code" href="a00007.html">00022</a>    <span class="keyword">class </span><a class="code" href="a00007.html" title="...">EventDispatcher</a> : <span class="keyword">public</span> <a class="code" href="a00015.html" title="...">Object</a>
-<a name="l00023"></a>00023    {
-<a name="l00024"></a>00024      <a class="code" href="a00056.html#ea2814fa4df16226353440db8e8d7290">DECLARE_CHAIN_CLASS</a>(<a class="code" href="a00003.html#e379502854cdb2272013bd16dde8bbc7fa8c0b09fff733e79f78f7cd1e28f1ba">COb::EventDispatcher</a>,<a class="code" href="a00015.html" title="...">Object</a>,<span class="stringliteral">"eventDispatcher"</span>)
-<a name="l00025"></a>00025       <span class="keyword">protected</span>:
-<a name="l00026"></a>00026          <span class="comment">//---------------------------------------</span>
-<a name="l00028"></a>00028 <span class="comment"></span>         <a class="code" href="a00007.html#9ed8d61b0716e2c1bb455cf5de4d6e60">EventDispatcher</a>();
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030       <span class="keyword">public</span>:
-<a name="l00031"></a>00031          <span class="comment">//---------------------------------------</span>
-<a name="l00033"></a>00033 <span class="comment"></span>         <span class="keyword">virtual</span> <a class="code" href="a00007.html#f3ccf6055b649482691e5ccf9095db1d">~EventDispatcher</a>();
-<a name="l00034"></a>00034    };
-<a name="l00035"></a>00035 }
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="preprocessor">#endif</span>
-</pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 2 09:29:25 2009 for Chain by&nbsp;
+</div>
+<div class="contents">
+<h1>Vector4.cpp File Reference</h1><a class="el" href="a00034.html" title="Structure to hold a vector contain four values.">chain::Vector4</a> function definitions  
+<a href="#_details">More...</a>
+<p>
+<code>#include &quot;<a class="el" href="a00094.html">Vector2.hpp</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="a00096.html">Vector3.hpp</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="a00098.html">Vector4.hpp</a>&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Namespaces</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">namespace &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html">chain</a></td></tr>
+
+<tr><td colspan="2"><br><h2>Defines</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00097.html#a5a6142385f1314d81501f40f2316b8a">_1OVER255</a>&nbsp;&nbsp;&nbsp;0.003921568627450980392156862745098</td></tr>
+
+<tr><td colspan="2"><br><h2>Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html#804d46f00835c1185fbf8a83b025d108">chain::operator&lt;&lt;</a> (std::ostream &amp;s, const Vector4 &amp;v)</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Detailed Description</h2>
+<a class="el" href="a00034.html" title="Structure to hold a vector contain four values.">chain::Vector4</a> function definitions 
+<p>
+<dl class="date" compact><dt><b>Date:</b></dt><dd>2007/11/18 </dd></dl>
+<dl class="author" compact><dt><b>Author:</b></dt><dd>Peter Dodds </dd></dl>
+<dl class="note" compact><dt><b>Note:</b></dt><dd></dd></dl>
+<hr><h2>Define Documentation</h2>
+<a class="anchor" name="a5a6142385f1314d81501f40f2316b8a"></a><!-- doxytag: member="Vector4.cpp::_1OVER255" ref="a5a6142385f1314d81501f40f2316b8a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _1OVER255&nbsp;&nbsp;&nbsp;0.003921568627450980392156862745098          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 30 09:16:43 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

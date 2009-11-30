@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Chain: chain::Quaternion Struct Reference</title>
+<title>Chain: chain::Object Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -22,923 +22,185 @@
       <li><a href="functions.html"><span>Class&nbsp;Members</span></a></li>
     </ul>
   </div>
-  <div class="navpath"><a class="el" href="a00041.html">chain</a>::<a class="el" href="a00021.html">Quaternion</a>
+  <div class="navpath"><a class="el" href="a00042.html">chain</a>::<a class="el" href="a00021.html">Object</a>
   </div>
 </div>
 <div class="contents">
-<h1>chain::Quaternion Struct Reference</h1><!-- doxytag: class="chain::Quaternion" -->Structure to hold a quaternion.  
+<h1>chain::Object Class Reference</h1><!-- doxytag: class="chain::Object" -->...  
 <a href="#_details">More...</a>
 <p>
-<code>#include &lt;Quaternion.hpp&gt;</code>
+<code>#include &lt;Object.hpp&gt;</code>
 <p>
+<div class="dynheader">
+Inheritance diagram for chain::Object:</div>
+<div class="dynsection">
+
+<p><center><img src="a00021.png" usemap="#chain::Object_map" border="0" alt=""></center>
+<map name="chain::Object_map">
+<area href="a00009.html" alt="chain::EventDispatcher" shape="rect" coords="228,56,370,80">
+<area href="a00001.html" alt="chain::App" shape="rect" coords="0,112,142,136">
+<area href="a00015.html" alt="chain::Log" shape="rect" coords="152,112,294,136">
+<area href="a00023.html" alt="chain::RenderLayer" shape="rect" coords="304,112,446,136">
+<area href="a00030.html" alt="chain::Transform" shape="rect" coords="456,112,598,136">
+<area href="a00005.html" alt="chain::DisplayObject" shape="rect" coords="456,168,598,192">
+<area href="a00002.html" alt="chain::Camera" shape="rect" coords="304,224,446,248">
+<area href="a00004.html" alt="chain::Container" shape="rect" coords="456,224,598,248">
+<area href="a00011.html" alt="chain::Geometry" shape="rect" coords="684,224,826,248">
+<area href="a00014.html" alt="chain::Instance" shape="rect" coords="380,280,522,304">
+<area href="a00025.html" alt="chain::Root" shape="rect" coords="532,280,674,304">
+<area href="a00020.html" alt="chain::Mesh" shape="rect" coords="684,280,826,304">
+<area href="a00029.html" alt="chain::Sprite" shape="rect" coords="380,336,522,360">
+</map>
+</div>
 
 <p>
-<a href="a00184.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
+<a href="a00187.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#eade3eec291fc8ce71a4fd2684d9bd4a">Quaternion</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_x=0, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_y=0, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_z=0, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_w=1)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#17beff095d04b7ca614c6b669a091dc4">LoadIntoLua</a> (lua_State *L)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#db0f5f8ca107f53dfeb6c7977fb87fbb">Quaternion</a> (const <a class="el" href="a00021.html">Quaternion</a> &amp;q)</td></tr>
+<tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#992f67d724cab79a23a0cee41d4b9f92">GetType</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#e3fa880127d484d000fbfe95d66defd0">Quaternion</a> (<a class="el" href="a00018.html">Matrix</a> &amp;m)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the <a class="el" href="a00003.html">chain::COb</a> type of the object.  <a href="#992f67d724cab79a23a0cee41d4b9f92"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#3e7b5552e3406769b0e3ccac86015bde">GetTypeName</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#8b1f873d6e646fb2ba0f96fe8373f463">Set</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_x=0, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_y=0, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_z=0, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_w=1)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the <a class="el" href="a00003.html">chain::COb</a> type as a string.  <a href="#3e7b5552e3406769b0e3ccac86015bde"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#429e6dbc1f436332e56b3b52cc5074b0">IsType</a> (const <a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> &amp;_type)</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the values of <em>x</em>, <em>y</em>, <em>z</em> and <em>w</em>.  <a href="#8b1f873d6e646fb2ba0f96fe8373f463"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#373b48024f1fdc369f47f768bdc0cf36">SetAxisAngle</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;angle, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_x, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_y, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Test if a class is of a certain type, or derived from that type.  <a href="#429e6dbc1f436332e56b3b52cc5074b0"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#454b49200a6f23e077a0c4ed3299250f">Object</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the value of the rotation using an axis angle.  <a href="#373b48024f1fdc369f47f768bdc0cf36"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00018.html">Matrix</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#3a2c8754d9a626e508e0c87aeda5dc2f">ToMatrix</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#fe9c966c5afacf8ec21f47ea1bccd7da">~Object</a> ()</td></tr>
 
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert quaternion to a rotation matrix.  <a href="#3a2c8754d9a626e508e0c87aeda5dc2f"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#5c219bbabd1dc40f8dc0241f36237c15">ToAxisAngles</a> (<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;angle, <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_x, <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_y, <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;_z) const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert quaternion to a axis angle.  <a href="#5c219bbabd1dc40f8dc0241f36237c15"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00007.html">EulerAngle</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#efd420df4c173c9c592d662e16821b4e">ToEulerAngles</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Convert quaternion to euler angles.  <a href="#efd420df4c173c9c592d662e16821b4e"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#c8d211e4b802093ea160f5a8f6256b89">GetAngle</a> ()</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the angle of rotation.  <a href="#c8d211e4b802093ea160f5a8f6256b89"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#b93bb8e0e851eae128c750518ebe00ab">Split</a> (<a class="el" href="a00021.html">Quaternion</a> &amp;_x, <a class="el" href="a00021.html">Quaternion</a> &amp;_y, <a class="el" href="a00021.html">Quaternion</a> &amp;_z) const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Split quaternion rotation into component rotations.  <a href="#b93bb8e0e851eae128c750518ebe00ab"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#13a0841f7b92667c8cbac5d4c8fd7a51">Normalise</a> ()</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Normalise this quaternion.  <a href="#13a0841f7b92667c8cbac5d4c8fd7a51"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#f5812f94fabbd0f6622df4a0919940e7">Normalised</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate the normalised quaternion.  <a href="#f5812f94fabbd0f6622df4a0919940e7"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#5bd0e02893cdf50b4cf4479e0244bec8">ScaleTo</a> (<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> s)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ScaleTo this quaternion to a new angle.  <a href="#5bd0e02893cdf50b4cf4479e0244bec8"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#5e2681b0971b172ed31623e6cd965c81">MagnitudeSquared</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate quaternion's magnitude squared.  <a href="#5e2681b0971b172ed31623e6cd965c81"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#e73be66ee624799bf1ff2cfafc3ef5d9">Magnitude</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate quaternion's magnitude.  <a href="#e73be66ee624799bf1ff2cfafc3ef5d9"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#794266f7ba564a9a1642576d14875e90">Conjugate</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calculate the conjugate of this quaternion.  <a href="#794266f7ba564a9a1642576d14875e90"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#667d19ec9762a2960af23623ddc74e0f">operator-</a> () const </td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the inverse of this quaternion.  <a href="#667d19ec9762a2960af23623ddc74e0f"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#02303d0a493e0f49a92c763941a3fced">operator*</a> (const <a class="el" href="a00021.html">Quaternion</a> &amp;q) const </td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#ff8ea9ce399fbf93bd16903732e022d9">operator*</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;r) const </td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#d9d6399888d36016899cbdf85c4f8ba3">operator/</a> (const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;r) const </td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#adbc28dd6db5b6e3d577c40e6049d3d5">operator=</a> (const <a class="el" href="a00021.html">Quaternion</a> &amp;q)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#6c29d457e3793ee17f1fc41ee9e307ef">operator=</a> (const <a class="el" href="a00018.html">Matrix</a> &amp;m)</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#15278d917c0d63c0dc6511484b3983fb">operator==</a> (const <a class="el" href="a00021.html">Quaternion</a> &amp;q) const </td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#ec5dd98992fed4481b5822694c7b6075">operator!=</a> (const <a class="el" href="a00021.html">Quaternion</a> &amp;q) const </td></tr>
-
-<tr><td colspan="2"><br><h2>Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap>union {</td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;struct {</td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00021.html#d40e939a4e8627ab5f0db344550233dd">x</a></td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00021.html#88357eb1fd5e07c5f8b55ce1a6155c95">y</a></td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00021.html#2297cc3382a110f9fcfc252c42214e5b">z</a></td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00021.html#cfdd8944f533f20911d4aaf41c96d260">w</a></td></tr>
-
-<tr><td class="memItemLeft" nowrap valign="top">&nbsp;&nbsp;&nbsp;}&nbsp;</td><td class="memItemRight" valign="bottom"></td></tr>
-
-<tr><td class="memItemLeft" nowrap>&nbsp;&nbsp;&nbsp;<a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;&nbsp;&nbsp;<a class="el" href="a00021.html#423adbd3310c03925b593cd686c00483">m_data</a> [4]</td></tr>
-
-<tr><td class="memItemLeft" nowrap valign="top">};&nbsp;</td><td class="memItemRight" valign="bottom"></td></tr>
-
-<tr><td colspan="2"><br><h2>Friends</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#9dc71eaedf4486dc005fa9a67c6da866">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="a00021.html">Quaternion</a> &amp;q)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Out stream operator.  <a href="#9dc71eaedf4486dc005fa9a67c6da866"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#e2a6c5f79257af7e70a181d6140f0f8a">SLERP</a> (const <a class="el" href="a00021.html">Quaternion</a> &amp;q1, const <a class="el" href="a00021.html">Quaternion</a> &amp;q2, const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;t)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Spherical Linear Interpolation.  <a href="#e2a6c5f79257af7e70a181d6140f0f8a"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00021.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00021.html#4bf23da80ab314ab4ebd1693ca283a36">DIFF</a> (const <a class="el" href="a00021.html">Quaternion</a> &amp;orig, const <a class="el" href="a00021.html">Quaternion</a> &amp;dest)</td></tr>
-
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the difference between two quaternions.  <a href="#4bf23da80ab314ab4ebd1693ca283a36"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
-Structure to hold a quaternion. 
+... 
 <p>
-A normalised quaternion to represent a rotation in 3D about an arbitrary axis <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="eade3eec291fc8ce71a4fd2684d9bd4a"></a><!-- doxytag: member="chain::Quaternion::Quaternion" ref="eade3eec291fc8ce71a4fd2684d9bd4a" args="(const Real &amp;_x=0, const Real &amp;_y=0, const Real &amp;_z=0, const Real &amp;_w=1)" -->
+... <hr><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" name="454b49200a6f23e077a0c4ed3299250f"></a><!-- doxytag: member="chain::Object::Object" ref="454b49200a6f23e077a0c4ed3299250f" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Quaternion::Quaternion           </td>
+          <td class="memname">chain::Object::Object           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_x</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_y</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_z</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_w</em> = <code>1</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Default constructor taking initial values for <em>x</em>, <em>y</em>, <em>z</em> and <em>w</em> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>_x</em>&nbsp;</td><td>- initial value of <a class="el" href="a00021.html#d40e939a4e8627ab5f0db344550233dd">Quaternion::x</a> </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_y</em>&nbsp;</td><td>- initial value of <a class="el" href="a00021.html#88357eb1fd5e07c5f8b55ce1a6155c95">Quaternion::y</a> </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_z</em>&nbsp;</td><td>- initial value of <a class="el" href="a00021.html#2297cc3382a110f9fcfc252c42214e5b">Quaternion::z</a> </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_w</em>&nbsp;</td><td>- initial value of <a class="el" href="a00021.html#cfdd8944f533f20911d4aaf41c96d260">Quaternion::w</a> </td></tr>
-  </table>
-</dl>
-<dl class="note" compact><dt><b>Note:</b></dt><dd>To be a valid quaternion rotation the magnitude of 1 </dd></dl>
-
+Default Constructor 
 </div>
 </div><p>
-<a class="anchor" name="db0f5f8ca107f53dfeb6c7977fb87fbb"></a><!-- doxytag: member="chain::Quaternion::Quaternion" ref="db0f5f8ca107f53dfeb6c7977fb87fbb" args="(const Quaternion &amp;q)" -->
+<a class="anchor" name="fe9c966c5afacf8ec21f47ea1bccd7da"></a><!-- doxytag: member="chain::Object::~Object" ref="fe9c966c5afacf8ec21f47ea1bccd7da" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">chain::Quaternion::Quaternion           </td>
+          <td class="memname">virtual chain::Object::~Object           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>q</em>          </td>
+          <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td></td>
+          <td><code> [inline, protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Constructor using a <a class="el" href="a00021.html" title="Structure to hold a quaternion.">Quaternion</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>q</em>&nbsp;</td><td>- quaternion </td></tr>
-  </table>
-</dl>
-
-</div>
-</div><p>
-<a class="anchor" name="e3fa880127d484d000fbfe95d66defd0"></a><!-- doxytag: member="chain::Quaternion::Quaternion" ref="e3fa880127d484d000fbfe95d66defd0" args="(Matrix &amp;m)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">chain::Quaternion::Quaternion           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00018.html">Matrix</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>m</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Constructor using a <a class="el" href="a00018.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>- matrix </td></tr>
-  </table>
-</dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00018.html#0a623f48e0b557d8746f3f08e7750403" title="Get the quaternion rotation of this matrix.">Matrix::ToQuat()</a> </dd></dl>
-
+Destructor 
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="794266f7ba564a9a1642576d14875e90"></a><!-- doxytag: member="chain::Quaternion::Conjugate" ref="794266f7ba564a9a1642576d14875e90" args="() const " -->
+<a class="anchor" name="992f67d724cab79a23a0cee41d4b9f92"></a><!-- doxytag: member="chain::Object::GetType" ref="992f67d724cab79a23a0cee41d4b9f92" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00021.html">Quaternion</a> chain::Quaternion::Conjugate           </td>
+          <td class="memname">static <a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> chain::Object::GetType           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
+          <td><code> [inline, static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Calculate the conjugate of this quaternion. 
+Get the <a class="el" href="a00003.html">chain::COb</a> type of the object. 
 <p>
-This is equvilent to the inverse of a normalised quaternion and therefore opposite rotation to that defined by this quaternion <dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00021.html" title="Structure to hold a quaternion.">chain::Quaternion</a> - conjugate of this quaternion </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> - The object's type </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="c8d211e4b802093ea160f5a8f6256b89"></a><!-- doxytag: member="chain::Quaternion::GetAngle" ref="c8d211e4b802093ea160f5a8f6256b89" args="()" -->
+<a class="anchor" name="3e7b5552e3406769b0e3ccac86015bde"></a><!-- doxytag: member="chain::Object::GetTypeName" ref="3e7b5552e3406769b0e3ccac86015bde" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Quaternion::GetAngle           </td>
+          <td class="memname">static std::string chain::Object::GetTypeName           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td></td>
+          <td><code> [inline, static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Get the angle of rotation. 
+Get the <a class="el" href="a00003.html">chain::COb</a> type as a string. 
 <p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d" title="A real number.">chain::Real</a> - angle of rotation in radians </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>std::string - The object's type </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="e73be66ee624799bf1ff2cfafc3ef5d9"></a><!-- doxytag: member="chain::Quaternion::Magnitude" ref="e73be66ee624799bf1ff2cfafc3ef5d9" args="() const " -->
+<a class="anchor" name="429e6dbc1f436332e56b3b52cc5074b0"></a><!-- doxytag: member="chain::Object::IsType" ref="429e6dbc1f436332e56b3b52cc5074b0" args="(const COb::eType &amp;_type)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Quaternion::Magnitude           </td>
+          <td class="memname">static bool chain::Object::IsType           </td>
           <td>(</td>
-          <td class="paramname">          </td>
+          <td class="paramtype">const <a class="el" href="a00003.html#e379502854cdb2272013bd16dde8bbc7">COb::eType</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>_type</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
+          <td><code> [inline, static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>
-Calculate quaternion's magnitude. 
+Test if a class is of a certain type, or derived from that type. 
 <p>
-similar to <a class="el" href="a00021.html#e73be66ee624799bf1ff2cfafc3ef5d9" title="Calculate quaternion&#39;s magnitude.">Magnitude()</a>, but using <a class="el" href="a00040.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a> <dl class="return" compact><dt><b>Returns:</b></dt><dd>Real - the magnitude </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="5e2681b0971b172ed31623e6cd965c81"></a><!-- doxytag: member="chain::Quaternion::MagnitudeSquared" ref="5e2681b0971b172ed31623e6cd965c81" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">chain::Real</a> chain::Quaternion::MagnitudeSquared           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Calculate quaternion's magnitude squared. 
-<p>
-similar to <a class="el" href="a00021.html#e73be66ee624799bf1ff2cfafc3ef5d9" title="Calculate quaternion&#39;s magnitude.">Magnitude()</a>, but avoiding <a class="el" href="a00040.html#d75d3377d96c1b20f0d29b74ef76ab56" title="Maths function interface.">CH_SQRT()</a> <dl class="return" compact><dt><b>Returns:</b></dt><dd>Real - the magnitude squared </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="13a0841f7b92667c8cbac5d4c8fd7a51"></a><!-- doxytag: member="chain::Quaternion::Normalise" ref="13a0841f7b92667c8cbac5d4c8fd7a51" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00021.html">Quaternion</a> &amp; chain::Quaternion::Normalise           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Normalise this quaternion. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00021.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; - this quaternion </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="f5812f94fabbd0f6622df4a0919940e7"></a><!-- doxytag: member="chain::Quaternion::Normalised" ref="f5812f94fabbd0f6622df4a0919940e7" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00021.html">chain::Quaternion</a> chain::Quaternion::Normalised           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Calculate the normalised quaternion. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00021.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; - normalised quaternion </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="ec5dd98992fed4481b5822694c7b6075"></a><!-- doxytag: member="chain::Quaternion::operator!=" ref="ec5dd98992fed4481b5822694c7b6075" args="(const Quaternion &amp;q) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool chain::Quaternion::operator!=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>q</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Not-equal comparison operation, using <a class="el" href="a00040.html#bfefa7f89e0452bc225dc1a7882bfdbf" title="Safe comparison of two Real values.">FCOMPARE()</a> 
-</div>
-</div><p>
-<a class="anchor" name="ff8ea9ce399fbf93bd16903732e022d9"></a><!-- doxytag: member="chain::Quaternion::operator*" ref="ff8ea9ce399fbf93bd16903732e022d9" args="(const Real &amp;r) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00021.html">chain::Quaternion</a> chain::Quaternion::operator*           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>r</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Multiply a quaternion. This uses <a class="el" href="a00021.html#e2a6c5f79257af7e70a181d6140f0f8a" title="Spherical Linear Interpolation.">SLERP()</a> 
-</div>
-</div><p>
-<a class="anchor" name="02303d0a493e0f49a92c763941a3fced"></a><!-- doxytag: member="chain::Quaternion::operator*" ref="02303d0a493e0f49a92c763941a3fced" args="(const Quaternion &amp;q) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00021.html">chain::Quaternion</a> chain::Quaternion::operator*           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>q</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Multiply two quaternions. With normalised rotation quaternions, this can be seen to be similar to vector addition. Multiplication by the inverse quaternion would then be equivalent to vector subtraction 
-</div>
-</div><p>
-<a class="anchor" name="667d19ec9762a2960af23623ddc74e0f"></a><!-- doxytag: member="chain::Quaternion::operator&#45;" ref="667d19ec9762a2960af23623ddc74e0f" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00021.html">chain::Quaternion</a> chain::Quaternion::operator-           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get the inverse of this quaternion. 
-<p>
-This uses <a class="el" href="a00021.html#794266f7ba564a9a1642576d14875e90" title="Calculate the conjugate of this quaternion.">Conjugate()</a> <dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00021.html" title="Structure to hold a quaternion.">chain::Quaternion</a> - </dd></dl>
-<dl class="warning" compact><dt><b>Warning:</b></dt><dd>The quaternion is assumed to be normalised. </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="d9d6399888d36016899cbdf85c4f8ba3"></a><!-- doxytag: member="chain::Quaternion::operator/" ref="d9d6399888d36016899cbdf85c4f8ba3" args="(const Real &amp;r) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00021.html">chain::Quaternion</a> chain::Quaternion::operator/           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>r</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Divide a quaternion. This uses <a class="el" href="a00021.html#e2a6c5f79257af7e70a181d6140f0f8a" title="Spherical Linear Interpolation.">SLERP()</a> 
-</div>
-</div><p>
-<a class="anchor" name="6c29d457e3793ee17f1fc41ee9e307ef"></a><!-- doxytag: member="chain::Quaternion::operator=" ref="6c29d457e3793ee17f1fc41ee9e307ef" args="(const Matrix &amp;m)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00021.html">Quaternion</a> &amp; chain::Quaternion::operator=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00018.html">Matrix</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>m</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Assignment operation using a rotation matrix <dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00021.html#3a2c8754d9a626e508e0c87aeda5dc2f" title="Convert quaternion to a rotation matrix.">ToMatrix()</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="adbc28dd6db5b6e3d577c40e6049d3d5"></a><!-- doxytag: member="chain::Quaternion::operator=" ref="adbc28dd6db5b6e3d577c40e6049d3d5" args="(const Quaternion &amp;q)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00021.html">Quaternion</a> &amp; chain::Quaternion::operator=           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>q</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Assignment operation using a quaternion 
-</div>
-</div><p>
-<a class="anchor" name="15278d917c0d63c0dc6511484b3983fb"></a><!-- doxytag: member="chain::Quaternion::operator==" ref="15278d917c0d63c0dc6511484b3983fb" args="(const Quaternion &amp;q) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool chain::Quaternion::operator==           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>q</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Equal comparison operation, using <a class="el" href="a00040.html#bfefa7f89e0452bc225dc1a7882bfdbf" title="Safe comparison of two Real values.">FCOMPARE()</a> 
-</div>
-</div><p>
-<a class="anchor" name="5bd0e02893cdf50b4cf4479e0244bec8"></a><!-- doxytag: member="chain::Quaternion::ScaleTo" ref="5bd0e02893cdf50b4cf4479e0244bec8" args="(Real s)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00021.html">Quaternion</a> &amp; chain::Quaternion::ScaleTo           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a>&nbsp;</td>
-          <td class="paramname"> <em>s</em>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-ScaleTo this quaternion to a new angle. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
+This function looks down the class hierarchy for the class type. <dl compact><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>- new angle to scale to </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>_type</em>&nbsp;</td><td>- <a class="el" href="a00003.html">chain::COb</a> type being checked against </td></tr>
   </table>
 </dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00021.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; - the quaternion </dd></dl>
+<dl class="return" compact><dt><b>Returns:</b></dt><dd>bool - True if part of type </dd></dl>
 
 </div>
 </div><p>
-<a class="anchor" name="8b1f873d6e646fb2ba0f96fe8373f463"></a><!-- doxytag: member="chain::Quaternion::Set" ref="8b1f873d6e646fb2ba0f96fe8373f463" args="(const Real &amp;_x=0, const Real &amp;_y=0, const Real &amp;_z=0, const Real &amp;_w=1)" -->
+<a class="anchor" name="17beff095d04b7ca614c6b669a091dc4"></a><!-- doxytag: member="chain::Object::LoadIntoLua" ref="17beff095d04b7ca614c6b669a091dc4" args="(lua_State *L)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="a00021.html">Quaternion</a> &amp; chain::Quaternion::Set           </td>
+          <td class="memname">void chain::Object::LoadIntoLua           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_x</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_y</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_z</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_w</em> = <code>1</code></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Set the values of <em>x</em>, <em>y</em>, <em>z</em> and <em>w</em>. 
-<p>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>_x</em>&nbsp;</td><td>- new value of <a class="el" href="a00021.html#d40e939a4e8627ab5f0db344550233dd">Quaternion::x</a> </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_y</em>&nbsp;</td><td>- new value of <a class="el" href="a00021.html#88357eb1fd5e07c5f8b55ce1a6155c95">Quaternion::y</a> </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_z</em>&nbsp;</td><td>- new value of <a class="el" href="a00021.html#2297cc3382a110f9fcfc252c42214e5b">Quaternion::z</a> </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_w</em>&nbsp;</td><td>- new value of <a class="el" href="a00021.html#cfdd8944f533f20911d4aaf41c96d260">Quaternion::w</a> </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00021.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; - this quaternion </dd></dl>
-<dl class="note" compact><dt><b>Note:</b></dt><dd>To be a valid quaternion rotation the magnitude of 1 </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="373b48024f1fdc369f47f768bdc0cf36"></a><!-- doxytag: member="chain::Quaternion::SetAxisAngle" ref="373b48024f1fdc369f47f768bdc0cf36" args="(const Real &amp;angle, const Real &amp;_x, const Real &amp;_y, const Real &amp;_z)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00021.html">Quaternion</a> &amp; chain::Quaternion::SetAxisAngle           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>angle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_z</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Set the value of the rotation using an axis angle. 
-<p>
-Axis angle is defined by a axis to rotate about (<em>_x</em>, <em>_y</em>, <em>_z</em>), and the angle to rotate by <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>angle</em>&nbsp;</td><td>- angle to be rotated (in <b>radians</b>) </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_x</em>&nbsp;</td><td>- x component of axis </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_y</em>&nbsp;</td><td>- y component of axis </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>_z</em>&nbsp;</td><td>- z component of axis </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd>const <a class="el" href="a00021.html" title="Structure to hold a quaternion.">Quaternion</a>&amp; - this quaternion </dd></dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00021.html#5c219bbabd1dc40f8dc0241f36237c15" title="Convert quaternion to a axis angle.">ToAxisAngles()</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="b93bb8e0e851eae128c750518ebe00ab"></a><!-- doxytag: member="chain::Quaternion::Split" ref="b93bb8e0e851eae128c750518ebe00ab" args="(Quaternion &amp;_x, Quaternion &amp;_y, Quaternion &amp;_z) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chain::Quaternion::Split           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_z</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Split quaternion rotation into component rotations. 
-<p>
-Split into roll, pitch, yaw (rotations about x, y, and z axis respectively). <dl class="user" compact><dt><b></b></dt><dd>recombined in this order:<br>
-<code>R = _z * _y * _x</code> </dd></dl>
-<dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>_x</em>&nbsp;</td><td>- x-axis rotation </td></tr>
-    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>_y</em>&nbsp;</td><td>- y-axis rotation </td></tr>
-    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>_z</em>&nbsp;</td><td>- z-axis rotation </td></tr>
-  </table>
-</dl>
-
-</div>
-</div><p>
-<a class="anchor" name="5c219bbabd1dc40f8dc0241f36237c15"></a><!-- doxytag: member="chain::Quaternion::ToAxisAngles" ref="5c219bbabd1dc40f8dc0241f36237c15" args="(Real &amp;angle, Real &amp;_x, Real &amp;_y, Real &amp;_z) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void chain::Quaternion::ToAxisAngles           </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>angle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>_z</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Convert quaternion to a axis angle. 
-<p>
-Axis angle is defined by a axis to rotate about (<em>_x</em>, <em>_y</em>, <em>_z</em>), and the angle to rotate by <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>angle</em>&nbsp;</td><td>- angle rotated by (in <b>radians</b>) </td></tr>
-    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>_x</em>&nbsp;</td><td>- x component of axis </td></tr>
-    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>_y</em>&nbsp;</td><td>- y component of axis </td></tr>
-    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>_z</em>&nbsp;</td><td>- z component of axis </td></tr>
-  </table>
-</dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00021.html#373b48024f1fdc369f47f768bdc0cf36" title="Set the value of the rotation using an axis angle.">SetAxisAngle()</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="efd420df4c173c9c592d662e16821b4e"></a><!-- doxytag: member="chain::Quaternion::ToEulerAngles" ref="efd420df4c173c9c592d662e16821b4e" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00007.html">chain::EulerAngle</a> chain::Quaternion::ToEulerAngles           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
+          <td class="paramtype">lua_State *&nbsp;</td>
+          <td class="paramname"> <em>L</em>          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Convert quaternion to euler angles. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00007.html" title="Structure to hold a set of euler angles in the format XYZ.">EulerAngle</a> - result euler angle </dd></dl>
-<dl class="warning" compact><dt><b>Warning:</b></dt><dd>Euler angle rotation is not equivalent to quaternion rotation. </dd></dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00007.html" title="Structure to hold a set of euler angles in the format XYZ.">EulerAngle</a> <a class="el" href="a00007.html#d5cfff8addcbc09b24a689e43ae507f3" title="Set the value of this from a Quaternion.">EulerAngle::FromQuat()</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="3a2c8754d9a626e508e0c87aeda5dc2f"></a><!-- doxytag: member="chain::Quaternion::ToMatrix" ref="3a2c8754d9a626e508e0c87aeda5dc2f" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00018.html">chain::Matrix</a> chain::Quaternion::ToMatrix           </td>
-          <td>(</td>
-          <td class="paramname">          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Convert quaternion to a rotation matrix. 
-<p>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00018.html" title="Structure to hold a 4x4 matrix, in openGL format.">Matrix</a> - result matrix </dd></dl>
-
-<p>
-<dl compact><dt><b><a class="el" href="bug.html#_bug000003">Bug:</a></b></dt><dd>This is in the incorrect format! Should be transposed </dd></dl>
-
-</div>
-</div><p>
-<hr><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" name="4bf23da80ab314ab4ebd1693ca283a36"></a><!-- doxytag: member="chain::Quaternion::DIFF" ref="4bf23da80ab314ab4ebd1693ca283a36" args="(const Quaternion &amp;orig, const Quaternion &amp;dest)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00021.html">Quaternion</a> DIFF           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>orig</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>dest</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [friend]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Get the difference between two quaternions. 
-<p>
-Calculate the rotation between two normalised quaternion rotations. This is the same as <code>q1 * (-q2)</code> <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>orig</em>&nbsp;</td><td>- First rotation </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>dest</em>&nbsp;</td><td>- Second rotation </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00021.html" title="Structure to hold a quaternion.">Quaternion</a> - result quaternion </dd></dl>
-<dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00021.html#02303d0a493e0f49a92c763941a3fced">Quaternion::operator*()</a> </dd></dl>
-
-<p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>expand this out </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="9dc71eaedf4486dc005fa9a67c6da866"></a><!-- doxytag: member="chain::Quaternion::operator&lt;&lt;" ref="9dc71eaedf4486dc005fa9a67c6da866" args="(std::ostream &amp;os, const Quaternion &amp;q)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt;           </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&nbsp;</td>
-          <td class="paramname"> <em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>q</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [friend]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Out stream operator. 
-<p>
-In format: <dl class="user" compact><dt><b></b></dt><dd><code>x y z w</code> </dd></dl>
-<dl class="user" compact><dt><b>See</b></dt><dd><a href="http://www.cplusplus.com/reference/iostream/ostream/" target="_parent">std::ostream</a> </dd></dl>
-
-</div>
-</div><p>
-<a class="anchor" name="e2a6c5f79257af7e70a181d6140f0f8a"></a><!-- doxytag: member="chain::Quaternion::SLERP" ref="e2a6c5f79257af7e70a181d6140f0f8a" args="(const Quaternion &amp;q1, const Quaternion &amp;q2, const Real &amp;t)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00021.html">Quaternion</a> SLERP           </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>q1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00021.html">Quaternion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>q2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [friend]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Spherical Linear Interpolation. 
-<p>
-Interpolate between two normalised quaternion rotations <dl compact><dt><b>Parameters:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>q1</em>&nbsp;</td><td>- Start rotation </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>q2</em>&nbsp;</td><td>- End rotation </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>- Interpolation factor </td></tr>
-  </table>
-</dl>
-<dl class="return" compact><dt><b>Returns:</b></dt><dd><a class="el" href="a00021.html" title="Structure to hold a quaternion.">Quaternion</a> - result quaternion </dd></dl>
-
-</div>
-</div><p>
-<hr><h2>Member Data Documentation</h2>
-<a class="anchor" name="f124c15fd222435d0f65d854be3cadbb"></a><!-- doxytag: member="chain::Quaternion::@11" ref="f124c15fd222435d0f65d854be3cadbb" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">union { ... }           </td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -948,87 +210,10 @@ Interpolate between two normalised quaternion rotations <dl compact><dt><b>Param
 
 </div>
 </div><p>
-<a class="anchor" name="423adbd3310c03925b593cd686c00483"></a><!-- doxytag: member="chain::Quaternion::m_data" ref="423adbd3310c03925b593cd686c00483" args="[4]" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00021.html#423adbd3310c03925b593cd686c00483">chain::Quaternion::m_data</a>[4]          </td>
-        </tr>
-      </table>
+<hr>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="a00072.html">Object.hpp</a><li><a class="el" href="a00071.html">Object.cpp</a></ul>
 </div>
-<div class="memdoc">
-
-<p>
-Array data interface. 
-<p>
-Array to access all four values 
-</div>
-</div><p>
-<a class="anchor" name="cfdd8944f533f20911d4aaf41c96d260"></a><!-- doxytag: member="chain::Quaternion::w" ref="cfdd8944f533f20911d4aaf41c96d260" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00021.html#cfdd8944f533f20911d4aaf41c96d260">chain::Quaternion::w</a>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Fourth value, the scalar rotation element 
-</div>
-</div><p>
-<a class="anchor" name="d40e939a4e8627ab5f0db344550233dd"></a><!-- doxytag: member="chain::Quaternion::x" ref="d40e939a4e8627ab5f0db344550233dd" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00021.html#d40e939a4e8627ab5f0db344550233dd">chain::Quaternion::x</a>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-First value, x axis component 
-</div>
-</div><p>
-<a class="anchor" name="88357eb1fd5e07c5f8b55ce1a6155c95"></a><!-- doxytag: member="chain::Quaternion::y" ref="88357eb1fd5e07c5f8b55ce1a6155c95" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00021.html#88357eb1fd5e07c5f8b55ce1a6155c95">chain::Quaternion::y</a>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Second value, y axis component 
-</div>
-</div><p>
-<a class="anchor" name="2297cc3382a110f9fcfc252c42214e5b"></a><!-- doxytag: member="chain::Quaternion::z" ref="2297cc3382a110f9fcfc252c42214e5b" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00041.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> <a class="el" href="a00021.html#2297cc3382a110f9fcfc252c42214e5b">chain::Quaternion::z</a>          </td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>
-Third value, z axis component 
-</div>
-</div><p>
-<hr>The documentation for this struct was generated from the following files:<ul>
-<li><a class="el" href="a00072.html">Quaternion.hpp</a><li><a class="el" href="a00071.html">Quaternion.cpp</a></ul>
-</div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 16 13:38:13 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 30 09:16:43 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
