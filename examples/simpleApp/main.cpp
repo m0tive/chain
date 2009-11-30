@@ -10,13 +10,16 @@
 
 // #include <iostream>
 #include <stdlib.h>
-// 
+//
 // #include <boost/filesystem/operations.hpp>
 // #include <boost/filesystem/path.hpp>
-// 
+//
 #include "Chain/App.hpp"
 #include "Chain/Event.hpp"
-// 
+
+#include "Chain/Def.hpp"
+
+//
 // namespace fs = boost::filesystem;
 
 int main(int argc, char *argv[])
@@ -55,6 +58,8 @@ int main(int argc, char *argv[])
 */
   app.AddEventListener(chain::EType::Application_Stop,
     app.scriptManager.NewScript("io.write(\"Application stop script\")"));
+
+  CH_ASSERT(0);
 
   app.AddEventListener(chain::EType::Application_Render,
     app.scriptManager.NewScript("io.write(\"Render!\")"));

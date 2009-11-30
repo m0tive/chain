@@ -169,4 +169,56 @@ namespace chain
       return singleton;               \
     };
 
+#ifdef _DEBUG
+  #ifdef _MSC_VER
+    #include <crtdbg.h>
+    #include <intrin.h>
+    #include <string>
+
+    #define CH_DEBUGBREAK() __debugbreak();
+
+    #define CH_ASSERT(X) \
+       if(!(X)) \
+       { \
+         std::string str = "Assertion failed :"; \
+         str += #X; \
+         str += "\nFailure occured on line "; \
+         str += __LINE__; \
+         str += " of source file :\n \""; \
+         str += __FILE__; \
+         str += "\""; \
+         OutputDebugStringA(str.c_str()); \
+         CH_DEBUGBREAK(); \
+       }
+  #else
+    #include <iostream>
+
+    // DebugBreak :: Copied on 30/11/09 from :
+    // http://cocoawithlove.com/2008/03/break-into-debugger.html
+
+    /// \todo Test CH_DEBUGBREAK() is working
+
+    #if __ppc64__ || __ppc__
+      #define CH_DEBUGBREAK() \
+        __asm__("li r0, 20\nsc\nnop\nli r0, 37\nli r4, 2\nsc\nnop\n" \
+                  : : : "memory","r0","r3","r4" );
+    #else
+        #define CH_DEBUGBREAK() __asm__("int $3\n" : : );
+    #endif
+
+    #define CH_ASSERT(X) \
+      if(!(X)) \
+      { \
+       std::cerr << "Assertion failed :"<< #X \
+       << "\nFailure occured on line " \
+       << __LINE__ << " of source file :" \
+       << "\n \""<<__FILE__<<"\"" << std::endl; \
+       CH_DEBUGBREAK(); \
+      }
+  #endif
+#else
+  #define CH_DEBUGBREAK()
+  #define CH_ASSERT()
+#endif
+
 #endif

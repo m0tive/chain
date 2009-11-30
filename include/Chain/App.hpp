@@ -65,8 +65,8 @@ namespace chain
       Log * log;
 
     private:
-      bool m_isRunning;
       bool m_shutdown;
+      bool m_isRunning;
   };
 }
 

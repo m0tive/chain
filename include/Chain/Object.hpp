@@ -18,6 +18,7 @@
 
 #include <string>
 #include "Def.hpp"
+#include "LuaUtl.hpp"
 
 struct lua_State;
 

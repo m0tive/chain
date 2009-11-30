@@ -63,6 +63,9 @@ $(OUTDIR)/$(TARGET): $(OBJECTS)
 $(OBJECTS): $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	$(COMPILER) -c $(FLAGS) $(DEFINES) $(INCLUDE) $< -o $@
 
+examples:
+	make -C $(ROOT)/examples BUILD:=$(BUILD)
+
 ## Clean up by removing compiled object files and the output
 clean :
 	rm -f $(OUTDIR)/$(TARGET)
