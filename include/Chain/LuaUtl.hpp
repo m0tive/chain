@@ -3,7 +3,7 @@
 /// \version
 /// \author
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //-----------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -14,7 +14,7 @@
 #define _chain_LuaUtl_hpp_
 
 #include <lua/lua.hpp>
-#include <typeinfo>
+//#include <typeinfo>
 
 #include "Def.hpp"
 
@@ -47,6 +47,14 @@ namespace chain
   class LuaUtl
   {
     protected:
+      template<class T>
+      void m_validate_type()
+      {
+        T *t = 0;
+        Object *o = t;
+        (void)o;
+      }
+
       static void* m_create_object(lua_State* L, const char* key, int bytes)
       {
         void *ptr = lua_newuserdata(L,bytes);
@@ -86,7 +94,8 @@ namespace chain
       template<class T>
       static void* pushReference(lua_State* L, T* ref)
       {
-        T** ptr = static_cast<T**>(m_create_object(L, typeid(T).name(), sizeof(T*)));
+        m_validate_type<T>();
+        T** ptr = static_cast<T**>(m_create_object(L, T::GetTypeName(), sizeof(T*)));
         *ptr = ref;
         return ptr;
       }
@@ -94,7 +103,8 @@ namespace chain
       template<class T>
       void registerType(lua_State *L, const luaL_Reg *functions)
       {
-        m_registerType(L, typeid(T).name(), functions);//, &detail::garbageCollect<T>);
+        m_validate_type<T>();
+        m_registerType(L, T::GetTypeName(), functions);//, &detail::garbageCollect<T>);
       }
 
     private:

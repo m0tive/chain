@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Camera : public DisplayObject
    {
-     DECLARE_CHAIN_CLASS(COb::Camera,DisplayObject,"camera")
+     DECLARE_CHAIN_CLASS(OType::Camera,DisplayObject,"camera")
       public:
          //---------------------------------------
          /// \details Default Constructor

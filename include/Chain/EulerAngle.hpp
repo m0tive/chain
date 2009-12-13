@@ -2,7 +2,7 @@
 /// \date 2008/04/16
 /// \author Peter Dodds
 /// \brief chain::EulerAngle structure declaration
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER

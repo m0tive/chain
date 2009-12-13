@@ -2,7 +2,7 @@
 /// \date 2007/11/19
 /// \author Peter Dodds
 /// \brief chain::Utl function declarations
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER

@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -24,7 +24,7 @@ namespace chain
    /// \details These are created and managed in chain::SceneManager
    class Root : public Container
    {
-     DECLARE_CHAIN_CLASS(COb::Root,Container,"root")
+     DECLARE_CHAIN_CLASS(OType::Root,Container,"root")
       friend class SceneManager;
       protected:
          //---------------------------------------

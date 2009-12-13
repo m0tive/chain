@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Geometry : public DisplayObject
    {
-     DECLARE_CHAIN_CLASS(COb::Geometry,DisplayObject,"geometry")
+     DECLARE_CHAIN_CLASS(OType::Geometry,DisplayObject,"geometry")
       protected:
          //---------------------------------------
          /// \details Default Constructor

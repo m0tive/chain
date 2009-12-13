@@ -2,7 +2,7 @@
 /// \date 2009/10/28
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #include "Script.hpp"

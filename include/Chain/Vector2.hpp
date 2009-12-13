@@ -2,7 +2,7 @@
 /// \date 2007/11/13
 /// \author Peter Dodds
 /// \brief chain::Vector2 structure declaration
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER

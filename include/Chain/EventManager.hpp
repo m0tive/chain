@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -37,7 +37,7 @@ namespace chain
   /// \details ...
   class EventManager : public Manager
   {
-    DECLARE_CHAIN_CLASS(COb::EventManager,Manager,"eventManager")
+    DECLARE_CHAIN_CLASS(OType::EventManager,Manager,"eventManager")
     CH_SINGLETON(EventDispatcher)
 
     friend class EventDispatcher;

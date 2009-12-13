@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class RenderLayer : public EventDispatcher
    {
-     DECLARE_CHAIN_CLASS(COb::RenderLayer,EventDispatcher,"renderLayer")
+     DECLARE_CHAIN_CLASS(OType::RenderLayer,EventDispatcher,"renderLayer")
       friend class RenderManager;
       protected:
          //---------------------------------------

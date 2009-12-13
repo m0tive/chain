@@ -4,7 +4,7 @@
 /// \author Peter Dodds
 /// \brief Top level application class.
 /// A singleton that acts as the root object for the application
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #include "App.hpp"

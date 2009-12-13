@@ -2,7 +2,7 @@
 /// \date 2007/11/13
 /// \author Peter Dodds
 /// \brief chain::Vector2 function definitions
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #include "Vector2.hpp"

@@ -196,6 +196,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\LuaUtl.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\src\Manager.cpp"
 				>
 			</File>
@@ -323,6 +327,10 @@
 			</File>
 			<File
 				RelativePath=".\include\Chain\LuaGL.h"
+				>
+			</File>
+			<File
+				RelativePath=".\include\Chain\LuaUtl.hpp"
 				>
 			</File>
 			<File

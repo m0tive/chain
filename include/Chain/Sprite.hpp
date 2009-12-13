@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Sprite : public Instance
    {
-     DECLARE_CHAIN_CLASS(COb::Sprite,Instance,"sprite")
+     DECLARE_CHAIN_CLASS(OType::Sprite,Instance,"sprite")
       public:
          //---------------------------------------
          /// \details Default Constructor

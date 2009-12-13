@@ -2,7 +2,7 @@
 /// \date 2007/12/07
 /// \author Peter Dodds
 /// \brief chain::Quaternion structure declaration
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER

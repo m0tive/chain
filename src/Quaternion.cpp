@@ -2,7 +2,7 @@
 /// \date 2007/12/07
 /// \author Peter Dodds
 /// \brief chain::Quaternion function definitions
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #include "Quaternion.hpp"

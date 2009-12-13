@@ -4,7 +4,7 @@
 /// \author Peter Dodds
 /// \brief Top level application class.
 /// A singleton that acts as the root object for the application
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -26,19 +26,19 @@ namespace chain
 {
   #define DECLARE_CHAIN_CLASS(OBJTYPE,PARENT,TYPENAME)    \
     public:                                               \
-    static COb::eType GetType () {                        \
+    static OType::_t GetType () {                        \
       return OBJTYPE;                                     \
     };                                                    \
     static std::string GetTypeName () {                   \
       return TYPENAME;                                    \
     };                                                    \
-    static bool IsType (const COb::eType& _type) {        \
-      if(_type != OBJTYPE) return PARENT::IsType(_type);  \
+    static bool IsType (const OType::_t& t) {        \
+      if(t != OBJTYPE) return PARENT::IsType(t);  \
       else return true;                                   \
     };
 
-  struct COb {
-    enum eType {
+  struct OType {
+    enum _t {
       Object=0,
         Event,
         EventDispatcher,
@@ -72,24 +72,24 @@ namespace chain
    // IMPORTANT: No call to DECLARE_CHAIN_CLASS. This is replaced with the following code
     public:
       // -----------------------------------
-      /// \brief Get the chain::COb type of the object
-      /// \returns COb::eType - The object's type
-      static COb::eType GetType () {
-        return COb::Object;
+      /// \brief Get the chain::OType _t of the object
+      /// \returns OType::_t - The object's _t
+      static OType::_t GetType () {
+        return OType::Object;
       };
       // -----------------------------------
-      /// \brief Get the chain::COb type as a string
-      /// \returns std::string - The object's type
+      /// \brief Get the chain::OType _t as a string
+      /// \returns std::string - The object's _t
       static std::string GetTypeName () {
         return "object";
       };
       // -----------------------------------
-      /// \brief Test if a class is of a certain type, or derived from that type.
-      /// \details This function looks down the class hierarchy for the class type.
-      /// \param _type - chain::COb type being checked against
-      /// \returns bool - True if part of type
-      static bool IsType(const COb::eType& _type) {
-        return (_type == COb::Object);
+      /// \brief Test if a class is of a certain _t, or derived from that _t.
+      /// \details This function looks down the class hierarchy for the class _t.
+      /// \param _t - chain::OType _t being checked against
+      /// \returns bool - True if part of _t
+      static bool IsType(const OType::_t& t) {
+        return (t == OType::Object);
       }
 
       void LoadIntoLua (lua_State *L) {};

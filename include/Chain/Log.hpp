@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -36,7 +36,7 @@ namespace chain
    /// \brief ...
    /// \details ...
    class Log : public EventDispatcher {
-     DECLARE_CHAIN_CLASS(COb::Log,EventDispatcher,"log")
+     DECLARE_CHAIN_CLASS(OType::Log,EventDispatcher,"log")
       friend class Logger;
       private:
          //---------------------------------------

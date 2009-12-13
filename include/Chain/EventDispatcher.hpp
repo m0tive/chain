@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -46,7 +46,7 @@ namespace chain
   /// \details ...
   class EventDispatcher : public Object
   {
-    DECLARE_CHAIN_CLASS(COb::EventDispatcher,Object,"eventDispatcher")
+    DECLARE_CHAIN_CLASS(OType::EventDispatcher,Object,"eventDispatcher")
 
     protected:
       //---------------------------------------

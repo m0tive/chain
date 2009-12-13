@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -25,7 +25,7 @@ namespace chain
    /// \details ...
    class Container : public DisplayObject
    {
-     DECLARE_CHAIN_CLASS(COb::Container,DisplayObject,"container")
+     DECLARE_CHAIN_CLASS(OType::Container,DisplayObject,"container")
       friend class SceneManager;
       protected:
          //---------------------------------------

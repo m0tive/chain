@@ -2,7 +2,7 @@
 /// \date 2008/04/19
 /// \author Peter Dodds
 /// \brief Definitions of basic data types, associated function and constants
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER

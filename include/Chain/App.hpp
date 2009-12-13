@@ -4,7 +4,7 @@
 /// \author Peter Dodds
 /// \brief Top level application class.
 /// A singleton that acts as the root object for the application
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -31,7 +31,7 @@ namespace chain
   /// \todo Change name: App -> Application
   class App : public EventDispatcher
   {
-    DECLARE_CHAIN_CLASS(COb::App,EventDispatcher,"app")
+    DECLARE_CHAIN_CLASS(OType::App,EventDispatcher,"app")
     // -----------------------------------
     /// \details Get an instance of this singleton.
     /// The first call to this will create the singleton.

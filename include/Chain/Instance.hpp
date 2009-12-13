@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -21,7 +21,7 @@ namespace chain
    /// \details ...
    class Instance : public Container
    {
-     DECLARE_CHAIN_CLASS(COb::Instance,Container,"instance")
+     DECLARE_CHAIN_CLASS(OType::Instance,Container,"instance")
       public:
          //---------------------------------------
          /// \details Default Constructor

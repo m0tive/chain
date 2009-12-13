@@ -3,7 +3,7 @@
 /// \version 0.01
 /// \author Peter Dodds
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #ifdef _MSC_VER
@@ -24,7 +24,7 @@ namespace chain
    /// \details ...
    class DisplayObject : public Transform
    {
-     DECLARE_CHAIN_CLASS(COb::DisplayObject,Transform,"displayObject")
+     DECLARE_CHAIN_CLASS(OType::DisplayObject,Transform,"displayObject")
       // The Container needs access to m_root and m_parent, which are updated
       // when added as a child
       friend class Container;

@@ -2,7 +2,7 @@
 /// \date 2008/04/16
 /// \author Peter Dodds
 /// \brief chain::EulerAngle function definitions
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //------------------------------------------------------------------------------
 
 #include "EulerAngle.hpp"

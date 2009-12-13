@@ -3,7 +3,7 @@
 /// \version
 /// \author
 /// \brief
-/// \note
+/// \note Copyright (C) 2009 - All Rights Reserved
 //-----------------------------------------------------------------------------
 
 #include "LuaUtl.hpp"
