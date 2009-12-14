@@ -23,7 +23,10 @@
   </div>
 </div>
 <div class="contents">
-<h1>LuaUtl.hpp File Reference</h1><table border="0" cellpadding="0" cellspacing="0">
+<h1>LuaUtl.hpp File Reference</h1><code>#include &lt;lua/lua.hpp&gt;</code><br>
+<code>#include &lt;typeinfo&gt;</code><br>
+<code>#include &quot;<a class="el" href="a00041.html">Def.hpp</a>&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Classes</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html">chain::LuaUtl</a></td></tr>
@@ -31,14 +34,67 @@
 <tr><td colspan="2"><br><h2>Namespaces</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">namespace &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html">chain</a></td></tr>
 
+<tr><td colspan="2"><br><h2>Defines</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00064.html#92e7db508061d5bf39654673141d3e33">LUAC_ENTRY</a>(x)&nbsp;&nbsp;&nbsp;{#x, &amp;chain::luaC_callProxy&lt;&amp;x&gt;}</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00064.html#5e2efb2b6f6fe3669c041428e77d2ea3">LUAC_ENTRY2</a>(x, y)&nbsp;&nbsp;&nbsp;{#x, &amp;chain::luaC_callProxy&lt;&amp;y&gt;}</td></tr>
+
+<tr><td colspan="2"><br><h2>Functions</h2></td></tr>
+<tr><td class="memTemplParams" nowrap colspan="2">template&lt;int(*)(lua_State *L) function&gt; </td></tr>
+<tr><td class="memTemplItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00042.html#04e72972d61c09d8f26485b4f266dde6">chain::luaC_callProxy</a> (lua_State *L)</td></tr>
+
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 <dl class="date" compact><dt><b>Date:</b></dt><dd>2009 Nov 25 </dd></dl>
 <dl class="version" compact><dt><b>Version:</b></dt><dd></dd></dl>
 <dl class="author" compact><dt><b>Author:</b></dt><dd></dd></dl>
 <dl class="note" compact><dt><b>Note:</b></dt><dd></dd></dl>
+<hr><h2>Define Documentation</h2>
+<a class="anchor" name="92e7db508061d5bf39654673141d3e33"></a><!-- doxytag: member="LuaUtl.hpp::LUAC_ENTRY" ref="92e7db508061d5bf39654673141d3e33" args="(x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAC_ENTRY          </td>
+          <td>(</td>
+          <td class="paramtype">x&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;{#x, &amp;chain::luaC_callProxy&lt;&amp;x&gt;}</td>
+        </tr>
+      </table>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 30 09:16:43 2009 for Chain by&nbsp;
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="5e2efb2b6f6fe3669c041428e77d2ea3"></a><!-- doxytag: member="LuaUtl.hpp::LUAC_ENTRY2" ref="5e2efb2b6f6fe3669c041428e77d2ea3" args="(x, y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAC_ENTRY2          </td>
+          <td>(</td>
+          <td class="paramtype">x,         <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">y&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;{#x, &amp;chain::luaC_callProxy&lt;&amp;y&gt;}</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Generated on Wed Dec 9 16:52:27 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

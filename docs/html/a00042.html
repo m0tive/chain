@@ -138,6 +138,9 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">typedef luaL_Reg&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html#08e68dc81b962f9ac84fb99819f41f79">ScriptFunctionTable</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Functions</h2></td></tr>
+<tr><td class="memTemplParams" nowrap colspan="2">template&lt;int(*)(lua_State *L) function&gt; </td></tr>
+<tr><td class="memTemplItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00042.html#04e72972d61c09d8f26485b4f266dde6">luaC_callProxy</a> (lua_State *L)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html#b7644519ab3fa34b551214715e5cda8c">operator&lt;&lt;</a> (std::ostream &amp;s, const <a class="el" href="a00019.html">Matrix</a> &amp;m)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="a00022.html">Quaternion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00042.html#6436d8bdea48bcb4b40cb9793d7be731">SLERP</a> (const <a class="el" href="a00022.html">Quaternion</a> &amp;q1, const <a class="el" href="a00022.html">Quaternion</a> &amp;q2, const <a class="el" href="a00042.html#d5c27125ffb58164eddb4b998e0b299d">Real</a> &amp;t)</td></tr>
@@ -312,7 +315,29 @@ Calculate the rotation between two normalised quaternion rotations. This is the 
 <dl class="see" compact><dt><b>See also:</b></dt><dd><a class="el" href="a00022.html#02303d0a493e0f49a92c763941a3fced">Quaternion::operator*()</a> </dd></dl>
 
 <p>
-<dl compact><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>expand this out </dd></dl>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>expand this out </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="04e72972d61c09d8f26485b4f266dde6"></a><!-- doxytag: member="chain::luaC_callProxy" ref="04e72972d61c09d8f26485b4f266dde6" args="(lua_State *L)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int(*)(lua_State *L) function&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int chain::luaC_callProxy           </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&nbsp;</td>
+          <td class="paramname"> <em>L</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
 
 </div>
 </div><p>
@@ -662,7 +687,7 @@ PI/2 constant.
 </div>
 </div><p>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 30 09:16:43 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Wed Dec 9 16:52:27 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

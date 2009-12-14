@@ -18,7 +18,7 @@
 
 #include <string>
 #include "Def.hpp"
-#include "LuaUtl.hpp"
+//#include "LuaUtl.hpp"
 
 struct lua_State;
 
@@ -26,14 +26,14 @@ namespace chain
 {
   #define DECLARE_CHAIN_CLASS(OBJTYPE,PARENT,TYPENAME)    \
     public:                                               \
-    static OType::_t GetType () {                        \
+    static OType::_t GetType () {                         \
       return OBJTYPE;                                     \
     };                                                    \
     static std::string GetTypeName () {                   \
       return TYPENAME;                                    \
     };                                                    \
-    static bool IsType (const OType::_t& t) {        \
-      if(t != OBJTYPE) return PARENT::IsType(t);  \
+    static bool IsType (const OType::_t& t) {             \
+      if(t != OBJTYPE) return PARENT::IsType(t);          \
       else return true;                                   \
     };
 
@@ -92,7 +92,29 @@ namespace chain
         return (t == OType::Object);
       }
 
-      void LoadIntoLua (lua_State *L) {};
+#if 0
+      //void LoadIntoLua (lua_State *L) {}
+
+      bool RegisterLua (lua_State *L)
+      {
+        if(!m_hasLua){
+          m_hasLua = true;
+          // do register
+        }
+        return !m_hasLua
+      }
+
+    protected:
+      virtual luaL_Reg* LuaBindings () {
+
+        // Object::LuaBindings()
+
+
+      }
+
+    private:
+      bool m_hasLua;
+      #endif
 
     protected:
 

@@ -33,11 +33,27 @@
 <a href="a00180.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memTemplParams" nowrap colspan="2">template&lt;class T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00017.html#e5c8ac811087863bad25c4e35590d37f">registerType</a> (lua_State *L, const luaL_Reg *functions)</td></tr>
+
+<tr><td colspan="2"><br><h2>Static Public Member Functions</h2></td></tr>
+<tr><td class="memTemplParams" nowrap colspan="2">template&lt;class T &gt; </td></tr>
+<tr><td class="memTemplItemLeft" nowrap align="right" valign="top">static void *&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00017.html#ad3d8dc1c24c23f0dd8beb6d22f3127b">pushReference</a> (lua_State *L, T *ref)</td></tr>
+
+<tr><td colspan="2"><br><h2>Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#6104e4b397da452a16f1756705e3ebc4">m_registerType</a> (lua_State *L, const char *key, const luaL_Reg *functions)</td></tr>
+
+<tr><td colspan="2"><br><h2>Static Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#842e0dc38e4f034d4272f9c04e1b6c27">m_create_object</a> (lua_State *L, const char *key, int bytes)</td></tr>
+
+<tr><td colspan="2"><br><h2>Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#64d335d923e86443d251381525891b6a">LuaUtl</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00017.html#f0fdbcaf174888831477fc06ff65dcbf">~LuaUtl</a> ()</td></tr>
 
 </table>
+<hr><a name="_details"></a><h2>Detailed Description</h2>
+<dl compact><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>replace typeid functions with a Chain type name </dd></dl>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" name="64d335d923e86443d251381525891b6a"></a><!-- doxytag: member="chain::LuaUtl::LuaUtl" ref="64d335d923e86443d251381525891b6a" args="()" -->
 <div class="memitem">
@@ -48,7 +64,7 @@
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
+          <td><code> [inline, private]</code></td>
         </tr>
       </table>
 </div>
@@ -67,7 +83,140 @@
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
+          <td><code> [inline, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Member Function Documentation</h2>
+<a class="anchor" name="842e0dc38e4f034d4272f9c04e1b6c27"></a><!-- doxytag: member="chain::LuaUtl::m_create_object" ref="842e0dc38e4f034d4272f9c04e1b6c27" args="(lua_State *L, const char *key, int bytes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* chain::LuaUtl::m_create_object           </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&nbsp;</td>
+          <td class="paramname"> <em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>bytes</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, static, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="6104e4b397da452a16f1756705e3ebc4"></a><!-- doxytag: member="chain::LuaUtl::m_registerType" ref="6104e4b397da452a16f1756705e3ebc4" args="(lua_State *L, const char *key, const luaL_Reg *functions)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chain::LuaUtl::m_registerType           </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&nbsp;</td>
+          <td class="paramname"> <em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const luaL_Reg *&nbsp;</td>
+          <td class="paramname"> <em>functions</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="ad3d8dc1c24c23f0dd8beb6d22f3127b"></a><!-- doxytag: member="chain::LuaUtl::pushReference" ref="ad3d8dc1c24c23f0dd8beb6d22f3127b" args="(lua_State *L, T *ref)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* chain::LuaUtl::pushReference           </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&nbsp;</td>
+          <td class="paramname"> <em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&nbsp;</td>
+          <td class="paramname"> <em>ref</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="e5c8ac811087863bad25c4e35590d37f"></a><!-- doxytag: member="chain::LuaUtl::registerType" ref="e5c8ac811087863bad25c4e35590d37f" args="(lua_State *L, const luaL_Reg *functions)" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void chain::LuaUtl::registerType           </td>
+          <td>(</td>
+          <td class="paramtype">lua_State *&nbsp;</td>
+          <td class="paramname"> <em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const luaL_Reg *&nbsp;</td>
+          <td class="paramname"> <em>functions</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -80,7 +229,7 @@
 <hr>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="a00064.html">LuaUtl.hpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Generated on Mon Nov 30 09:16:43 2009 for Chain by&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Generated on Wed Dec 9 16:52:27 2009 for Chain by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

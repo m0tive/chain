@@ -17,12 +17,15 @@
 //#include <typeinfo>
 
 #include "Def.hpp"
+//#include "Object.hpp"
 
 // Code for lua class utilitys from code by Brian "rip-off" Barrett (http://ripoff.wordpress.com/)
 // Sourced on 16/11/2009 from : http://www.gamedev.net/community/forums/topic.asp?topic_id=538631
 
 namespace chain
 {
+  class Object;
+
   /// \brief
   template<int (*function)(lua_State* L)>
   int luaC_callProxy(lua_State* L)
@@ -71,7 +74,10 @@ namespace chain
         return ptr;
       }
 
-      void m_registerType(lua_State *L, const char *key, const luaL_Reg *functions)//, lua_CFunction garbageCollect)
+
+    public:
+
+      void registerType(lua_State *L, const char *key, const luaL_Reg *functions)//, lua_CFunction garbageCollect)
       {
         luaL_newmetatable(L,key);
 
@@ -85,12 +91,11 @@ namespace chain
         //lua_settable(L, -3);
 
 
-        luaL_openlib(L, NULL, functions, 0);
-        //lua_getglobal(L, "_G");
-        //luaL_register(L, NULL, functions);
+        //luaL_openlib(L, NULL, functions, 0); // deprecated
+        lua_getglobal(L, "_G");
+        luaL_register(L, NULL, functions);
       }
 
-    public:
       template<class T>
       static void* pushReference(lua_State* L, T* ref)
       {
@@ -100,11 +105,26 @@ namespace chain
         return ptr;
       }
 
-      template<class T>
+
+
+      /*template<class T>
       void registerType(lua_State *L, const luaL_Reg *functions)
       {
         m_validate_type<T>();
         m_registerType(L, T::GetTypeName(), functions);//, &detail::garbageCollect<T>);
+      }*/
+
+      unsigned CountRegArray (luaL_Reg* reg)
+      {
+        if(reg == 0) return 0;
+
+        unsigned i = 0;
+        while((reg + i)->name != NULL)
+        {
+          ++i;
+        }
+
+        return i;
       }
 
     private:

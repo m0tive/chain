@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
   app.AddEventListener(chain::EType::Application_Stop,
     app.scriptManager.NewScript("io.write(\"Application stop script\")"));
 
-  CH_ASSERT(0);
+  //CH_ASSERT(0);
 
   app.AddEventListener(chain::EType::Application_Render,
     app.scriptManager.NewScript("io.write(\"Render!\")"));

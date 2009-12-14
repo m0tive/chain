@@ -7,7 +7,6 @@
 		<Option makefile_is_custom="1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="Bindings/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="lib/libchain" prefix_auto="1" extension_auto="1" />
@@ -61,6 +60,7 @@
 		<Unit filename="include/Chain/InputManager.hpp" />
 		<Unit filename="include/Chain/Instance.hpp" />
 		<Unit filename="include/Chain/Log.hpp" />
+		<Unit filename="include/Chain/LuaBindable.hpp" />
 		<Unit filename="include/Chain/LuaGL.h" />
 		<Unit filename="include/Chain/LuaUtl.hpp" />
 		<Unit filename="include/Chain/Manager.hpp" />
@@ -93,9 +93,8 @@
 		<Unit filename="src/InputManager.cpp" />
 		<Unit filename="src/Instance.cpp" />
 		<Unit filename="src/Log.cpp" />
-		<Unit filename="src/LuaGL.cpp">
-			<Option virtualFolder="Bindings/" />
-		</Unit>
+		<Unit filename="src/LuaBindable.cpp" />
+		<Unit filename="src/LuaGL.cpp" />
 		<Unit filename="src/LuaUtl.cpp" />
 		<Unit filename="src/Manager.cpp" />
 		<Unit filename="src/Matrix.cpp" />
